@@ -1,5 +1,5 @@
 # Performance Monitoring Events for Intel(R) Xeon(R) processor E5 v3 family based on the Haswell-E microarchitecture - V15
-# 10/21/2015 5:44:51 PM
+# 11/9/2015 12:24:50 PM
 # Copyright (c) 2007 - 2014 Intel Corporation. All rights reserved.
 Unit	EventCode	UMask	EventName	Description	Counter	MSRValue	Filter	Internal
 CBO	0xA	0x0	UNC_C_BOUNCE_CONTROL	Bounce Control	0,1,2,3	0	null	0
@@ -104,7 +104,6 @@ CBO	0x2A	0x1	UNC_C_RxR_ISMQ_RETRY2.AD_SBO	ISMQ Request Queue Rejects; No AD Sbo 
 CBO	0x2A	0x2	UNC_C_RxR_ISMQ_RETRY2.BL_SBO	ISMQ Request Queue Rejects; No BL Sbo Credits	0,1,2,3	0	null	0
 CBO	0x2A	0x40	UNC_C_RxR_ISMQ_RETRY2.TARGET	ISMQ Request Queue Rejects; Target Node Filter	0,1,2,3	0	CBoFilter1[15:0]	0
 CBO	0x11	0x1	UNC_C_RxR_OCCUPANCY.IRQ	Ingress Occupancy; IRQ	0	0	null	0
-CBO	0x11	0x2	UNC_C_RxR_OCCUPANCY.IRQ_REJECTED	IRQ Rejected	0	0	null	0
 CBO	0x11	0x4	UNC_C_RxR_OCCUPANCY.IPQ	Ingress Occupancy; IPQ	0	0	null	0
 CBO	0x11	0x20	UNC_C_RxR_OCCUPANCY.PRQ_REJ	Ingress Occupancy; PRQ Rejects	0	0	null	0
 CBO	0x3D	0x1	UNC_C_SBO_CREDITS_ACQUIRED.AD	SBo Credits Acquired; For AD Ring	0,1,2,3	0	null	0
@@ -403,7 +402,6 @@ IRP	0x14	0x8	UNC_I_MISC0.2ND_WR_INSERT	Misc Events - Set 0; Cache Inserts of Wri
 IRP	0x14	0x10	UNC_I_MISC0.2ND_ATOMIC_INSERT	Misc Events - Set 0; Cache Inserts of Atomic Transactions as Secondary	0,1	0	null	0
 IRP	0x14	0x20	UNC_I_MISC0.FAST_XFER	Misc Events - Set 0; Fastpath Transfers From Primary to Secondary	0,1	0	null	0
 IRP	0x14	0x40	UNC_I_MISC0.PF_ACK_HINT	Misc Events - Set 0; Prefetch Ack Hints From Primary to Secondary	0,1	0	null	0
-IRP	0x14	0x80	UNC_I_MISC0.UNKNOWN	Misc Events - Set 0	0,1	0	null	0
 IRP	0x15	0x1	UNC_I_MISC1.SLOW_I	Misc Events - Set 1; Slow Transfer of I Line	0,1	0	null	0
 IRP	0x15	0x2	UNC_I_MISC1.SLOW_S	Misc Events - Set 1; Slow Transfer of S Line	0,1	0	null	0
 IRP	0x15	0x4	UNC_I_MISC1.SLOW_E	Misc Events - Set 1; Slow Transfer of E Line	0,1	0	null	0
@@ -965,7 +963,7 @@ iMC	0x4	0xC	UNC_M_CAS_COUNT.WR	DRAM RD_CAS and WR_CAS Commands.; All DRAM WR_CAS
 iMC	0x4	0xF	UNC_M_CAS_COUNT.ALL	DRAM RD_CAS and WR_CAS Commands.; All DRAM WR_CAS (w/ and w/out auto-pre)	0,1,2,3	0	null	0
 iMC	0x4	0x10	UNC_M_CAS_COUNT.RD_WMM	DRAM RD_CAS and WR_CAS Commands.; Read CAS issued in WMM	0,1,2,3	0	null	0
 iMC	0x4	0x20	UNC_M_CAS_COUNT.RD_RMM	DRAM RD_CAS and WR_CAS Commands.; Read CAS issued in RMM	0,1,2,3	0	null	0
-iMC	0x0	 	UNC_M_CLOCKTICKS	DRAM Clockticks	0,1,2,3	0	null	0
+iMC	0x0	0x0	UNC_M_CLOCKTICKS	DRAM Clockticks	0,1,2,3	0	null	0
 iMC	0x6	0x0	UNC_M_DRAM_PRE_ALL	DRAM Precharge All Commands	0,1,2,3	0	null	0
 iMC	0x5	0x2	UNC_M_DRAM_REFRESH.PANIC	Number of DRAM Refreshes Issued	0,1,2,3	0	null	0
 iMC	0x5	0x4	UNC_M_DRAM_REFRESH.HIGH	Number of DRAM Refreshes Issued	0,1,2,3	0	null	0
