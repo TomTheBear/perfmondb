@@ -3721,7 +3721,7 @@
     "PEBS": "0",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE55,BDE63",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -3744,7 +3744,7 @@
     "PEBS": "0",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE55,BDE63",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -3767,7 +3767,7 @@
     "PEBS": "0",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE55,BDE63",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -3790,7 +3790,7 @@
     "PEBS": "0",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE55,BDE63",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -3813,7 +3813,7 @@
     "PEBS": "0",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE55,BDE63",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -3836,7 +3836,7 @@
     "PEBS": "0",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE55,BDE63",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -3859,7 +3859,7 @@
     "PEBS": "0",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE55,BDE63",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -3974,7 +3974,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE43",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5147,7 +5147,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5170,7 +5170,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5193,7 +5193,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5216,7 +5216,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5239,7 +5239,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5262,7 +5262,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5285,7 +5285,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5308,7 +5308,7 @@
     "PEBS": "2",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5377,7 +5377,7 @@
     "PEBS": "1",
     "Data_LA": "1",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5515,7 +5515,7 @@
     "PEBS": "1",
     "Data_LA": "1",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE33",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5607,7 +5607,7 @@
     "PEBS": "1",
     "Data_LA": "1",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE70",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -5745,7 +5745,7 @@
     "PEBS": "1",
     "Data_LA": "1",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE70",
     "ELLC": "0",
     "Offcore": "0"
   },
@@ -6757,7 +6757,7 @@
     "PEBS": "0",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
-    "Errata": "null",
+    "Errata": "BDE69",
     "ELLC": "0",
     "Offcore": "0"
   },
