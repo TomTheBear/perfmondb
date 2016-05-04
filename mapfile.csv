@@ -12,6 +12,8 @@ GenuineIntel-6-4D,V10,/SLM/Silvermont_core_V10.json,core
 GenuineIntel-6-4D,V10,/SLM/Silvermont_matrix_V10.json,offcore
 GenuineIntel-6-4C,V10,/SLM/Silvermont_core_V10.json,core
 GenuineIntel-6-4C,V10,/SLM/Silvermont_matrix_V10.json,offcore
+GenuineIntel-6-5C,V6,/GLM/Goldmont_core_V6.json,core
+GenuineIntel-6-5C,V6,/GLM/Goldmont_matrix_V6.json,offcore
 GenuineIntel-6-1C,V1,/BNL/Bonnell_core_V1.json,core
 GenuineIntel-6-26,V1,/BNL/Bonnell_core_V1.json,core
 GenuineIntel-6-27,V1,/BNL/Bonnell_core_V1.json,core
