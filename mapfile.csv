@@ -64,3 +64,6 @@ GenuineIntel-6-4E,V19,/SKL/Skylake_uncore_V19.json,uncore
 GenuineIntel-6-5E,V19,/SKL/Skylake_uncore_V19.json,uncore
 GenuineIntel-6-4E,V19,/SKL/Skylake_FP_ARITH_INST_V19.json,fp_arith_inst
 GenuineIntel-6-5E,V19,/SKL/Skylake_FP_ARITH_INST_V19.json,fp_arith_inst
+GenuineIntel-6-57,V6,/KNL/KnightsLanding_core_V6.json,core
+GenuineIntel-6-57,V6,/KNL/KnightsLanding_matrix_V6.json,offcore
+GenuineIntel-6-57,V6,/KNL/KnightsLanding_uncore_V6.json,uncore
