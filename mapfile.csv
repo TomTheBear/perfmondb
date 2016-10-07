@@ -72,6 +72,6 @@ GenuineIntel-6-8E,V24,/SKL/Skylake_uncore_V24.json,uncore
 GenuineIntel-6-9E,V24,/SKL/Skylake_uncore_V24.json,uncore
 GenuineIntel-6-8E,V24,/SKL/Skylake_FP_ARITH_INST_V24.json,fp_arith_inst
 GenuineIntel-6-9E,V24,/SKL/Skylake_FP_ARITH_INST_V24.json,fp_arith_inst
-GenuineIntel-6-57,V8,/KNL/KnightsLanding_core_V8.json,core
-GenuineIntel-6-57,V8,/KNL/KnightsLanding_matrix_V8.json,offcore
-GenuineIntel-6-57,V8,/KNL/KnightsLanding_uncore_V8.json,uncore
+GenuineIntel-6-57,V9,/KNL/KnightsLanding_core_V9.json,core
+GenuineIntel-6-57,V9,/KNL/KnightsLanding_matrix_V9.json,offcore
+GenuineIntel-6-57,V9,/KNL/KnightsLanding_uncore_V9.json,uncore
