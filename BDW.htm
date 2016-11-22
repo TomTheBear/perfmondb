@@ -1,0 +1,1536 @@
+<!DOCTYPE html><html>
+<head><style> table{font-family:arial,sans-serif;border-collapse:collapse;width:100%;}td,th{border:1px solid #dddddd;text-align:left;padding: 8px;}tr:nth-child(even) {background-color:#dddddd;}
+:target {
+   background-color: #ffa;
+}
+</style></head>
+<body>
+<table border="1">
+	<tr>
+		<th>EventName</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>INST_RETIRED.ANY</td>
+		<td>Instructions retired from execution.</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_UNHALTED.THREAD</td>
+		<td>Core cycles when the thread is not in halt state</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_UNHALTED.REF_TSC</td>
+		<td>Reference cycles when the core is not in halt state.</td>
+	</tr>
+	<tr>
+		<td>LD_BLOCKS.STORE_FORWARD</td>
+		<td>Cases when loads get true Block-on-Store blocking code preventing store forwarding</td>
+	</tr>
+	<tr>
+		<td>LD_BLOCKS.NO_SR</td>
+		<td>This event counts the number of times that split load operations are temporarily blocked because all resources for handling the split accesses are in use.</td>
+	</tr>
+	<tr>
+		<td>MISALIGN_MEM_REF.LOADS</td>
+		<td>Speculative cache line split load uops dispatched to L1 cache</td>
+	</tr>
+	<tr>
+		<td>MISALIGN_MEM_REF.STORES</td>
+		<td>Speculative cache line split STA uops dispatched to L1 cache</td>
+	</tr>
+	<tr>
+		<td>LD_BLOCKS_PARTIAL.ADDRESS_ALIAS</td>
+		<td>False dependencies in MOB due to partial compare</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.MISS_CAUSES_A_WALK</td>
+		<td>Load misses in all DTLB levels that cause page walks</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.WALK_COMPLETED_4K</td>
+		<td>Demand load Miss in all translation lookaside buffer (TLB) levels causes a page walk that completes (4K).</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M</td>
+		<td>Demand load Miss in all translation lookaside buffer (TLB) levels causes a page walk that completes (2M/4M).</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.WALK_COMPLETED_1G</td>
+		<td>Load miss in all TLB levels causes a page walk that completes. (1G)</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.WALK_DURATION</td>
+		<td>Cycles when PMH is busy with page walks</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.STLB_HIT_4K</td>
+		<td>Load misses that miss the  DTLB and hit the STLB (4K).</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.STLB_HIT_2M</td>
+		<td>Load misses that miss the  DTLB and hit the STLB (2M).</td>
+	</tr>
+	<tr>
+		<td><div id="INT_MISC.RAT_STALL_CYCLES">INT_MISC.RAT_STALL_CYCLES</div></td>
+		<td>Cycles when Resource Allocation Table (RAT) external stall is sent to Instruction Decode Queue (IDQ) for the thread</td>
+	</tr>
+	<tr>
+		<td>INT_MISC.RECOVERY_CYCLES</td>
+		<td>Number of cycles waiting for the checkpoints in Resource Allocation Table (RAT) to be recovered after Nuke due to all other cases except JEClear (e.g. whenever a ucode assist is needed like SSE exception, memory disambiguation, etc...)</td>
+	</tr>
+	<tr>
+		<td>UOPS_ISSUED.ANY</td>
+		<td>Uops that Resource Allocation Table (RAT) issues to Reservation Station (RS)</td>
+	</tr>
+	<tr>
+		<td>UOPS_ISSUED.FLAGS_MERGE</td>
+		<td>Number of flags-merge uops being allocated. Such uops considered perf sensitive; added by GSR u-arch.</td>
+	</tr>
+	<tr>
+		<td>UOPS_ISSUED.SLOW_LEA</td>
+		<td>Number of slow LEA uops being allocated. A uop is generally considered SlowLea if it has 3 sources (e.g. 2 sources + immediate) regardless if as a result of LEA instruction or not.</td>
+	</tr>
+	<tr>
+		<td>UOPS_ISSUED.SINGLE_MUL</td>
+		<td>Number of Multiply packed/scalar single precision uops allocated.</td>
+	</tr>
+	<tr>
+		<td>UOPS_ISSUED.STALL_CYCLES</td>
+		<td>Cycles when Resource Allocation Table (RAT) does not issue Uops to Reservation Station (RS) for the thread</td>
+	</tr>
+	<tr>
+		<td>ARITH.FPU_DIV_ACTIVE</td>
+		<td>Cycles when divider is busy executing divide operations</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.DEMAND_DATA_RD_MISS</td>
+		<td>Demand Data Read miss L2, no rejects</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.DEMAND_DATA_RD_HIT</td>
+		<td>Demand Data Read requests that hit L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.L2_PF_MISS</td>
+		<td>L2 prefetch requests that miss L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.L2_PF_HIT</td>
+		<td>L2 prefetch requests that hit L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.ALL_DEMAND_DATA_RD</td>
+		<td>Demand Data Read requests</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.ALL_RFO</td>
+		<td>RFO requests to L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.ALL_CODE_RD</td>
+		<td>L2 code requests</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.ALL_PF</td>
+		<td>Requests from L2 hardware prefetchers</td>
+	</tr>
+	<tr>
+		<td>L2_DEMAND_RQSTS.WB_HIT</td>
+		<td>Not rejected writebacks that hit L2 cache</td>
+	</tr>
+	<tr>
+		<td>LONGEST_LAT_CACHE.MISS</td>
+		<td>Core-originated cacheable demand requests missed L3</td>
+	</tr>
+	<tr>
+		<td>LONGEST_LAT_CACHE.REFERENCE</td>
+		<td>Core-originated cacheable demand requests that refer to L3</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_THREAD_UNHALTED.REF_XCLK</td>
+		<td>Reference cycles when the thread is unhalted (counts at 100 MHz rate)</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_THREAD_UNHALTED.ONE_THREAD_ACTIVE</td>
+		<td>Count XClk pulses when this thread is unhalted and the other thread is halted.</td>
+	</tr>
+	<tr>
+		<td>L1D_PEND_MISS.PENDING</td>
+		<td>L1D miss oustandings duration in cycles</td>
+	</tr>
+	<tr>
+		<td>L1D_PEND_MISS.PENDING_CYCLES</td>
+		<td>Cycles with L1D load Misses outstanding.</td>
+	</tr>
+	<tr>
+		<td>DTLB_STORE_MISSES.MISS_CAUSES_A_WALK</td>
+		<td>Store misses in all DTLB levels that cause page walks</td>
+	</tr>
+	<tr>
+		<td>DTLB_STORE_MISSES.WALK_COMPLETED_4K</td>
+		<td>Store miss in all TLB levels causes a page walk that completes. (4K)</td>
+	</tr>
+	<tr>
+		<td>DTLB_STORE_MISSES.WALK_COMPLETED_2M_4M</td>
+		<td>Store misses in all DTLB levels that cause completed page walks (2M/4M)</td>
+	</tr>
+	<tr>
+		<td>DTLB_STORE_MISSES.WALK_COMPLETED_1G</td>
+		<td>Store misses in all DTLB levels that cause completed page walks (1G)</td>
+	</tr>
+	<tr>
+		<td>DTLB_STORE_MISSES.WALK_DURATION</td>
+		<td>Cycles when PMH is busy with page walks</td>
+	</tr>
+	<tr>
+		<td>DTLB_STORE_MISSES.STLB_HIT_4K</td>
+		<td>Store misses that miss the  DTLB and hit the STLB (4K).</td>
+	</tr>
+	<tr>
+		<td>DTLB_STORE_MISSES.STLB_HIT_2M</td>
+		<td>Store misses that miss the  DTLB and hit the STLB (2M).</td>
+	</tr>
+	<tr>
+		<td>LOAD_HIT_PRE.SW_PF</td>
+		<td>Not software-prefetch load dispatches that hit FB allocated for software prefetch</td>
+	</tr>
+	<tr>
+		<td>LOAD_HIT_PRE.HW_PF</td>
+		<td>Not software-prefetch load dispatches that hit FB allocated for hardware prefetch</td>
+	</tr>
+	<tr>
+		<td>EPT.WALK_CYCLES</td>
+		<td>Cycle count for an Extended Page table walk.</td>
+	</tr>
+	<tr>
+		<td>L1D.REPLACEMENT</td>
+		<td>L1D data line replacements</td>
+	</tr>
+	<tr>
+		<td>TX_MEM.ABORT_CONFLICT</td>
+		<td>Number of times a TSX line had a cache conflict</td>
+	</tr>
+	<tr>
+		<td>TX_MEM.ABORT_CAPACITY_WRITE</td>
+		<td>Number of times a TSX Abort was triggered due to an evicted line caused by a transaction overflow</td>
+	</tr>
+	<tr>
+		<td>TX_MEM.ABORT_HLE_STORE_TO_ELIDED_LOCK</td>
+		<td>Number of times a TSX Abort was triggered due to a non-release/commit store to lock</td>
+	</tr>
+	<tr>
+		<td>TX_MEM.ABORT_HLE_ELISION_BUFFER_NOT_EMPTY</td>
+		<td>Number of times a TSX Abort was triggered due to commit but Lock Buffer not empty</td>
+	</tr>
+	<tr>
+		<td>TX_MEM.ABORT_HLE_ELISION_BUFFER_MISMATCH</td>
+		<td>Number of times a TSX Abort was triggered due to release/commit but data and address mismatch</td>
+	</tr>
+	<tr>
+		<td>TX_MEM.ABORT_HLE_ELISION_BUFFER_UNSUPPORTED_ALIGNMENT</td>
+		<td>Number of times a TSX Abort was triggered due to attempting an unsupported alignment from Lock Buffer</td>
+	</tr>
+	<tr>
+		<td>TX_MEM.HLE_ELISION_BUFFER_FULL</td>
+		<td>Number of times we could not allocate Lock Buffer</td>
+	</tr>
+	<tr>
+		<td>MOVE_ELIMINATION.INT_ELIMINATED</td>
+		<td>Number of integer Move Elimination candidate uops that were eliminated.</td>
+	</tr>
+	<tr>
+		<td>MOVE_ELIMINATION.SIMD_ELIMINATED</td>
+		<td>Number of SIMD Move Elimination candidate uops that were eliminated.</td>
+	</tr>
+	<tr>
+		<td>MOVE_ELIMINATION.INT_NOT_ELIMINATED</td>
+		<td>Number of integer Move Elimination candidate uops that were not eliminated.</td>
+	</tr>
+	<tr>
+		<td>MOVE_ELIMINATION.SIMD_NOT_ELIMINATED</td>
+		<td>Number of SIMD Move Elimination candidate uops that were not eliminated.</td>
+	</tr>
+	<tr>
+		<td>CPL_CYCLES.RING0</td>
+		<td>Unhalted core cycles when the thread is in ring 0</td>
+	</tr>
+	<tr>
+		<td>CPL_CYCLES.RING123</td>
+		<td>Unhalted core cycles when thread is in rings 1, 2, or 3</td>
+	</tr>
+	<tr>
+		<td>CPL_CYCLES.RING0_TRANS</td>
+		<td>Number of intervals between processor halts while thread is in ring 0</td>
+	</tr>
+	<tr>
+		<td>TX_EXEC.MISC1</td>
+		<td>Counts the number of times a class of instructions that may cause a transactional abort was executed. Since this is the count of execution, it may not always cause a transactional abort.</td>
+	</tr>
+	<tr>
+		<td>TX_EXEC.MISC2</td>
+		<td>Counts the number of times a class of instructions (e.g., vzeroupper) that may cause a transactional abort was executed inside a transactional region</td>
+	</tr>
+	<tr>
+		<td>TX_EXEC.MISC3</td>
+		<td>Counts the number of times an instruction execution caused the transactional nest count supported to be exceeded</td>
+	</tr>
+	<tr>
+		<td>TX_EXEC.MISC4</td>
+		<td>Counts the number of times a XBEGIN instruction was executed inside an HLE transactional region.</td>
+	</tr>
+	<tr>
+		<td>TX_EXEC.MISC5</td>
+		<td>Counts the number of times an HLE XACQUIRE instruction was executed inside an RTM transactional region.</td>
+	</tr>
+	<tr>
+		<td>RS_EVENTS.EMPTY_CYCLES</td>
+		<td>Cycles when Reservation Station (RS) is empty for the thread</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD</td>
+		<td>Offcore outstanding Demand Data Read transactions in uncore queue.</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD</td>
+		<td>Offcore outstanding code reads transactions in SuperQueue (SQ), queue to uncore, every cycle</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO</td>
+		<td>Offcore outstanding RFO store transactions in SuperQueue (SQ), queue to uncore</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD</td>
+		<td>Offcore outstanding cacheable Core Data Read transactions in SuperQueue (SQ), queue to uncore</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD</td>
+		<td>Cycles when offcore outstanding Demand Data Read transactions are present in SuperQueue (SQ), queue to uncore</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD</td>
+		<td>Cycles when offcore outstanding cacheable Core Data Read transactions are present in SuperQueue (SQ), queue to uncore</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO</td>
+		<td>Offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore, every cycle</td>
+	</tr>
+	<tr>
+		<td>LOCK_CYCLES.SPLIT_LOCK_UC_LOCK_DURATION</td>
+		<td>Cycles when L1 and L2 are locked due to UC or split lock</td>
+	</tr>
+	<tr>
+		<td>LOCK_CYCLES.CACHE_LOCK_DURATION</td>
+		<td>Cycles when L1D is locked</td>
+	</tr>
+	<tr>
+		<td>IDQ.EMPTY</td>
+		<td>Instruction Decode Queue (IDQ) empty cycles</td>
+	</tr>
+	<tr>
+		<td>IDQ.MITE_UOPS</td>
+		<td>Uops delivered to Instruction Decode Queue (IDQ) from MITE path</td>
+	</tr>
+	<tr>
+		<td>IDQ.DSB_UOPS</td>
+		<td>Uops delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path</td>
+	</tr>
+	<tr>
+		<td>IDQ.MS_DSB_UOPS</td>
+		<td>Uops initiated by Decode Stream Buffer (DSB) that are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy</td>
+	</tr>
+	<tr>
+		<td>IDQ.MS_MITE_UOPS</td>
+		<td>Uops initiated by MITE and delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy</td>
+	</tr>
+	<tr>
+		<td>IDQ.MS_UOPS</td>
+		<td>Uops delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy</td>
+	</tr>
+	<tr>
+		<td>IDQ.MS_CYCLES</td>
+		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy</td>
+	</tr>
+	<tr>
+		<td>IDQ.MITE_CYCLES</td>
+		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from MITE path</td>
+	</tr>
+	<tr>
+		<td>IDQ.DSB_CYCLES</td>
+		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from Decode Stream Buffer (DSB) path</td>
+	</tr>
+	<tr>
+		<td>IDQ.MS_DSB_CYCLES</td>
+		<td>Cycles when uops initiated by Decode Stream Buffer (DSB) are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy</td>
+	</tr>
+	<tr>
+		<td>IDQ.MS_DSB_OCCUR</td>
+		<td>Deliveries to Instruction Decode Queue (IDQ) initiated by Decode Stream Buffer (DSB) while Microcode Sequenser (MS) is busy</td>
+	</tr>
+	<tr>
+		<td>IDQ.ALL_DSB_CYCLES_4_UOPS</td>
+		<td>Cycles Decode Stream Buffer (DSB) is delivering 4 Uops</td>
+	</tr>
+	<tr>
+		<td>IDQ.ALL_DSB_CYCLES_ANY_UOPS</td>
+		<td>Cycles Decode Stream Buffer (DSB) is delivering any Uop</td>
+	</tr>
+	<tr>
+		<td>IDQ.ALL_MITE_CYCLES_4_UOPS</td>
+		<td>Cycles MITE is delivering 4 Uops</td>
+	</tr>
+	<tr>
+		<td>IDQ.ALL_MITE_CYCLES_ANY_UOPS</td>
+		<td>Cycles MITE is delivering any Uop</td>
+	</tr>
+	<tr>
+		<td>IDQ.MITE_ALL_UOPS</td>
+		<td>Uops delivered to Instruction Decode Queue (IDQ) from MITE path</td>
+	</tr>
+	<tr>
+		<td>ICACHE.HIT</td>
+		<td>Number of Instruction Cache, Streaming Buffer and Victim Cache Reads. both cacheable and noncacheable, including UC fetches</td>
+	</tr>
+	<tr>
+		<td>ICACHE.MISSES</td>
+		<td>Number of Instruction Cache, Streaming Buffer and Victim Cache Misses. Includes Uncacheable accesses.</td>
+	</tr>
+	<tr>
+		<td>ICACHE.IFDATA_STALL</td>
+		<td>Cycles where a code fetch is stalled due to L1 instruction-cache miss.</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.MISS_CAUSES_A_WALK</td>
+		<td>Misses at all ITLB levels that cause page walks</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.WALK_COMPLETED_4K</td>
+		<td>Code miss in all TLB levels causes a page walk that completes. (4K)</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.WALK_COMPLETED_2M_4M</td>
+		<td>Code miss in all TLB levels causes a page walk that completes. (2M/4M)</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.WALK_COMPLETED_1G</td>
+		<td>Store miss in all TLB levels causes a page walk that completes. (1G)</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.WALK_DURATION</td>
+		<td>Cycles when PMH is busy with page walks</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.STLB_HIT_4K</td>
+		<td>Core misses that miss the  DTLB and hit the STLB (4K).</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.STLB_HIT_2M</td>
+		<td>Code misses that miss the  DTLB and hit the STLB (2M).</td>
+	</tr>
+	<tr>
+		<td>ILD_STALL.LCP</td>
+		<td>Stalls caused by changing prefix length of the instruction.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.NONTAKEN_CONDITIONAL</td>
+		<td>Not taken macro-conditional branches</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.TAKEN_CONDITIONAL</td>
+		<td>Taken speculative and retired macro-conditional branches</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.TAKEN_DIRECT_JUMP</td>
+		<td>Taken speculative and retired macro-conditional branch instructions excluding calls and indirects</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET</td>
+		<td>Taken speculative and retired indirect branches excluding calls and returns</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.TAKEN_INDIRECT_NEAR_RETURN</td>
+		<td>Taken speculative and retired indirect branches with return mnemonic</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.TAKEN_DIRECT_NEAR_CALL</td>
+		<td>Taken speculative and retired direct near calls</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.TAKEN_INDIRECT_NEAR_CALL</td>
+		<td>Taken speculative and retired indirect calls</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.ALL_CONDITIONAL</td>
+		<td>Speculative and retired macro-conditional branches</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.ALL_DIRECT_JMP</td>
+		<td>Speculative and retired macro-unconditional branches excluding calls and indirects</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET</td>
+		<td>Speculative and retired indirect branches excluding calls and returns</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.ALL_INDIRECT_NEAR_RETURN</td>
+		<td>Speculative and retired indirect return branches.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.ALL_DIRECT_NEAR_CALL</td>
+		<td>Speculative and retired direct near calls</td>
+	</tr>
+	<tr>
+		<td>BR_INST_EXEC.ALL_BRANCHES</td>
+		<td>Speculative and retired  branches</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_EXEC.NONTAKEN_CONDITIONAL</td>
+		<td>Not taken speculative and retired mispredicted macro conditional branches</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_EXEC.TAKEN_CONDITIONAL</td>
+		<td>Taken speculative and retired mispredicted macro conditional branches</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET</td>
+		<td>Taken speculative and retired mispredicted indirect branches excluding calls and returns</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_EXEC.TAKEN_RETURN_NEAR</td>
+		<td>Taken speculative and retired mispredicted indirect branches with return mnemonic</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_EXEC.ALL_CONDITIONAL</td>
+		<td>Speculative and retired mispredicted macro conditional branches</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET</td>
+		<td>Mispredicted indirect branches excluding calls and returns</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_EXEC.ALL_BRANCHES</td>
+		<td>Speculative and retired mispredicted macro conditional branches</td>
+	</tr>
+	<tr>
+		<td>IDQ_UOPS_NOT_DELIVERED.CORE</td>
+		<td>Uops not delivered to Resource Allocation Table (RAT) per thread when backend of the machine is not stalled</td>
+	</tr>
+	<tr>
+		<td>IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE</td>
+		<td>Cycles per thread when 4 or more uops are not delivered to Resource Allocation Table (RAT) when backend of the machine is not stalled</td>
+	</tr>
+	<tr>
+		<td>IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_1_UOP_DELIV.CORE</td>
+		<td>Cycles per thread when 3 or more uops are not delivered to Resource Allocation Table (RAT) when backend of the machine is not stalled</td>
+	</tr>
+	<tr>
+		<td>IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_2_UOP_DELIV.CORE</td>
+		<td>Cycles with less than 2 uops delivered by the front end.</td>
+	</tr>
+	<tr>
+		<td>IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_3_UOP_DELIV.CORE</td>
+		<td>Cycles with less than 3 uops delivered by the front end.</td>
+	</tr>
+	<tr>
+		<td>IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK</td>
+		<td>Counts cycles FE delivered 4 uops or Resource Allocation Table (RAT) was stalling FE.</td>
+	</tr>
+	<tr>
+		<td>UOPS_DISPATCHED_PORT.PORT_0</td>
+		<td>Cycles per thread when uops are executed in port 0</td>
+	</tr>
+	<tr>
+		<td>UOPS_DISPATCHED_PORT.PORT_1</td>
+		<td>Cycles per thread when uops are executed in port 1</td>
+	</tr>
+	<tr>
+		<td>UOPS_DISPATCHED_PORT.PORT_2</td>
+		<td>Cycles per thread when uops are executed in port 2</td>
+	</tr>
+	<tr>
+		<td>UOPS_DISPATCHED_PORT.PORT_3</td>
+		<td>Cycles per thread when uops are executed in port 3</td>
+	</tr>
+	<tr>
+		<td>UOPS_DISPATCHED_PORT.PORT_4</td>
+		<td>Cycles per thread when uops are executed in port 4</td>
+	</tr>
+	<tr>
+		<td>UOPS_DISPATCHED_PORT.PORT_5</td>
+		<td>Cycles per thread when uops are executed in port 5</td>
+	</tr>
+	<tr>
+		<td>UOPS_DISPATCHED_PORT.PORT_6</td>
+		<td>Cycles per thread when uops are executed in port 6</td>
+	</tr>
+	<tr>
+		<td>UOPS_DISPATCHED_PORT.PORT_7</td>
+		<td>Cycles per thread when uops are executed in port 7</td>
+	</tr>
+	<tr>
+		<td>RESOURCE_STALLS.ANY</td>
+		<td>Resource-related stall cycles</td>
+	</tr>
+	<tr>
+		<td>RESOURCE_STALLS.RS</td>
+		<td>Cycles stalled due to no eligible RS entry available.</td>
+	</tr>
+	<tr>
+		<td>RESOURCE_STALLS.SB</td>
+		<td>Cycles stalled due to no store buffers available. (not including draining form sync).</td>
+	</tr>
+	<tr>
+		<td>RESOURCE_STALLS.ROB</td>
+		<td>Cycles stalled due to re-order buffer full.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.CYCLES_L2_PENDING</td>
+		<td>Cycles while L2 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.CYCLES_L1D_PENDING</td>
+		<td>Cycles while L1 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.CYCLES_LDM_PENDING</td>
+		<td>Cycles while memory subsystem has an outstanding load.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.CYCLES_NO_EXECUTE</td>
+		<td>Total execution stalls</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.STALLS_L2_PENDING</td>
+		<td>Execution stalls while L2 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.STALLS_LDM_PENDING</td>
+		<td>Execution stalls while memory subsystem has an outstanding load.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.STALLS_L1D_PENDING</td>
+		<td>Execution stalls while L1 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td>LSD.UOPS</td>
+		<td>Number of Uops delivered by the LSD.</td>
+	</tr>
+	<tr>
+		<td>DSB2MITE_SWITCHES.PENALTY_CYCLES</td>
+		<td>Decode Stream Buffer (DSB)-to-MITE switch true penalty cycles.</td>
+	</tr>
+	<tr>
+		<td>ITLB.ITLB_FLUSH</td>
+		<td>Flushing of the Instruction TLB (ITLB) pages, includes 4k/2M/4M pages.</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS.DEMAND_DATA_RD</td>
+		<td>Demand Data Read requests sent to uncore</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS.DEMAND_CODE_RD</td>
+		<td>Cacheable and noncachaeble code read requests</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS.DEMAND_RFO</td>
+		<td>Demand RFO requests including regular RFOs, locks, ItoM</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS.ALL_DATA_RD</td>
+		<td>Demand and prefetch data reads</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.THREAD</td>
+		<td>Counts the number of uops to be executed per-thread each cycle.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CORE</td>
+		<td>Number of uops executed on the core.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.STALL_CYCLES</td>
+		<td>Counts number of cycles no uops were dispatched to be executed on this thread.</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_BUFFER.SQ_FULL</td>
+		<td>Offcore requests buffer cannot take more entries for this thread core.</td>
+	</tr>
+	<tr>
+		<td>PAGE_WALKER_LOADS.DTLB_L1</td>
+		<td>Number of DTLB page walker hits in the L1+FB.</td>
+	</tr>
+	<tr>
+		<td>PAGE_WALKER_LOADS.ITLB_L1</td>
+		<td>Number of ITLB page walker hits in the L1+FB.</td>
+	</tr>
+	<tr>
+		<td>PAGE_WALKER_LOADS.DTLB_L2</td>
+		<td>Number of DTLB page walker hits in the L2.</td>
+	</tr>
+	<tr>
+		<td>PAGE_WALKER_LOADS.ITLB_L2</td>
+		<td>Number of ITLB page walker hits in the L2.</td>
+	</tr>
+	<tr>
+		<td>PAGE_WALKER_LOADS.DTLB_L3</td>
+		<td>Number of DTLB page walker hits in the L3 + XSNP.</td>
+	</tr>
+	<tr>
+		<td>PAGE_WALKER_LOADS.ITLB_L3</td>
+		<td>Number of ITLB page walker hits in the L3 + XSNP.</td>
+	</tr>
+	<tr>
+		<td>PAGE_WALKER_LOADS.DTLB_MEMORY</td>
+		<td>Number of DTLB page walker hits in Memory.</td>
+	</tr>
+	<tr>
+		<td>TLB_FLUSH.DTLB_THREAD</td>
+		<td>DTLB flush attempts of the thread-specific entries</td>
+	</tr>
+	<tr>
+		<td>TLB_FLUSH.STLB_ANY</td>
+		<td>STLB flush attempts</td>
+	</tr>
+	<tr>
+		<td>INST_RETIRED.ANY_P</td>
+		<td>Number of instructions retired. General Counter   - architectural event</td>
+	</tr>
+	<tr>
+		<td>INST_RETIRED.X87</td>
+		<td>FP operations  retired. X87 FP operations that have no exceptions:</td>
+	</tr>
+	<tr>
+		<td>INST_RETIRED.PREC_DIST</td>
+		<td>Precise instruction retired event with HW to reduce effect of PEBS shadow in IP distribution</td>
+	</tr>
+	<tr>
+		<td>OTHER_ASSISTS.AVX_TO_SSE</td>
+		<td>Number of transitions from AVX-256 to legacy SSE when penalty applicable.</td>
+	</tr>
+	<tr>
+		<td>OTHER_ASSISTS.SSE_TO_AVX</td>
+		<td>Number of transitions from SSE to AVX-256 when penalty applicable.</td>
+	</tr>
+	<tr>
+		<td>OTHER_ASSISTS.ANY_WB_ASSIST</td>
+		<td>Number of times any microcode assist is invoked by HW upon uop writeback.</td>
+	</tr>
+	<tr>
+		<td>UOPS_RETIRED.ALL</td>
+		<td>Actually retired uops.</td>
+	</tr>
+	<tr>
+		<td>UOPS_RETIRED.RETIRE_SLOTS</td>
+		<td>Retirement slots used.</td>
+	</tr>
+	<tr>
+		<td>UOPS_RETIRED.ALL_PS</td>
+		<td>Actually retired uops. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>UOPS_RETIRED.RETIRE_SLOTS_PS</td>
+		<td>Retirement slots used. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>UOPS_RETIRED.STALL_CYCLES</td>
+		<td>Cycles without actually retired uops.</td>
+	</tr>
+	<tr>
+		<td>UOPS_RETIRED.TOTAL_CYCLES</td>
+		<td>Cycles with less than 10 actually retired uops.</td>
+	</tr>
+	<tr>
+		<td>MACHINE_CLEARS.CYCLES</td>
+		<td>Cycles there was a Nuke. Account for both thread-specific and All Thread Nukes.</td>
+	</tr>
+	<tr>
+		<td>MACHINE_CLEARS.MEMORY_ORDERING</td>
+		<td>Counts the number of machine clears due to memory order conflicts.</td>
+	</tr>
+	<tr>
+		<td>MACHINE_CLEARS.SMC</td>
+		<td>Self-modifying code (SMC) detected.</td>
+	</tr>
+	<tr>
+		<td>MACHINE_CLEARS.MASKMOV</td>
+		<td>This event counts the number of executed Intel AVX masked load operations that refer to an illegal address range with the mask bits set to 0.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.CONDITIONAL</td>
+		<td>Conditional branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NEAR_CALL</td>
+		<td>Direct and indirect near call instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.ALL_BRANCHES</td>
+		<td>All (macro) branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NEAR_RETURN</td>
+		<td>Return instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NOT_TAKEN</td>
+		<td>Not taken branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NEAR_TAKEN</td>
+		<td>Taken branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.FAR_BRANCH</td>
+		<td>Far branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.CONDITIONAL_PS</td>
+		<td>Conditional branch instructions retired. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NEAR_CALL_PS</td>
+		<td>Direct and indirect near call instructions retired. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.ALL_BRANCHES_PS</td>
+		<td>All (macro) branch instructions retired. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NEAR_RETURN_PS</td>
+		<td>Return instructions retired. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NEAR_TAKEN_PS</td>
+		<td>Taken branch instructions retired. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NEAR_CALL_R3</td>
+		<td>Direct and indirect macro near call instructions retired (captured in ring 3).</td>
+	</tr>
+	<tr>
+		<td>BR_INST_RETIRED.NEAR_CALL_R3_PS</td>
+		<td>Direct and indirect macro near call instructions retired (captured in ring 3). (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_RETIRED.CONDITIONAL</td>
+		<td>Mispredicted conditional branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_RETIRED.ALL_BRANCHES</td>
+		<td>All mispredicted macro branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_RETIRED.RET</td>
+		<td>This event counts the number of mispredicted ret instructions retired. Non PEBS</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_RETIRED.CONDITIONAL_PS</td>
+		<td>Mispredicted conditional branch instructions retired. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_RETIRED.ALL_BRANCHES_PS</td>
+		<td>Mispredicted macro branch instructions retired. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_RETIRED.RET_PS</td>
+		<td>This event counts the number of mispredicted ret instructions retired.(Precise Event)</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.SCALAR_DOUBLE</td>
+		<td>Number of SSE/AVX computational scalar double precision floating-point instructions retired.  Each count represents 1 computation. Applies to SSE* and AVX* scalar double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT FM(N)ADD/SUB.  FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.SCALAR_SINGLE</td>
+		<td>Number of SSE/AVX computational scalar single precision floating-point instructions retired.  Each count represents 1 computation. Applies to SSE* and AVX* scalar single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT FM(N)ADD/SUB.  FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE</td>
+		<td>Number of SSE/AVX computational 128-bit packed double precision floating-point instructions retired.  Each count represents 2 computations. Applies to SSE* and AVX* packed double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE</td>
+		<td>Number of SSE/AVX computational 128-bit packed single precision floating-point instructions retired.  Each count represents 4 computations. Applies to SSE* and AVX* packed single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE</td>
+		<td>Number of SSE/AVX computational 256-bit packed double precision floating-point instructions retired.  Each count represents 4 computations. Applies to SSE* and AVX* packed double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.START</td>
+		<td>Number of times we entered an HLE region; does not count nested transactions</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.COMMIT</td>
+		<td>Number of times HLE commit succeeded</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.ABORTED</td>
+		<td>Number of times HLE abort was triggered</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.ABORTED_MISC1</td>
+		<td>Number of times an HLE execution aborted due to various memory events (e.g., read/write capacity and conflicts).</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.ABORTED_MISC2</td>
+		<td>Number of times an HLE execution aborted due to uncommon conditions</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.ABORTED_MISC3</td>
+		<td>Number of times an HLE execution aborted due to HLE-unfriendly instructions</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.ABORTED_MISC4</td>
+		<td>Number of times an HLE execution aborted due to incompatible memory type</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.ABORTED_MISC5</td>
+		<td>Number of times an HLE execution aborted due to none of the previous 4 categories (e.g. interrupts)</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.START</td>
+		<td>Number of times we entered an RTM region; does not count nested transactions</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.COMMIT</td>
+		<td>Number of times RTM commit succeeded</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.ABORTED</td>
+		<td>Number of times RTM abort was triggered</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.ABORTED_MISC1</td>
+		<td>Number of times an RTM execution aborted due to various memory events (e.g. read/write capacity and conflicts)</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.ABORTED_MISC2</td>
+		<td>Number of times an RTM execution aborted due to various memory events (e.g., read/write capacity and conflicts).</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.ABORTED_MISC3</td>
+		<td>Number of times an RTM execution aborted due to HLE-unfriendly instructions</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.ABORTED_MISC4</td>
+		<td>Number of times an RTM execution aborted due to incompatible memory type</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.ABORTED_MISC5</td>
+		<td>Number of times an RTM execution aborted due to none of the previous 4 categories (e.g. interrupt)</td>
+	</tr>
+	<tr>
+		<td>FP_ASSIST.X87_OUTPUT</td>
+		<td>Number of X87 assists due to output value.</td>
+	</tr>
+	<tr>
+		<td>FP_ASSIST.X87_INPUT</td>
+		<td>Number of X87 assists due to input value.</td>
+	</tr>
+	<tr>
+		<td>FP_ASSIST.SIMD_OUTPUT</td>
+		<td>Number of SIMD FP assists due to Output values</td>
+	</tr>
+	<tr>
+		<td>FP_ASSIST.SIMD_INPUT</td>
+		<td>Number of SIMD FP assists due to input values</td>
+	</tr>
+	<tr>
+		<td>FP_ASSIST.ANY</td>
+		<td>Cycles with any input/output SSE or FP assist</td>
+	</tr>
+	<tr>
+		<td>ROB_MISC_EVENTS.LBR_INSERTS</td>
+		<td>Count cases of saving new LBR</td>
+	</tr>
+	<tr>
+		<td>MEM_TRANS_RETIRED.LOAD_LATENCY_GT_4</td>
+		<td>Loads with latency value being above 4</td>
+	</tr>
+	<tr>
+		<td>MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8</td>
+		<td>Loads with latency value being above 8</td>
+	</tr>
+	<tr>
+		<td>MEM_TRANS_RETIRED.LOAD_LATENCY_GT_16</td>
+		<td>Loads with latency value being above 16</td>
+	</tr>
+	<tr>
+		<td>MEM_TRANS_RETIRED.LOAD_LATENCY_GT_32</td>
+		<td>Loads with latency value being above 32</td>
+	</tr>
+	<tr>
+		<td>MEM_TRANS_RETIRED.LOAD_LATENCY_GT_64</td>
+		<td>Loads with latency value being above 64</td>
+	</tr>
+	<tr>
+		<td>MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128</td>
+		<td>Loads with latency value being above 128</td>
+	</tr>
+	<tr>
+		<td>MEM_TRANS_RETIRED.LOAD_LATENCY_GT_256</td>
+		<td>Loads with latency value being above 256</td>
+	</tr>
+	<tr>
+		<td>MEM_TRANS_RETIRED.LOAD_LATENCY_GT_512</td>
+		<td>Loads with latency value being above 512</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.STLB_MISS_LOADS</td>
+		<td>Retired load uops that miss the STLB.</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.STLB_MISS_STORES</td>
+		<td>Retired store uops that miss the STLB.</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.LOCK_LOADS</td>
+		<td>Retired load uops with locked access.</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.SPLIT_LOADS</td>
+		<td>Retired load uops that split across a cacheline boundary.</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.SPLIT_STORES</td>
+		<td>Retired store uops that split across a cacheline boundary.</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.ALL_LOADS</td>
+		<td>All retired load uops.</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.ALL_STORES</td>
+		<td>All retired store uops.</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.STLB_MISS_LOADS_PS</td>
+		<td>Retired load uops that miss the STLB. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.STLB_MISS_STORES_PS</td>
+		<td>Retired store uops that miss the STLB. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.LOCK_LOADS_PS</td>
+		<td>Retired load uops with locked access. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.SPLIT_LOADS_PS</td>
+		<td>Retired load uops that split across a cacheline boundary.(Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.SPLIT_STORES_PS</td>
+		<td>Retired store uops that split across a cacheline boundary. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.ALL_LOADS_PS</td>
+		<td>All retired load uops. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_UOPS_RETIRED.ALL_STORES_PS</td>
+		<td>Retired store uops that split across a cacheline boundary. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L1_HIT</td>
+		<td>Retired load uops with L1 cache hits as data sources.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L2_HIT</td>
+		<td>Retired load uops with L2 cache hits as data sources.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L3_HIT</td>
+		<td>Retired load uops which data sources were data hits in L3 without snoops required.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L1_MISS</td>
+		<td>Retired load uops misses in L1 cache as data sources.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L2_MISS</td>
+		<td>Miss in mid-level (L2) cache. Excludes Unknown data-source.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L3_MISS</td>
+		<td>Miss in last-level (L3) cache. Excludes Unknown data-source.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.HIT_LFB</td>
+		<td>Retired load uops which data sources were load uops missed L1 but hit FB due to preceding miss to the same cache line with data not ready.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L1_HIT_PS</td>
+		<td>Retired load uops with L1 cache hits as data sources. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L2_HIT_PS</td>
+		<td>Retired load uops with L2 cache hits as data sources. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L3_HIT_PS</td>
+		<td>Hit in last-level (L3) cache. Excludes Unknown data-source. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L1_MISS_PS</td>
+		<td>Retired load uops misses in L1 cache as data sources. Uses PEBS.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L2_MISS_PS</td>
+		<td>Retired load uops with L2 cache misses as data sources. Uses PEBS.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.L3_MISS_PS</td>
+		<td>Miss in last-level (L3) cache. Excludes Unknown data-source. (Precise Event - PEBS).</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_RETIRED.HIT_LFB_PS</td>
+		<td>Retired load uops which data sources were load uops missed L1 but hit FB due to preceding miss to the same cache line with data not ready. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS</td>
+		<td>Retired load uops which data sources were L3 hit and cross-core snoop missed in on-pkg core cache.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT</td>
+		<td>Retired load uops which data sources were L3 and cross-core snoop hits in on-pkg core cache.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM</td>
+		<td>Retired load uops which data sources were HitM responses from shared L3.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE</td>
+		<td>Retired load uops which data sources were hits in L3 without snoops required.</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS_PS</td>
+		<td>Retired load uops which data sources were L3 hit and cross-core snoop missed in on-pkg core cache. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT_PS</td>
+		<td>Retired load uops which data sources were L3 and cross-core snoop hits in on-pkg core cache. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM_PS</td>
+		<td>Retired load uops which data sources were HitM responses from shared L3. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE_PS</td>
+		<td>Retired load uops which data sources were hits in L3 without snoops required. (Precise Event - PEBS)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_MISS_RETIRED.LOCAL_DRAM</td>
+		<td>Data from local DRAM either Snoop not needed or Snoop Miss (RspI)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_DRAM</td>
+		<td>Retired load uop whose Data Source was: remote DRAM either Snoop not needed or Snoop Miss (RspI)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_HITM</td>
+		<td>Retired load uop whose Data Source was: Remote cache HITM</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_FWD</td>
+		<td>Retired load uop whose Data Source was: forwarded from remote cache</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_MISS_RETIRED.LOCAL_DRAM_PS</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_DRAM_PS</td>
+		<td>Retired load uop whose Data Source was: remote DRAM either Snoop not needed or Snoop Miss (RspI) (Precise Event)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_HITM_PS</td>
+		<td>Retired load uop whose Data Source was: Remote cache HITM (Precise Event)</td>
+	</tr>
+	<tr>
+		<td>MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_FWD_PS</td>
+		<td>Retired load uop whose Data Source was: forwarded from remote cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_UNHALTED.THREAD_P</td>
+		<td>Thread cycles when thread is not in halt state</td>
+	</tr>
+	<tr>
+		<td>L2_TRANS.DEMAND_DATA_RD</td>
+		<td>Demand Data Read requests that access L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_TRANS.RFO</td>
+		<td>RFO requests that access L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_TRANS.CODE_RD</td>
+		<td>L2 cache accesses when fetching instructions</td>
+	</tr>
+	<tr>
+		<td>L2_TRANS.ALL_PF</td>
+		<td>L2 or L3 HW prefetches that access L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_TRANS.L1D_WB</td>
+		<td>L1D writebacks that access L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_TRANS.L2_FILL</td>
+		<td>L2 fill requests that access L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_TRANS.L2_WB</td>
+		<td>L2 writebacks that access L2 cache</td>
+	</tr>
+	<tr>
+		<td>L2_TRANS.ALL_REQUESTS</td>
+		<td>Transactions accessing L2 pipe</td>
+	</tr>
+	<tr>
+		<td>L2_LINES_IN.I</td>
+		<td>L2 cache lines in I state filling L2</td>
+	</tr>
+	<tr>
+		<td>L2_LINES_IN.S</td>
+		<td>L2 cache lines in S state filling L2</td>
+	</tr>
+	<tr>
+		<td>L2_LINES_IN.E</td>
+		<td>L2 cache lines in E state filling L2</td>
+	</tr>
+	<tr>
+		<td>L2_LINES_IN.ALL</td>
+		<td>L2 cache lines filling L2</td>
+	</tr>
+	<tr>
+		<td>L2_LINES_OUT.DEMAND_CLEAN</td>
+		<td>Clean L2 cache lines evicted by demand.</td>
+	</tr>
+	<tr>
+		<td>SQ_MISC.SPLIT_LOCK</td>
+		<td>Split locks in SQ</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_EXEC.TAKEN_INDIRECT_NEAR_CALL</td>
+		<td>Taken speculative and retired mispredicted indirect calls.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_0_CORE</td>
+		<td>Cycles per core when uops are exectuted in port 0.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_1_CORE</td>
+		<td>Cycles per core when uops are exectuted in port 1.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_2_CORE</td>
+		<td>Cycles per core when uops are dispatched to port 2.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_3_CORE</td>
+		<td>Cycles per core when uops are dispatched to port 3.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_4_CORE</td>
+		<td>Cycles per core when uops are exectuted in port 4.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_5_CORE</td>
+		<td>Cycles per core when uops are exectuted in port 5.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_6_CORE</td>
+		<td>Cycles per core when uops are exectuted in port 6.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_7_CORE</td>
+		<td>Cycles per core when uops are dispatched to port 7.</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_RETIRED.NEAR_TAKEN</td>
+		<td>number of near branch instructions retired that were mispredicted and taken.</td>
+	</tr>
+	<tr>
+		<td>BR_MISP_RETIRED.NEAR_TAKEN_PS</td>
+		<td>number of near branch instructions retired that were mispredicted and taken. (Precise Event - PEBS).</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.WALK_COMPLETED</td>
+		<td>Demand load Miss in all translation lookaside buffer (TLB) levels causes a page walk that completes of any page size.</td>
+	</tr>
+	<tr>
+		<td>DTLB_LOAD_MISSES.STLB_HIT</td>
+		<td>Load operations that miss the first DTLB level but hit the second and do not cause page walks.</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.RFO_HIT</td>
+		<td>RFO requests that hit L2 cache.</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.RFO_MISS</td>
+		<td>RFO requests that miss L2 cache.</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.CODE_RD_HIT</td>
+		<td>L2 cache hits when fetching instructions, code reads.</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.CODE_RD_MISS</td>
+		<td>L2 cache misses when fetching instructions.</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.ALL_DEMAND_MISS</td>
+		<td>Demand requests that miss L2 cache.</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.ALL_DEMAND_REFERENCES</td>
+		<td>Demand requests to L2 cache.</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.MISS</td>
+		<td>All requests that miss L2 cache.</td>
+	</tr>
+	<tr>
+		<td>L2_RQSTS.REFERENCES</td>
+		<td>All L2 requests.</td>
+	</tr>
+	<tr>
+		<td><div id="DTLB_STORE_MISSES.WALK_COMPLETED">DTLB_STORE_MISSES.WALK_COMPLETED</div></td>
+		<td>Store misses in all DTLB levels that cause completed page walks.</td>
+	</tr>
+	<tr>
+		<td>DTLB_STORE_MISSES.STLB_HIT</td>
+		<td>Store operations that miss the first TLB level but hit the second and do not cause page walks.</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.WALK_COMPLETED</td>
+		<td>Misses in all ITLB levels that cause completed page walks.</td>
+	</tr>
+	<tr>
+		<td>ITLB_MISSES.STLB_HIT</td>
+		<td>Operations that miss the first ITLB level but hit the second and do not cause any page walks.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC</td>
+		<td>Cycles where at least 1 uop was executed per-thread.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC</td>
+		<td>Cycles where at least 2 uops were executed per-thread.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC</td>
+		<td>Cycles where at least 3 uops were executed per-thread.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CYCLES_GE_4_UOPS_EXEC</td>
+		<td>Cycles where at least 4 uops were executed per-thread.</td>
+	</tr>
+	<tr>
+		<td>BACLEARS.ANY</td>
+		<td>Counts the total number when the front end is resteered, mainly when the BPU cannot provide a correct prediction and this is corrected by other branch handling mechanisms at the front end.</td>
+	</tr>
+	<tr>
+		<td>HLE_RETIRED.ABORTED_PS</td>
+		<td>Number of times HLE abort was triggered (PEBS)</td>
+	</tr>
+	<tr>
+		<td>RTM_RETIRED.ABORTED_PS</td>
+		<td>Number of times RTM abort was triggered (PEBS)</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_RESPONSE</td>
+		<td>Offcore response can be programmed only with a specific pair of event select and counter MSR, and with specific event codes and predefine mask bit value in a dedicated MSR to specify attributes of the offcore transaction.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE</td>
+		<td>Number of SSE/AVX computational 256-bit packed single precision floating-point instructions retired.  Each count represents 8 computations. Applies to SSE* and AVX* packed single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.SCALAR_DOUBLE_PS</td>
+		<td>Number of Scalar Double-Precision FP arithmetic instructions.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.SCALAR_SINGLE_PS</td>
+		<td>Number of Scalar Single-Precision FP arithmetic instructions.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE_PS</td>
+		<td>Number of Packed Double-Precision FP arithmetic instructions.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.128B_PACKED_SINGLE_PS</td>
+		<td>Number of Packed Single-Precision FP arithmetic instructions.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.256B_PACKED_DOUBLE_PS</td>
+		<td>Number of Packed Double-Precision FP arithmetic instructions.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.256B_PACKED_SINGLE_PS</td>
+		<td>Number of Packed Single-Precision FP arithmetic instructions.</td>
+	</tr>
+	<tr>
+		<td>IDQ.MS_SWITCHES</td>
+		<td>Number of switches from DSB (Decode Stream Buffer) or MITE (legacy decode pipeline) to the Microcode Sequencer.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.CYCLES_L1D_MISS</td>
+		<td>Cycles while L1 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.CYCLES_L2_MISS</td>
+		<td>Cycles while L2 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.CYCLES_MEM_ANY</td>
+		<td>Cycles while memory subsystem has an outstanding load.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.STALLS_TOTAL</td>
+		<td>Total execution stalls.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.STALLS_L1D_MISS</td>
+		<td>Execution stalls while L1 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.STALLS_L2_MISS</td>
+		<td>Execution stalls while L2 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td>CYCLE_ACTIVITY.STALLS_MEM_ANY</td>
+		<td>Execution stalls while memory subsystem has an outstanding load.</td>
+	</tr>
+	<tr>
+		<td>MACHINE_CLEARS.COUNT</td>
+		<td>Number of machine clears (nukes) of any type.</td>
+	</tr>
+	<tr>
+		<td>LSD.CYCLES_4_UOPS</td>
+		<td>Cycles 4 Uops delivered by the LSD, but didn&#39;t come from the decoder.</td>
+	</tr>
+	<tr>
+		<td>RS_EVENTS.EMPTY_END</td>
+		<td>Counts end of periods where the Reservation Station (RS) was empty. Could be useful to precisely locate Frontend Latency Bound issues.</td>
+	</tr>
+	<tr>
+		<td>LSD.CYCLES_ACTIVE</td>
+		<td>Cycles Uops delivered by the LSD, but didn&#39;t come from the decoder.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_0</td>
+		<td>Cycles per thread when uops are executed in port 0</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_1</td>
+		<td>Cycles per thread when uops are executed in port 1</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_2</td>
+		<td>Cycles per thread when uops are executed in port 2</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_3</td>
+		<td>Cycles per thread when uops are executed in port 3</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_4</td>
+		<td>Cycles per thread when uops are executed in port 4</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_5</td>
+		<td>Cycles per thread when uops are executed in port 5</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_6</td>
+		<td>Cycles per thread when uops are executed in port 6</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED_PORT.PORT_7</td>
+		<td>Cycles per thread when uops are executed in port 7</td>
+	</tr>
+	<tr>
+		<td>UOP_DISPATCHES_CANCELLED.SIMD_PRF</td>
+		<td>Micro-op dispatches cancelled due to insufficient SIMD physical register file read ports</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.SCALAR</td>
+		<td>Number of SSE/AVX computational scalar floating-point instructions retired. Applies to SSE* and AVX* scalar, double and single precision floating-point: ADD SUB MUL DIV MIN MAX RSQRT RCP SQRT FM(N)ADD/SUB. FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.PACKED</td>
+		<td>Number of SSE/AVX computational packed floating-point instructions retired. Applies to SSE* and AVX*, packed, double and single precision floating-point: ADD SUB MUL DIV MIN MAX RSQRT RCP SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.SINGLE</td>
+		<td>Number of SSE/AVX computational single precision floating-point instructions retired. Applies to SSE* and AVX*scalar, double and single precision floating-point: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element. ?.</td>
+	</tr>
+	<tr>
+		<td>FP_ARITH_INST_RETIRED.DOUBLE</td>
+		<td>Number of SSE/AVX computational double precision floating-point instructions retired. Applies to SSE* and AVX*scalar, double and single precision floating-point: ADD SUB MUL DIV MIN MAX SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.  ?.</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_UNHALTED.THREAD_ANY</td>
+		<td>Core cycles when at least one thread on the physical core is not in halt state.</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_UNHALTED.THREAD_P_ANY</td>
+		<td>Core cycles when at least one thread on the physical core is not in halt state.</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_THREAD_UNHALTED.REF_XCLK_ANY</td>
+		<td>Reference cycles when the at least one thread on the physical core is unhalted (counts at 100 MHz rate).</td>
+	</tr>
+	<tr>
+		<td>INT_MISC.RECOVERY_CYCLES_ANY</td>
+		<td>Core cycles the allocator was stalled due to recovery from earlier clear event for any thread running on the physical core (e.g. misprediction or memory nuke).</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CORE_CYCLES_GE_1</td>
+		<td>Cycles at least 1 micro-op is executed from any thread on physical core.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CORE_CYCLES_GE_2</td>
+		<td>Cycles at least 2 micro-op is executed from any thread on physical core.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CORE_CYCLES_GE_3</td>
+		<td>Cycles at least 3 micro-op is executed from any thread on physical core.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CORE_CYCLES_GE_4</td>
+		<td>Cycles at least 4 micro-op is executed from any thread on physical core.</td>
+	</tr>
+	<tr>
+		<td>UOPS_EXECUTED.CORE_CYCLES_NONE</td>
+		<td>Cycles with no micro-ops executed from any thread on physical core.</td>
+	</tr>
+	<tr>
+		<td>OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6</td>
+		<td>Cycles with at least 6 offcore outstanding Demand Data Read transactions in uncore queue.</td>
+	</tr>
+	<tr>
+		<td>L1D_PEND_MISS.PENDING_CYCLES_ANY</td>
+		<td>Cycles with L1D load Misses outstanding from any thread on physical core.</td>
+	</tr>
+	<tr>
+		<td>L1D_PEND_MISS.FB_FULL</td>
+		<td>Cycles a demand request was blocked due to Fill Buffers inavailability.</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_UNHALTED.REF_XCLK</td>
+		<td>Reference cycles when the thread is unhalted (counts at 100 MHz rate)</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_UNHALTED.REF_XCLK_ANY</td>
+		<td>Reference cycles when the at least one thread on the physical core is unhalted (counts at 100 MHz rate).</td>
+	</tr>
+	<tr>
+		<td>CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE</td>
+		<td>Count XClk pulses when this thread is unhalted and the other thread is halted.</td>
+	</tr>
+</table>
+
+</body>
+</html>

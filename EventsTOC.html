@@ -1,0 +1,156 @@
+<div class="just-padding">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <style>
+	.just-padding {
+		padding: 15px;
+	}
+
+	.list-group.list-group-root {
+		padding: 0;
+		overflow: hidden;
+	}
+	
+  </style>
+  <script>
+	  $(function() {
+			
+	  $('.list-group-item').on('click', function() {
+		$('.glyphicon', this)
+		  .toggleClass('glyphicon-chevron-right')
+		  .toggleClass('glyphicon-chevron-down');
+	  });
+
+	});
+	
+	$(document).ready ( function () { //Work as soon as the DOM is ready for parsing
+    var id  = location.hash.substr(1); //Get the word after the hash from the url
+    if (id) $('#'+id).addClass('highlight'); // add class highlight to element whose id is the word after the hash
+});
+
+	</script>
+</head>
+<body>
+
+<div class="container">	
+	 <div id="myList" class="list-group list-group-root well">
+	  
+	  <a href="#item-1" class="list-group-item" data-toggle="collapse">
+		<i class="glyphicon glyphicon-chevron-right"></i>Broadwell Processor
+	  </a>
+	  <div class="list-group collapse" id="item-1">
+		
+		<a href="BDW.htm" class="list-group-item" target="right">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Broadwell Information
+		</a>
+		<!-- <div class="list-group collapse" id="item-1-1">
+		  <a href="#" class="list-group-item">Event1</a>
+		  <a href="#" class="list-group-item">Event2</a>
+		  <a href="#" class="list-group-item">Event3</a>
+		</div> -->
+		
+		<a href="#item-1-2" class="list-group-item" data-toggle="collapse">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Events 
+		</a>
+		<div class="list-group collapse" id="item-1-2">
+		  <a href="BDW.htm#DTLB_STORE_MISSES.WALK_COMPLETED" class="list-group-item" target="right">DTLB_STORE_MISSES.WALK_COMPLETED</a>
+		  <a href="BDW.htm#INT_MISC.RAT_STALL_CYCLES" class="list-group-item" target="right">INT_MISC.RAT_STALL_CYCLES</a>
+		  <a href="#" class="list-group-item">Item 1.2.3</a>
+		</div>
+		
+		<a href="#item-1-3" class="list-group-item" data-toggle="collapse">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Item 1.3
+		</a>
+		<div class="list-group collapse" id="item-1-3">
+		  <a href="#" class="list-group-item">Item 1.3.1</a>
+		  <a href="#" class="list-group-item">Item 1.3.2</a>
+		  <a href="#" class="list-group-item">Item 1.3.3</a>
+		</div>
+		
+	  </div>
+	  
+	  <a href="#item-2" class="list-group-item" data-toggle="collapse">
+		<i class="glyphicon glyphicon-chevron-right"></i>Broadwell IDE Processor
+	  </a>
+	  <div class="list-group collapse" id="item-2">
+		
+		<!-- <a href="#item-2-1" class="list-group-item" data-toggle="collapse">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Item 2.1
+		</a> -->
+		<a href="BDW-DE.htm" class="list-group-item" target="right">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Broadwell IDE Information
+		</a>
+		<!-- <div class="list-group collapse" id="item-2-1">
+		  <a href="#" class="list-group-item">Item 2.1.1</a>
+		  <a href="#" class="list-group-item">Item 2.1.2</a>
+		  <a href="#" class="list-group-item">Item 2.1.3</a>
+		</div> -->
+		
+		<a href="#item-2-2" class="list-group-item" data-toggle="collapse">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Broadwell IDE Events
+		</a>
+		<div class="list-group collapse" id="item-2-2">
+		  <a href="BDW-DE.htm#UNC_H_RPQ_CYCLES_NO_SPEC_CREDITS.CHN3" class="list-group-item" target="right">UNC_H_RPQ_CYCLES_NO_SPEC_CREDITS.CHN3</a>
+		  <a href="BDW-DE.htm#UNC_M_WR_CAS_RANK1.BANK12" class="list-group-item" target="right">UNC_M_WR_CAS_RANK1.BANK12</a>
+		  <a href="#" class="list-group-item">Item 1.2.3</a>
+		</div>
+		
+		<a href="#item-2-3" class="list-group-item" data-toggle="collapse">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Item 2.3
+		</a>
+		<div class="list-group collapse" id="item-2-3">
+		  <a href="#" class="list-group-item">Item 2.3.1</a>
+		  <a href="#" class="list-group-item">Item 2.3.2</a>
+		  <a href="#" class="list-group-item">Item 2.3.3</a>
+		</div>
+		
+	  </div>
+	  
+	  
+	  <a href="#item-3" class="list-group-item" data-toggle="collapse">
+		<i class="glyphicon glyphicon-chevron-right"></i>Item 3
+	  </a>
+	  <div class="list-group collapse" id="item-3">
+		
+		<a href="#item-3-1" class="list-group-item" data-toggle="collapse">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Item 3.1
+		</a>
+		<div class="list-group collapse" id="item-3-1">
+		  <a href="#" class="list-group-item">Item 3.1.1</a>
+		  <a href="#" class="list-group-item">Item 3.1.2</a>
+		  <a href="#" class="list-group-item">Item 3.1.3</a>
+		</div>
+		
+		<a href="#item-3-2" class="list-group-item" data-toggle="collapse">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Item 3.2
+		</a>
+		<div class="list-group collapse" id="item-3-2">
+		  <a href="#" class="list-group-item">Item 3.2.1</a>
+		  <a href="#" class="list-group-item">Item 3.2.2</a>
+		  <a href="#" class="list-group-item">Item 3.2.3</a>
+		</div>
+		
+		<a href="#item-3-3" class="list-group-item" data-toggle="collapse">
+		  <i class="glyphicon glyphicon-chevron-right"></i>Item 3.3
+		</a>
+		<div class="list-group collapse" id="item-3-3">
+		  <a href="#" class="list-group-item">Item 3.3.1</a>
+		  <a href="#" class="list-group-item">Item 3.3.2</a>
+		  <a href="#" class="list-group-item">Item 3.3.3</a>
+		</div>
+		
+	  </div>
+	  
+	</div>
+	  
+	</div>
+</div>
+    
+</body>
+</html>

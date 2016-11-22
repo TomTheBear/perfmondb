@@ -1,0 +1,3616 @@
+<!DOCTYPE html><html>
+<head><style> table{font-family:arial,sans-serif;border-collapse:collapse;width:100%;}td,th{border:1px solid #dddddd;text-align:left;padding: 8px;}tr:nth-child(even) {background-color:#dddddd;}
+:target {
+   background-color: #ffa;
+}
+</style></head>
+<body>
+<table border="1">
+	<tr>
+		<th>EventName</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>UNC_C_BOUNCE_CONTROL</td>
+		<td>Bounce Control</td>
+	</tr>
+	<tr>
+		<td>UNC_C_CLOCKTICKS</td>
+		<td>Uncore Clocks</td>
+	</tr>
+	<tr>
+		<td>UNC_C_COUNTER0_OCCUPANCY</td>
+		<td>Counter 0 Occupancy</td>
+	</tr>
+	<tr>
+		<td>UNC_C_FAST_ASSERTED</td>
+		<td>FaST wire asserted</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_LOOKUP.DATA_READ</td>
+		<td>Cache Lookups; Data Read Request</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_LOOKUP.WRITE</td>
+		<td>Cache Lookups; Write Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_LOOKUP.REMOTE_SNOOP</td>
+		<td>Cache Lookups; External Snoop Request</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_LOOKUP.ANY</td>
+		<td>Cache Lookups; Any Request</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_LOOKUP.NID</td>
+		<td>Cache Lookups; Lookups that Match NID</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_LOOKUP.READ</td>
+		<td>Cache Lookups; Any Read Request</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_VICTIMS.M_STATE</td>
+		<td>Lines Victimized; Lines in M state</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_VICTIMS.E_STATE</td>
+		<td>Lines Victimized; Lines in E state</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_VICTIMS.I_STATE</td>
+		<td>Lines Victimized; Lines in S State</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_VICTIMS.F_STATE</td>
+		<td>Lines Victimized</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_VICTIMS.NID</td>
+		<td>Lines Victimized; Victimized Lines that Match NID</td>
+	</tr>
+	<tr>
+		<td>UNC_C_LLC_VICTIMS.MISS</td>
+		<td>Lines Victimized</td>
+	</tr>
+	<tr>
+		<td>UNC_C_MISC.RSPI_WAS_FSE</td>
+		<td>Cbo Misc; Silent Snoop Eviction</td>
+	</tr>
+	<tr>
+		<td>UNC_C_MISC.WC_ALIASING</td>
+		<td>Cbo Misc; Write Combining Aliasing</td>
+	</tr>
+	<tr>
+		<td>UNC_C_MISC.STARTED</td>
+		<td>Cbo Misc</td>
+	</tr>
+	<tr>
+		<td>UNC_C_MISC.RFO_HIT_S</td>
+		<td>Cbo Misc; RFO HitS</td>
+	</tr>
+	<tr>
+		<td>UNC_C_MISC.CVZERO_PREFETCH_VICTIM</td>
+		<td>Cbo Misc; Clean Victim with raw CV=0</td>
+	</tr>
+	<tr>
+		<td>UNC_C_MISC.CVZERO_PREFETCH_MISS</td>
+		<td>Cbo Misc; DRd hitting non-M with raw CV=0</td>
+	</tr>
+	<tr>
+		<td>UNC_C_QLRU.AGE0</td>
+		<td>LRU Queue; LRU Age 0</td>
+	</tr>
+	<tr>
+		<td>UNC_C_QLRU.AGE1</td>
+		<td>LRU Queue; LRU Age 1</td>
+	</tr>
+	<tr>
+		<td>UNC_C_QLRU.AGE2</td>
+		<td>LRU Queue; LRU Age 2</td>
+	</tr>
+	<tr>
+		<td>UNC_C_QLRU.AGE3</td>
+		<td>LRU Queue; LRU Age 3</td>
+	</tr>
+	<tr>
+		<td>UNC_C_QLRU.LRU_DECREMENT</td>
+		<td>LRU Queue; LRU Bits Decremented</td>
+	</tr>
+	<tr>
+		<td>UNC_C_QLRU.VICTIM_NON_ZERO</td>
+		<td>LRU Queue; Non-0 Aged Victim</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AD_USED.UP_EVEN</td>
+		<td>AD Ring In Use; Up and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AD_USED.UP_ODD</td>
+		<td>AD Ring In Use; Up and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AD_USED.DOWN_EVEN</td>
+		<td>AD Ring In Use; Down and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AD_USED.DOWN_ODD</td>
+		<td>AD Ring In Use; Down and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AD_USED.CW</td>
+		<td>AD Ring In Use; Up</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AD_USED.CCW</td>
+		<td>AD Ring In Use; Down</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AD_USED.ALL</td>
+		<td>AD Ring In Use; All</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AK_USED.UP_EVEN</td>
+		<td>AK Ring In Use; Up and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AK_USED.UP_ODD</td>
+		<td>AK Ring In Use; Up and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AK_USED.DOWN_EVEN</td>
+		<td>AK Ring In Use; Down and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AK_USED.DOWN_ODD</td>
+		<td>AK Ring In Use; Down and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AK_USED.CW</td>
+		<td>AK Ring In Use; Up</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AK_USED.CCW</td>
+		<td>AK Ring In Use; Down</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_AK_USED.ALL</td>
+		<td>AK Ring In Use; All</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BL_USED.UP_EVEN</td>
+		<td>BL Ring in Use; Up and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BL_USED.UP_ODD</td>
+		<td>BL Ring in Use; Up and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BL_USED.DOWN_EVEN</td>
+		<td>BL Ring in Use; Down and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BL_USED.DOWN_ODD</td>
+		<td>BL Ring in Use; Down and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BL_USED.CW</td>
+		<td>BL Ring in Use; Up</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BL_USED.CCW</td>
+		<td>BL Ring in Use; Down</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BL_USED.ALL</td>
+		<td>BL Ring in Use; Down</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BOUNCES.AD</td>
+		<td>Number of LLC responses that bounced on the Ring.; AD</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BOUNCES.AK</td>
+		<td>Number of LLC responses that bounced on the Ring.; AK</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BOUNCES.BL</td>
+		<td>Number of LLC responses that bounced on the Ring.; BL</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_BOUNCES.IV</td>
+		<td>Number of LLC responses that bounced on the Ring.; Snoops of processor&#39;s cache.</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_IV_USED.ANY</td>
+		<td>BL Ring in Use; Any</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_IV_USED.UP</td>
+		<td>BL Ring in Use; Any</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_IV_USED.DOWN</td>
+		<td>BL Ring in Use; Down</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_IV_USED.DN</td>
+		<td>BL Ring in Use; Any</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_SINK_STARVED.AD</td>
+		<td>AD</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_SINK_STARVED.AK</td>
+		<td>AK</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_SINK_STARVED.IV</td>
+		<td>IV</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_SINK_STARVED.BL</td>
+		<td>BL</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RING_SRC_THRTL</td>
+		<td>Number of cycles the Cbo is actively throttling traffic onto the Ring in order to limit bounce traffic.</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_EXT_STARVED.IRQ</td>
+		<td>Ingress Arbiter Blocking Cycles; IPQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_EXT_STARVED.IPQ</td>
+		<td>Ingress Arbiter Blocking Cycles; IRQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_EXT_STARVED.PRQ</td>
+		<td>Ingress Arbiter Blocking Cycles; PRQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_EXT_STARVED.ISMQ_BIDS</td>
+		<td>Ingress Arbiter Blocking Cycles; ISMQ_BID</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INSERTS.IRQ</td>
+		<td>Ingress Allocations; IRQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INSERTS.IRQ_REJ</td>
+		<td>Ingress Allocations; IRQ Rejected</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INSERTS.IPQ</td>
+		<td>Ingress Allocations; IPQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INSERTS.PRQ</td>
+		<td>Ingress Allocations; PRQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INSERTS.PRQ_REJ</td>
+		<td>Ingress Allocations; PRQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INT_STARVED.IRQ</td>
+		<td>Ingress Internal Starvation Cycles; IRQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INT_STARVED.IPQ</td>
+		<td>Ingress Internal Starvation Cycles; IPQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INT_STARVED.ISMQ</td>
+		<td>Ingress Internal Starvation Cycles; ISMQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_INT_STARVED.PRQ</td>
+		<td>Ingress Internal Starvation Cycles; PRQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IPQ_RETRY.ANY</td>
+		<td>Probe Queue Retries; Any Reject</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IPQ_RETRY.FULL</td>
+		<td>Probe Queue Retries; No Egress Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IPQ_RETRY.ADDR_CONFLICT</td>
+		<td>Probe Queue Retries; Address Conflict</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IPQ_RETRY.QPI_CREDITS</td>
+		<td>Probe Queue Retries; No QPI Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IPQ_RETRY2.AD_SBO</td>
+		<td>Probe Queue Retries; No AD Sbo Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IPQ_RETRY2.TARGET</td>
+		<td>Probe Queue Retries; Target Node Filter</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY.ANY</td>
+		<td>Ingress Request Queue Rejects; Any Reject</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY.FULL</td>
+		<td>Ingress Request Queue Rejects; No Egress Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY.ADDR_CONFLICT</td>
+		<td>Ingress Request Queue Rejects; Address Conflict</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY.RTID</td>
+		<td>Ingress Request Queue Rejects; No RTIDs</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY.QPI_CREDITS</td>
+		<td>Ingress Request Queue Rejects; No QPI Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY.IIO_CREDITS</td>
+		<td>Ingress Request Queue Rejects; No IIO Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY.NID</td>
+		<td>Ingress Request Queue Rejects</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY2.AD_SBO</td>
+		<td>Ingress Request Queue Rejects; No AD Sbo Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY2.BL_SBO</td>
+		<td>Ingress Request Queue Rejects; No BL Sbo Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_IRQ_RETRY2.TARGET</td>
+		<td>Ingress Request Queue Rejects; Target Node Filter</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY.ANY</td>
+		<td>ISMQ Retries; Any Reject</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY.FULL</td>
+		<td>ISMQ Retries; No Egress Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY.RTID</td>
+		<td>ISMQ Retries; No RTIDs</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY.QPI_CREDITS</td>
+		<td>ISMQ Retries; No QPI Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY.IIO_CREDITS</td>
+		<td>ISMQ Retries; No IIO Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY.WB_CREDITS</td>
+		<td>ISMQ Retries</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY.NID</td>
+		<td>ISMQ Retries</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY2.AD_SBO</td>
+		<td>ISMQ Request Queue Rejects; No AD Sbo Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY2.BL_SBO</td>
+		<td>ISMQ Request Queue Rejects; No BL Sbo Credits</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_ISMQ_RETRY2.TARGET</td>
+		<td>ISMQ Request Queue Rejects; Target Node Filter</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_OCCUPANCY.IRQ</td>
+		<td>Ingress Occupancy; IRQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_OCCUPANCY.IRQ_REJ</td>
+		<td>Ingress Occupancy; IRQ Rejected</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_OCCUPANCY.IPQ</td>
+		<td>Ingress Occupancy; IPQ</td>
+	</tr>
+	<tr>
+		<td>UNC_C_RxR_OCCUPANCY.PRQ_REJ</td>
+		<td>Ingress Occupancy; PRQ Rejects</td>
+	</tr>
+	<tr>
+		<td>UNC_C_SBO_CREDITS_ACQUIRED.AD</td>
+		<td>SBo Credits Acquired; For AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_SBO_CREDITS_ACQUIRED.BL</td>
+		<td>SBo Credits Acquired; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_SBO_CREDIT_OCCUPANCY.AD</td>
+		<td>SBo Credits Occupancy; For AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_SBO_CREDIT_OCCUPANCY.BL</td>
+		<td>SBo Credits Occupancy; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.OPCODE</td>
+		<td>TOR Inserts; Opcode Match</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.EVICTION</td>
+		<td>TOR Inserts; Evictions</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.ALL</td>
+		<td>TOR Inserts; All</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.WB</td>
+		<td>TOR Inserts; Writebacks</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.MISS_OPCODE</td>
+		<td>TOR Inserts; Miss Opcode Match</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.NID_OPCODE</td>
+		<td>TOR Inserts; NID and Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.NID_EVICTION</td>
+		<td>TOR Inserts; NID Matched Evictions</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.NID_ALL</td>
+		<td>TOR Inserts; NID Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.NID_WB</td>
+		<td>TOR Inserts; NID Matched Writebacks</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.NID_MISS_OPCODE</td>
+		<td>TOR Inserts; NID and Opcode Matched Miss</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.NID_MISS_ALL</td>
+		<td>TOR Inserts; NID Matched Miss All</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.MISS_LOCAL</td>
+		<td>TOR Inserts; Misses to Local Memory</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.MISS_REMOTE</td>
+		<td>TOR Inserts; Misses to Remote Memory</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.LOCAL</td>
+		<td>TOR Inserts; Local Memory</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.REMOTE</td>
+		<td>TOR Inserts; Remote Memory</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.MISS_LOCAL_OPCODE</td>
+		<td>TOR Inserts; Misses to Local Memory - Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.MISS_REMOTE_OPCODE</td>
+		<td>TOR Inserts; Misses to Remote Memory - Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.LOCAL_OPCODE</td>
+		<td>TOR Inserts; Local Memory - Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_INSERTS.REMOTE_OPCODE</td>
+		<td>TOR Inserts; Remote Memory - Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.OPCODE</td>
+		<td>TOR Occupancy; Opcode Match</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.EVICTION</td>
+		<td>TOR Occupancy; Evictions</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.ALL</td>
+		<td>TOR Occupancy; Any</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.MISS_OPCODE</td>
+		<td>TOR Occupancy; Miss Opcode Match</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.MISS_ALL</td>
+		<td>TOR Occupancy; Miss All</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.NID_OPCODE</td>
+		<td>TOR Occupancy; NID and Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.NID_EVICTION</td>
+		<td>TOR Occupancy; NID Matched Evictions</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.NID_ALL</td>
+		<td>TOR Occupancy; NID Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.NID_MISS_OPCODE</td>
+		<td>TOR Occupancy; NID and Opcode Matched Miss</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.NID_MISS_ALL</td>
+		<td>TOR Occupancy; NID Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.MISS_LOCAL</td>
+		<td>TOR Occupancy</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.MISS_REMOTE</td>
+		<td>TOR Occupancy</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.LOCAL</td>
+		<td>TOR Occupancy</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.REMOTE</td>
+		<td>TOR Occupancy</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.MISS_LOCAL_OPCODE</td>
+		<td>TOR Occupancy; Misses to Local Memory - Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.MISS_REMOTE_OPCODE</td>
+		<td>TOR Occupancy; Misses to Remote Memory - Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.LOCAL_OPCODE</td>
+		<td>TOR Occupancy; Local Memory - Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.REMOTE_OPCODE</td>
+		<td>TOR Occupancy; Remote Memory - Opcode Matched</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.WB</td>
+		<td>TOR Occupancy; Writebacks</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TOR_OCCUPANCY.NID_WB</td>
+		<td>TOR Occupancy; NID Matched Writebacks</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_ADS_USED.AD</td>
+		<td>Onto AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_ADS_USED.AK</td>
+		<td>Onto AK Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_ADS_USED.BL</td>
+		<td>Onto BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_INSERTS.AD_CACHE</td>
+		<td>Egress Allocations; AD - Cachebo</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_INSERTS.AK_CACHE</td>
+		<td>Egress Allocations; AK - Cachebo</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_INSERTS.BL_CACHE</td>
+		<td>Egress Allocations; BL - Cacheno</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_INSERTS.IV_CACHE</td>
+		<td>Egress Allocations; IV - Cachebo</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_INSERTS.AD_CORE</td>
+		<td>Egress Allocations; AD - Corebo</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_INSERTS.AK_CORE</td>
+		<td>Egress Allocations; AK - Corebo</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_INSERTS.BL_CORE</td>
+		<td>Egress Allocations; BL - Corebo</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_STARVED.AK_BOTH</td>
+		<td>Injection Starvation; Onto AK Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_STARVED.BL_BOTH</td>
+		<td>Injection Starvation; Onto BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_STARVED.IV</td>
+		<td>Injection Starvation; Onto IV Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_C_TxR_STARVED.AD_CORE</td>
+		<td>Injection Starvation; Onto AD Ring (to core)</td>
+	</tr>
+	<tr>
+		<td>UNC_H_ADDR_OPC_MATCH.FILT</td>
+		<td>QPI Address/Opcode Match; Address &amp; Opcode Match</td>
+	</tr>
+	<tr>
+		<td>UNC_H_ADDR_OPC_MATCH.ADDR</td>
+		<td>QPI Address/Opcode Match; Address</td>
+	</tr>
+	<tr>
+		<td>UNC_H_ADDR_OPC_MATCH.OPC</td>
+		<td>QPI Address/Opcode Match; Opcode</td>
+	</tr>
+	<tr>
+		<td>UNC_H_ADDR_OPC_MATCH.AD</td>
+		<td>QPI Address/Opcode Match; AD Opcodes</td>
+	</tr>
+	<tr>
+		<td>UNC_H_ADDR_OPC_MATCH.BL</td>
+		<td>QPI Address/Opcode Match; BL Opcodes</td>
+	</tr>
+	<tr>
+		<td>UNC_H_ADDR_OPC_MATCH.AK</td>
+		<td>QPI Address/Opcode Match; AK Opcodes</td>
+	</tr>
+	<tr>
+		<td>UNC_H_BT_CYCLES_NE</td>
+		<td>BT Cycles Not Empty</td>
+	</tr>
+	<tr>
+		<td>UNC_H_BT_TO_HT_NOT_ISSUED.INCOMING_SNP_HAZARD</td>
+		<td>BT to HT Not Issued; Incoming Snoop Hazard</td>
+	</tr>
+	<tr>
+		<td>UNC_H_BT_TO_HT_NOT_ISSUED.INCOMING_BL_HAZARD</td>
+		<td>BT to HT Not Issued; Incoming Data Hazard</td>
+	</tr>
+	<tr>
+		<td>UNC_H_BT_TO_HT_NOT_ISSUED.RSPACKCFLT_HAZARD</td>
+		<td>BT to HT Not Issued; Incoming Data Hazard</td>
+	</tr>
+	<tr>
+		<td>UNC_H_BT_TO_HT_NOT_ISSUED.WBMDATA_HAZARD</td>
+		<td>BT to HT Not Issued; Incoming Data Hazard</td>
+	</tr>
+	<tr>
+		<td>UNC_H_BYPASS_IMC.TAKEN</td>
+		<td>HA to iMC Bypass; Taken</td>
+	</tr>
+	<tr>
+		<td>UNC_H_BYPASS_IMC.NOT_TAKEN</td>
+		<td>HA to iMC Bypass; Not Taken</td>
+	</tr>
+	<tr>
+		<td>UNC_H_CLOCKTICKS</td>
+		<td>uclks</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECT2CORE_COUNT</td>
+		<td>Direct2Core Messages Sent</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECT2CORE_CYCLES_DISABLED</td>
+		<td>Cycles when Direct2Core was Disabled</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECT2CORE_TXN_OVERRIDE</td>
+		<td>Number of Reads that had Direct2Core Overridden</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECTORY_LAT_OPT</td>
+		<td>Directory Lat Opt Return</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECTORY_LOOKUP.SNP</td>
+		<td>Directory Lookups; Snoop Needed</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECTORY_LOOKUP.NO_SNP</td>
+		<td>Directory Lookups; Snoop Not Needed</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECTORY_UPDATE.SET</td>
+		<td>Directory Updates; Directory Set</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECTORY_UPDATE.CLEAR</td>
+		<td>Directory Updates; Directory Clear</td>
+	</tr>
+	<tr>
+		<td>UNC_H_DIRECTORY_UPDATE.ANY</td>
+		<td>Directory Updates; Any Directory Update</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.READ_OR_INVITOE</td>
+		<td>Counts Number of Hits in HitMe Cache; op is RdCode, RdData, RdDataMigratory, RdInvOwn, RdCur or InvItoE</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.WBMTOI</td>
+		<td>Counts Number of Hits in HitMe Cache; op is WbMtoI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.ACKCNFLTWBI</td>
+		<td>Counts Number of Hits in HitMe Cache; op is AckCnfltWbI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.WBMTOE_OR_S</td>
+		<td>Counts Number of Hits in HitMe Cache; op is WbMtoE or WbMtoS</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.RSPFWDI_REMOTE</td>
+		<td>Counts Number of Hits in HitMe Cache; op is RspIFwd or RspIFwdWb for a remote request</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.RSPFWDI_LOCAL</td>
+		<td>Counts Number of Hits in HitMe Cache; op is RspIFwd or RspIFwdWb for a local request</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.RSPFWDS</td>
+		<td>Counts Number of Hits in HitMe Cache; op is RsSFwd or RspSFwdWb</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.RSP</td>
+		<td>Counts Number of Hits in HitMe Cache; op is RspI, RspIWb, RspS, RspSWb, RspCnflt or RspCnfltWbI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.ALLOCS</td>
+		<td>Counts Number of Hits in HitMe Cache; Allocations</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.EVICTS</td>
+		<td>Counts Number of Hits in HitMe Cache; Allocations</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.INVALS</td>
+		<td>Counts Number of Hits in HitMe Cache; Invalidations</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.ALL</td>
+		<td>Counts Number of Hits in HitMe Cache; All Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT.HOM</td>
+		<td>Counts Number of Hits in HitMe Cache; HOM Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.READ_OR_INVITOE</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; op is RdCode, RdData, RdDataMigratory, RdInvOwn, RdCur or InvItoE</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.WBMTOI</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; op is WbMtoI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.ACKCNFLTWBI</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; op is AckCnfltWbI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.WBMTOE_OR_S</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; op is WbMtoE or WbMtoS</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.RSPFWDI_REMOTE</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; op is RspIFwd or RspIFwdWb for a remote request</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.RSPFWDI_LOCAL</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; op is RspIFwd or RspIFwdWb for a local request</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.RSPFWDS</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; op is RsSFwd or RspSFwdWb</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.RSP</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; op is RspI, RspIWb, RspS, RspSWb, RspCnflt or RspCnfltWbI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.ALL</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; All Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_HIT_PV_BITS_SET.HOM</td>
+		<td>Accumulates Number of PV bits set on HitMe Cache Hits; HOM Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.READ_OR_INVITOE</td>
+		<td>Counts Number of times HitMe Cache is accessed; op is RdCode, RdData, RdDataMigratory, RdInvOwn, RdCur or InvItoE</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.WBMTOI</td>
+		<td>Counts Number of times HitMe Cache is accessed; op is WbMtoI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.ACKCNFLTWBI</td>
+		<td>Counts Number of times HitMe Cache is accessed; op is AckCnfltWbI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.WBMTOE_OR_S</td>
+		<td>Counts Number of times HitMe Cache is accessed; op is WbMtoE or WbMtoS</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.RSPFWDI_REMOTE</td>
+		<td>Counts Number of times HitMe Cache is accessed; op is RspIFwd or RspIFwdWb for a remote request</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.RSPFWDI_LOCAL</td>
+		<td>Counts Number of times HitMe Cache is accessed; op is RspIFwd or RspIFwdWb for a local request</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.RSPFWDS</td>
+		<td>Counts Number of times HitMe Cache is accessed; op is RsSFwd or RspSFwdWb</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.RSP</td>
+		<td>Counts Number of times HitMe Cache is accessed; op is RspI, RspIWb, RspS, RspSWb, RspCnflt or RspCnfltWbI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.ALLOCS</td>
+		<td>Counts Number of times HitMe Cache is accessed; Allocations</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.INVALS</td>
+		<td>Counts Number of times HitMe Cache is accessed; Invalidations</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.ALL</td>
+		<td>Counts Number of times HitMe Cache is accessed; All Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_HITME_LOOKUP.HOM</td>
+		<td>Counts Number of times HitMe Cache is accessed; HOM Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IGR_NO_CREDIT_CYCLES.AD_QPI0</td>
+		<td>Cycles without QPI Ingress Credits; AD to QPI Link 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IGR_NO_CREDIT_CYCLES.AD_QPI1</td>
+		<td>Cycles without QPI Ingress Credits; AD to QPI Link 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IGR_NO_CREDIT_CYCLES.BL_QPI0</td>
+		<td>Cycles without QPI Ingress Credits; BL to QPI Link 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IGR_NO_CREDIT_CYCLES.BL_QPI1</td>
+		<td>Cycles without QPI Ingress Credits; BL to QPI Link 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IGR_NO_CREDIT_CYCLES.AD_QPI2</td>
+		<td>Cycles without QPI Ingress Credits; BL to QPI Link 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IGR_NO_CREDIT_CYCLES.BL_QPI2</td>
+		<td>Cycles without QPI Ingress Credits; BL to QPI Link 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IMC_READS.NORMAL</td>
+		<td>HA to iMC Normal Priority Reads Issued; Normal Priority</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IMC_RETRY</td>
+		<td>Retry Events</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IMC_WRITES.FULL</td>
+		<td>HA to iMC Full Line Writes Issued; Full Line Non-ISOCH</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IMC_WRITES.PARTIAL</td>
+		<td>HA to iMC Full Line Writes Issued; Partial Non-ISOCH</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IMC_WRITES.FULL_ISOCH</td>
+		<td>HA to iMC Full Line Writes Issued; ISOCH Full Line</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IMC_WRITES.PARTIAL_ISOCH</td>
+		<td>HA to iMC Full Line Writes Issued; ISOCH Partial</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IMC_WRITES.ALL</td>
+		<td>HA to iMC Full Line Writes Issued; All Writes</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IOT_BACKPRESSURE.SAT</td>
+		<td>IOT Backpressure</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IOT_BACKPRESSURE.HUB</td>
+		<td>IOT Backpressure</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IOT_CTS_EAST_LO.CTS0</td>
+		<td>IOT Common Trigger Sequencer - Lo</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IOT_CTS_EAST_LO.CTS1</td>
+		<td>IOT Common Trigger Sequencer - Lo</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IOT_CTS_HI.CTS2</td>
+		<td>IOT Common Trigger Sequencer - Hi</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IOT_CTS_HI.CTS3</td>
+		<td>IOT Common Trigger Sequencer - Hi</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IOT_CTS_WEST_LO.CTS0</td>
+		<td>IOT Common Trigger Sequencer - Lo</td>
+	</tr>
+	<tr>
+		<td>UNC_H_IOT_CTS_WEST_LO.CTS1</td>
+		<td>IOT Common Trigger Sequencer - Lo</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB.READS_LOCAL</td>
+		<td>OSB Snoop Broadcast; Local Reads</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB.INVITOE_LOCAL</td>
+		<td>OSB Snoop Broadcast; Local InvItoE</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB.REMOTE</td>
+		<td>OSB Snoop Broadcast; Remote</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB.CANCELLED</td>
+		<td>OSB Snoop Broadcast; Cancelled</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB.READS_LOCAL_USEFUL</td>
+		<td>OSB Snoop Broadcast; Reads Local -  Useful</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB.REMOTE_USEFUL</td>
+		<td>OSB Snoop Broadcast; Remote - Useful</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB_EDR.ALL</td>
+		<td>OSB Early Data Return; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB_EDR.READS_LOCAL_I</td>
+		<td>OSB Early Data Return; Reads to Local  I</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB_EDR.READS_REMOTE_I</td>
+		<td>OSB Early Data Return; Reads to Remote I</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB_EDR.READS_LOCAL_S</td>
+		<td>OSB Early Data Return; Reads to Local S</td>
+	</tr>
+	<tr>
+		<td>UNC_H_OSB_EDR.READS_REMOTE_S</td>
+		<td>OSB Early Data Return; Reads to Remote S</td>
+	</tr>
+	<tr>
+		<td>UNC_H_REQUESTS.READS</td>
+		<td>Read and Write Requests; Reads</td>
+	</tr>
+	<tr>
+		<td>UNC_H_REQUESTS.WRITES</td>
+		<td>Read and Write Requests; Writes</td>
+	</tr>
+	<tr>
+		<td>UNC_H_REQUESTS.READS_LOCAL</td>
+		<td>Read and Write Requests; Local Reads</td>
+	</tr>
+	<tr>
+		<td>UNC_H_REQUESTS.READS_REMOTE</td>
+		<td>Read and Write Requests; Remote Reads</td>
+	</tr>
+	<tr>
+		<td>UNC_H_REQUESTS.WRITES_LOCAL</td>
+		<td>Read and Write Requests; Local Writes</td>
+	</tr>
+	<tr>
+		<td>UNC_H_REQUESTS.WRITES_REMOTE</td>
+		<td>Read and Write Requests; Remote Writes</td>
+	</tr>
+	<tr>
+		<td>UNC_H_REQUESTS.INVITOE_LOCAL</td>
+		<td>Read and Write Requests; Local InvItoEs</td>
+	</tr>
+	<tr>
+		<td>UNC_H_REQUESTS.INVITOE_REMOTE</td>
+		<td>Read and Write Requests; Remote InvItoEs</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AD_USED.CW_EVEN</td>
+		<td>HA AD Ring in Use; Clockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AD_USED.CW_ODD</td>
+		<td>HA AD Ring in Use; Clockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AD_USED.CCW_EVEN</td>
+		<td>HA AD Ring in Use; Counterclockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AD_USED.CCW_ODD</td>
+		<td>HA AD Ring in Use; Counterclockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AD_USED.CW</td>
+		<td>HA AD Ring in Use; Clockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AD_USED.CCW</td>
+		<td>HA AD Ring in Use; Counterclockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AK_USED.CW_EVEN</td>
+		<td>HA AK Ring in Use; Clockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AK_USED.CW_ODD</td>
+		<td>HA AK Ring in Use; Clockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AK_USED.CCW_EVEN</td>
+		<td>HA AK Ring in Use; Counterclockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AK_USED.CCW_ODD</td>
+		<td>HA AK Ring in Use; Counterclockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AK_USED.CW</td>
+		<td>HA AK Ring in Use; Clockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AK_USED.CCW</td>
+		<td>HA AK Ring in Use; Counterclockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_AK_USED.ALL</td>
+		<td>HA AK Ring in Use; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_BL_USED.CW_EVEN</td>
+		<td>HA BL Ring in Use; Clockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_BL_USED.CW_ODD</td>
+		<td>HA BL Ring in Use; Clockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_BL_USED.CCW_EVEN</td>
+		<td>HA BL Ring in Use; Counterclockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_BL_USED.CCW_ODD</td>
+		<td>HA BL Ring in Use; Counterclockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_BL_USED.CW</td>
+		<td>HA BL Ring in Use; Clockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_BL_USED.CCW</td>
+		<td>HA BL Ring in Use; Counterclockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RING_BL_USED.ALL</td>
+		<td>HA BL Ring in Use; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RPQ_CYCLES_NO_REG_CREDITS.CHN0</td>
+		<td>iMC RPQ Credits Empty - Regular; Channel 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RPQ_CYCLES_NO_REG_CREDITS.CHN1</td>
+		<td>iMC RPQ Credits Empty - Regular; Channel 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RPQ_CYCLES_NO_REG_CREDITS.CHN2</td>
+		<td>iMC RPQ Credits Empty - Regular; Channel 2</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RPQ_CYCLES_NO_REG_CREDITS.CHN3</td>
+		<td>iMC RPQ Credits Empty - Regular; Channel 3</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RPQ_CYCLES_NO_SPEC_CREDITS.CHN0</td>
+		<td>iMC RPQ Credits Empty - Special; Channel 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RPQ_CYCLES_NO_SPEC_CREDITS.CHN1</td>
+		<td>iMC RPQ Credits Empty - Special; Channel 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_RPQ_CYCLES_NO_SPEC_CREDITS.CHN2</td>
+		<td>iMC RPQ Credits Empty - Special; Channel 2</td>
+	</tr>
+	<tr>
+		<td><div id="UNC_H_RPQ_CYCLES_NO_SPEC_CREDITS.CHN3">UNC_H_RPQ_CYCLES_NO_SPEC_CREDITS.CHN3</div></td>
+		<td>iMC RPQ Credits Empty - Special; Channel 3</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SBO0_CREDITS_ACQUIRED.AD</td>
+		<td>SBo0 Credits Acquired; For AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SBO0_CREDITS_ACQUIRED.BL</td>
+		<td>SBo0 Credits Acquired; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SBO0_CREDIT_OCCUPANCY.AD</td>
+		<td>SBo0 Credits Occupancy; For AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SBO0_CREDIT_OCCUPANCY.BL</td>
+		<td>SBo0 Credits Occupancy; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SBO1_CREDITS_ACQUIRED.AD</td>
+		<td>SBo1 Credits Acquired; For AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SBO1_CREDITS_ACQUIRED.BL</td>
+		<td>SBo1 Credits Acquired; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SBO1_CREDIT_OCCUPANCY.AD</td>
+		<td>SBo1 Credits Occupancy; For AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SBO1_CREDIT_OCCUPANCY.BL</td>
+		<td>SBo1 Credits Occupancy; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOPS_RSP_AFTER_DATA.LOCAL</td>
+		<td>Data beat the Snoop Responses; Local Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOPS_RSP_AFTER_DATA.REMOTE</td>
+		<td>Data beat the Snoop Responses; Remote Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_CYCLES_NE.LOCAL</td>
+		<td>Cycles with Snoops Outstanding; Local Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_CYCLES_NE.REMOTE</td>
+		<td>Cycles with Snoops Outstanding; Remote Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_CYCLES_NE.ALL</td>
+		<td>Cycles with Snoops Outstanding; All Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_OCCUPANCY.LOCAL</td>
+		<td>Tracker Snoops Outstanding Accumulator; Local Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_OCCUPANCY.REMOTE</td>
+		<td>Tracker Snoops Outstanding Accumulator; Remote Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_RESP.RSPI</td>
+		<td>Snoop Responses Received; RspI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_RESP.RSPS</td>
+		<td>Snoop Responses Received; RspS</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_RESP.RSPIFWD</td>
+		<td>Snoop Responses Received; RspIFwd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_RESP.RSPSFWD</td>
+		<td>Snoop Responses Received; RspSFwd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_RESP.RSP_WB</td>
+		<td>Snoop Responses Received; Rsp*WB</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_RESP.RSP_FWD_WB</td>
+		<td>Snoop Responses Received; Rsp*Fwd*WB</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNOOP_RESP.RSPCNFLCT</td>
+		<td>Snoop Responses Received; RSPCNFLCT*</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNP_RESP_RECV_LOCAL.RSPI</td>
+		<td>Snoop Responses Received Local; RspI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNP_RESP_RECV_LOCAL.RSPS</td>
+		<td>Snoop Responses Received Local; RspS</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNP_RESP_RECV_LOCAL.RSPIFWD</td>
+		<td>Snoop Responses Received Local; RspIFwd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNP_RESP_RECV_LOCAL.RSPSFWD</td>
+		<td>Snoop Responses Received Local; RspSFwd</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNP_RESP_RECV_LOCAL.RSPxWB</td>
+		<td>Snoop Responses Received Local; Rsp*WB</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNP_RESP_RECV_LOCAL.RSPxFWDxWB</td>
+		<td>Snoop Responses Received Local; Rsp*FWD*WB</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNP_RESP_RECV_LOCAL.RSPCNFLCT</td>
+		<td>Snoop Responses Received Local; RspCnflct</td>
+	</tr>
+	<tr>
+		<td>UNC_H_SNP_RESP_RECV_LOCAL.OTHER</td>
+		<td>Snoop Responses Received Local; Other</td>
+	</tr>
+	<tr>
+		<td>UNC_H_STALL_NO_SBO_CREDIT.SBO0_AD</td>
+		<td>Stall on No Sbo Credits; For SBo0, AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_STALL_NO_SBO_CREDIT.SBO1_AD</td>
+		<td>Stall on No Sbo Credits; For SBo1, AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_STALL_NO_SBO_CREDIT.SBO0_BL</td>
+		<td>Stall on No Sbo Credits; For SBo0, BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_STALL_NO_SBO_CREDIT.SBO1_BL</td>
+		<td>Stall on No Sbo Credits; For SBo1, BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G0.REGION0</td>
+		<td>HA Requests to a TAD Region - Group 0; TAD Region 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G0.REGION1</td>
+		<td>HA Requests to a TAD Region - Group 0; TAD Region 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G0.REGION2</td>
+		<td>HA Requests to a TAD Region - Group 0; TAD Region 2</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G0.REGION3</td>
+		<td>HA Requests to a TAD Region - Group 0; TAD Region 3</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G0.REGION4</td>
+		<td>HA Requests to a TAD Region - Group 0; TAD Region 4</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G0.REGION5</td>
+		<td>HA Requests to a TAD Region - Group 0; TAD Region 5</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G0.REGION6</td>
+		<td>HA Requests to a TAD Region - Group 0; TAD Region 6</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G0.REGION7</td>
+		<td>HA Requests to a TAD Region - Group 0; TAD Region 7</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G1.REGION8</td>
+		<td>HA Requests to a TAD Region - Group 1; TAD Region 8</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G1.REGION9</td>
+		<td>HA Requests to a TAD Region - Group 1; TAD Region 9</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G1.REGION10</td>
+		<td>HA Requests to a TAD Region - Group 1; TAD Region 10</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TAD_REQUESTS_G1.REGION11</td>
+		<td>HA Requests to a TAD Region - Group 1; TAD Region 11</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_CYCLES_FULL.GP</td>
+		<td>Tracker Cycles Full; Cycles GP Completely Used</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_CYCLES_FULL.ALL</td>
+		<td>Tracker Cycles Full; Cycles Completely Used</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_CYCLES_NE.LOCAL</td>
+		<td>Tracker Cycles Not Empty; Local Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_CYCLES_NE.REMOTE</td>
+		<td>Tracker Cycles Not Empty; Remote Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_CYCLES_NE.ALL</td>
+		<td>Tracker Cycles Not Empty; All Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_OCCUPANCY.READS_LOCAL</td>
+		<td>Tracker Occupancy Accumultor; Local Read Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_OCCUPANCY.READS_REMOTE</td>
+		<td>Tracker Occupancy Accumultor; Remote Read Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_OCCUPANCY.WRITES_LOCAL</td>
+		<td>Tracker Occupancy Accumultor; Local Write Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_OCCUPANCY.WRITES_REMOTE</td>
+		<td>Tracker Occupancy Accumultor; Remote Write Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_OCCUPANCY.INVITOE_LOCAL</td>
+		<td>Tracker Occupancy Accumultor; Local InvItoE Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_OCCUPANCY.INVITOE_REMOTE</td>
+		<td>Tracker Occupancy Accumultor; Remote InvItoE Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_PENDING_OCCUPANCY.LOCAL</td>
+		<td>Data Pending Occupancy Accumultor; Local Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TRACKER_PENDING_OCCUPANCY.REMOTE</td>
+		<td>Data Pending Occupancy Accumultor; Remote Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD.HOM</td>
+		<td>Outbound NDR Ring Transactions; Non-data Responses</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_CYCLES_FULL.SCHED0</td>
+		<td>AD Egress Full; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_CYCLES_FULL.SCHED1</td>
+		<td>AD Egress Full; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_CYCLES_FULL.ALL</td>
+		<td>AD Egress Full; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_CYCLES_NE.SCHED0</td>
+		<td>AD Egress Not Empty; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_CYCLES_NE.SCHED1</td>
+		<td>AD Egress Not Empty; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_CYCLES_NE.ALL</td>
+		<td>AD Egress Not Empty; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_INSERTS.SCHED0</td>
+		<td>AD Egress Allocations; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_INSERTS.SCHED1</td>
+		<td>AD Egress Allocations; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AD_INSERTS.ALL</td>
+		<td>AD Egress Allocations; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_CYCLES_FULL.SCHED0</td>
+		<td>AK Egress Full; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_CYCLES_FULL.SCHED1</td>
+		<td>AK Egress Full; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_CYCLES_FULL.ALL</td>
+		<td>AK Egress Full; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_CYCLES_NE.SCHED0</td>
+		<td>AK Egress Not Empty; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_CYCLES_NE.SCHED1</td>
+		<td>AK Egress Not Empty; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_CYCLES_NE.ALL</td>
+		<td>AK Egress Not Empty; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_INSERTS.SCHED0</td>
+		<td>AK Egress Allocations; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_INSERTS.SCHED1</td>
+		<td>AK Egress Allocations; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_AK_INSERTS.ALL</td>
+		<td>AK Egress Allocations; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL.DRS_CACHE</td>
+		<td>Outbound DRS Ring Transactions to Cache; Data to Cache</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL.DRS_CORE</td>
+		<td>Outbound DRS Ring Transactions to Cache; Data to Core</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL.DRS_QPI</td>
+		<td>Outbound DRS Ring Transactions to Cache; Data to QPI</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_CYCLES_FULL.SCHED0</td>
+		<td>BL Egress Full; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_CYCLES_FULL.SCHED1</td>
+		<td>BL Egress Full; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_CYCLES_FULL.ALL</td>
+		<td>BL Egress Full; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_CYCLES_NE.SCHED0</td>
+		<td>BL Egress Not Empty; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_CYCLES_NE.SCHED1</td>
+		<td>BL Egress Not Empty; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_CYCLES_NE.ALL</td>
+		<td>BL Egress Not Empty; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_INSERTS.SCHED0</td>
+		<td>BL Egress Allocations; Scheduler 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_INSERTS.SCHED1</td>
+		<td>BL Egress Allocations; Scheduler 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_BL_INSERTS.ALL</td>
+		<td>BL Egress Allocations; All</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_STARVED.AK</td>
+		<td>Injection Starvation; For AK Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_TxR_STARVED.BL</td>
+		<td>Injection Starvation; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_H_WPQ_CYCLES_NO_REG_CREDITS.CHN0</td>
+		<td>HA iMC CHN0 WPQ Credits Empty - Regular; Channel 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_WPQ_CYCLES_NO_REG_CREDITS.CHN1</td>
+		<td>HA iMC CHN0 WPQ Credits Empty - Regular; Channel 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_WPQ_CYCLES_NO_REG_CREDITS.CHN2</td>
+		<td>HA iMC CHN0 WPQ Credits Empty - Regular; Channel 2</td>
+	</tr>
+	<tr>
+		<td>UNC_H_WPQ_CYCLES_NO_REG_CREDITS.CHN3</td>
+		<td>HA iMC CHN0 WPQ Credits Empty - Regular; Channel 3</td>
+	</tr>
+	<tr>
+		<td>UNC_H_WPQ_CYCLES_NO_SPEC_CREDITS.CHN0</td>
+		<td>HA iMC CHN0 WPQ Credits Empty - Special; Channel 0</td>
+	</tr>
+	<tr>
+		<td>UNC_H_WPQ_CYCLES_NO_SPEC_CREDITS.CHN1</td>
+		<td>HA iMC CHN0 WPQ Credits Empty - Special; Channel 1</td>
+	</tr>
+	<tr>
+		<td>UNC_H_WPQ_CYCLES_NO_SPEC_CREDITS.CHN2</td>
+		<td>HA iMC CHN0 WPQ Credits Empty - Special; Channel 2</td>
+	</tr>
+	<tr>
+		<td>UNC_H_WPQ_CYCLES_NO_SPEC_CREDITS.CHN3</td>
+		<td>HA iMC CHN0 WPQ Credits Empty - Special; Channel 3</td>
+	</tr>
+	<tr>
+		<td>UNC_I_CACHE_TOTAL_OCCUPANCY.ANY</td>
+		<td>Total Write Cache Occupancy; Any Source</td>
+	</tr>
+	<tr>
+		<td>UNC_I_CACHE_TOTAL_OCCUPANCY.SOURCE</td>
+		<td>Total Write Cache Occupancy; Select Source</td>
+	</tr>
+	<tr>
+		<td>UNC_I_CLOCKTICKS</td>
+		<td>Clocks in the IRP</td>
+	</tr>
+	<tr>
+		<td>UNC_I_COHERENT_OPS.PCIRDCUR</td>
+		<td>Coherent Ops; PCIRdCur</td>
+	</tr>
+	<tr>
+		<td>UNC_I_COHERENT_OPS.CRD</td>
+		<td>Coherent Ops; CRd</td>
+	</tr>
+	<tr>
+		<td>UNC_I_COHERENT_OPS.DRD</td>
+		<td>Coherent Ops; DRd</td>
+	</tr>
+	<tr>
+		<td>UNC_I_COHERENT_OPS.RFO</td>
+		<td>Coherent Ops; RFO</td>
+	</tr>
+	<tr>
+		<td>UNC_I_COHERENT_OPS.PCITOM</td>
+		<td>Coherent Ops; PCIItoM</td>
+	</tr>
+	<tr>
+		<td>UNC_I_COHERENT_OPS.PCIDCAHINT</td>
+		<td>Coherent Ops; PCIDCAHin5t</td>
+	</tr>
+	<tr>
+		<td>UNC_I_COHERENT_OPS.WBMTOI</td>
+		<td>Coherent Ops; WbMtoI</td>
+	</tr>
+	<tr>
+		<td>UNC_I_COHERENT_OPS.CLFLUSH</td>
+		<td>Coherent Ops; CLFlush</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC0.FAST_REQ</td>
+		<td>Misc Events - Set 0; Fastpath Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC0.FAST_REJ</td>
+		<td>Misc Events - Set 0; Fastpath Rejects</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC0.2ND_RD_INSERT</td>
+		<td>Misc Events - Set 0; Cache Inserts of Read Transactions as Secondary</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC0.2ND_WR_INSERT</td>
+		<td>Misc Events - Set 0; Cache Inserts of Write Transactions as Secondary</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC0.2ND_ATOMIC_INSERT</td>
+		<td>Misc Events - Set 0; Cache Inserts of Atomic Transactions as Secondary</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC0.FAST_XFER</td>
+		<td>Misc Events - Set 0; Fastpath Transfers From Primary to Secondary</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC0.PF_ACK_HINT</td>
+		<td>Misc Events - Set 0; Prefetch Ack Hints From Primary to Secondary</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC0.PF_TIMEOUT</td>
+		<td>Misc Events - Set 0; Prefetch TimeOut</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC1.SLOW_I</td>
+		<td>Misc Events - Set 1; Slow Transfer of I Line</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC1.SLOW_S</td>
+		<td>Misc Events - Set 1; Slow Transfer of S Line</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC1.SLOW_E</td>
+		<td>Misc Events - Set 1; Slow Transfer of E Line</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC1.SLOW_M</td>
+		<td>Misc Events - Set 1; Slow Transfer of M Line</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC1.LOST_FWD</td>
+		<td>Misc Events - Set 1</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC1.SEC_RCVD_INVLD</td>
+		<td>Misc Events - Set 1; Received Invalid</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC1.SEC_RCVD_VLD</td>
+		<td>Misc Events - Set 1; Received Valid</td>
+	</tr>
+	<tr>
+		<td>UNC_I_MISC1.DATA_THROTTLE</td>
+		<td>Misc Events - Set 1; Data Throttled</td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_AK_INSERTS</td>
+		<td>AK Ingress Occupancy</td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_DRS_CYCLES_FULL</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_DRS_INSERTS</td>
+		<td>BL Ingress Occupancy - DRS</td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_DRS_OCCUPANCY</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_NCB_CYCLES_FULL</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_NCB_INSERTS</td>
+		<td>BL Ingress Occupancy - NCB</td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_NCB_OCCUPANCY</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_NCS_CYCLES_FULL</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_NCS_INSERTS</td>
+		<td>BL Ingress Occupancy - NCS</td>
+	</tr>
+	<tr>
+		<td>UNC_I_RxR_BL_NCS_OCCUPANCY</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_I_SNOOP_RESP.MISS</td>
+		<td>Snoop Responses; Miss</td>
+	</tr>
+	<tr>
+		<td>UNC_I_SNOOP_RESP.HIT_I</td>
+		<td>Snoop Responses; Hit I</td>
+	</tr>
+	<tr>
+		<td>UNC_I_SNOOP_RESP.HIT_ES</td>
+		<td>Snoop Responses; Hit E or S</td>
+	</tr>
+	<tr>
+		<td>UNC_I_SNOOP_RESP.HIT_M</td>
+		<td>Snoop Responses; Hit M</td>
+	</tr>
+	<tr>
+		<td>UNC_I_SNOOP_RESP.SNPCODE</td>
+		<td>Snoop Responses; SnpCode</td>
+	</tr>
+	<tr>
+		<td>UNC_I_SNOOP_RESP.SNPDATA</td>
+		<td>Snoop Responses; SnpData</td>
+	</tr>
+	<tr>
+		<td>UNC_I_SNOOP_RESP.SNPINV</td>
+		<td>Snoop Responses; SnpInv</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TRANSACTIONS.READS</td>
+		<td>Inbound Transaction Count; Reads</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TRANSACTIONS.WRITES</td>
+		<td>Inbound Transaction Count; Writes</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TRANSACTIONS.RD_PREF</td>
+		<td>Inbound Transaction Count; Read Prefetches</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TRANSACTIONS.WR_PREF</td>
+		<td>Inbound Transaction Count; Write Prefetches</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TRANSACTIONS.ATOMIC</td>
+		<td>Inbound Transaction Count; Atomic</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TRANSACTIONS.OTHER</td>
+		<td>Inbound Transaction Count; Other</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TRANSACTIONS.ORDERINGQ</td>
+		<td>Inbound Transaction Count; Select Source</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TxR_AD_STALL_CREDIT_CYCLES</td>
+		<td>No AD Egress Credit Stalls</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TxR_BL_STALL_CREDIT_CYCLES</td>
+		<td>No BL Egress Credit Stalls</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TxR_DATA_INSERTS_NCB</td>
+		<td>Outbound Read Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TxR_DATA_INSERTS_NCS</td>
+		<td>Outbound Read Requests</td>
+	</tr>
+	<tr>
+		<td>UNC_I_TxR_REQUEST_OCCUPANCY</td>
+		<td>Outbound Request Queue Occupancy</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CLOCKTICKS</td>
+		<td>pclk Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE0_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE10_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE11_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE12_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE13_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE14_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE15_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE16_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE17_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE1_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE2_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE3_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE4_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE5_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE6_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE7_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE8_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_CORE9_TRANSITION_CYCLES</td>
+		<td>Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE0</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE1</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE10</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE11</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE12</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE13</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE14</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE15</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE16</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE17</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE2</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE3</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE4</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE5</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE6</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE7</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE8</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_DEMOTIONS_CORE9</td>
+		<td>Core C State Demotions</td>
+	</tr>
+	<tr>
+		<td>UNC_P_FREQ_MAX_LIMIT_THERMAL_CYCLES</td>
+		<td>Thermal Strongest Upper Limit Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_FREQ_MAX_OS_CYCLES</td>
+		<td>OS Strongest Upper Limit Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_FREQ_MAX_POWER_CYCLES</td>
+		<td>Power Strongest Upper Limit Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_FREQ_MIN_IO_P_CYCLES</td>
+		<td>IO P Limit Strongest Lower Limit Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_FREQ_TRANS_CYCLES</td>
+		<td>Cycles spent changing Frequency</td>
+	</tr>
+	<tr>
+		<td>UNC_P_MEMORY_PHASE_SHEDDING_CYCLES</td>
+		<td>Memory Phase Shedding Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_PKG_RESIDENCY_C0_CYCLES</td>
+		<td>Package C State Residency - C0</td>
+	</tr>
+	<tr>
+		<td>UNC_P_PKG_RESIDENCY_C1E_CYCLES</td>
+		<td>Package C State Residency - C1E</td>
+	</tr>
+	<tr>
+		<td>UNC_P_PKG_RESIDENCY_C2E_CYCLES</td>
+		<td>Package C State Residency - C2E</td>
+	</tr>
+	<tr>
+		<td>UNC_P_PKG_RESIDENCY_C3_CYCLES</td>
+		<td>Package C State Residency - C3</td>
+	</tr>
+	<tr>
+		<td>UNC_P_PKG_RESIDENCY_C6_CYCLES</td>
+		<td>Package C State Residency - C6</td>
+	</tr>
+	<tr>
+		<td>UNC_P_PKG_RESIDENCY_C7_CYCLES</td>
+		<td>Package C7 State Residency</td>
+	</tr>
+	<tr>
+		<td>UNC_P_POWER_STATE_OCCUPANCY.CORES_C0</td>
+		<td>Number of cores in C-State; C0 and C1</td>
+	</tr>
+	<tr>
+		<td>UNC_P_POWER_STATE_OCCUPANCY.CORES_C3</td>
+		<td>Number of cores in C-State; C3</td>
+	</tr>
+	<tr>
+		<td>UNC_P_POWER_STATE_OCCUPANCY.CORES_C6</td>
+		<td>Number of cores in C-State; C6 and C7</td>
+	</tr>
+	<tr>
+		<td>UNC_P_PROCHOT_EXTERNAL_CYCLES</td>
+		<td>External Prochot</td>
+	</tr>
+	<tr>
+		<td>UNC_P_PROCHOT_INTERNAL_CYCLES</td>
+		<td>Internal Prochot</td>
+	</tr>
+	<tr>
+		<td>UNC_P_TOTAL_TRANSITION_CYCLES</td>
+		<td>Total Core C State Transition Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_P_UFS_TRANSITIONS_RING_GV</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_P_VR_HOT_CYCLES</td>
+		<td>VR Hot</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_CLOCKTICKS</td>
+		<td>Number of uclks in domain</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDIT.PRQ_QPI0</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDIT.PRQ_QPI1</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDIT.ISOCH_QPI0</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDIT.ISOCH_QPI1</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDITS_ACQUIRED.DRS</td>
+		<td>R2PCIe IIO Credit Acquired; DRS</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDITS_ACQUIRED.NCB</td>
+		<td>R2PCIe IIO Credit Acquired; NCB</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDITS_ACQUIRED.NCS</td>
+		<td>R2PCIe IIO Credit Acquired; NCS</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDITS_USED.DRS</td>
+		<td>R2PCIe IIO Credits in Use; DRS</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDITS_USED.NCB</td>
+		<td>R2PCIe IIO Credits in Use; NCB</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_IIO_CREDITS_USED.NCS</td>
+		<td>R2PCIe IIO Credits in Use; NCS</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AD_USED.CW_EVEN</td>
+		<td>R2 AD Ring in Use; Clockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AD_USED.CW_ODD</td>
+		<td>R2 AD Ring in Use; Clockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AD_USED.CCW_EVEN</td>
+		<td>R2 AD Ring in Use; Counterclockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AD_USED.CCW_ODD</td>
+		<td>R2 AD Ring in Use; Counterclockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AD_USED.CW</td>
+		<td>R2 AD Ring in Use; Clockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AD_USED.CCW</td>
+		<td>R2 AD Ring in Use; Counterclockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AD_USED.ALL</td>
+		<td>R2 AD Ring in Use; All</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_BOUNCES.UP</td>
+		<td>AK Ingress Bounced; Up</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_BOUNCES.DN</td>
+		<td>AK Ingress Bounced; Dn</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_USED.CW_EVEN</td>
+		<td>R2 AK Ring in Use; Clockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_USED.CW_ODD</td>
+		<td>R2 AK Ring in Use; Clockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_USED.CCW_EVEN</td>
+		<td>R2 AK Ring in Use; Counterclockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_USED.CCW_ODD</td>
+		<td>R2 AK Ring in Use; Counterclockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_USED.CW</td>
+		<td>R2 AK Ring in Use; Clockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_USED.CCW</td>
+		<td>R2 AK Ring in Use; Counterclockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_AK_USED.ALL</td>
+		<td>R2 AK Ring in Use; All</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_BL_USED.CW_EVEN</td>
+		<td>R2 BL Ring in Use; Clockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_BL_USED.CW_ODD</td>
+		<td>R2 BL Ring in Use; Clockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_BL_USED.CCW_EVEN</td>
+		<td>R2 BL Ring in Use; Counterclockwise and Even</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_BL_USED.CCW_ODD</td>
+		<td>R2 BL Ring in Use; Counterclockwise and Odd</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_BL_USED.CW</td>
+		<td>R2 BL Ring in Use; Clockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_BL_USED.CCW</td>
+		<td>R2 BL Ring in Use; Counterclockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_BL_USED.ALL</td>
+		<td>R2 BL Ring in Use; All</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_IV_USED.CW</td>
+		<td>R2 IV Ring in Use; Clockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_IV_USED.CCW</td>
+		<td>R2 IV Ring in Use; Counterclockwise</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RING_IV_USED.ANY</td>
+		<td>R2 IV Ring in Use; Any</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RxR_CYCLES_NE.NCB</td>
+		<td>Ingress Cycles Not Empty; NCB</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RxR_CYCLES_NE.NCS</td>
+		<td>Ingress Cycles Not Empty; NCS</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RxR_INSERTS.NCB</td>
+		<td>Ingress Allocations; NCB</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RxR_INSERTS.NCS</td>
+		<td>Ingress Allocations; NCS</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_RxR_OCCUPANCY.DRS</td>
+		<td>Ingress Occupancy Accumulator; DRS</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_SBO0_CREDITS_ACQUIRED.AD</td>
+		<td>SBo0 Credits Acquired; For AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_SBO0_CREDITS_ACQUIRED.BL</td>
+		<td>SBo0 Credits Acquired; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_SBO0_CREDIT_OCCUPANCY.AD</td>
+		<td>SBo0 Credits Occupancy; For AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_SBO0_CREDIT_OCCUPANCY.BL</td>
+		<td>SBo0 Credits Occupancy; For BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_STALL_NO_SBO_CREDIT.SBO0_AD</td>
+		<td>Stall on No Sbo Credits; For SBo0, AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_STALL_NO_SBO_CREDIT.SBO1_AD</td>
+		<td>Stall on No Sbo Credits; For SBo1, AD Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_STALL_NO_SBO_CREDIT.SBO0_BL</td>
+		<td>Stall on No Sbo Credits; For SBo0, BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_STALL_NO_SBO_CREDIT.SBO1_BL</td>
+		<td>Stall on No Sbo Credits; For SBo1, BL Ring</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_CYCLES_FULL.AD</td>
+		<td>Egress Cycles Full; AD</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_CYCLES_FULL.AK</td>
+		<td>Egress Cycles Full; AK</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_CYCLES_FULL.BL</td>
+		<td>Egress Cycles Full; BL</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_CYCLES_NE.AD</td>
+		<td>Egress Cycles Not Empty; AD</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_CYCLES_NE.AK</td>
+		<td>Egress Cycles Not Empty; AK</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_CYCLES_NE.BL</td>
+		<td>Egress Cycles Not Empty; BL</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_NACK_CW.DN_AD</td>
+		<td>Egress CCW NACK; AD CCW</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_NACK_CW.DN_BL</td>
+		<td>Egress CCW NACK; BL CCW</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_NACK_CW.DN_AK</td>
+		<td>Egress CCW NACK; AK CCW</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_NACK_CW.UP_AD</td>
+		<td>Egress CCW NACK; AK CCW</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_NACK_CW.UP_BL</td>
+		<td>Egress CCW NACK; BL CCW</td>
+	</tr>
+	<tr>
+		<td>UNC_R2_TxR_NACK_CW.UP_AK</td>
+		<td>Egress CCW NACK; BL CW</td>
+	</tr>
+	<tr>
+		<td>UNC_U_EVENT_MSG.DOORBELL_RCVD</td>
+		<td>VLW Received</td>
+	</tr>
+	<tr>
+		<td>UNC_U_FILTER_MATCH.ENABLE</td>
+		<td>Filter Match</td>
+	</tr>
+	<tr>
+		<td>UNC_U_FILTER_MATCH.DISABLE</td>
+		<td>Filter Match</td>
+	</tr>
+	<tr>
+		<td>UNC_U_FILTER_MATCH.U2C_ENABLE</td>
+		<td>Filter Match</td>
+	</tr>
+	<tr>
+		<td>UNC_U_FILTER_MATCH.U2C_DISABLE</td>
+		<td>Filter Match</td>
+	</tr>
+	<tr>
+		<td>UNC_U_PHOLD_CYCLES.ASSERT_TO_ACK</td>
+		<td>Cycles PHOLD Assert to Ack; Assert to ACK</td>
+	</tr>
+	<tr>
+		<td>UNC_U_RACU_REQUESTS</td>
+		<td>RACU Request</td>
+	</tr>
+	<tr>
+		<td>UNC_U_U2C_EVENTS.MONITOR_T0</td>
+		<td>Monitor Sent to T0; Monitor T0</td>
+	</tr>
+	<tr>
+		<td>UNC_U_U2C_EVENTS.MONITOR_T1</td>
+		<td>Monitor Sent to T0; Monitor T1</td>
+	</tr>
+	<tr>
+		<td>UNC_U_U2C_EVENTS.LIVELOCK</td>
+		<td>Monitor Sent to T0; Livelock</td>
+	</tr>
+	<tr>
+		<td>UNC_U_U2C_EVENTS.LTERROR</td>
+		<td>Monitor Sent to T0; LTError</td>
+	</tr>
+	<tr>
+		<td>UNC_U_U2C_EVENTS.CMC</td>
+		<td>Monitor Sent to T0; Correctable Machine Check</td>
+	</tr>
+	<tr>
+		<td>UNC_U_U2C_EVENTS.UMC</td>
+		<td>Monitor Sent to T0; Uncorrectable Machine Check</td>
+	</tr>
+	<tr>
+		<td>UNC_U_U2C_EVENTS.TRAP</td>
+		<td>Monitor Sent to T0; Trap</td>
+	</tr>
+	<tr>
+		<td>UNC_U_U2C_EVENTS.OTHER</td>
+		<td>Monitor Sent to T0; Other</td>
+	</tr>
+	<tr>
+		<td>UNC_M_ACT_COUNT.RD</td>
+		<td>DRAM Activate Count; Activate due to Read</td>
+	</tr>
+	<tr>
+		<td>UNC_M_ACT_COUNT.WR</td>
+		<td>DRAM Activate Count; Activate due to Write</td>
+	</tr>
+	<tr>
+		<td>UNC_M_ACT_COUNT.BYP</td>
+		<td>DRAM Activate Count; Activate due to Write</td>
+	</tr>
+	<tr>
+		<td>UNC_M_BYP_CMDS.ACT</td>
+		<td>ACT command issued by 2 cycle bypass</td>
+	</tr>
+	<tr>
+		<td>UNC_M_BYP_CMDS.CAS</td>
+		<td>CAS command issued by 2 cycle bypass</td>
+	</tr>
+	<tr>
+		<td>UNC_M_BYP_CMDS.PRE</td>
+		<td>PRE command issued by 2 cycle bypass</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.RD_REG</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; All DRAM RD_CAS (w/ and w/out auto-pre)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.RD_UNDERFILL</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; Underfill Read Issued</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.RD</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; All DRAM Reads (RD_CAS + Underfills)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.WR_WMM</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; DRAM WR_CAS (w/ and w/out auto-pre) in Write Major Mode</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.WR_RMM</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; DRAM WR_CAS (w/ and w/out auto-pre) in Read Major Mode</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.WR</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; All DRAM WR_CAS (both Modes)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.ALL</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; All DRAM WR_CAS (w/ and w/out auto-pre)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.RD_WMM</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; Read CAS issued in WMM</td>
+	</tr>
+	<tr>
+		<td>UNC_M_CAS_COUNT.RD_RMM</td>
+		<td>DRAM RD_CAS and WR_CAS Commands.; Read CAS issued in RMM</td>
+	</tr>
+	<tr>
+		<td>UNC_M_DCLOCKTICKS</td>
+		<td>DRAM Clockticks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_DRAM_PRE_ALL</td>
+		<td>DRAM Precharge All Commands</td>
+	</tr>
+	<tr>
+		<td>UNC_M_DRAM_REFRESH.PANIC</td>
+		<td>Number of DRAM Refreshes Issued</td>
+	</tr>
+	<tr>
+		<td>UNC_M_DRAM_REFRESH.HIGH</td>
+		<td>Number of DRAM Refreshes Issued</td>
+	</tr>
+	<tr>
+		<td>UNC_M_ECC_CORRECTABLE_ERRORS</td>
+		<td>ECC Correctable Errors</td>
+	</tr>
+	<tr>
+		<td>UNC_M_MAJOR_MODES.READ</td>
+		<td>Cycles in a Major Mode; Read Major Mode</td>
+	</tr>
+	<tr>
+		<td>UNC_M_MAJOR_MODES.WRITE</td>
+		<td>Cycles in a Major Mode; Write Major Mode</td>
+	</tr>
+	<tr>
+		<td>UNC_M_MAJOR_MODES.PARTIAL</td>
+		<td>Cycles in a Major Mode; Partial Major Mode</td>
+	</tr>
+	<tr>
+		<td>UNC_M_MAJOR_MODES.ISOCH</td>
+		<td>Cycles in a Major Mode; Isoch Major Mode</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CHANNEL_DLLOFF</td>
+		<td>Channel DLLOFF Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CHANNEL_PPD</td>
+		<td>Channel PPD Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CKE_CYCLES.RANK0</td>
+		<td>CKE_ON_CYCLES by Rank; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CKE_CYCLES.RANK1</td>
+		<td>CKE_ON_CYCLES by Rank; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CKE_CYCLES.RANK2</td>
+		<td>CKE_ON_CYCLES by Rank; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CKE_CYCLES.RANK3</td>
+		<td>CKE_ON_CYCLES by Rank; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CKE_CYCLES.RANK4</td>
+		<td>CKE_ON_CYCLES by Rank; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CKE_CYCLES.RANK5</td>
+		<td>CKE_ON_CYCLES by Rank; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CKE_CYCLES.RANK6</td>
+		<td>CKE_ON_CYCLES by Rank; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CKE_CYCLES.RANK7</td>
+		<td>CKE_ON_CYCLES by Rank; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_CRITICAL_THROTTLE_CYCLES</td>
+		<td>Critical Throttle Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_PCU_THROTTLING</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_SELF_REFRESH</td>
+		<td>Clock-Enabled Self-Refresh</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_THROTTLE_CYCLES.RANK0</td>
+		<td>Throttle Cycles for Rank 0; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_THROTTLE_CYCLES.RANK1</td>
+		<td>Throttle Cycles for Rank 0; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_THROTTLE_CYCLES.RANK2</td>
+		<td>Throttle Cycles for Rank 0; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_THROTTLE_CYCLES.RANK3</td>
+		<td>Throttle Cycles for Rank 0; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_THROTTLE_CYCLES.RANK4</td>
+		<td>Throttle Cycles for Rank 0; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_THROTTLE_CYCLES.RANK5</td>
+		<td>Throttle Cycles for Rank 0; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_THROTTLE_CYCLES.RANK6</td>
+		<td>Throttle Cycles for Rank 0; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_POWER_THROTTLE_CYCLES.RANK7</td>
+		<td>Throttle Cycles for Rank 0; DIMM ID</td>
+	</tr>
+	<tr>
+		<td>UNC_M_PREEMPTION.RD_PREEMPT_RD</td>
+		<td>Read Preemption Count; Read over Read Preemption</td>
+	</tr>
+	<tr>
+		<td>UNC_M_PREEMPTION.RD_PREEMPT_WR</td>
+		<td>Read Preemption Count; Read over Write Preemption</td>
+	</tr>
+	<tr>
+		<td>UNC_M_PRE_COUNT.PAGE_MISS</td>
+		<td>DRAM Precharge commands.; Precharges due to page miss</td>
+	</tr>
+	<tr>
+		<td>UNC_M_PRE_COUNT.PAGE_CLOSE</td>
+		<td>DRAM Precharge commands.; Precharge due to timer expiration</td>
+	</tr>
+	<tr>
+		<td>UNC_M_PRE_COUNT.RD</td>
+		<td>DRAM Precharge commands.; Precharge due to read</td>
+	</tr>
+	<tr>
+		<td>UNC_M_PRE_COUNT.WR</td>
+		<td>DRAM Precharge commands.; Precharge due to write</td>
+	</tr>
+	<tr>
+		<td>UNC_M_PRE_COUNT.BYP</td>
+		<td>DRAM Precharge commands.; Precharge due to bypass</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_PRIO.LOW</td>
+		<td>Read CAS issued with LOW priority</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_PRIO.MED</td>
+		<td>Read CAS issued with MEDIUM priority</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_PRIO.HIGH</td>
+		<td>Read CAS issued with HIGH priority</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_PRIO.PANIC</td>
+		<td>Read CAS issued with PANIC NON ISOCH priority (starved)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK1</td>
+		<td>RD_CAS Access to Rank 0; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK2</td>
+		<td>RD_CAS Access to Rank 0; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK4</td>
+		<td>RD_CAS Access to Rank 0; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK8</td>
+		<td>RD_CAS Access to Rank 0; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.ALLBANKS</td>
+		<td>RD_CAS Access to Rank 0; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK0</td>
+		<td>RD_CAS Access to Rank 0; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK3</td>
+		<td>RD_CAS Access to Rank 0; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK5</td>
+		<td>RD_CAS Access to Rank 0; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK6</td>
+		<td>RD_CAS Access to Rank 0; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK7</td>
+		<td>RD_CAS Access to Rank 0; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK9</td>
+		<td>RD_CAS Access to Rank 0; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK10</td>
+		<td>RD_CAS Access to Rank 0; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK11</td>
+		<td>RD_CAS Access to Rank 0; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK12</td>
+		<td>RD_CAS Access to Rank 0; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK13</td>
+		<td>RD_CAS Access to Rank 0; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK14</td>
+		<td>RD_CAS Access to Rank 0; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANK15</td>
+		<td>RD_CAS Access to Rank 0; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANKG0</td>
+		<td>RD_CAS Access to Rank 0; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANKG1</td>
+		<td>RD_CAS Access to Rank 0; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANKG2</td>
+		<td>RD_CAS Access to Rank 0; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK0.BANKG3</td>
+		<td>RD_CAS Access to Rank 0; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK1</td>
+		<td>RD_CAS Access to Rank 1; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK2</td>
+		<td>RD_CAS Access to Rank 1; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK4</td>
+		<td>RD_CAS Access to Rank 1; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK8</td>
+		<td>RD_CAS Access to Rank 1; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.ALLBANKS</td>
+		<td>RD_CAS Access to Rank 1; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK0</td>
+		<td>RD_CAS Access to Rank 1; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK3</td>
+		<td>RD_CAS Access to Rank 1; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK5</td>
+		<td>RD_CAS Access to Rank 1; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK6</td>
+		<td>RD_CAS Access to Rank 1; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK7</td>
+		<td>RD_CAS Access to Rank 1; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK9</td>
+		<td>RD_CAS Access to Rank 1; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK10</td>
+		<td>RD_CAS Access to Rank 1; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK11</td>
+		<td>RD_CAS Access to Rank 1; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK12</td>
+		<td>RD_CAS Access to Rank 1; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK13</td>
+		<td>RD_CAS Access to Rank 1; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK14</td>
+		<td>RD_CAS Access to Rank 1; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANK15</td>
+		<td>RD_CAS Access to Rank 1; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANKG0</td>
+		<td>RD_CAS Access to Rank 1; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANKG1</td>
+		<td>RD_CAS Access to Rank 1; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANKG2</td>
+		<td>RD_CAS Access to Rank 1; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK1.BANKG3</td>
+		<td>RD_CAS Access to Rank 1; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK2.BANK0</td>
+		<td>RD_CAS Access to Rank 2; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK1</td>
+		<td>RD_CAS Access to Rank 4; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK2</td>
+		<td>RD_CAS Access to Rank 4; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK4</td>
+		<td>RD_CAS Access to Rank 4; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK8</td>
+		<td>RD_CAS Access to Rank 4; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.ALLBANKS</td>
+		<td>RD_CAS Access to Rank 4; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK0</td>
+		<td>RD_CAS Access to Rank 4; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK3</td>
+		<td>RD_CAS Access to Rank 4; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK5</td>
+		<td>RD_CAS Access to Rank 4; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK6</td>
+		<td>RD_CAS Access to Rank 4; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK7</td>
+		<td>RD_CAS Access to Rank 4; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK9</td>
+		<td>RD_CAS Access to Rank 4; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK10</td>
+		<td>RD_CAS Access to Rank 4; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK11</td>
+		<td>RD_CAS Access to Rank 4; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK12</td>
+		<td>RD_CAS Access to Rank 4; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK13</td>
+		<td>RD_CAS Access to Rank 4; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK14</td>
+		<td>RD_CAS Access to Rank 4; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANK15</td>
+		<td>RD_CAS Access to Rank 4; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANKG0</td>
+		<td>RD_CAS Access to Rank 4; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANKG1</td>
+		<td>RD_CAS Access to Rank 4; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANKG2</td>
+		<td>RD_CAS Access to Rank 4; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK4.BANKG3</td>
+		<td>RD_CAS Access to Rank 4; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK1</td>
+		<td>RD_CAS Access to Rank 5; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK2</td>
+		<td>RD_CAS Access to Rank 5; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK4</td>
+		<td>RD_CAS Access to Rank 5; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK8</td>
+		<td>RD_CAS Access to Rank 5; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.ALLBANKS</td>
+		<td>RD_CAS Access to Rank 5; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK0</td>
+		<td>RD_CAS Access to Rank 5; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK3</td>
+		<td>RD_CAS Access to Rank 5; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK5</td>
+		<td>RD_CAS Access to Rank 5; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK6</td>
+		<td>RD_CAS Access to Rank 5; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK7</td>
+		<td>RD_CAS Access to Rank 5; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK9</td>
+		<td>RD_CAS Access to Rank 5; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK10</td>
+		<td>RD_CAS Access to Rank 5; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK11</td>
+		<td>RD_CAS Access to Rank 5; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK12</td>
+		<td>RD_CAS Access to Rank 5; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK13</td>
+		<td>RD_CAS Access to Rank 5; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK14</td>
+		<td>RD_CAS Access to Rank 5; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANK15</td>
+		<td>RD_CAS Access to Rank 5; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANKG0</td>
+		<td>RD_CAS Access to Rank 5; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANKG1</td>
+		<td>RD_CAS Access to Rank 5; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANKG2</td>
+		<td>RD_CAS Access to Rank 5; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK5.BANKG3</td>
+		<td>RD_CAS Access to Rank 5; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK1</td>
+		<td>RD_CAS Access to Rank 6; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK2</td>
+		<td>RD_CAS Access to Rank 6; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK4</td>
+		<td>RD_CAS Access to Rank 6; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK8</td>
+		<td>RD_CAS Access to Rank 6; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.ALLBANKS</td>
+		<td>RD_CAS Access to Rank 6; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK0</td>
+		<td>RD_CAS Access to Rank 6; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK3</td>
+		<td>RD_CAS Access to Rank 6; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK5</td>
+		<td>RD_CAS Access to Rank 6; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK6</td>
+		<td>RD_CAS Access to Rank 6; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK7</td>
+		<td>RD_CAS Access to Rank 6; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK9</td>
+		<td>RD_CAS Access to Rank 6; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK10</td>
+		<td>RD_CAS Access to Rank 6; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK11</td>
+		<td>RD_CAS Access to Rank 6; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK12</td>
+		<td>RD_CAS Access to Rank 6; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK13</td>
+		<td>RD_CAS Access to Rank 6; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK14</td>
+		<td>RD_CAS Access to Rank 6; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANK15</td>
+		<td>RD_CAS Access to Rank 6; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANKG0</td>
+		<td>RD_CAS Access to Rank 6; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANKG1</td>
+		<td>RD_CAS Access to Rank 6; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANKG2</td>
+		<td>RD_CAS Access to Rank 6; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK6.BANKG3</td>
+		<td>RD_CAS Access to Rank 6; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK1</td>
+		<td>RD_CAS Access to Rank 7; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK2</td>
+		<td>RD_CAS Access to Rank 7; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK4</td>
+		<td>RD_CAS Access to Rank 7; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK8</td>
+		<td>RD_CAS Access to Rank 7; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.ALLBANKS</td>
+		<td>RD_CAS Access to Rank 7; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK0</td>
+		<td>RD_CAS Access to Rank 7; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK3</td>
+		<td>RD_CAS Access to Rank 7; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK5</td>
+		<td>RD_CAS Access to Rank 7; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK6</td>
+		<td>RD_CAS Access to Rank 7; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK7</td>
+		<td>RD_CAS Access to Rank 7; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK9</td>
+		<td>RD_CAS Access to Rank 7; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK10</td>
+		<td>RD_CAS Access to Rank 7; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK11</td>
+		<td>RD_CAS Access to Rank 7; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK12</td>
+		<td>RD_CAS Access to Rank 7; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK13</td>
+		<td>RD_CAS Access to Rank 7; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK14</td>
+		<td>RD_CAS Access to Rank 7; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANK15</td>
+		<td>RD_CAS Access to Rank 7; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANKG0</td>
+		<td>RD_CAS Access to Rank 7; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANKG1</td>
+		<td>RD_CAS Access to Rank 7; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANKG2</td>
+		<td>RD_CAS Access to Rank 7; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RD_CAS_RANK7.BANKG3</td>
+		<td>RD_CAS Access to Rank 7; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RPQ_CYCLES_NE</td>
+		<td>Read Pending Queue Not Empty</td>
+	</tr>
+	<tr>
+		<td>UNC_M_RPQ_INSERTS</td>
+		<td>Read Pending Queue Allocations</td>
+	</tr>
+	<tr>
+		<td>UNC_M_VMSE_MXB_WR_OCCUPANCY</td>
+		<td>VMSE MXB write buffer occupancy</td>
+	</tr>
+	<tr>
+		<td>UNC_M_VMSE_WR_PUSH.WMM</td>
+		<td>VMSE WR PUSH issued; VMSE write PUSH issued in WMM</td>
+	</tr>
+	<tr>
+		<td>UNC_M_VMSE_WR_PUSH.RMM</td>
+		<td>VMSE WR PUSH issued; VMSE write PUSH issued in RMM</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WMM_TO_RMM.LOW_THRESH</td>
+		<td>Transition from WMM to RMM because of low threshold; Transition from WMM to RMM because of starve counter</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WMM_TO_RMM.STARVE</td>
+		<td>Transition from WMM to RMM because of low threshold</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WMM_TO_RMM.VMSE_RETRY</td>
+		<td>Transition from WMM to RMM because of low threshold</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WPQ_CYCLES_FULL</td>
+		<td>Write Pending Queue Full Cycles</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WPQ_CYCLES_NE</td>
+		<td>Write Pending Queue Not Empty</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WPQ_READ_HIT</td>
+		<td>Write Pending Queue CAM Match</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WPQ_WRITE_HIT</td>
+		<td>Write Pending Queue CAM Match</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WRONG_MM</td>
+		<td>Not getting the requested Major Mode</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK1</td>
+		<td>WR_CAS Access to Rank 0; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK2</td>
+		<td>WR_CAS Access to Rank 0; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK4</td>
+		<td>WR_CAS Access to Rank 0; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK8</td>
+		<td>WR_CAS Access to Rank 0; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.ALLBANKS</td>
+		<td>WR_CAS Access to Rank 0; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK0</td>
+		<td>WR_CAS Access to Rank 0; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK3</td>
+		<td>WR_CAS Access to Rank 0; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK5</td>
+		<td>WR_CAS Access to Rank 0; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK6</td>
+		<td>WR_CAS Access to Rank 0; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK7</td>
+		<td>WR_CAS Access to Rank 0; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK9</td>
+		<td>WR_CAS Access to Rank 0; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK10</td>
+		<td>WR_CAS Access to Rank 0; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK11</td>
+		<td>WR_CAS Access to Rank 0; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK12</td>
+		<td>WR_CAS Access to Rank 0; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK13</td>
+		<td>WR_CAS Access to Rank 0; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK14</td>
+		<td>WR_CAS Access to Rank 0; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANK15</td>
+		<td>WR_CAS Access to Rank 0; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANKG0</td>
+		<td>WR_CAS Access to Rank 0; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANKG1</td>
+		<td>WR_CAS Access to Rank 0; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANKG2</td>
+		<td>WR_CAS Access to Rank 0; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK0.BANKG3</td>
+		<td>WR_CAS Access to Rank 0; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK1</td>
+		<td>WR_CAS Access to Rank 1; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK2</td>
+		<td>WR_CAS Access to Rank 1; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK4</td>
+		<td>WR_CAS Access to Rank 1; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK8</td>
+		<td>WR_CAS Access to Rank 1; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.ALLBANKS</td>
+		<td>WR_CAS Access to Rank 1; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK0</td>
+		<td>WR_CAS Access to Rank 1; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK3</td>
+		<td>WR_CAS Access to Rank 1; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK5</td>
+		<td>WR_CAS Access to Rank 1; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK6</td>
+		<td>WR_CAS Access to Rank 1; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK7</td>
+		<td>WR_CAS Access to Rank 1; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK9</td>
+		<td>WR_CAS Access to Rank 1; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK10</td>
+		<td>WR_CAS Access to Rank 1; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK11</td>
+		<td>WR_CAS Access to Rank 1; Bank 11</td>
+	</tr>
+	<tr>
+		<td><div id="UNC_M_WR_CAS_RANK1.BANK12">UNC_M_WR_CAS_RANK1.BANK12</div></td>
+		<td>WR_CAS Access to Rank 1; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK13</td>
+		<td>WR_CAS Access to Rank 1; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK14</td>
+		<td>WR_CAS Access to Rank 1; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANK15</td>
+		<td>WR_CAS Access to Rank 1; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANKG0</td>
+		<td>WR_CAS Access to Rank 1; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANKG1</td>
+		<td>WR_CAS Access to Rank 1; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANKG2</td>
+		<td>WR_CAS Access to Rank 1; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK1.BANKG3</td>
+		<td>WR_CAS Access to Rank 1; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK1</td>
+		<td>WR_CAS Access to Rank 4; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK2</td>
+		<td>WR_CAS Access to Rank 4; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK4</td>
+		<td>WR_CAS Access to Rank 4; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK8</td>
+		<td>WR_CAS Access to Rank 4; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.ALLBANKS</td>
+		<td>WR_CAS Access to Rank 4; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK0</td>
+		<td>WR_CAS Access to Rank 4; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK3</td>
+		<td>WR_CAS Access to Rank 4; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK5</td>
+		<td>WR_CAS Access to Rank 4; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK6</td>
+		<td>WR_CAS Access to Rank 4; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK7</td>
+		<td>WR_CAS Access to Rank 4; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK9</td>
+		<td>WR_CAS Access to Rank 4; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK10</td>
+		<td>WR_CAS Access to Rank 4; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK11</td>
+		<td>WR_CAS Access to Rank 4; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK12</td>
+		<td>WR_CAS Access to Rank 4; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK13</td>
+		<td>WR_CAS Access to Rank 4; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK14</td>
+		<td>WR_CAS Access to Rank 4; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANK15</td>
+		<td>WR_CAS Access to Rank 4; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANKG0</td>
+		<td>WR_CAS Access to Rank 4; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANKG1</td>
+		<td>WR_CAS Access to Rank 4; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANKG2</td>
+		<td>WR_CAS Access to Rank 4; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK4.BANKG3</td>
+		<td>WR_CAS Access to Rank 4; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK1</td>
+		<td>WR_CAS Access to Rank 5; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK2</td>
+		<td>WR_CAS Access to Rank 5; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK4</td>
+		<td>WR_CAS Access to Rank 5; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK8</td>
+		<td>WR_CAS Access to Rank 5; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.ALLBANKS</td>
+		<td>WR_CAS Access to Rank 5; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK0</td>
+		<td>WR_CAS Access to Rank 5; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK3</td>
+		<td>WR_CAS Access to Rank 5; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK5</td>
+		<td>WR_CAS Access to Rank 5; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK6</td>
+		<td>WR_CAS Access to Rank 5; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK7</td>
+		<td>WR_CAS Access to Rank 5; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK9</td>
+		<td>WR_CAS Access to Rank 5; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK10</td>
+		<td>WR_CAS Access to Rank 5; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK11</td>
+		<td>WR_CAS Access to Rank 5; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK12</td>
+		<td>WR_CAS Access to Rank 5; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK13</td>
+		<td>WR_CAS Access to Rank 5; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK14</td>
+		<td>WR_CAS Access to Rank 5; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANK15</td>
+		<td>WR_CAS Access to Rank 5; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANKG0</td>
+		<td>WR_CAS Access to Rank 5; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANKG1</td>
+		<td>WR_CAS Access to Rank 5; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANKG2</td>
+		<td>WR_CAS Access to Rank 5; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK5.BANKG3</td>
+		<td>WR_CAS Access to Rank 5; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK1</td>
+		<td>WR_CAS Access to Rank 6; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK2</td>
+		<td>WR_CAS Access to Rank 6; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK4</td>
+		<td>WR_CAS Access to Rank 6; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK8</td>
+		<td>WR_CAS Access to Rank 6; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.ALLBANKS</td>
+		<td>WR_CAS Access to Rank 6; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK0</td>
+		<td>WR_CAS Access to Rank 6; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK3</td>
+		<td>WR_CAS Access to Rank 6; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK5</td>
+		<td>WR_CAS Access to Rank 6; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK6</td>
+		<td>WR_CAS Access to Rank 6; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK7</td>
+		<td>WR_CAS Access to Rank 6; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK9</td>
+		<td>WR_CAS Access to Rank 6; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK10</td>
+		<td>WR_CAS Access to Rank 6; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK11</td>
+		<td>WR_CAS Access to Rank 6; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK12</td>
+		<td>WR_CAS Access to Rank 6; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK13</td>
+		<td>WR_CAS Access to Rank 6; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK14</td>
+		<td>WR_CAS Access to Rank 6; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANK15</td>
+		<td>WR_CAS Access to Rank 6; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANKG0</td>
+		<td>WR_CAS Access to Rank 6; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANKG1</td>
+		<td>WR_CAS Access to Rank 6; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANKG2</td>
+		<td>WR_CAS Access to Rank 6; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK6.BANKG3</td>
+		<td>WR_CAS Access to Rank 6; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK1</td>
+		<td>WR_CAS Access to Rank 7; Bank 1</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK2</td>
+		<td>WR_CAS Access to Rank 7; Bank 2</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK4</td>
+		<td>WR_CAS Access to Rank 7; Bank 4</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK8</td>
+		<td>WR_CAS Access to Rank 7; Bank 8</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.ALLBANKS</td>
+		<td>WR_CAS Access to Rank 7; All Banks</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK0</td>
+		<td>WR_CAS Access to Rank 7; Bank 0</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK3</td>
+		<td>WR_CAS Access to Rank 7; Bank 3</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK5</td>
+		<td>WR_CAS Access to Rank 7; Bank 5</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK6</td>
+		<td>WR_CAS Access to Rank 7; Bank 6</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK7</td>
+		<td>WR_CAS Access to Rank 7; Bank 7</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK9</td>
+		<td>WR_CAS Access to Rank 7; Bank 9</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK10</td>
+		<td>WR_CAS Access to Rank 7; Bank 10</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK11</td>
+		<td>WR_CAS Access to Rank 7; Bank 11</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK12</td>
+		<td>WR_CAS Access to Rank 7; Bank 12</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK13</td>
+		<td>WR_CAS Access to Rank 7; Bank 13</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK14</td>
+		<td>WR_CAS Access to Rank 7; Bank 14</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANK15</td>
+		<td>WR_CAS Access to Rank 7; Bank 15</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANKG0</td>
+		<td>WR_CAS Access to Rank 7; Bank Group 0 (Banks 0-3)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANKG1</td>
+		<td>WR_CAS Access to Rank 7; Bank Group 1 (Banks 4-7)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANKG2</td>
+		<td>WR_CAS Access to Rank 7; Bank Group 2 (Banks 8-11)</td>
+	</tr>
+	<tr>
+		<td>UNC_M_WR_CAS_RANK7.BANKG3</td>
+		<td>WR_CAS Access to Rank 7; Bank Group 3 (Banks 12-15)</td>
+	</tr>
+</table>
+
+</body>
+</html>
