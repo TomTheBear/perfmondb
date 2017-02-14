@@ -1,0 +1,2283 @@
+<!DOCTYPE html><html>
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles/intel_table_styles.css"></head>
+<body>
+<h3>Westmere EP-DP</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
+<li>Intel&reg; Xeon&reg; / Core i7 980X processor</li><p>
+<table class="table table-responsive">
+	<tr>
+		<th>EventName</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><span id="ARITH.CYCLES_DIV_BUSY">ARITH.CYCLES_DIV_BUSY</span></td>
+		<td>Cycles the divider is busy</td>
+	</tr>
+	<tr>
+		<td><span id="ARITH.DIV">ARITH.DIV</span></td>
+		<td>Divide Operations executed</td>
+	</tr>
+	<tr>
+		<td><span id="ARITH.MUL">ARITH.MUL</span></td>
+		<td>Multiply operations executed</td>
+	</tr>
+	<tr>
+		<td><span id="BACLEAR.BAD_TARGET">BACLEAR.BAD_TARGET</span></td>
+		<td>BACLEAR asserted with bad target address</td>
+	</tr>
+	<tr>
+		<td><span id="BACLEAR.CLEAR">BACLEAR.CLEAR</span></td>
+		<td>BACLEAR asserted, regardless of cause </td>
+	</tr>
+	<tr>
+		<td><span id="BACLEAR_FORCE_IQ">BACLEAR_FORCE_IQ</span></td>
+		<td>Instruction queue forced BACLEAR</td>
+	</tr>
+	<tr>
+		<td><span id="BPU_CLEARS.EARLY">BPU_CLEARS.EARLY</span></td>
+		<td>Early Branch Prediciton Unit clears</td>
+	</tr>
+	<tr>
+		<td><span id="BPU_CLEARS.LATE">BPU_CLEARS.LATE</span></td>
+		<td>Late Branch Prediction Unit clears</td>
+	</tr>
+	<tr>
+		<td><span id="BPU_MISSED_CALL_RET">BPU_MISSED_CALL_RET</span></td>
+		<td>Branch prediction unit missed call or return</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_DECODED">BR_INST_DECODED</span></td>
+		<td>Branch instructions decoded</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.ANY">BR_INST_EXEC.ANY</span></td>
+		<td>Branch instructions executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.COND">BR_INST_EXEC.COND</span></td>
+		<td>Conditional branch instructions executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.DIRECT">BR_INST_EXEC.DIRECT</span></td>
+		<td>Unconditional branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.DIRECT_NEAR_CALL">BR_INST_EXEC.DIRECT_NEAR_CALL</span></td>
+		<td>Unconditional call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.INDIRECT_NEAR_CALL">BR_INST_EXEC.INDIRECT_NEAR_CALL</span></td>
+		<td>Indirect call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.INDIRECT_NON_CALL">BR_INST_EXEC.INDIRECT_NON_CALL</span></td>
+		<td>Indirect non call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.NEAR_CALLS">BR_INST_EXEC.NEAR_CALLS</span></td>
+		<td>Call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.NON_CALLS">BR_INST_EXEC.NON_CALLS</span></td>
+		<td>All non call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.RETURN_NEAR">BR_INST_EXEC.RETURN_NEAR</span></td>
+		<td>Indirect return branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_EXEC.TAKEN">BR_INST_EXEC.TAKEN</span></td>
+		<td>Taken branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.ALL_BRANCHES">BR_INST_RETIRED.ALL_BRANCHES</span></td>
+		<td>Retired branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.CONDITIONAL">BR_INST_RETIRED.CONDITIONAL</span></td>
+		<td>Retired conditional branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL">BR_INST_RETIRED.NEAR_CALL</span></td>
+		<td>Retired near call instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3">BR_INST_RETIRED.NEAR_CALL_R3</span></td>
+		<td>Retired near call instructions Ring 3 only(Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.ANY">BR_MISP_EXEC.ANY</span></td>
+		<td>Mispredicted branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.COND">BR_MISP_EXEC.COND</span></td>
+		<td>Mispredicted conditional branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.DIRECT">BR_MISP_EXEC.DIRECT</span></td>
+		<td>Mispredicted unconditional branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.DIRECT_NEAR_CALL">BR_MISP_EXEC.DIRECT_NEAR_CALL</span></td>
+		<td>Mispredicted non call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.INDIRECT_NEAR_CALL">BR_MISP_EXEC.INDIRECT_NEAR_CALL</span></td>
+		<td>Mispredicted indirect call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.INDIRECT_NON_CALL">BR_MISP_EXEC.INDIRECT_NON_CALL</span></td>
+		<td>Mispredicted indirect non call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.NEAR_CALLS">BR_MISP_EXEC.NEAR_CALLS</span></td>
+		<td>Mispredicted call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.NON_CALLS">BR_MISP_EXEC.NON_CALLS</span></td>
+		<td>Mispredicted non call branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.RETURN_NEAR">BR_MISP_EXEC.RETURN_NEAR</span></td>
+		<td>Mispredicted return branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.TAKEN">BR_MISP_EXEC.TAKEN</span></td>
+		<td>Mispredicted taken branches executed</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES">BR_MISP_RETIRED.ALL_BRANCHES</span></td>
+		<td>Mispredicted retired branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.CONDITIONAL">BR_MISP_RETIRED.CONDITIONAL</span></td>
+		<td>Mispredicted conditional retired branches (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.NEAR_CALL">BR_MISP_RETIRED.NEAR_CALL</span></td>
+		<td>Mispredicted near retired calls (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="CACHE_LOCK_CYCLES.L1D">CACHE_LOCK_CYCLES.L1D</span></td>
+		<td>Cycles L1D locked</td>
+	</tr>
+	<tr>
+		<td><span id="CACHE_LOCK_CYCLES.L1D_L2">CACHE_LOCK_CYCLES.L1D_L2</span></td>
+		<td>Cycles L1D and L2 locked</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.REF">CPU_CLK_UNHALTED.REF</span></td>
+		<td>Reference cycles when thread is not halted (fixed counter)</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.REF_P">CPU_CLK_UNHALTED.REF_P</span></td>
+		<td>Reference base clock (133 Mhz) cycles when thread is not halted (programmable counter)</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.THREAD">CPU_CLK_UNHALTED.THREAD</span></td>
+		<td>Cycles when thread is not halted (fixed counter)</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.THREAD_P">CPU_CLK_UNHALTED.THREAD_P</span></td>
+		<td>Cycles when thread is not halted (programmable counter)</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.TOTAL_CYCLES">CPU_CLK_UNHALTED.TOTAL_CYCLES</span></td>
+		<td>Total CPU cycles</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.ANY">DTLB_LOAD_MISSES.ANY</span></td>
+		<td>DTLB load misses</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.LARGE_WALK_COMPLETED">DTLB_LOAD_MISSES.LARGE_WALK_COMPLETED</span></td>
+		<td>DTLB load miss large page walks</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.PDE_MISS">DTLB_LOAD_MISSES.PDE_MISS</span></td>
+		<td>DTLB load miss caused by low part of address</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.STLB_HIT">DTLB_LOAD_MISSES.STLB_HIT</span></td>
+		<td>DTLB second level hit</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED">DTLB_LOAD_MISSES.WALK_COMPLETED</span></td>
+		<td>DTLB load miss page walks complete</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.WALK_CYCLES">DTLB_LOAD_MISSES.WALK_CYCLES</span></td>
+		<td>DTLB load miss page walk cycles</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_MISSES.ANY">DTLB_MISSES.ANY</span></td>
+		<td>DTLB misses</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_MISSES.LARGE_WALK_COMPLETED">DTLB_MISSES.LARGE_WALK_COMPLETED</span></td>
+		<td>DTLB miss large page walks</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_MISSES.PDE_MISS">DTLB_MISSES.PDE_MISS</span></td>
+		<td>DTLB misses casued by low part of address</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_MISSES.STLB_HIT">DTLB_MISSES.STLB_HIT</span></td>
+		<td>DTLB first level misses but second level hit</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_MISSES.WALK_COMPLETED">DTLB_MISSES.WALK_COMPLETED</span></td>
+		<td>DTLB miss page walks</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_MISSES.WALK_CYCLES">DTLB_MISSES.WALK_CYCLES</span></td>
+		<td>DTLB miss page walk cycles</td>
+	</tr>
+	<tr>
+		<td><span id="EPT.WALK_CYCLES">EPT.WALK_CYCLES</span></td>
+		<td>Extended Page Table walk cycles</td>
+	</tr>
+	<tr>
+		<td><span id="ES_REG_RENAMES">ES_REG_RENAMES</span></td>
+		<td>ES segment renames</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.ALL">FP_ASSIST.ALL</span></td>
+		<td>X87 Floating point assists (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.INPUT">FP_ASSIST.INPUT</span></td>
+		<td>X87 Floating poiint assists for invalid input value (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.OUTPUT">FP_ASSIST.OUTPUT</span></td>
+		<td>X87 Floating point assists for invalid output value (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="FP_COMP_OPS_EXE.MMX">FP_COMP_OPS_EXE.MMX</span></td>
+		<td>MMX Uops</td>
+	</tr>
+	<tr>
+		<td><span id="FP_COMP_OPS_EXE.SSE_DOUBLE_PRECISION">FP_COMP_OPS_EXE.SSE_DOUBLE_PRECISION</span></td>
+		<td>SSE* FP double precision Uops</td>
+	</tr>
+	<tr>
+		<td><span id="FP_COMP_OPS_EXE.SSE_FP">FP_COMP_OPS_EXE.SSE_FP</span></td>
+		<td>SSE and SSE2 FP Uops</td>
+	</tr>
+	<tr>
+		<td><span id="FP_COMP_OPS_EXE.SSE_FP_PACKED">FP_COMP_OPS_EXE.SSE_FP_PACKED</span></td>
+		<td>SSE FP packed Uops</td>
+	</tr>
+	<tr>
+		<td><span id="FP_COMP_OPS_EXE.SSE_FP_SCALAR">FP_COMP_OPS_EXE.SSE_FP_SCALAR</span></td>
+		<td>SSE FP scalar Uops</td>
+	</tr>
+	<tr>
+		<td><span id="FP_COMP_OPS_EXE.SSE_SINGLE_PRECISION">FP_COMP_OPS_EXE.SSE_SINGLE_PRECISION</span></td>
+		<td>SSE* FP single precision Uops</td>
+	</tr>
+	<tr>
+		<td><span id="FP_COMP_OPS_EXE.SSE2_INTEGER">FP_COMP_OPS_EXE.SSE2_INTEGER</span></td>
+		<td>SSE2 integer Uops</td>
+	</tr>
+	<tr>
+		<td><span id="FP_COMP_OPS_EXE.X87">FP_COMP_OPS_EXE.X87</span></td>
+		<td>Computational floating-point operations executed</td>
+	</tr>
+	<tr>
+		<td><span id="FP_MMX_TRANS.ANY">FP_MMX_TRANS.ANY</span></td>
+		<td>All Floating Point to and from MMX transitions</td>
+	</tr>
+	<tr>
+		<td><span id="FP_MMX_TRANS.TO_FP">FP_MMX_TRANS.TO_FP</span></td>
+		<td>Transitions from MMX to Floating Point instructions</td>
+	</tr>
+	<tr>
+		<td><span id="FP_MMX_TRANS.TO_MMX">FP_MMX_TRANS.TO_MMX</span></td>
+		<td>Transitions from Floating Point to MMX instructions</td>
+	</tr>
+	<tr>
+		<td><span id="ILD_STALL.ANY">ILD_STALL.ANY</span></td>
+		<td>Any Instruction Length Decoder stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="ILD_STALL.IQ_FULL">ILD_STALL.IQ_FULL</span></td>
+		<td>Instruction Queue full stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="ILD_STALL.LCP">ILD_STALL.LCP</span></td>
+		<td>Length Change Prefix stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="ILD_STALL.MRU">ILD_STALL.MRU</span></td>
+		<td>Stall cycles due to BPU MRU bypass</td>
+	</tr>
+	<tr>
+		<td><span id="ILD_STALL.REGEN">ILD_STALL.REGEN</span></td>
+		<td>Regen stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="INST_DECODED.DEC0">INST_DECODED.DEC0</span></td>
+		<td>Instructions that must be decoded by decoder 0</td>
+	</tr>
+	<tr>
+		<td><span id="INST_QUEUE_WRITE_CYCLES">INST_QUEUE_WRITE_CYCLES</span></td>
+		<td>Cycles instructions are written to the instruction queue</td>
+	</tr>
+	<tr>
+		<td><span id="INST_QUEUE_WRITES">INST_QUEUE_WRITES</span></td>
+		<td>Instructions written to instruction queue.</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.ANY">INST_RETIRED.ANY</span></td>
+		<td>Instructions retired (fixed counter)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.ANY_P">INST_RETIRED.ANY_P</span></td>
+		<td>Instructions retired (Programmable counter and Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.MMX">INST_RETIRED.MMX</span></td>
+		<td>Retired MMX instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.TOTAL_CYCLES">INST_RETIRED.TOTAL_CYCLES</span></td>
+		<td>Total cycles (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.X87">INST_RETIRED.X87</span></td>
+		<td>Retired floating-point operations (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="IO_TRANSACTIONS">IO_TRANSACTIONS</span></td>
+		<td>I/O transactions</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_FLUSH">ITLB_FLUSH</span></td>
+		<td>ITLB flushes</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISS_RETIRED">ITLB_MISS_RETIRED</span></td>
+		<td>Retired instructions that missed the ITLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISSES.ANY">ITLB_MISSES.ANY</span></td>
+		<td>ITLB miss</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISSES.LARGE_WALK_COMPLETED">ITLB_MISSES.LARGE_WALK_COMPLETED</span></td>
+		<td>ITLB miss large page walks</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISSES.WALK_COMPLETED">ITLB_MISSES.WALK_COMPLETED</span></td>
+		<td>ITLB miss page walks</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISSES.WALK_CYCLES">ITLB_MISSES.WALK_CYCLES</span></td>
+		<td>ITLB miss page walk cycles</td>
+	</tr>
+	<tr>
+		<td><span id="L1D.M_EVICT">L1D.M_EVICT</span></td>
+		<td>L1D cache lines replaced in M state</td>
+	</tr>
+	<tr>
+		<td><span id="L1D.M_REPL">L1D.M_REPL</span></td>
+		<td>L1D cache lines allocated in the M state</td>
+	</tr>
+	<tr>
+		<td><span id="L1D.M_SNOOP_EVICT">L1D.M_SNOOP_EVICT</span></td>
+		<td>L1D snoop eviction of cache lines in M state</td>
+	</tr>
+	<tr>
+		<td><span id="L1D.REPL">L1D.REPL</span></td>
+		<td>L1 data cache lines allocated</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_CACHE_PREFETCH_LOCK_FB_HIT">L1D_CACHE_PREFETCH_LOCK_FB_HIT</span></td>
+		<td>L1D prefetch load lock accepted in fill buffer</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_PREFETCH.MISS">L1D_PREFETCH.MISS</span></td>
+		<td>L1D hardware prefetch misses</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_PREFETCH.REQUESTS">L1D_PREFETCH.REQUESTS</span></td>
+		<td>L1D hardware prefetch requests</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_PREFETCH.TRIGGERS">L1D_PREFETCH.TRIGGERS</span></td>
+		<td>L1D hardware prefetch requests triggered</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_WB_L2.E_STATE">L1D_WB_L2.E_STATE</span></td>
+		<td>L1 writebacks to L2 in E state</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_WB_L2.I_STATE">L1D_WB_L2.I_STATE</span></td>
+		<td>L1 writebacks to L2 in I state (misses)</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_WB_L2.M_STATE">L1D_WB_L2.M_STATE</span></td>
+		<td>L1 writebacks to L2 in M state</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_WB_L2.MESI">L1D_WB_L2.MESI</span></td>
+		<td>All L1 writebacks to L2</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_WB_L2.S_STATE">L1D_WB_L2.S_STATE</span></td>
+		<td>L1 writebacks to L2 in S state</td>
+	</tr>
+	<tr>
+		<td><span id="L1I.CYCLES_STALLED">L1I.CYCLES_STALLED</span></td>
+		<td>L1I instruction fetch stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="L1I.HITS">L1I.HITS</span></td>
+		<td>L1I instruction fetch hits</td>
+	</tr>
+	<tr>
+		<td><span id="L1I.MISSES">L1I.MISSES</span></td>
+		<td>L1I instruction fetch misses</td>
+	</tr>
+	<tr>
+		<td><span id="L1I.READS">L1I.READS</span></td>
+		<td>L1I Instruction fetches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.ANY">L2_DATA_RQSTS.ANY</span></td>
+		<td>All L2 data requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.DEMAND.E_STATE">L2_DATA_RQSTS.DEMAND.E_STATE</span></td>
+		<td>L2 data demand loads in E state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.DEMAND.I_STATE">L2_DATA_RQSTS.DEMAND.I_STATE</span></td>
+		<td>L2 data demand loads in I state (misses)</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.DEMAND.M_STATE">L2_DATA_RQSTS.DEMAND.M_STATE</span></td>
+		<td>L2 data demand loads in M state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.DEMAND.MESI">L2_DATA_RQSTS.DEMAND.MESI</span></td>
+		<td>L2 data demand requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.DEMAND.S_STATE">L2_DATA_RQSTS.DEMAND.S_STATE</span></td>
+		<td>L2 data demand loads in S state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.PREFETCH.E_STATE">L2_DATA_RQSTS.PREFETCH.E_STATE</span></td>
+		<td>L2 data prefetches in E state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.PREFETCH.I_STATE">L2_DATA_RQSTS.PREFETCH.I_STATE</span></td>
+		<td>L2 data prefetches in the I state (misses)</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.PREFETCH.M_STATE">L2_DATA_RQSTS.PREFETCH.M_STATE</span></td>
+		<td>L2 data prefetches in M state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.PREFETCH.MESI">L2_DATA_RQSTS.PREFETCH.MESI</span></td>
+		<td>All L2 data prefetches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.PREFETCH.S_STATE">L2_DATA_RQSTS.PREFETCH.S_STATE</span></td>
+		<td>L2 data prefetches in the S state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_IN.ANY">L2_LINES_IN.ANY</span></td>
+		<td>L2 lines alloacated</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_IN.E_STATE">L2_LINES_IN.E_STATE</span></td>
+		<td>L2 lines allocated in the E state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_IN.S_STATE">L2_LINES_IN.S_STATE</span></td>
+		<td>L2 lines allocated in the S state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_OUT.ANY">L2_LINES_OUT.ANY</span></td>
+		<td>L2 lines evicted</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_OUT.DEMAND_CLEAN">L2_LINES_OUT.DEMAND_CLEAN</span></td>
+		<td>L2 lines evicted by a demand request</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_OUT.DEMAND_DIRTY">L2_LINES_OUT.DEMAND_DIRTY</span></td>
+		<td>L2 modified lines evicted by a demand request</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_OUT.PREFETCH_CLEAN">L2_LINES_OUT.PREFETCH_CLEAN</span></td>
+		<td>L2 lines evicted by a prefetch request</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_OUT.PREFETCH_DIRTY">L2_LINES_OUT.PREFETCH_DIRTY</span></td>
+		<td>L2 modified lines evicted by a prefetch request</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.IFETCH_HIT">L2_RQSTS.IFETCH_HIT</span></td>
+		<td>L2 instruction fetch hits</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.IFETCH_MISS">L2_RQSTS.IFETCH_MISS</span></td>
+		<td>L2 instruction fetch misses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.IFETCHES">L2_RQSTS.IFETCHES</span></td>
+		<td>L2 instruction fetches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.LD_HIT">L2_RQSTS.LD_HIT</span></td>
+		<td>L2 load hits</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.LD_MISS">L2_RQSTS.LD_MISS</span></td>
+		<td>L2 load misses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.LOADS">L2_RQSTS.LOADS</span></td>
+		<td>L2 requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.MISS">L2_RQSTS.MISS</span></td>
+		<td>All L2 misses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.PREFETCH_HIT">L2_RQSTS.PREFETCH_HIT</span></td>
+		<td>L2 prefetch hits</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.PREFETCH_MISS">L2_RQSTS.PREFETCH_MISS</span></td>
+		<td>L2 prefetch misses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.PREFETCHES">L2_RQSTS.PREFETCHES</span></td>
+		<td>All L2 prefetches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.REFERENCES">L2_RQSTS.REFERENCES</span></td>
+		<td>All L2 requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.RFO_HIT">L2_RQSTS.RFO_HIT</span></td>
+		<td>L2 RFO hits</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.RFO_MISS">L2_RQSTS.RFO_MISS</span></td>
+		<td>L2 RFO misses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.RFOS">L2_RQSTS.RFOS</span></td>
+		<td>L2 RFO requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_TRANSACTIONS.ANY">L2_TRANSACTIONS.ANY</span></td>
+		<td>All L2 transactions</td>
+	</tr>
+	<tr>
+		<td><span id="L2_TRANSACTIONS.FILL">L2_TRANSACTIONS.FILL</span></td>
+		<td>L2 fill transactions</td>
+	</tr>
+	<tr>
+		<td><span id="L2_TRANSACTIONS.IFETCH">L2_TRANSACTIONS.IFETCH</span></td>
+		<td>L2 instruction fetch transactions</td>
+	</tr>
+	<tr>
+		<td><span id="L2_TRANSACTIONS.L1D_WB">L2_TRANSACTIONS.L1D_WB</span></td>
+		<td>L1D writeback to L2 transactions</td>
+	</tr>
+	<tr>
+		<td><span id="L2_TRANSACTIONS.LOAD">L2_TRANSACTIONS.LOAD</span></td>
+		<td>L2 Load transactions</td>
+	</tr>
+	<tr>
+		<td><span id="L2_TRANSACTIONS.PREFETCH">L2_TRANSACTIONS.PREFETCH</span></td>
+		<td>L2 prefetch transactions</td>
+	</tr>
+	<tr>
+		<td><span id="L2_TRANSACTIONS.RFO">L2_TRANSACTIONS.RFO</span></td>
+		<td>L2 RFO transactions</td>
+	</tr>
+	<tr>
+		<td><span id="L2_TRANSACTIONS.WB">L2_TRANSACTIONS.WB</span></td>
+		<td>L2 writeback to LLC transactions</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.LOCK.E_STATE">L2_WRITE.LOCK.E_STATE</span></td>
+		<td>L2 demand lock RFOs in E state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.LOCK.HIT">L2_WRITE.LOCK.HIT</span></td>
+		<td>All demand L2 lock RFOs that hit the cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.LOCK.I_STATE">L2_WRITE.LOCK.I_STATE</span></td>
+		<td>L2 demand lock RFOs in I state (misses)</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.LOCK.M_STATE">L2_WRITE.LOCK.M_STATE</span></td>
+		<td>L2 demand lock RFOs in M state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.LOCK.MESI">L2_WRITE.LOCK.MESI</span></td>
+		<td>All demand L2 lock RFOs</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.LOCK.S_STATE">L2_WRITE.LOCK.S_STATE</span></td>
+		<td>L2 demand lock RFOs in S state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.RFO.HIT">L2_WRITE.RFO.HIT</span></td>
+		<td>All L2 demand store RFOs that hit the cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.RFO.I_STATE">L2_WRITE.RFO.I_STATE</span></td>
+		<td>L2 demand store RFOs in I state (misses)</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.RFO.M_STATE">L2_WRITE.RFO.M_STATE</span></td>
+		<td>L2 demand store RFOs in M state</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.RFO.MESI">L2_WRITE.RFO.MESI</span></td>
+		<td>All L2 demand store RFOs</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE.RFO.S_STATE">L2_WRITE.RFO.S_STATE</span></td>
+		<td>L2 demand store RFOs in S state</td>
+	</tr>
+	<tr>
+		<td><span id="LARGE_ITLB.HIT">LARGE_ITLB.HIT</span></td>
+		<td>Large ITLB hit</td>
+	</tr>
+	<tr>
+		<td><span id="LOAD_BLOCK.OVERLAP_STORE">LOAD_BLOCK.OVERLAP_STORE</span></td>
+		<td>Loads that partially overlap an earlier store</td>
+	</tr>
+	<tr>
+		<td><span id="LOAD_DISPATCH.ANY">LOAD_DISPATCH.ANY</span></td>
+		<td>All loads dispatched</td>
+	</tr>
+	<tr>
+		<td><span id="LOAD_DISPATCH.MOB">LOAD_DISPATCH.MOB</span></td>
+		<td>Loads dispatched from the MOB</td>
+	</tr>
+	<tr>
+		<td><span id="LOAD_DISPATCH.RS">LOAD_DISPATCH.RS</span></td>
+		<td>Loads dispatched that bypass the MOB</td>
+	</tr>
+	<tr>
+		<td><span id="LOAD_DISPATCH.RS_DELAYED">LOAD_DISPATCH.RS_DELAYED</span></td>
+		<td>Loads dispatched from stage 305</td>
+	</tr>
+	<tr>
+		<td><span id="LOAD_HIT_PRE">LOAD_HIT_PRE</span></td>
+		<td>Load operations conflicting with software prefetches</td>
+	</tr>
+	<tr>
+		<td><span id="LONGEST_LAT_CACHE.MISS">LONGEST_LAT_CACHE.MISS</span></td>
+		<td>Longest latency cache miss</td>
+	</tr>
+	<tr>
+		<td><span id="LONGEST_LAT_CACHE.REFERENCE">LONGEST_LAT_CACHE.REFERENCE</span></td>
+		<td>Longest latency cache reference</td>
+	</tr>
+	<tr>
+		<td><span id="LSD.ACTIVE">LSD.ACTIVE</span></td>
+		<td>Cycles when uops were delivered by the LSD</td>
+	</tr>
+	<tr>
+		<td><span id="LSD.INACTIVE">LSD.INACTIVE</span></td>
+		<td>Cycles no uops were delivered by the LSD</td>
+	</tr>
+	<tr>
+		<td><span id="LSD_OVERFLOW">LSD_OVERFLOW</span></td>
+		<td>Loops that can&#39;t stream from the instruction queue</td>
+	</tr>
+	<tr>
+		<td><span id="MACHINE_CLEARS.CYCLES">MACHINE_CLEARS.CYCLES</span></td>
+		<td>Cycles machine clear asserted</td>
+	</tr>
+	<tr>
+		<td><span id="MACHINE_CLEARS.MEM_ORDER">MACHINE_CLEARS.MEM_ORDER</span></td>
+		<td>Execution pipeline restart due to Memory ordering conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="MACHINE_CLEARS.SMC">MACHINE_CLEARS.SMC</span></td>
+		<td>Self-Modifying Code detected</td>
+	</tr>
+	<tr>
+		<td><span id="MACRO_INSTS.DECODED">MACRO_INSTS.DECODED</span></td>
+		<td>Instructions decoded</td>
+	</tr>
+	<tr>
+		<td><span id="MACRO_INSTS.FUSIONS_DECODED">MACRO_INSTS.FUSIONS_DECODED</span></td>
+		<td>Macro-fused instructions decoded</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LOADS">MEM_INST_RETIRED.LOADS</span></td>
+		<td>Instructions retired which contains a load (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.STORES">MEM_INST_RETIRED.STORES</span></td>
+		<td>Instructions retired which contains a store (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS">MEM_LOAD_RETIRED.DTLB_MISS</span></td>
+		<td>Retired loads that miss the DTLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.HIT_LFB">MEM_LOAD_RETIRED.HIT_LFB</span></td>
+		<td>Retired loads that miss L1D and hit an previously allocated LFB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.L1D_HIT">MEM_LOAD_RETIRED.L1D_HIT</span></td>
+		<td>Retired loads that hit the L1 data cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.L2_HIT">MEM_LOAD_RETIRED.L2_HIT</span></td>
+		<td>Retired loads that hit the L2 cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.LLC_MISS">MEM_LOAD_RETIRED.LLC_MISS</span></td>
+		<td>Retired loads that miss the LLC cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.LLC_UNSHARED_HIT">MEM_LOAD_RETIRED.LLC_UNSHARED_HIT</span></td>
+		<td>Retired loads that hit valid versions in the LLC cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM">MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM</span></td>
+		<td>Retired loads that hit sibling core&#39;s L2 in modified or unmodified states (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_STORE_RETIRED.DTLB_MISS">MEM_STORE_RETIRED.DTLB_MISS</span></td>
+		<td>Retired stores that miss the DTLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MISALIGN_MEM_REF.STORE">MISALIGN_MEM_REF.STORE</span></td>
+		<td>Misaligned store references</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.ANY">OFFCORE_REQUESTS.ANY</span></td>
+		<td>All offcore requests</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.ANY.READ">OFFCORE_REQUESTS.ANY.READ</span></td>
+		<td>Offcore read requests</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.ANY.RFO">OFFCORE_REQUESTS.ANY.RFO</span></td>
+		<td>Offcore RFO requests</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.DEMAND.READ_CODE">OFFCORE_REQUESTS.DEMAND.READ_CODE</span></td>
+		<td>Offcore demand code read requests</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.DEMAND.READ_DATA">OFFCORE_REQUESTS.DEMAND.READ_DATA</span></td>
+		<td>Offcore demand data read requests</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.DEMAND.RFO">OFFCORE_REQUESTS.DEMAND.RFO</span></td>
+		<td>Offcore demand RFO requests</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.L1D_WRITEBACK">OFFCORE_REQUESTS.L1D_WRITEBACK</span></td>
+		<td>Offcore L1 data cache writebacks</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.ANY.READ">OFFCORE_REQUESTS_OUTSTANDING.ANY.READ</span></td>
+		<td>Outstanding offcore reads</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.ANY.READ_NOT_EMPTY">OFFCORE_REQUESTS_OUTSTANDING.ANY.READ_NOT_EMPTY</span></td>
+		<td>Cycles offcore reads busy</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND.READ_CODE">OFFCORE_REQUESTS_OUTSTANDING.DEMAND.READ_CODE</span></td>
+		<td>Outstanding offcore demand code reads</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND.READ_CODE_NOT_EMPTY">OFFCORE_REQUESTS_OUTSTANDING.DEMAND.READ_CODE_NOT_EMPTY</span></td>
+		<td>Cycles offcore demand code read busy</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND.READ_DATA">OFFCORE_REQUESTS_OUTSTANDING.DEMAND.READ_DATA</span></td>
+		<td>Outstanding offcore demand data reads</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND.READ_DATA_NOT_EMPTY">OFFCORE_REQUESTS_OUTSTANDING.DEMAND.READ_DATA_NOT_EMPTY</span></td>
+		<td>Cycles offcore demand data read busy</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND.RFO">OFFCORE_REQUESTS_OUTSTANDING.DEMAND.RFO</span></td>
+		<td>Outstanding offcore demand RFOs</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND.RFO_NOT_EMPTY">OFFCORE_REQUESTS_OUTSTANDING.DEMAND.RFO_NOT_EMPTY</span></td>
+		<td>Cycles offcore demand RFOs busy</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_SQ_FULL">OFFCORE_REQUESTS_SQ_FULL</span></td>
+		<td>Offcore requests blocked due to Super Queue full</td>
+	</tr>
+	<tr>
+		<td><span id="PARTIAL_ADDRESS_ALIAS">PARTIAL_ADDRESS_ALIAS</span></td>
+		<td>False dependencies due to partial address aliasing</td>
+	</tr>
+	<tr>
+		<td><span id="RAT_STALLS.ANY">RAT_STALLS.ANY</span></td>
+		<td>All RAT stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RAT_STALLS.FLAGS">RAT_STALLS.FLAGS</span></td>
+		<td>Flag stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RAT_STALLS.REGISTERS">RAT_STALLS.REGISTERS</span></td>
+		<td>Partial register stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RAT_STALLS.ROB_READ_PORT">RAT_STALLS.ROB_READ_PORT</span></td>
+		<td>ROB read port stalls cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RAT_STALLS.SCOREBOARD">RAT_STALLS.SCOREBOARD</span></td>
+		<td>Scoreboard stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.ANY">RESOURCE_STALLS.ANY</span></td>
+		<td>Resource related stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.FPCW">RESOURCE_STALLS.FPCW</span></td>
+		<td>FPU control word write stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.LOAD">RESOURCE_STALLS.LOAD</span></td>
+		<td>Load buffer stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.MXCSR">RESOURCE_STALLS.MXCSR</span></td>
+		<td>MXCSR rename stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.OTHER">RESOURCE_STALLS.OTHER</span></td>
+		<td>Other Resource related stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.ROB_FULL">RESOURCE_STALLS.ROB_FULL</span></td>
+		<td>ROB full stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.RS_FULL">RESOURCE_STALLS.RS_FULL</span></td>
+		<td>Reservation Station full stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.STORE">RESOURCE_STALLS.STORE</span></td>
+		<td>Store buffer stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="SB_DRAIN.ANY">SB_DRAIN.ANY</span></td>
+		<td>All Store buffer stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="SEG_RENAME_STALLS">SEG_RENAME_STALLS</span></td>
+		<td>Segment rename stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_128.PACK">SIMD_INT_128.PACK</span></td>
+		<td>128 bit SIMD integer pack operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_128.PACKED_ARITH">SIMD_INT_128.PACKED_ARITH</span></td>
+		<td>128 bit SIMD integer arithmetic operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_128.PACKED_LOGICAL">SIMD_INT_128.PACKED_LOGICAL</span></td>
+		<td>128 bit SIMD integer logical operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_128.PACKED_MPY">SIMD_INT_128.PACKED_MPY</span></td>
+		<td>128 bit SIMD integer multiply operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_128.PACKED_SHIFT">SIMD_INT_128.PACKED_SHIFT</span></td>
+		<td>128 bit SIMD integer shift operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_128.SHUFFLE_MOVE">SIMD_INT_128.SHUFFLE_MOVE</span></td>
+		<td>128 bit SIMD integer shuffle/move operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_128.UNPACK">SIMD_INT_128.UNPACK</span></td>
+		<td>128 bit SIMD integer unpack operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_64.PACK">SIMD_INT_64.PACK</span></td>
+		<td>SIMD integer 64 bit pack operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_64.PACKED_ARITH">SIMD_INT_64.PACKED_ARITH</span></td>
+		<td>SIMD integer 64 bit arithmetic operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_64.PACKED_LOGICAL">SIMD_INT_64.PACKED_LOGICAL</span></td>
+		<td>SIMD integer 64 bit logical operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_64.PACKED_MPY">SIMD_INT_64.PACKED_MPY</span></td>
+		<td>SIMD integer 64 bit packed multiply operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_64.PACKED_SHIFT">SIMD_INT_64.PACKED_SHIFT</span></td>
+		<td>SIMD integer 64 bit shift operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_64.SHUFFLE_MOVE">SIMD_INT_64.SHUFFLE_MOVE</span></td>
+		<td>SIMD integer 64 bit shuffle/move operations</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_INT_64.UNPACK">SIMD_INT_64.UNPACK</span></td>
+		<td>SIMD integer 64 bit unpack operations</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOP_RESPONSE.HIT">SNOOP_RESPONSE.HIT</span></td>
+		<td>Thread responded HIT to snoop</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOP_RESPONSE.HITE">SNOOP_RESPONSE.HITE</span></td>
+		<td>Thread responded HITE to snoop</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOP_RESPONSE.HITM">SNOOP_RESPONSE.HITM</span></td>
+		<td>Thread responded HITM to snoop</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS.CODE">SNOOPQ_REQUESTS.CODE</span></td>
+		<td>Snoop code requests</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS.DATA">SNOOPQ_REQUESTS.DATA</span></td>
+		<td>Snoop data requests</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS.INVALIDATE">SNOOPQ_REQUESTS.INVALIDATE</span></td>
+		<td>Snoop invalidate requests</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS_OUTSTANDING.CODE">SNOOPQ_REQUESTS_OUTSTANDING.CODE</span></td>
+		<td>Outstanding snoop code requests</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS_OUTSTANDING.CODE_NOT_EMPTY">SNOOPQ_REQUESTS_OUTSTANDING.CODE_NOT_EMPTY</span></td>
+		<td>Cycles snoop code requests queued</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS_OUTSTANDING.DATA">SNOOPQ_REQUESTS_OUTSTANDING.DATA</span></td>
+		<td>Outstanding snoop data requests</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS_OUTSTANDING.DATA_NOT_EMPTY">SNOOPQ_REQUESTS_OUTSTANDING.DATA_NOT_EMPTY</span></td>
+		<td>Cycles snoop data requests queued</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS_OUTSTANDING.INVALIDATE">SNOOPQ_REQUESTS_OUTSTANDING.INVALIDATE</span></td>
+		<td>Outstanding snoop invalidate requests</td>
+	</tr>
+	<tr>
+		<td><span id="SNOOPQ_REQUESTS_OUTSTANDING.INVALIDATE_NOT_EMPTY">SNOOPQ_REQUESTS_OUTSTANDING.INVALIDATE_NOT_EMPTY</span></td>
+		<td>Cycles snoop invalidate requests queued</td>
+	</tr>
+	<tr>
+		<td><span id="SQ_FULL_STALL_CYCLES">SQ_FULL_STALL_CYCLES</span></td>
+		<td>Super Queue full stall cycles</td>
+	</tr>
+	<tr>
+		<td><span id="SQ_MISC.LRU_HINTS">SQ_MISC.LRU_HINTS</span></td>
+		<td>Super Queue LRU hints sent to LLC</td>
+	</tr>
+	<tr>
+		<td><span id="SQ_MISC.SPLIT_LOCK">SQ_MISC.SPLIT_LOCK</span></td>
+		<td>Super Queue lock splits across a cache line</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.PACKED_DOUBLE">SSEX_UOPS_RETIRED.PACKED_DOUBLE</span></td>
+		<td>SIMD Packed-Double Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.PACKED_SINGLE">SSEX_UOPS_RETIRED.PACKED_SINGLE</span></td>
+		<td>SIMD Packed-Single Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.SCALAR_DOUBLE">SSEX_UOPS_RETIRED.SCALAR_DOUBLE</span></td>
+		<td>SIMD Scalar-Double Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.SCALAR_SINGLE">SSEX_UOPS_RETIRED.SCALAR_SINGLE</span></td>
+		<td>SIMD Scalar-Single Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.VECTOR_INTEGER">SSEX_UOPS_RETIRED.VECTOR_INTEGER</span></td>
+		<td>SIMD Vector Integer Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="STORE_BLOCKS.AT_RET">STORE_BLOCKS.AT_RET</span></td>
+		<td>Loads delayed with at-Retirement block code</td>
+	</tr>
+	<tr>
+		<td><span id="STORE_BLOCKS.L1D_BLOCK">STORE_BLOCKS.L1D_BLOCK</span></td>
+		<td>Cacheable loads delayed with L1D block code</td>
+	</tr>
+	<tr>
+		<td><span id="TWO_UOP_INSTS_DECODED">TWO_UOP_INSTS_DECODED</span></td>
+		<td>Two Uop instructions decoded</td>
+	</tr>
+	<tr>
+		<td><span id="UOP_UNFUSION">UOP_UNFUSION</span></td>
+		<td>Uop unfusions due to FP exceptions</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DECODED.ESP_FOLDING">UOPS_DECODED.ESP_FOLDING</span></td>
+		<td>Stack pointer instructions decoded</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DECODED.ESP_SYNC">UOPS_DECODED.ESP_SYNC</span></td>
+		<td>Stack pointer sync operations</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DECODED.MS_CYCLES_ACTIVE">UOPS_DECODED.MS_CYCLES_ACTIVE</span></td>
+		<td>Uops decoded by Microcode Sequencer</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DECODED.STALL_CYCLES">UOPS_DECODED.STALL_CYCLES</span></td>
+		<td>Cycles no Uops are decoded</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.CORE_ACTIVE_CYCLES">UOPS_EXECUTED.CORE_ACTIVE_CYCLES</span></td>
+		<td>Cycles Uops executed on any port (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.CORE_ACTIVE_CYCLES_NO_PORT5">UOPS_EXECUTED.CORE_ACTIVE_CYCLES_NO_PORT5</span></td>
+		<td>Cycles Uops executed on ports 0-4 (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.CORE_STALL_COUNT">UOPS_EXECUTED.CORE_STALL_COUNT</span></td>
+		<td>Uops executed on any port (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.CORE_STALL_COUNT_NO_PORT5">UOPS_EXECUTED.CORE_STALL_COUNT_NO_PORT5</span></td>
+		<td>Uops executed on ports 0-4 (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.CORE_STALL_CYCLES">UOPS_EXECUTED.CORE_STALL_CYCLES</span></td>
+		<td>Cycles no Uops issued on any port (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.CORE_STALL_CYCLES_NO_PORT5">UOPS_EXECUTED.CORE_STALL_CYCLES_NO_PORT5</span></td>
+		<td>Cycles no Uops issued on ports 0-4 (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT0">UOPS_EXECUTED.PORT0</span></td>
+		<td>Uops executed on port 0</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT015">UOPS_EXECUTED.PORT015</span></td>
+		<td>Uops issued on ports 0, 1 or 5</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT015_STALL_CYCLES">UOPS_EXECUTED.PORT015_STALL_CYCLES</span></td>
+		<td>Cycles no Uops issued on ports 0, 1 or 5</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT1">UOPS_EXECUTED.PORT1</span></td>
+		<td>Uops executed on port 1</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT2_CORE">UOPS_EXECUTED.PORT2_CORE</span></td>
+		<td>Uops executed on port 2 (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT234_CORE">UOPS_EXECUTED.PORT234_CORE</span></td>
+		<td>Uops issued on ports 2, 3 or 4</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT3_CORE">UOPS_EXECUTED.PORT3_CORE</span></td>
+		<td>Uops executed on port 3 (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT4_CORE">UOPS_EXECUTED.PORT4_CORE</span></td>
+		<td>Uops executed on port 4 (core count)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.PORT5">UOPS_EXECUTED.PORT5</span></td>
+		<td>Uops executed on port 5</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_ISSUED.ANY">UOPS_ISSUED.ANY</span></td>
+		<td>Uops issued</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_ISSUED.CORE_STALL_CYCLES">UOPS_ISSUED.CORE_STALL_CYCLES</span></td>
+		<td>Cycles no Uops were issued on any thread</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_ISSUED.CYCLES_ALL_THREADS">UOPS_ISSUED.CYCLES_ALL_THREADS</span></td>
+		<td>Cycles Uops were issued on either thread</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_ISSUED.FUSED">UOPS_ISSUED.FUSED</span></td>
+		<td>Fused Uops issued</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_ISSUED.STALL_CYCLES">UOPS_ISSUED.STALL_CYCLES</span></td>
+		<td>Cycles no Uops were issued</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.ACTIVE_CYCLES">UOPS_RETIRED.ACTIVE_CYCLES</span></td>
+		<td>Cycles Uops are being retired</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.ANY">UOPS_RETIRED.ANY</span></td>
+		<td>Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.MACRO_FUSED">UOPS_RETIRED.MACRO_FUSED</span></td>
+		<td>Macro-fused Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.RETIRE_SLOTS">UOPS_RETIRED.RETIRE_SLOTS</span></td>
+		<td>Retirement slots used (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.STALL_CYCLES">UOPS_RETIRED.STALL_CYCLES</span></td>
+		<td>Cycles Uops are not retiring (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.TOTAL_CYCLES">UOPS_RETIRED.TOTAL_CYCLES</span></td>
+		<td>Total cycles using precise uop retired event (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.ALL_BRANCHES_PS">BR_INST_RETIRED.ALL_BRANCHES_PS</span></td>
+		<td>Retired branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.CONDITIONAL_PS">BR_INST_RETIRED.CONDITIONAL_PS</span></td>
+		<td>Retired conditional branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL_PS">BR_INST_RETIRED.NEAR_CALL_PS</span></td>
+		<td>Retired near call instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3_PS">BR_INST_RETIRED.NEAR_CALL_R3_PS</span></td>
+		<td>Retired near call instructions Ring 3 only(Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES_PS">BR_MISP_RETIRED.ALL_BRANCHES_PS</span></td>
+		<td>Mispredicted retired branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.CONDITIONAL_PS">BR_MISP_RETIRED.CONDITIONAL_PS</span></td>
+		<td>Mispredicted conditional retired branches (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.NEAR_CALL_PS">BR_MISP_RETIRED.NEAR_CALL_PS</span></td>
+		<td>Mispredicted near retired calls (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.ALL_PS">FP_ASSIST.ALL_PS</span></td>
+		<td>X87 Floating point assists (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.INPUT_PS">FP_ASSIST.INPUT_PS</span></td>
+		<td>X87 Floating poiint assists for invalid input value (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.OUTPUT_PS">FP_ASSIST.OUTPUT_PS</span></td>
+		<td>X87 Floating point assists for invalid output value (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.ANY_P_PS">INST_RETIRED.ANY_P_PS</span></td>
+		<td>Instructions retired (Programmable counter and Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.MMX_PS">INST_RETIRED.MMX_PS</span></td>
+		<td>Retired MMX instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.TOTAL_CYCLES_PS">INST_RETIRED.TOTAL_CYCLES_PS</span></td>
+		<td>Total cycles (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.X87_PS">INST_RETIRED.X87_PS</span></td>
+		<td>Retired floating-point operations (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISS_RETIRED_PS">ITLB_MISS_RETIRED_PS</span></td>
+		<td>Retired instructions that missed the ITLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_0">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_0</span></td>
+		<td>Memory instructions retired above 0 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_1024">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_1024</span></td>
+		<td>Memory instructions retired above 1024 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_128">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_128</span></td>
+		<td>Memory instructions retired above 128 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16</span></td>
+		<td>Memory instructions retired above 16 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16384">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16384</span></td>
+		<td>Memory instructions retired above 16384 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_2048">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_2048</span></td>
+		<td>Memory instructions retired above 2048 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_256">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_256</span></td>
+		<td>Memory instructions retired above 256 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32</span></td>
+		<td>Memory instructions retired above 32 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32768">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32768</span></td>
+		<td>Memory instructions retired above 32768 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4</span></td>
+		<td>Memory instructions retired above 4 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4096">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4096</span></td>
+		<td>Memory instructions retired above 4096 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_512">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_512</span></td>
+		<td>Memory instructions retired above 512 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_64">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_64</span></td>
+		<td>Memory instructions retired above 64 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8</span></td>
+		<td>Memory instructions retired above 8 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8192">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8192</span></td>
+		<td>Memory instructions retired above 8192 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LOADS_PS">MEM_INST_RETIRED.LOADS_PS</span></td>
+		<td>Instructions retired which contains a load (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.STORES_PS">MEM_INST_RETIRED.STORES_PS</span></td>
+		<td>Instructions retired which contains a store (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS_PS">MEM_LOAD_RETIRED.DTLB_MISS_PS</span></td>
+		<td>Retired loads that miss the DTLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.HIT_LFB_PS">MEM_LOAD_RETIRED.HIT_LFB_PS</span></td>
+		<td>Retired loads that miss L1D and hit an previously allocated LFB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.L1D_HIT_PS">MEM_LOAD_RETIRED.L1D_HIT_PS</span></td>
+		<td>Retired loads that hit the L1 data cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.L2_HIT_PS">MEM_LOAD_RETIRED.L2_HIT_PS</span></td>
+		<td>Retired loads that hit the L2 cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.LLC_MISS_PS">MEM_LOAD_RETIRED.LLC_MISS_PS</span></td>
+		<td>Retired loads that miss the LLC cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.LLC_UNSHARED_HIT_PS">MEM_LOAD_RETIRED.LLC_UNSHARED_HIT_PS</span></td>
+		<td>Retired loads that hit valid versions in the LLC cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM_PS">MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM_PS</span></td>
+		<td>Retired loads that hit sibling core&#39;s L2 in modified or unmodified states (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_STORE_RETIRED.DTLB_MISS_PS">MEM_STORE_RETIRED.DTLB_MISS_PS</span></td>
+		<td>Retired stores that miss the DTLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.PACKED_DOUBLE_PS">SSEX_UOPS_RETIRED.PACKED_DOUBLE_PS</span></td>
+		<td>SIMD Packed-Double Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.PACKED_SINGLE_PS">SSEX_UOPS_RETIRED.PACKED_SINGLE_PS</span></td>
+		<td>SIMD Packed-Single Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.SCALAR_DOUBLE_PS">SSEX_UOPS_RETIRED.SCALAR_DOUBLE_PS</span></td>
+		<td>SIMD Scalar-Double Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.SCALAR_SINGLE_PS">SSEX_UOPS_RETIRED.SCALAR_SINGLE_PS</span></td>
+		<td>SIMD Scalar-Single Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.VECTOR_INTEGER_PS">SSEX_UOPS_RETIRED.VECTOR_INTEGER_PS</span></td>
+		<td>SIMD Vector Integer Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.ACTIVE_CYCLES_PS">UOPS_RETIRED.ACTIVE_CYCLES_PS</span></td>
+		<td>Cycles Uops are being retired</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.ANY_PS">UOPS_RETIRED.ANY_PS</span></td>
+		<td>Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.MACRO_FUSED_PS">UOPS_RETIRED.MACRO_FUSED_PS</span></td>
+		<td>Macro-fused Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.RETIRE_SLOTS_PS">UOPS_RETIRED.RETIRE_SLOTS_PS</span></td>
+		<td>Retirement slots used (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.STALL_CYCLES_PS">UOPS_RETIRED.STALL_CYCLES_PS</span></td>
+		<td>Cycles Uops are not retiring (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.TOTAL_CYCLES_PS">UOPS_RETIRED.TOTAL_CYCLES_PS</span></td>
+		<td>Total cycles using precise uop retired event (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.IOH.NONE">UNC_ADDR_OPCODE_MATCH.IOH.NONE</span></td>
+		<td>TBD</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.IOH.RSPFWDI">UNC_ADDR_OPCODE_MATCH.IOH.RSPFWDI</span></td>
+		<td>TBD</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.IOH.RSPFWDS">UNC_ADDR_OPCODE_MATCH.IOH.RSPFWDS</span></td>
+		<td>TBD</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.IOH.RSPIWB">UNC_ADDR_OPCODE_MATCH.IOH.RSPIWB</span></td>
+		<td>TBD</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.LOCAL.NONE">UNC_ADDR_OPCODE_MATCH.LOCAL.NONE</span></td>
+		<td>TBD</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.LOCAL.RSPFWDI">UNC_ADDR_OPCODE_MATCH.LOCAL.RSPFWDI</span></td>
+		<td>hitm in local LLC rfo snoop</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.LOCAL.RSPFWDS">UNC_ADDR_OPCODE_MATCH.LOCAL.RSPFWDS</span></td>
+		<td>local LLC in F or S, load snoop</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.LOCAL.RSPIWB">UNC_ADDR_OPCODE_MATCH.LOCAL.RSPIWB</span></td>
+		<td>hitm in local LLC, load snoop</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.REMOTE.NONE">UNC_ADDR_OPCODE_MATCH.REMOTE.NONE</span></td>
+		<td>TBD</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.REMOTE.RSPFWDI">UNC_ADDR_OPCODE_MATCH.REMOTE.RSPFWDI</span></td>
+		<td>hitm in remote LLC, rfo</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.REMOTE.RSPFWDS">UNC_ADDR_OPCODE_MATCH.REMOTE.RSPFWDS</span></td>
+		<td>remote LLC in F or S, load</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ADDR_OPCODE_MATCH.REMOTE.RSPIWB">UNC_ADDR_OPCODE_MATCH.REMOTE.RSPIWB</span></td>
+		<td>hitm in remote LLC, load</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CLOCKTICKS">UNC_CLOCKTICKS</span></td>
+		<td>Uncore clockticks</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CYCLES_UNHALTED_LLC_FULL_DISABLE">UNC_CYCLES_UNHALTED_LLC_FULL_DISABLE</span></td>
+		<td>Cycles LLC disabled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CYCLES_UNHALTED_LLC_FULL_ENABLE">UNC_CYCLES_UNHALTED_LLC_FULL_ENABLE</span></td>
+		<td>Cycles package not halted</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_OPEN.CH0">UNC_DRAM_OPEN.CH0</span></td>
+		<td>DRAM Channel 0 open commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_OPEN.CH1">UNC_DRAM_OPEN.CH1</span></td>
+		<td>DRAM Channel 1 open commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_OPEN.CH2">UNC_DRAM_OPEN.CH2</span></td>
+		<td>DRAM Channel 2 open commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PAGE_CLOSE.CH0">UNC_DRAM_PAGE_CLOSE.CH0</span></td>
+		<td>DRAM Channel 0 page close</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PAGE_CLOSE.CH1">UNC_DRAM_PAGE_CLOSE.CH1</span></td>
+		<td>DRAM Channel 1 page close</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PAGE_CLOSE.CH2">UNC_DRAM_PAGE_CLOSE.CH2</span></td>
+		<td>DRAM Channel 2 page close</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PAGE_MISS.CH0">UNC_DRAM_PAGE_MISS.CH0</span></td>
+		<td>DRAM Channel 0 page miss</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PAGE_MISS.CH1">UNC_DRAM_PAGE_MISS.CH1</span></td>
+		<td>DRAM Channel 1 page miss</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PAGE_MISS.CH2">UNC_DRAM_PAGE_MISS.CH2</span></td>
+		<td>DRAM Channel 2 page miss</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PRE_ALL.CH0">UNC_DRAM_PRE_ALL.CH0</span></td>
+		<td>DRAM Channel 0 precharge all commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PRE_ALL.CH1">UNC_DRAM_PRE_ALL.CH1</span></td>
+		<td>DRAM Channel 1 precharge all commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_PRE_ALL.CH2">UNC_DRAM_PRE_ALL.CH2</span></td>
+		<td>DRAM Channel 2 precharge all commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_READ_CAS.AUTOPRE_CH0">UNC_DRAM_READ_CAS.AUTOPRE_CH0</span></td>
+		<td>DRAM Channel 0 read CAS auto page close commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_READ_CAS.AUTOPRE_CH1">UNC_DRAM_READ_CAS.AUTOPRE_CH1</span></td>
+		<td>DRAM Channel 1 read CAS auto page close commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_READ_CAS.AUTOPRE_CH2">UNC_DRAM_READ_CAS.AUTOPRE_CH2</span></td>
+		<td>DRAM Channel 2 read CAS auto page close commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_READ_CAS.CH0">UNC_DRAM_READ_CAS.CH0</span></td>
+		<td>DRAM Channel 0 read CAS commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_READ_CAS.CH1">UNC_DRAM_READ_CAS.CH1</span></td>
+		<td>DRAM Channel 1 read CAS commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_READ_CAS.CH2">UNC_DRAM_READ_CAS.CH2</span></td>
+		<td>DRAM Channel 2 read CAS commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_REFRESH.CH0">UNC_DRAM_REFRESH.CH0</span></td>
+		<td>DRAM Channel 0 refresh commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_REFRESH.CH1">UNC_DRAM_REFRESH.CH1</span></td>
+		<td>DRAM Channel 1 refresh commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_REFRESH.CH2">UNC_DRAM_REFRESH.CH2</span></td>
+		<td>DRAM Channel 2 refresh commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_THERMAL_THROTTLED">UNC_DRAM_THERMAL_THROTTLED</span></td>
+		<td>Cycles DRAM thermal throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_WRITE_CAS.AUTOPRE_CH0">UNC_DRAM_WRITE_CAS.AUTOPRE_CH0</span></td>
+		<td>DRAM Channel 0 write CAS auto page close commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_WRITE_CAS.AUTOPRE_CH1">UNC_DRAM_WRITE_CAS.AUTOPRE_CH1</span></td>
+		<td>DRAM Channel 1 write CAS auto page close commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_WRITE_CAS.AUTOPRE_CH2">UNC_DRAM_WRITE_CAS.AUTOPRE_CH2</span></td>
+		<td>DRAM Channel 2 write CAS auto page close commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_WRITE_CAS.CH0">UNC_DRAM_WRITE_CAS.CH0</span></td>
+		<td>DRAM Channel 0 write CAS commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_WRITE_CAS.CH1">UNC_DRAM_WRITE_CAS.CH1</span></td>
+		<td>DRAM Channel 1 write CAS commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_DRAM_WRITE_CAS.CH2">UNC_DRAM_WRITE_CAS.CH2</span></td>
+		<td>DRAM Channel 2 write CAS commands</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_ALLOC.PEER_PROBE_TRACKER">UNC_GQ_ALLOC.PEER_PROBE_TRACKER</span></td>
+		<td>GQ peer probe tracker requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_ALLOC.READ_TRACKER">UNC_GQ_ALLOC.READ_TRACKER</span></td>
+		<td>GQ read tracker requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_ALLOC.RT_LLC_MISS">UNC_GQ_ALLOC.RT_LLC_MISS</span></td>
+		<td>GQ read tracker LLC misses</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_ALLOC.RT_TO_LLC_RESP">UNC_GQ_ALLOC.RT_TO_LLC_RESP</span></td>
+		<td>GQ read tracker LLC requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_ALLOC.RT_TO_RTID_ACQUIRED">UNC_GQ_ALLOC.RT_TO_RTID_ACQUIRED</span></td>
+		<td>GQ read tracker LLC miss to RTID acquired</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_ALLOC.WRITE_TRACKER">UNC_GQ_ALLOC.WRITE_TRACKER</span></td>
+		<td>GQ write tracker LLC misses</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_ALLOC.WT_TO_RTID_ACQUIRED">UNC_GQ_ALLOC.WT_TO_RTID_ACQUIRED</span></td>
+		<td>GQ write tracker LLC miss to RTID acquired</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_CYCLES_FULL.PEER_PROBE_TRACKER">UNC_GQ_CYCLES_FULL.PEER_PROBE_TRACKER</span></td>
+		<td>Cycles GQ peer probe tracker is full.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_CYCLES_FULL.READ_TRACKER">UNC_GQ_CYCLES_FULL.READ_TRACKER</span></td>
+		<td>Cycles GQ read tracker is full.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_CYCLES_FULL.WRITE_TRACKER">UNC_GQ_CYCLES_FULL.WRITE_TRACKER</span></td>
+		<td>Cycles GQ write tracker is full.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_CYCLES_NOT_EMPTY.PEER_PROBE_TRACKER">UNC_GQ_CYCLES_NOT_EMPTY.PEER_PROBE_TRACKER</span></td>
+		<td>Cycles GQ peer probe tracker is busy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_CYCLES_NOT_EMPTY.READ_TRACKER">UNC_GQ_CYCLES_NOT_EMPTY.READ_TRACKER</span></td>
+		<td>Cycles GQ read tracker is busy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_CYCLES_NOT_EMPTY.WRITE_TRACKER">UNC_GQ_CYCLES_NOT_EMPTY.WRITE_TRACKER</span></td>
+		<td>Cycles GQ write tracker is busy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_DATA.FROM_CORES_02">UNC_GQ_DATA.FROM_CORES_02</span></td>
+		<td>Cycles GQ data is imported from Cores 0 and 2</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_DATA.FROM_CORES_13">UNC_GQ_DATA.FROM_CORES_13</span></td>
+		<td>Cycles GQ data is imported from Cores 1 and 3</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_DATA.FROM_IMC">UNC_GQ_DATA.FROM_IMC</span></td>
+		<td>Cycles GQ data is imported from Integrated Memory Controller</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_DATA.FROM_LLC">UNC_GQ_DATA.FROM_LLC</span></td>
+		<td>Cycles GQ data is imported from LLC</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_DATA.FROM_QPI">UNC_GQ_DATA.FROM_QPI</span></td>
+		<td>Cycles GQ data is imported from Quickpath interface</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_DATA.TO_CORES">UNC_GQ_DATA.TO_CORES</span></td>
+		<td>Cycles GQ data sent to cores</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_DATA.TO_LLC">UNC_GQ_DATA.TO_LLC</span></td>
+		<td>Cycles GQ data sent to LLC</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_DATA.TO_QPI_IMC">UNC_GQ_DATA.TO_QPI_IMC</span></td>
+		<td>Cycles GQ data sent to the interconnect or IMC</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.PEER_PROBE_TRACKER">UNC_GQ_OCCUPANCY.PEER_PROBE_TRACKER</span></td>
+		<td>GQ peer probe tracker LLC miss occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.READ_TRACKER">UNC_GQ_OCCUPANCY.READ_TRACKER</span></td>
+		<td>GQ read tracker occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.RT_LLC_MISS">UNC_GQ_OCCUPANCY.RT_LLC_MISS</span></td>
+		<td>GQ read tracker LLC miss occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.RT_LLC_MISS_NOT_EMPTY">UNC_GQ_OCCUPANCY.RT_LLC_MISS_NOT_EMPTY</span></td>
+		<td>Cycles GQ read tracker LLC miss queued</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.RT_TO_LLC_RESP">UNC_GQ_OCCUPANCY.RT_TO_LLC_RESP</span></td>
+		<td>GQ read tracker LLC hit occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.RT_TO_LLC_RESP_NOT_EMPTY">UNC_GQ_OCCUPANCY.RT_TO_LLC_RESP_NOT_EMPTY</span></td>
+		<td>GQ read tracker LLC request queued</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.RT_TO_RTID_ACQUIRED">UNC_GQ_OCCUPANCY.RT_TO_RTID_ACQUIRED</span></td>
+		<td>GQ read tracker LLC miss to RTID acquired occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.WRITE_TRACKER">UNC_GQ_OCCUPANCY.WRITE_TRACKER</span></td>
+		<td>GQ write tracker LLC miss occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_OCCUPANCY.WT_TO_RTID_ACQUIRED">UNC_GQ_OCCUPANCY.WT_TO_RTID_ACQUIRED</span></td>
+		<td>GQ write tracker LLC miss to RTID acquired occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_I">UNC_GQ_SNOOP.GOTO_I</span></td>
+		<td>Remote snoop requests to change cache line to I state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_I_HIT_E">UNC_GQ_SNOOP.GOTO_I_HIT_E</span></td>
+		<td>Remote snoop requests to change cache line from E to I state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_I_HIT_F">UNC_GQ_SNOOP.GOTO_I_HIT_F</span></td>
+		<td>Remote snoop requests to change cache line from F to I state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_I_HIT_M">UNC_GQ_SNOOP.GOTO_I_HIT_M</span></td>
+		<td>Remote snoop requests to change cache line from M to I state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_I_HIT_S">UNC_GQ_SNOOP.GOTO_I_HIT_S</span></td>
+		<td>Remote snoop requests to change cache line from S to I state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_S">UNC_GQ_SNOOP.GOTO_S</span></td>
+		<td>Remote snoop requests to change cache line to S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_S_HIT_E">UNC_GQ_SNOOP.GOTO_S_HIT_E</span></td>
+		<td>Remote snoop requests to change cache line from E to S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_S_HIT_F">UNC_GQ_SNOOP.GOTO_S_HIT_F</span></td>
+		<td>Remote snoop requests to change cache line from F to S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_S_HIT_M">UNC_GQ_SNOOP.GOTO_S_HIT_M</span></td>
+		<td>Remote snoop requests to change cache line from M to S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_GQ_SNOOP.GOTO_S_HIT_S">UNC_GQ_SNOOP.GOTO_S_HIT_S</span></td>
+		<td>Remote snoop requests to change cache line from S to S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_BUSY.READ.CH0">UNC_IMC_BUSY.READ.CH0</span></td>
+		<td>Cycles IMC channel 0 busy with a read request</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_BUSY.READ.CH1">UNC_IMC_BUSY.READ.CH1</span></td>
+		<td>Cycles IMC channel 1 busy with a read request</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_BUSY.READ.CH2">UNC_IMC_BUSY.READ.CH2</span></td>
+		<td>Cycles IMC channel 2 busy with a read request</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_BUSY.WRITE.CH0">UNC_IMC_BUSY.WRITE.CH0</span></td>
+		<td>Cycles IMC channel 0 busy with a write request</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_BUSY.WRITE.CH1">UNC_IMC_BUSY.WRITE.CH1</span></td>
+		<td>Cycles IMC channel 1 busy with a write request</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_BUSY.WRITE.CH2">UNC_IMC_BUSY.WRITE.CH2</span></td>
+		<td>Cycles IMC channel 2 busy with a write request</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_CANCEL.ANY">UNC_IMC_CANCEL.ANY</span></td>
+		<td>IMC cancels</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_CANCEL.CH0">UNC_IMC_CANCEL.CH0</span></td>
+		<td>IMC channel 0 cancels</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_CANCEL.CH1">UNC_IMC_CANCEL.CH1</span></td>
+		<td>IMC channel 1 cancels</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_CANCEL.CH2">UNC_IMC_CANCEL.CH2</span></td>
+		<td>IMC channel 2 cancels</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_CRITICAL_PRIORITY_READS.ANY">UNC_IMC_CRITICAL_PRIORITY_READS.ANY</span></td>
+		<td>IMC critical priority read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_CRITICAL_PRIORITY_READS.CH0">UNC_IMC_CRITICAL_PRIORITY_READS.CH0</span></td>
+		<td>IMC channel 0 critical priority read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_CRITICAL_PRIORITY_READS.CH1">UNC_IMC_CRITICAL_PRIORITY_READS.CH1</span></td>
+		<td>IMC channel 1 critical priority read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_CRITICAL_PRIORITY_READS.CH2">UNC_IMC_CRITICAL_PRIORITY_READS.CH2</span></td>
+		<td>IMC channel 2 critical priority read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_HIGH_PRIORITY_READS.ANY">UNC_IMC_HIGH_PRIORITY_READS.ANY</span></td>
+		<td>IMC high priority read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_HIGH_PRIORITY_READS.CH0">UNC_IMC_HIGH_PRIORITY_READS.CH0</span></td>
+		<td>IMC channel 0 high priority read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_HIGH_PRIORITY_READS.CH1">UNC_IMC_HIGH_PRIORITY_READS.CH1</span></td>
+		<td>IMC channel 1 high priority read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_HIGH_PRIORITY_READS.CH2">UNC_IMC_HIGH_PRIORITY_READS.CH2</span></td>
+		<td>IMC channel 2 high priority read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_FULL.READ.CH0">UNC_IMC_ISOC_FULL.READ.CH0</span></td>
+		<td>Cycles DRAM channel 0 full with ISOC read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_FULL.READ.CH1">UNC_IMC_ISOC_FULL.READ.CH1</span></td>
+		<td>Cycles DRAM channel 1 full with ISOC read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_FULL.READ.CH2">UNC_IMC_ISOC_FULL.READ.CH2</span></td>
+		<td>Cycles DRAM channel 2 full with ISOC read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_FULL.WRITE.CH0">UNC_IMC_ISOC_FULL.WRITE.CH0</span></td>
+		<td>Cycles DRAM channel 0 full with ISOC write requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_FULL.WRITE.CH1">UNC_IMC_ISOC_FULL.WRITE.CH1</span></td>
+		<td>Cycles DRAM channel 1 full with ISOC write requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_FULL.WRITE.CH2">UNC_IMC_ISOC_FULL.WRITE.CH2</span></td>
+		<td>Cycles DRAM channel 2 full with ISOC write requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_OCCUPANCY.ANY">UNC_IMC_ISOC_OCCUPANCY.ANY</span></td>
+		<td>IMC ISOC read request occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_OCCUPANCY.CH0">UNC_IMC_ISOC_OCCUPANCY.CH0</span></td>
+		<td>IMC channel 0 ISOC read request occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_OCCUPANCY.CH1">UNC_IMC_ISOC_OCCUPANCY.CH1</span></td>
+		<td>IMC channel 1 ISOC read request occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_ISOC_OCCUPANCY.CH2">UNC_IMC_ISOC_OCCUPANCY.CH2</span></td>
+		<td>IMC channel 2 ISOC read request occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_NORMAL_OCCUPANCY.ANY">UNC_IMC_NORMAL_OCCUPANCY.ANY</span></td>
+		<td>IMC normal read request occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_NORMAL_OCCUPANCY.CH0">UNC_IMC_NORMAL_OCCUPANCY.CH0</span></td>
+		<td>IMC channel 0 normal read request occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_NORMAL_OCCUPANCY.CH1">UNC_IMC_NORMAL_OCCUPANCY.CH1</span></td>
+		<td>IMC channel 1 normal read request occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_NORMAL_OCCUPANCY.CH2">UNC_IMC_NORMAL_OCCUPANCY.CH2</span></td>
+		<td>IMC channel 2 normal read request occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_NORMAL_READS.ANY">UNC_IMC_NORMAL_READS.ANY</span></td>
+		<td>IMC normal read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_NORMAL_READS.CH0">UNC_IMC_NORMAL_READS.CH0</span></td>
+		<td>IMC channel 0 normal read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_NORMAL_READS.CH1">UNC_IMC_NORMAL_READS.CH1</span></td>
+		<td>IMC channel 1 normal read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_NORMAL_READS.CH2">UNC_IMC_NORMAL_READS.CH2</span></td>
+		<td>IMC channel 2 normal read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_PRIORITY_UPDATES.ANY">UNC_IMC_PRIORITY_UPDATES.ANY</span></td>
+		<td>IMC priority updates</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_PRIORITY_UPDATES.CH0">UNC_IMC_PRIORITY_UPDATES.CH0</span></td>
+		<td>IMC channel 0 priority updates</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_PRIORITY_UPDATES.CH1">UNC_IMC_PRIORITY_UPDATES.CH1</span></td>
+		<td>IMC channel 1 priority updates</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_PRIORITY_UPDATES.CH2">UNC_IMC_PRIORITY_UPDATES.CH2</span></td>
+		<td>IMC channel 2 priority updates</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_RETRY.ANY">UNC_IMC_RETRY.ANY</span></td>
+		<td>IMC retries</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_RETRY.CH0">UNC_IMC_RETRY.CH0</span></td>
+		<td>IMC Channel 0 retries</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_RETRY.CH1">UNC_IMC_RETRY.CH1</span></td>
+		<td>IMC Channel 1 retries</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_RETRY.CH2">UNC_IMC_RETRY.CH2</span></td>
+		<td>IMC Channel 2 retries</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_WRITES.FULL.ANY">UNC_IMC_WRITES.FULL.ANY</span></td>
+		<td>IMC full cache line writes</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_WRITES.FULL.CH0">UNC_IMC_WRITES.FULL.CH0</span></td>
+		<td>IMC channel 0 full cache line writes</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_WRITES.FULL.CH1">UNC_IMC_WRITES.FULL.CH1</span></td>
+		<td>IMC channel 1 full cache line writes</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_WRITES.FULL.CH2">UNC_IMC_WRITES.FULL.CH2</span></td>
+		<td>IMC channel 2 full cache line writes</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_WRITES.PARTIAL.ANY">UNC_IMC_WRITES.PARTIAL.ANY</span></td>
+		<td>IMC partial cache line writes</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_WRITES.PARTIAL.CH0">UNC_IMC_WRITES.PARTIAL.CH0</span></td>
+		<td>IMC channel 0 partial cache line writes</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_WRITES.PARTIAL.CH1">UNC_IMC_WRITES.PARTIAL.CH1</span></td>
+		<td>IMC channel 1 partial cache line writes</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_IMC_WRITES.PARTIAL.CH2">UNC_IMC_WRITES.PARTIAL.CH2</span></td>
+		<td>IMC channel 2 partial cache line writes</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_HITS.ANY">UNC_LLC_HITS.ANY</span></td>
+		<td>Number of LLC hits</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_HITS.PROBE">UNC_LLC_HITS.PROBE</span></td>
+		<td>Number of LLC peer probe hits</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_HITS.READ">UNC_LLC_HITS.READ</span></td>
+		<td>Number of LLC read hits</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_HITS.WRITEBACKS">UNC_LLC_HITS.WRITEBACKS</span></td>
+		<td>Number of LLC write hits</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_IN.ANY">UNC_LLC_LINES_IN.ANY</span></td>
+		<td>LLC lines allocated</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_IN.E_STATE">UNC_LLC_LINES_IN.E_STATE</span></td>
+		<td>LLC lines allocated in E state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_IN.F_STATE">UNC_LLC_LINES_IN.F_STATE</span></td>
+		<td>LLC lines allocated in F state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_IN.M_STATE">UNC_LLC_LINES_IN.M_STATE</span></td>
+		<td>LLC lines allocated in M state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_IN.S_STATE">UNC_LLC_LINES_IN.S_STATE</span></td>
+		<td>LLC lines allocated in S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_OUT.ANY">UNC_LLC_LINES_OUT.ANY</span></td>
+		<td>LLC lines victimized</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_OUT.E_STATE">UNC_LLC_LINES_OUT.E_STATE</span></td>
+		<td>LLC lines victimized in E state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_OUT.F_STATE">UNC_LLC_LINES_OUT.F_STATE</span></td>
+		<td>LLC lines victimized in F state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_OUT.I_STATE">UNC_LLC_LINES_OUT.I_STATE</span></td>
+		<td>LLC lines victimized in I state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_OUT.M_STATE">UNC_LLC_LINES_OUT.M_STATE</span></td>
+		<td>LLC lines victimized in M state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_LINES_OUT.S_STATE">UNC_LLC_LINES_OUT.S_STATE</span></td>
+		<td>LLC lines victimized in S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_MISS.ANY">UNC_LLC_MISS.ANY</span></td>
+		<td>Number of LLC misses</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_MISS.PROBE">UNC_LLC_MISS.PROBE</span></td>
+		<td>Number of LLC peer probe misses</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_MISS.READ">UNC_LLC_MISS.READ</span></td>
+		<td>Number of LLC read misses</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_LLC_MISS.WRITEBACKS">UNC_LLC_MISS.WRITEBACKS</span></td>
+		<td>Number of LLC write misses</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_PROCHOT_ASSERTION">UNC_PROCHOT_ASSERTION</span></td>
+		<td>PROCHOT system assertions</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_ADDRESS_CONFLICTS.2WAY">UNC_QHL_ADDRESS_CONFLICTS.2WAY</span></td>
+		<td>QHL 2 way address conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_ADDRESS_CONFLICTS.3WAY">UNC_QHL_ADDRESS_CONFLICTS.3WAY</span></td>
+		<td>QHL 3 way address conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_ADDRESS_CONFLICTS.NONE">UNC_QHL_ADDRESS_CONFLICTS.NONE</span></td>
+		<td>QHL no address conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CONFLICT_CYCLES.IOH">UNC_QHL_CONFLICT_CYCLES.IOH</span></td>
+		<td>QHL IOH Tracker conflict cycles</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CONFLICT_CYCLES.LOCAL">UNC_QHL_CONFLICT_CYCLES.LOCAL</span></td>
+		<td>QHL Local Tracker conflict cycles</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CONFLICT_CYCLES.REMOTE">UNC_QHL_CONFLICT_CYCLES.REMOTE</span></td>
+		<td>QHL Remote Tracker conflict cycles</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CYCLES_FULL.IOH">UNC_QHL_CYCLES_FULL.IOH</span></td>
+		<td>Cycles QHL IOH Tracker is full</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CYCLES_FULL.LOCAL">UNC_QHL_CYCLES_FULL.LOCAL</span></td>
+		<td>Cycles QHL Local Tracker is full</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CYCLES_FULL.REMOTE">UNC_QHL_CYCLES_FULL.REMOTE</span></td>
+		<td>Cycles QHL  Remote Tracker is full</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CYCLES_NOT_EMPTY.IOH">UNC_QHL_CYCLES_NOT_EMPTY.IOH</span></td>
+		<td>Cycles QHL IOH tracker is busy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CYCLES_NOT_EMPTY.LOCAL">UNC_QHL_CYCLES_NOT_EMPTY.LOCAL</span></td>
+		<td>Cycles QHL local tracker is busy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_CYCLES_NOT_EMPTY.REMOTE">UNC_QHL_CYCLES_NOT_EMPTY.REMOTE</span></td>
+		<td>Cycles QHL remote tracker is busy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_FRC_ACK_CNFLTS.ANY">UNC_QHL_FRC_ACK_CNFLTS.ANY</span></td>
+		<td>QHL FrcAckCnflts sent</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_FRC_ACK_CNFLTS.IOH">UNC_QHL_FRC_ACK_CNFLTS.IOH</span></td>
+		<td>QHL FrcAckCnflts sent to IOH</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_FRC_ACK_CNFLTS.LOCAL">UNC_QHL_FRC_ACK_CNFLTS.LOCAL</span></td>
+		<td>QHL FrcAckCnflts sent to local home</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_FRC_ACK_CNFLTS.REMOTE">UNC_QHL_FRC_ACK_CNFLTS.REMOTE</span></td>
+		<td>QHL FrcAckCnflts sent to remote home</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_OCCUPANCY.IOH">UNC_QHL_OCCUPANCY.IOH</span></td>
+		<td>QHL IOH tracker allocate to deallocate occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_OCCUPANCY.LOCAL">UNC_QHL_OCCUPANCY.LOCAL</span></td>
+		<td>QHL local tracker allocate to deallocate occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_OCCUPANCY.REMOTE">UNC_QHL_OCCUPANCY.REMOTE</span></td>
+		<td>QHL remote tracker allocate to deallocate occupancy</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_REQUESTS.IOH_READS">UNC_QHL_REQUESTS.IOH_READS</span></td>
+		<td>Quickpath Home Logic IOH read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_REQUESTS.IOH_WRITES">UNC_QHL_REQUESTS.IOH_WRITES</span></td>
+		<td>Quickpath Home Logic IOH write requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_REQUESTS.LOCAL_READS">UNC_QHL_REQUESTS.LOCAL_READS</span></td>
+		<td>Quickpath Home Logic local read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_REQUESTS.LOCAL_WRITES">UNC_QHL_REQUESTS.LOCAL_WRITES</span></td>
+		<td>Quickpath Home Logic local write requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_REQUESTS.REMOTE_READS">UNC_QHL_REQUESTS.REMOTE_READS</span></td>
+		<td>Quickpath Home Logic remote read requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_REQUESTS.REMOTE_WRITES">UNC_QHL_REQUESTS.REMOTE_WRITES</span></td>
+		<td>Quickpath Home Logic remote write requests</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_SLEEPS.IOH_CONFLICT">UNC_QHL_SLEEPS.IOH_CONFLICT</span></td>
+		<td>Sleeps due to IOH address conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_SLEEPS.IOH_ORDER">UNC_QHL_SLEEPS.IOH_ORDER</span></td>
+		<td>Sleeps due to IOH order conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_SLEEPS.LOCAL_CONFLICT">UNC_QHL_SLEEPS.LOCAL_CONFLICT</span></td>
+		<td>Sleeps due to local address conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_SLEEPS.LOCAL_ORDER">UNC_QHL_SLEEPS.LOCAL_ORDER</span></td>
+		<td>Sleeps due to local order conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_SLEEPS.REMOTE_CONFLICT">UNC_QHL_SLEEPS.REMOTE_CONFLICT</span></td>
+		<td>Sleeps due to remote address conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_SLEEPS.REMOTE_ORDER">UNC_QHL_SLEEPS.REMOTE_ORDER</span></td>
+		<td>Sleeps due to remote order conflicts</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QHL_TO_IMC_BYPASS">UNC_QHL_TO_IMC_BYPASS</span></td>
+		<td>Number of requests to IMC that bypass QHL</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QPI_RESERVED_CYCLES.DRS_NDR.LINK_0">UNC_QPI_RESERVED_CYCLES.DRS_NDR.LINK_0</span></td>
+		<td>Cycles QPI DRS/NDR Link 0 reserved for forward progress</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QPI_RESERVED_CYCLES.DRS_NDR.LINK_1">UNC_QPI_RESERVED_CYCLES.DRS_NDR.LINK_1</span></td>
+		<td>Cycles QPI DRS/NDR Link 1 reserved for forward progress</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QPI_RESERVED_CYCLES.HOME.LINK_0">UNC_QPI_RESERVED_CYCLES.HOME.LINK_0</span></td>
+		<td>Cycles QPI Home Link 0 reserved for forward progress</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QPI_RESERVED_CYCLES.HOME.LINK_1">UNC_QPI_RESERVED_CYCLES.HOME.LINK_1</span></td>
+		<td>Cycles QPI Home Link 1 reserved for forward progress</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QPI_RESERVED_CYCLES.NCS_NCB.LINK_0">UNC_QPI_RESERVED_CYCLES.NCS_NCB.LINK_0</span></td>
+		<td>Cycles QPI NCS/NCB Link 0 reserved for forward progress</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QPI_RESERVED_CYCLES.NCS_NCB.LINK_1">UNC_QPI_RESERVED_CYCLES.NCS_NCB.LINK_1</span></td>
+		<td>Cycles QPI NCS/NCB Link 1 reserved for forward progress</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QPI_RESERVED_CYCLES.SNOOP.LINK_0">UNC_QPI_RESERVED_CYCLES.SNOOP.LINK_0</span></td>
+		<td>Cycles QPI Snoop Link 0 reserved for forward progress</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_QPI_RESERVED_CYCLES.SNOOP.LINK_1">UNC_QPI_RESERVED_CYCLES.SNOOP.LINK_1</span></td>
+		<td>Cycles QPI Snoop Link 1 reserved for forward progress</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_LOCAL_HOME.CONFLICT">UNC_SNP_RESP_TO_LOCAL_HOME.CONFLICT</span></td>
+		<td>Local home conflict snoop response</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_LOCAL_HOME.FWD_I_STATE">UNC_SNP_RESP_TO_LOCAL_HOME.FWD_I_STATE</span></td>
+		<td>Local home snoop response - LLC has forwarded a modified cache line</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_LOCAL_HOME.FWD_S_STATE">UNC_SNP_RESP_TO_LOCAL_HOME.FWD_S_STATE</span></td>
+		<td>Local home snoop response - LLC forwarding cache line in S state.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_LOCAL_HOME.HIT">UNC_SNP_RESP_TO_LOCAL_HOME.HIT</span></td>
+		<td>Local home snoop response - LLC HIT</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_LOCAL_HOME.HITM">UNC_SNP_RESP_TO_LOCAL_HOME.HITM</span></td>
+		<td>Local home snoop response - LLC HITM</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_LOCAL_HOME.I_STATE">UNC_SNP_RESP_TO_LOCAL_HOME.I_STATE</span></td>
+		<td>Local home snoop response - LLC does not have cache line</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_LOCAL_HOME.S_STATE">UNC_SNP_RESP_TO_LOCAL_HOME.S_STATE</span></td>
+		<td>Local home snoop response - LLC has  cache line in S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_LOCAL_HOME.WB">UNC_SNP_RESP_TO_LOCAL_HOME.WB</span></td>
+		<td>Local home snoop response - LLC has cache line in the M state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_REMOTE_HOME.CONFLICT">UNC_SNP_RESP_TO_REMOTE_HOME.CONFLICT</span></td>
+		<td>Remote home conflict snoop response</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_REMOTE_HOME.FWD_I_STATE">UNC_SNP_RESP_TO_REMOTE_HOME.FWD_I_STATE</span></td>
+		<td>Remote home snoop response - LLC has forwarded a modified cache line</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_REMOTE_HOME.FWD_S_STATE">UNC_SNP_RESP_TO_REMOTE_HOME.FWD_S_STATE</span></td>
+		<td>Remote home snoop response - LLC forwarding cache line in S state.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_REMOTE_HOME.HIT">UNC_SNP_RESP_TO_REMOTE_HOME.HIT</span></td>
+		<td>Remote home snoop response - LLC HIT</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_REMOTE_HOME.HITM">UNC_SNP_RESP_TO_REMOTE_HOME.HITM</span></td>
+		<td>Remote home snoop response - LLC HITM</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_REMOTE_HOME.I_STATE">UNC_SNP_RESP_TO_REMOTE_HOME.I_STATE</span></td>
+		<td>Remote home snoop response - LLC does not have cache line</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_REMOTE_HOME.S_STATE">UNC_SNP_RESP_TO_REMOTE_HOME.S_STATE</span></td>
+		<td>Remote home snoop response - LLC has  cache line in S state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_SNP_RESP_TO_REMOTE_HOME.WB">UNC_SNP_RESP_TO_REMOTE_HOME.WB</span></td>
+		<td>Remote home snoop response - LLC has cache line in the M state</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLED.CORE_0">UNC_THERMAL_THROTTLED.CORE_0</span></td>
+		<td>Cycles core 0 thermal throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLED.CORE_1">UNC_THERMAL_THROTTLED.CORE_1</span></td>
+		<td>Cycles core 1 thermal throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLED.CORE_2">UNC_THERMAL_THROTTLED.CORE_2</span></td>
+		<td>Cycles core 2 thermal throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLED.CORE_3">UNC_THERMAL_THROTTLED.CORE_3</span></td>
+		<td>Cycles core 3 thermal throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLING_PROCHOT.CORE_0">UNC_THERMAL_THROTTLING_PROCHOT.CORE_0</span></td>
+		<td>Cycles core 0 PROCHOT throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLING_PROCHOT.CORE_1">UNC_THERMAL_THROTTLING_PROCHOT.CORE_1</span></td>
+		<td>Cycles core 1 PROCHOT throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLING_PROCHOT.CORE_2">UNC_THERMAL_THROTTLING_PROCHOT.CORE_2</span></td>
+		<td>Cycles core 2 PROCHOT throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLING_PROCHOT.CORE_3">UNC_THERMAL_THROTTLING_PROCHOT.CORE_3</span></td>
+		<td>Cycles core 3 PROCHOT throttled</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLING_TEMP.CORE_0">UNC_THERMAL_THROTTLING_TEMP.CORE_0</span></td>
+		<td>Cycles core 0 above thermal throttling temperature</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLING_TEMP.CORE_1">UNC_THERMAL_THROTTLING_TEMP.CORE_1</span></td>
+		<td>Cycles core 1 above thermal throttling temperature</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLING_TEMP.CORE_2">UNC_THERMAL_THROTTLING_TEMP.CORE_2</span></td>
+		<td>Cycles core 2 above thermal throttling temperature</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_THERMAL_THROTTLING_TEMP.CORE_3">UNC_THERMAL_THROTTLING_TEMP.CORE_3</span></td>
+		<td>Cycles core 3 above thermal throttling temperature</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_TURBO_MODE.CORE_0">UNC_TURBO_MODE.CORE_0</span></td>
+		<td>Cycles core 0 in turbo mode</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_TURBO_MODE.CORE_1">UNC_TURBO_MODE.CORE_1</span></td>
+		<td>Cycles core 1 in turbo mode</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_TURBO_MODE.CORE_2">UNC_TURBO_MODE.CORE_2</span></td>
+		<td>Cycles core 2 in turbo mode</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_TURBO_MODE.CORE_3">UNC_TURBO_MODE.CORE_3</span></td>
+		<td>Cycles core 3 in turbo mode</td>
+	</tr>
+</table>
+
+</body>
+</html>
