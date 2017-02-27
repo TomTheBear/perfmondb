@@ -4,218 +4,338 @@
 <body>
 <h3>Intel&reg; Microarchitecture code named Ivy Bridge Events</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
 <li>3rd generation Intel&reg; Core&#8482 processor family</li><p>
-<table class="table table-responsive">
+<table class="table table-responsive" style="table-layout:fixed;width:100%">
 	<tr>
 		<th>EventName</th>
 		<th>Description</th>
-	</tr>
-	<tr>
-		<td><span id="INST_RETIRED.ANY">INST_RETIRED.ANY</span></td>
-		<td>Instructions retired from execution.</td>
-	</tr>
-	<tr>
-		<td><span id="CPU_CLK_UNHALTED.THREAD">CPU_CLK_UNHALTED.THREAD</span></td>
-		<td>Core cycles when the thread is not in halt state.</td>
-	</tr>
-	<tr>
-		<td><span id="CPU_CLK_UNHALTED.REF_TSC">CPU_CLK_UNHALTED.REF_TSC</span></td>
-		<td>Reference cycles when the core is not in halt state.</td>
-	</tr>
-	<tr>
-		<td><span id="LD_BLOCKS.STORE_FORWARD">LD_BLOCKS.STORE_FORWARD</span></td>
-		<td>Loads blocked by overlapping with store buffer that cannot be forwarded.</td>
-	</tr>
-	<tr>
-		<td><span id="LD_BLOCKS.NO_SR">LD_BLOCKS.NO_SR</span></td>
-		<td>The number of times that split load operations are temporarily blocked because all resources for handling the split accesses are in use.</td>
-	</tr>
-	<tr>
-		<td><span id="MISALIGN_MEM_REF.LOADS">MISALIGN_MEM_REF.LOADS</span></td>
-		<td>Speculative cache-line split load uops dispatched to L1D.</td>
-	</tr>
-	<tr>
-		<td><span id="MISALIGN_MEM_REF.STORES">MISALIGN_MEM_REF.STORES</span></td>
-		<td>Speculative cache-line split Store-address uops dispatched to L1D.</td>
-	</tr>
-	<tr>
-		<td><span id="LD_BLOCKS_PARTIAL.ADDRESS_ALIAS">LD_BLOCKS_PARTIAL.ADDRESS_ALIAS</span></td>
-		<td>False dependencies in MOB due to partial compare on address.</td>
-	</tr>
-	<tr>
-		<td><span id="DTLB_LOAD_MISSES.LARGE_PAGE_WALK_COMPLETED">DTLB_LOAD_MISSES.LARGE_PAGE_WALK_COMPLETED</span></td>
-		<td>Page walk for a large page completed for Demand load.</td>
-	</tr>
-	<tr>
-		<td><span id="INT_MISC.RECOVERY_CYCLES">INT_MISC.RECOVERY_CYCLES</span></td>
-		<td>Number of cycles waiting for the checkpoints in Resource Allocation Table (RAT) to be recovered after Nuke due to all other cases except JEClear (e.g. whenever a ucode assist is needed like SSE exception, memory disambiguation, etc.)</td>
-	</tr>
-	<tr>
-		<td><span id="INT_MISC.RECOVERY_STALLS_COUNT">INT_MISC.RECOVERY_STALLS_COUNT</span></td>
-		<td>Number of occurences waiting for the checkpoints in Resource Allocation Table (RAT) to be recovered after Nuke due to all other cases except JEClear (e.g. whenever a ucode assist is needed like SSE exception, memory disambiguation, etc.)</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_ISSUED.ANY">UOPS_ISSUED.ANY</span></td>
-		<td>Increments each cycle the # of Uops issued by the RAT to RS. Set Cmask = 1, Inv = 1, Any= 1to count stalled cycles of this core.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_ISSUED.STALL_CYCLES">UOPS_ISSUED.STALL_CYCLES</span></td>
-		<td>Cycles when Resource Allocation Table (RAT) does not issue Uops to Reservation Station (RS) for the thread.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_ISSUED.CORE_STALL_CYCLES">UOPS_ISSUED.CORE_STALL_CYCLES</span></td>
-		<td>Cycles when Resource Allocation Table (RAT) does not issue Uops to Reservation Station (RS) for all threads.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_ISSUED.FLAGS_MERGE">UOPS_ISSUED.FLAGS_MERGE</span></td>
-		<td>Number of flags-merge uops allocated. Such uops adds delay.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_ISSUED.SLOW_LEA">UOPS_ISSUED.SLOW_LEA</span></td>
-		<td>Number of slow LEA or similar uops allocated. Such uop has 3 sources (e.g. 2 sources + immediate) regardless if as a result of LEA instruction or not.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_ISSUED.SINGLE_MUL">UOPS_ISSUED.SINGLE_MUL</span></td>
-		<td>Number of multiply packed/scalar single precision uops allocated.</td>
-	</tr>
-	<tr>
-		<td><span id="FP_COMP_OPS_EXE.X87">FP_COMP_OPS_EXE.X87</span></td>
-		<td>Counts number of X87 uops executed.</td>
-	</tr>
-	<tr>
-		<td><span id="FP_COMP_OPS_EXE.SSE_PACKED_DOUBLE">FP_COMP_OPS_EXE.SSE_PACKED_DOUBLE</span></td>
-		<td>Number of SSE* or AVX-128 FP Computational packed double-precision uops issued this cycle.</td>
-	</tr>
-	<tr>
-		<td><span id="FP_COMP_OPS_EXE.SSE_SCALAR_SINGLE">FP_COMP_OPS_EXE.SSE_SCALAR_SINGLE</span></td>
-		<td>Number of SSE* or AVX-128 FP Computational scalar single-precision uops issued this cycle.</td>
-	</tr>
-	<tr>
-		<td><span id="FP_COMP_OPS_EXE.SSE_PACKED_SINGLE">FP_COMP_OPS_EXE.SSE_PACKED_SINGLE</span></td>
-		<td>Number of SSE* or AVX-128 FP Computational packed single-precision uops issued this cycle.</td>
-	</tr>
-	<tr>
-		<td><span id="FP_COMP_OPS_EXE.SSE_SCALAR_DOUBLE">FP_COMP_OPS_EXE.SSE_SCALAR_DOUBLE</span></td>
-		<td>Counts number of SSE* or AVX-128 double precision FP scalar uops executed.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_FP_256.PACKED_SINGLE">SIMD_FP_256.PACKED_SINGLE</span></td>
-		<td>Counts 256-bit packed single-precision floating-point instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_FP_256.PACKED_DOUBLE">SIMD_FP_256.PACKED_DOUBLE</span></td>
-		<td>Counts 256-bit packed double-precision floating-point instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="ARITH.FPU_DIV_ACTIVE">ARITH.FPU_DIV_ACTIVE</span></td>
-		<td>Cycles that the divider is active, includes INT and FP. Set &#39;edge =1, cmask=1&#39; to count the number of divides.</td>
 	</tr>
 	<tr>
 		<td><span id="ARITH.FPU_DIV">ARITH.FPU_DIV</span></td>
 		<td>Divide operations executed.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.DEMAND_DATA_RD_HIT">L2_RQSTS.DEMAND_DATA_RD_HIT</span></td>
-		<td>Demand Data Read requests that hit L2 cache.</td>
+		<td><span id="ARITH.FPU_DIV_ACTIVE">ARITH.FPU_DIV_ACTIVE</span></td>
+		<td>Cycles that the divider is active, includes INT and FP. Set &#39;edge =1, cmask=1&#39; to count the number of divides.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.RFO_HIT">L2_RQSTS.RFO_HIT</span></td>
-		<td>RFO requests that hit L2 cache.</td>
+		<td><span id="BACLEARS.ANY">BACLEARS.ANY</span></td>
+		<td>Number of front end re-steers due to BPU misprediction.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.RFO_MISS">L2_RQSTS.RFO_MISS</span></td>
-		<td>Counts the number of store RFO requests that miss the L2 cache.</td>
+		<td><span id="BR_INST_EXEC.ALL_BRANCHES">BR_INST_EXEC.ALL_BRANCHES</span></td>
+		<td>Counts all near executed branches (not necessarily retired).</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.CODE_RD_HIT">L2_RQSTS.CODE_RD_HIT</span></td>
-		<td>Number of instruction fetches that hit the L2 cache.</td>
+		<td><span id="BR_INST_EXEC.ALL_CONDITIONAL">BR_INST_EXEC.ALL_CONDITIONAL</span></td>
+		<td>Speculative and retired macro-conditional branches.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.CODE_RD_MISS">L2_RQSTS.CODE_RD_MISS</span></td>
-		<td>Number of instruction fetches that missed the L2 cache.</td>
+		<td><span id="BR_INST_EXEC.ALL_DIRECT_JMP">BR_INST_EXEC.ALL_DIRECT_JMP</span></td>
+		<td>Speculative and retired macro-unconditional branches excluding calls and indirects.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.PF_HIT">L2_RQSTS.PF_HIT</span></td>
-		<td>Counts all L2 HW prefetcher requests that hit L2.</td>
+		<td><span id="BR_INST_EXEC.ALL_DIRECT_NEAR_CALL">BR_INST_EXEC.ALL_DIRECT_NEAR_CALL</span></td>
+		<td>Speculative and retired direct near calls.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.PF_MISS">L2_RQSTS.PF_MISS</span></td>
-		<td>Counts all L2 HW prefetcher requests that missed L2.</td>
+		<td><span id="BR_INST_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET">BR_INST_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET</span></td>
+		<td>Speculative and retired indirect branches excluding calls and returns.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.ALL_DEMAND_DATA_RD">L2_RQSTS.ALL_DEMAND_DATA_RD</span></td>
-		<td>Counts any demand and L1 HW prefetch data load requests to L2.</td>
+		<td><span id="BR_INST_EXEC.ALL_INDIRECT_NEAR_RETURN">BR_INST_EXEC.ALL_INDIRECT_NEAR_RETURN</span></td>
+		<td>Speculative and retired indirect return branches.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.ALL_RFO">L2_RQSTS.ALL_RFO</span></td>
-		<td>Counts all L2 store RFO requests.</td>
+		<td><span id="BR_INST_EXEC.NONTAKEN_CONDITIONAL">BR_INST_EXEC.NONTAKEN_CONDITIONAL</span></td>
+		<td>Not taken macro-conditional branches.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.ALL_CODE_RD">L2_RQSTS.ALL_CODE_RD</span></td>
-		<td>Counts all L2 code requests.</td>
+		<td><span id="BR_INST_EXEC.TAKEN_CONDITIONAL">BR_INST_EXEC.TAKEN_CONDITIONAL</span></td>
+		<td>Taken speculative and retired macro-conditional branches.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_RQSTS.ALL_PF">L2_RQSTS.ALL_PF</span></td>
-		<td>Counts all L2 HW prefetcher requests.</td>
+		<td><span id="BR_INST_EXEC.TAKEN_DIRECT_JUMP">BR_INST_EXEC.TAKEN_DIRECT_JUMP</span></td>
+		<td>Taken speculative and retired macro-conditional branch instructions excluding calls and indirects.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_STORE_LOCK_RQSTS.MISS">L2_STORE_LOCK_RQSTS.MISS</span></td>
-		<td>RFOs that miss cache lines.</td>
+		<td><span id="BR_INST_EXEC.TAKEN_DIRECT_NEAR_CALL">BR_INST_EXEC.TAKEN_DIRECT_NEAR_CALL</span></td>
+		<td>Taken speculative and retired direct near calls.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_STORE_LOCK_RQSTS.HIT_M">L2_STORE_LOCK_RQSTS.HIT_M</span></td>
-		<td>RFOs that hit cache lines in M state.</td>
+		<td><span id="BR_INST_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET">BR_INST_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET</span></td>
+		<td>Taken speculative and retired indirect branches excluding calls and returns.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_STORE_LOCK_RQSTS.ALL">L2_STORE_LOCK_RQSTS.ALL</span></td>
-		<td>RFOs that access cache lines in any state.</td>
+		<td><span id="BR_INST_EXEC.TAKEN_INDIRECT_NEAR_CALL">BR_INST_EXEC.TAKEN_INDIRECT_NEAR_CALL</span></td>
+		<td>Taken speculative and retired indirect calls.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_L1D_WB_RQSTS.MISS">L2_L1D_WB_RQSTS.MISS</span></td>
-		<td>Not rejected writebacks that missed LLC.</td>
+		<td><span id="BR_INST_EXEC.TAKEN_INDIRECT_NEAR_RETURN">BR_INST_EXEC.TAKEN_INDIRECT_NEAR_RETURN</span></td>
+		<td>Taken speculative and retired indirect branches with return mnemonic.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_L1D_WB_RQSTS.HIT_E">L2_L1D_WB_RQSTS.HIT_E</span></td>
-		<td>Not rejected writebacks from L1D to L2 cache lines in E state.</td>
+		<td><span id="BR_INST_RETIRED.ALL_BRANCHES">BR_INST_RETIRED.ALL_BRANCHES</span></td>
+		<td>Branch instructions at retirement.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_L1D_WB_RQSTS.HIT_M">L2_L1D_WB_RQSTS.HIT_M</span></td>
-		<td>Not rejected writebacks from L1D to L2 cache lines in M state.</td>
+		<td><span id="BR_INST_RETIRED.ALL_BRANCHES_PS">BR_INST_RETIRED.ALL_BRANCHES_PS</span></td>
+		<td>All (macro) branch instructions retired.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_L1D_WB_RQSTS.ALL">L2_L1D_WB_RQSTS.ALL</span></td>
-		<td>Not rejected writebacks from L1D to L2 cache lines in any state.</td>
+		<td><span id="BR_INST_RETIRED.CONDITIONAL">BR_INST_RETIRED.CONDITIONAL</span></td>
+		<td>Counts the number of conditional branch instructions retired.</td>
 	</tr>
 	<tr>
-		<td><span id="LONGEST_LAT_CACHE.MISS">LONGEST_LAT_CACHE.MISS</span></td>
-		<td>This event counts each cache miss condition for references to the last level cache.</td>
+		<td><span id="BR_INST_RETIRED.CONDITIONAL_PS">BR_INST_RETIRED.CONDITIONAL_PS</span></td>
+		<td>Conditional branch instructions retired.</td>
 	</tr>
 	<tr>
-		<td><span id="LONGEST_LAT_CACHE.REFERENCE">LONGEST_LAT_CACHE.REFERENCE</span></td>
-		<td>This event counts requests originating from the core that reference a cache line in the last level cache.</td>
+		<td><span id="BR_INST_RETIRED.FAR_BRANCH">BR_INST_RETIRED.FAR_BRANCH</span></td>
+		<td>Number of far branches retired.</td>
 	</tr>
 	<tr>
-		<td><span id="CPU_CLK_UNHALTED.THREAD_P">CPU_CLK_UNHALTED.THREAD_P</span></td>
-		<td>Counts the number of thread cycles while the thread is not in a halt state. The thread enters the halt state when it is running the HLT instruction. The core frequency may change from time to time due to power or thermal throttling.</td>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL">BR_INST_RETIRED.NEAR_CALL</span></td>
+		<td>Direct and indirect near call instructions retired.</td>
 	</tr>
 	<tr>
-		<td><span id="CPU_CLK_THREAD_UNHALTED.REF_XCLK">CPU_CLK_THREAD_UNHALTED.REF_XCLK</span></td>
-		<td>Increments at the frequency of XCLK (100 MHz) when not halted.</td>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL_PS">BR_INST_RETIRED.NEAR_CALL_PS</span></td>
+		<td>Direct and indirect near call instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3">BR_INST_RETIRED.NEAR_CALL_R3</span></td>
+		<td>Direct and indirect macro near call instructions retired (captured in ring 3).</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3_PS">BR_INST_RETIRED.NEAR_CALL_R3_PS</span></td>
+		<td>Direct and indirect macro near call instructions retired (captured in ring 3).</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_RETURN">BR_INST_RETIRED.NEAR_RETURN</span></td>
+		<td>Counts the number of near return instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_RETURN_PS">BR_INST_RETIRED.NEAR_RETURN_PS</span></td>
+		<td>Return instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_TAKEN">BR_INST_RETIRED.NEAR_TAKEN</span></td>
+		<td>Number of near taken branches retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_TAKEN_PS">BR_INST_RETIRED.NEAR_TAKEN_PS</span></td>
+		<td>Taken branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NOT_TAKEN">BR_INST_RETIRED.NOT_TAKEN</span></td>
+		<td>Counts the number of not taken branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.ALL_BRANCHES">BR_MISP_EXEC.ALL_BRANCHES</span></td>
+		<td>Counts all near executed branches (not necessarily retired).</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.ALL_CONDITIONAL">BR_MISP_EXEC.ALL_CONDITIONAL</span></td>
+		<td>Speculative and retired mispredicted macro conditional branches.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET">BR_MISP_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET</span></td>
+		<td>Mispredicted indirect branches excluding calls and returns.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.NONTAKEN_CONDITIONAL">BR_MISP_EXEC.NONTAKEN_CONDITIONAL</span></td>
+		<td>Not taken speculative and retired mispredicted macro conditional branches.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.TAKEN_CONDITIONAL">BR_MISP_EXEC.TAKEN_CONDITIONAL</span></td>
+		<td>Taken speculative and retired mispredicted macro conditional branches.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET">BR_MISP_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET</span></td>
+		<td>Taken speculative and retired mispredicted indirect branches excluding calls and returns.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.TAKEN_INDIRECT_NEAR_CALL">BR_MISP_EXEC.TAKEN_INDIRECT_NEAR_CALL</span></td>
+		<td>Taken speculative and retired mispredicted indirect calls.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_EXEC.TAKEN_RETURN_NEAR">BR_MISP_EXEC.TAKEN_RETURN_NEAR</span></td>
+		<td>Taken speculative and retired mispredicted indirect branches with return mnemonic.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES">BR_MISP_RETIRED.ALL_BRANCHES</span></td>
+		<td>Mispredicted branch instructions at retirement.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES_PS">BR_MISP_RETIRED.ALL_BRANCHES_PS</span></td>
+		<td>Mispredicted macro branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.CONDITIONAL">BR_MISP_RETIRED.CONDITIONAL</span></td>
+		<td>Mispredicted conditional branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.CONDITIONAL_PS">BR_MISP_RETIRED.CONDITIONAL_PS</span></td>
+		<td>Mispredicted conditional branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.NEAR_TAKEN">BR_MISP_RETIRED.NEAR_TAKEN</span></td>
+		<td>Mispredicted taken branch instructions retired.</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.NEAR_TAKEN_PS">BR_MISP_RETIRED.NEAR_TAKEN_PS</span></td>
+		<td>number of near branch instructions retired that were mispredicted and taken.</td>
+	</tr>
+	<tr>
+		<td><span id="CPL_CYCLES.RING0">CPL_CYCLES.RING0</span></td>
+		<td>Unhalted core cycles when the thread is in ring 0.</td>
+	</tr>
+	<tr>
+		<td><span id="CPL_CYCLES.RING0_TRANS">CPL_CYCLES.RING0_TRANS</span></td>
+		<td>Number of intervals between processor halts while thread is in ring 0.</td>
+	</tr>
+	<tr>
+		<td><span id="CPL_CYCLES.RING123">CPL_CYCLES.RING123</span></td>
+		<td>Unhalted core cycles when the thread is not in ring 0.</td>
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_THREAD_UNHALTED.ONE_THREAD_ACTIVE">CPU_CLK_THREAD_UNHALTED.ONE_THREAD_ACTIVE</span></td>
 		<td>Count XClk pulses when this thread is unhalted and the other is halted.</td>
 	</tr>
 	<tr>
-		<td><span id="L1D_PEND_MISS.PENDING">L1D_PEND_MISS.PENDING</span></td>
-		<td>Increments the number of outstanding L1D misses every cycle. Set Cmask = 1 and Edge =1 to count occurrences.</td>
+		<td><span id="CPU_CLK_THREAD_UNHALTED.REF_XCLK">CPU_CLK_THREAD_UNHALTED.REF_XCLK</span></td>
+		<td>Increments at the frequency of XCLK (100 MHz) when not halted.</td>
 	</tr>
 	<tr>
-		<td><span id="L1D_PEND_MISS.PENDING_CYCLES">L1D_PEND_MISS.PENDING_CYCLES</span></td>
-		<td>Cycles with L1D load Misses outstanding.</td>
+		<td><span id="CPU_CLK_THREAD_UNHALTED.REF_XCLK_ANY">CPU_CLK_THREAD_UNHALTED.REF_XCLK_ANY</span></td>
+		<td>Reference cycles when the at least one thread on the physical core is unhalted. (counts at 100 MHz rate)</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE">CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE</span></td>
+		<td>Count XClk pulses when this thread is unhalted and the other thread is halted.</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.REF_TSC">CPU_CLK_UNHALTED.REF_TSC</span></td>
+		<td>Reference cycles when the core is not in halt state.</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.REF_XCLK">CPU_CLK_UNHALTED.REF_XCLK</span></td>
+		<td>Reference cycles when the thread is unhalted. (counts at 100 MHz rate)</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.REF_XCLK_ANY">CPU_CLK_UNHALTED.REF_XCLK_ANY</span></td>
+		<td>Reference cycles when the at least one thread on the physical core is unhalted. (counts at 100 MHz rate)</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.THREAD">CPU_CLK_UNHALTED.THREAD</span></td>
+		<td>Core cycles when the thread is not in halt state.</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.THREAD_ANY">CPU_CLK_UNHALTED.THREAD_ANY</span></td>
+		<td>Core cycles when at least one thread on the physical core is not in halt state.</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.THREAD_P">CPU_CLK_UNHALTED.THREAD_P</span></td>
+		<td>Counts the number of thread cycles while the thread is not in a halt state. The thread enters the halt state when it is running the HLT instruction. The core frequency may change from time to time due to power or thermal throttling.</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.THREAD_P_ANY">CPU_CLK_UNHALTED.THREAD_P_ANY</span></td>
+		<td>Core cycles when at least one thread on the physical core is not in halt state.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.CYCLES_L1D_MISS">CYCLE_ACTIVITY.CYCLES_L1D_MISS</span></td>
+		<td>Cycles while L1 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.CYCLES_L1D_PENDING">CYCLE_ACTIVITY.CYCLES_L1D_PENDING</span></td>
+		<td>Cycles with pending L1 cache miss loads. Set AnyThread to count per core.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.CYCLES_L2_MISS">CYCLE_ACTIVITY.CYCLES_L2_MISS</span></td>
+		<td>Cycles while L2 cache miss load* is outstanding.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.CYCLES_L2_PENDING">CYCLE_ACTIVITY.CYCLES_L2_PENDING</span></td>
+		<td>Cycles with pending L2 miss loads. Set AnyThread to count per core.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.CYCLES_LDM_PENDING">CYCLE_ACTIVITY.CYCLES_LDM_PENDING</span></td>
+		<td>Cycles with pending memory loads. Set AnyThread to count per core.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.CYCLES_MEM_ANY">CYCLE_ACTIVITY.CYCLES_MEM_ANY</span></td>
+		<td>Cycles while memory subsystem has an outstanding load.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.CYCLES_NO_EXECUTE">CYCLE_ACTIVITY.CYCLES_NO_EXECUTE</span></td>
+		<td>Total execution stalls.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.STALLS_L1D_MISS">CYCLE_ACTIVITY.STALLS_L1D_MISS</span></td>
+		<td>Execution stalls while L1 cache miss demand load is outstanding.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.STALLS_L1D_PENDING">CYCLE_ACTIVITY.STALLS_L1D_PENDING</span></td>
+		<td>Execution stalls due to L1 data cache miss loads. Set Cmask=0CH.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.STALLS_L2_MISS">CYCLE_ACTIVITY.STALLS_L2_MISS</span></td>
+		<td>Execution stalls while L2 cache miss load* is outstanding.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.STALLS_L2_PENDING">CYCLE_ACTIVITY.STALLS_L2_PENDING</span></td>
+		<td>Number of loads missed L2.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.STALLS_LDM_PENDING">CYCLE_ACTIVITY.STALLS_LDM_PENDING</span></td>
+		<td>Execution stalls due to memory subsystem.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.STALLS_MEM_ANY">CYCLE_ACTIVITY.STALLS_MEM_ANY</span></td>
+		<td>Execution stalls while memory subsystem has an outstanding load.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLE_ACTIVITY.STALLS_TOTAL">CYCLE_ACTIVITY.STALLS_TOTAL</span></td>
+		<td>Total execution stalls.</td>
+	</tr>
+	<tr>
+		<td><span id="DSB_FILL.EXCEED_DSB_LINES">DSB_FILL.EXCEED_DSB_LINES</span></td>
+		<td>DSB Fill encountered &gt; 3 DSB lines.</td>
+	</tr>
+	<tr>
+		<td><span id="DSB2MITE_SWITCHES.COUNT">DSB2MITE_SWITCHES.COUNT</span></td>
+		<td>Number of DSB to MITE switches.</td>
+	</tr>
+	<tr>
+		<td><span id="DSB2MITE_SWITCHES.PENALTY_CYCLES">DSB2MITE_SWITCHES.PENALTY_CYCLES</span></td>
+		<td>Cycles DSB to MITE switches caused delay.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.LARGE_PAGE_WALK_COMPLETED">DTLB_LOAD_MISSES.LARGE_PAGE_WALK_COMPLETED</span></td>
+		<td>Page walk for a large page completed for Demand load.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.MISS_CAUSES_A_WALK">DTLB_LOAD_MISSES.MISS_CAUSES_A_WALK</span></td>
+		<td>Misses in all TLB levels that cause a page walk of any page size from demand loads.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.STLB_HIT">DTLB_LOAD_MISSES.STLB_HIT</span></td>
+		<td>Counts load operations that missed 1st level DTLB but hit the 2nd level.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED">DTLB_LOAD_MISSES.WALK_COMPLETED</span></td>
+		<td>Misses in all TLB levels that caused page walk completed of any size by demand loads.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.WALK_DURATION">DTLB_LOAD_MISSES.WALK_DURATION</span></td>
+		<td>Cycle PMH is busy with a walk due to demand loads.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.MISS_CAUSES_A_WALK">DTLB_STORE_MISSES.MISS_CAUSES_A_WALK</span></td>
 		<td>Miss in all TLB levels causes a page walk of any page size (4K/2M/4M/1G).</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_STORE_MISSES.STLB_HIT">DTLB_STORE_MISSES.STLB_HIT</span></td>
+		<td>Store operations that miss the first TLB level but hit the second and do not cause page walks.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.WALK_COMPLETED">DTLB_STORE_MISSES.WALK_COMPLETED</span></td>
@@ -226,144 +346,60 @@
 		<td>Cycles PMH is busy with this walk.</td>
 	</tr>
 	<tr>
-		<td><span id="DTLB_STORE_MISSES.STLB_HIT">DTLB_STORE_MISSES.STLB_HIT</span></td>
-		<td>Store operations that miss the first TLB level but hit the second and do not cause page walks.</td>
-	</tr>
-	<tr>
-		<td><span id="LOAD_HIT_PRE.SW_PF">LOAD_HIT_PRE.SW_PF</span></td>
-		<td>Non-SW-prefetch load dispatches that hit fill buffer allocated for S/W prefetch.</td>
-	</tr>
-	<tr>
-		<td><span id="LOAD_HIT_PRE.HW_PF">LOAD_HIT_PRE.HW_PF</span></td>
-		<td>Non-SW-prefetch load dispatches that hit fill buffer allocated for H/W prefetch.</td>
-	</tr>
-	<tr>
 		<td><span id="EPT.WALK_CYCLES">EPT.WALK_CYCLES</span></td>
 		<td>Cycle count for an Extended Page table walk.  The Extended Page Directory cache is used by Virtual Machine operating systems while the guest operating systems use the standard TLB caches.</td>
 	</tr>
 	<tr>
-		<td><span id="L1D.REPLACEMENT">L1D.REPLACEMENT</span></td>
-		<td>Counts the number of lines brought into the L1 data cache.</td>
+		<td><span id="FP_ASSIST.ANY">FP_ASSIST.ANY</span></td>
+		<td>Cycles with any input/output SSE* or FP assists.</td>
 	</tr>
 	<tr>
-		<td><span id="MOVE_ELIMINATION.INT_NOT_ELIMINATED">MOVE_ELIMINATION.INT_NOT_ELIMINATED</span></td>
-		<td>Number of integer Move Elimination candidate uops that were not eliminated.</td>
+		<td><span id="FP_ASSIST.SIMD_INPUT">FP_ASSIST.SIMD_INPUT</span></td>
+		<td>Number of SIMD FP assists due to input values.</td>
 	</tr>
 	<tr>
-		<td><span id="MOVE_ELIMINATION.SIMD_NOT_ELIMINATED">MOVE_ELIMINATION.SIMD_NOT_ELIMINATED</span></td>
-		<td>Number of SIMD Move Elimination candidate uops that were not eliminated.</td>
+		<td><span id="FP_ASSIST.SIMD_OUTPUT">FP_ASSIST.SIMD_OUTPUT</span></td>
+		<td>Number of SIMD FP assists due to output values.</td>
 	</tr>
 	<tr>
-		<td><span id="MOVE_ELIMINATION.INT_ELIMINATED">MOVE_ELIMINATION.INT_ELIMINATED</span></td>
-		<td>Number of integer Move Elimination candidate uops that were eliminated.</td>
+		<td><span id="FP_ASSIST.X87_INPUT">FP_ASSIST.X87_INPUT</span></td>
+		<td>Number of X87 FP assists due to input values.</td>
 	</tr>
 	<tr>
-		<td><span id="MOVE_ELIMINATION.SIMD_ELIMINATED">MOVE_ELIMINATION.SIMD_ELIMINATED</span></td>
-		<td>Number of SIMD Move Elimination candidate uops that were eliminated.</td>
+		<td><span id="FP_ASSIST.X87_OUTPUT">FP_ASSIST.X87_OUTPUT</span></td>
+		<td>Number of X87 FP assists due to output values.</td>
 	</tr>
 	<tr>
-		<td><span id="CPL_CYCLES.RING0">CPL_CYCLES.RING0</span></td>
-		<td>Unhalted core cycles when the thread is in ring 0.</td>
+		<td><span id="FP_COMP_OPS_EXE.SSE_PACKED_DOUBLE">FP_COMP_OPS_EXE.SSE_PACKED_DOUBLE</span></td>
+		<td>Number of SSE* or AVX-128 FP Computational packed double-precision uops issued this cycle.</td>
 	</tr>
 	<tr>
-		<td><span id="CPL_CYCLES.RING123">CPL_CYCLES.RING123</span></td>
-		<td>Unhalted core cycles when the thread is not in ring 0.</td>
+		<td><span id="FP_COMP_OPS_EXE.SSE_PACKED_SINGLE">FP_COMP_OPS_EXE.SSE_PACKED_SINGLE</span></td>
+		<td>Number of SSE* or AVX-128 FP Computational packed single-precision uops issued this cycle.</td>
 	</tr>
 	<tr>
-		<td><span id="CPL_CYCLES.RING0_TRANS">CPL_CYCLES.RING0_TRANS</span></td>
-		<td>Number of intervals between processor halts while thread is in ring 0.</td>
+		<td><span id="FP_COMP_OPS_EXE.SSE_SCALAR_DOUBLE">FP_COMP_OPS_EXE.SSE_SCALAR_DOUBLE</span></td>
+		<td>Counts number of SSE* or AVX-128 double precision FP scalar uops executed.</td>
 	</tr>
 	<tr>
-		<td><span id="RS_EVENTS.EMPTY_CYCLES">RS_EVENTS.EMPTY_CYCLES</span></td>
-		<td>Cycles the RS is empty for the thread.</td>
+		<td><span id="FP_COMP_OPS_EXE.SSE_SCALAR_SINGLE">FP_COMP_OPS_EXE.SSE_SCALAR_SINGLE</span></td>
+		<td>Number of SSE* or AVX-128 FP Computational scalar single-precision uops issued this cycle.</td>
 	</tr>
 	<tr>
-		<td><span id="DTLB_LOAD_MISSES.STLB_HIT">DTLB_LOAD_MISSES.STLB_HIT</span></td>
-		<td>Counts load operations that missed 1st level DTLB but hit the 2nd level.</td>
+		<td><span id="FP_COMP_OPS_EXE.X87">FP_COMP_OPS_EXE.X87</span></td>
+		<td>Counts number of X87 uops executed.</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD</span></td>
-		<td>Offcore outstanding Demand Data Read transactions in SQ to uncore. Set Cmask=1 to count cycles.</td>
+		<td><span id="ICACHE.HIT">ICACHE.HIT</span></td>
+		<td>Number of Instruction Cache, Streaming Buffer and Victim Cache Reads. both cacheable and noncacheable, including UC fetches.</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD</span></td>
-		<td>Offcore outstanding Demand Code Read transactions in SQ to uncore. Set Cmask=1 to count cycles.</td>
+		<td><span id="ICACHE.IFETCH_STALL">ICACHE.IFETCH_STALL</span></td>
+		<td>Cycles where a code-fetch stalled due to L1 instruction-cache miss or an iTLB miss.</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO</span></td>
-		<td>Offcore outstanding RFO store transactions in SQ to uncore. Set Cmask=1 to count cycles.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD</span></td>
-		<td>Offcore outstanding cacheable data read transactions in SQ to uncore. Set Cmask=1 to count cycles.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD</span></td>
-		<td>Cycles when offcore outstanding Demand Data Read transactions are present in SuperQueue (SQ), queue to uncore.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD</span></td>
-		<td>Cycles when offcore outstanding cacheable Core Data Read transactions are present in SuperQueue (SQ), queue to uncore.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_CODE_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_CODE_RD</span></td>
-		<td>Offcore outstanding code reads transactions in SuperQueue (SQ), queue to uncore, every cycle.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO</span></td>
-		<td>Offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore, every cycle.</td>
-	</tr>
-	<tr>
-		<td><span id="LOCK_CYCLES.SPLIT_LOCK_UC_LOCK_DURATION">LOCK_CYCLES.SPLIT_LOCK_UC_LOCK_DURATION</span></td>
-		<td>Cycles in which the L1D and L2 are locked, due to a UC lock or split lock.</td>
-	</tr>
-	<tr>
-		<td><span id="LOCK_CYCLES.CACHE_LOCK_DURATION">LOCK_CYCLES.CACHE_LOCK_DURATION</span></td>
-		<td>Cycles in which the L1D is locked.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.EMPTY">IDQ.EMPTY</span></td>
-		<td>Counts cycles the IDQ is empty.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.MITE_UOPS">IDQ.MITE_UOPS</span></td>
-		<td>Increment each cycle # of uops delivered to IDQ from MITE path. Set Cmask = 1 to count cycles.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.DSB_UOPS">IDQ.DSB_UOPS</span></td>
-		<td>Increment each cycle. # of uops delivered to IDQ from DSB path. Set Cmask = 1 to count cycles.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.MS_DSB_UOPS">IDQ.MS_DSB_UOPS</span></td>
-		<td>Increment each cycle # of uops delivered to IDQ when MS_busy by DSB. Set Cmask = 1 to count cycles. Add Edge=1 to count # of delivery.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.MS_MITE_UOPS">IDQ.MS_MITE_UOPS</span></td>
-		<td>Increment each cycle # of uops delivered to IDQ when MS_busy by MITE. Set Cmask = 1 to count cycles.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.MS_UOPS">IDQ.MS_UOPS</span></td>
-		<td>Increment each cycle # of uops delivered to IDQ from MS by either DSB or MITE. Set Cmask = 1 to count cycles.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.MS_CYCLES">IDQ.MS_CYCLES</span></td>
-		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.MITE_CYCLES">IDQ.MITE_CYCLES</span></td>
-		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from MITE path.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.DSB_CYCLES">IDQ.DSB_CYCLES</span></td>
-		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from Decode Stream Buffer (DSB) path.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.MS_DSB_CYCLES">IDQ.MS_DSB_CYCLES</span></td>
-		<td>Cycles when uops initiated by Decode Stream Buffer (DSB) are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy.</td>
-	</tr>
-	<tr>
-		<td><span id="IDQ.MS_DSB_OCCUR">IDQ.MS_DSB_OCCUR</span></td>
-		<td>Deliveries to Instruction Decode Queue (IDQ) initiated by Decode Stream Buffer (DSB) while Microcode Sequenser (MS) is busy.</td>
+		<td><span id="ICACHE.MISSES">ICACHE.MISSES</span></td>
+		<td>Number of Instruction Cache, Streaming Buffer and Victim Cache Misses. Includes UC accesses.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.ALL_DSB_CYCLES_4_UOPS">IDQ.ALL_DSB_CYCLES_4_UOPS</span></td>
@@ -382,132 +418,56 @@
 		<td>Counts cycles MITE is delivered at least one uops. Set Cmask = 1.</td>
 	</tr>
 	<tr>
+		<td><span id="IDQ.DSB_CYCLES">IDQ.DSB_CYCLES</span></td>
+		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from Decode Stream Buffer (DSB) path.</td>
+	</tr>
+	<tr>
+		<td><span id="IDQ.DSB_UOPS">IDQ.DSB_UOPS</span></td>
+		<td>Increment each cycle. # of uops delivered to IDQ from DSB path. Set Cmask = 1 to count cycles.</td>
+	</tr>
+	<tr>
+		<td><span id="IDQ.EMPTY">IDQ.EMPTY</span></td>
+		<td>Counts cycles the IDQ is empty.</td>
+	</tr>
+	<tr>
 		<td><span id="IDQ.MITE_ALL_UOPS">IDQ.MITE_ALL_UOPS</span></td>
 		<td>Number of uops delivered to IDQ from any path.</td>
 	</tr>
 	<tr>
-		<td><span id="ICACHE.HIT">ICACHE.HIT</span></td>
-		<td>Number of Instruction Cache, Streaming Buffer and Victim Cache Reads. both cacheable and noncacheable, including UC fetches.</td>
+		<td><span id="IDQ.MITE_CYCLES">IDQ.MITE_CYCLES</span></td>
+		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) from MITE path.</td>
 	</tr>
 	<tr>
-		<td><span id="ICACHE.MISSES">ICACHE.MISSES</span></td>
-		<td>Number of Instruction Cache, Streaming Buffer and Victim Cache Misses. Includes UC accesses.</td>
+		<td><span id="IDQ.MITE_UOPS">IDQ.MITE_UOPS</span></td>
+		<td>Increment each cycle # of uops delivered to IDQ from MITE path. Set Cmask = 1 to count cycles.</td>
 	</tr>
 	<tr>
-		<td><span id="ICACHE.IFETCH_STALL">ICACHE.IFETCH_STALL</span></td>
-		<td>Cycles where a code-fetch stalled due to L1 instruction-cache miss or an iTLB miss.</td>
+		<td><span id="IDQ.MS_CYCLES">IDQ.MS_CYCLES</span></td>
+		<td>Cycles when uops are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy.</td>
 	</tr>
 	<tr>
-		<td><span id="ITLB_MISSES.MISS_CAUSES_A_WALK">ITLB_MISSES.MISS_CAUSES_A_WALK</span></td>
-		<td>Misses in all ITLB levels that cause page walks.</td>
+		<td><span id="IDQ.MS_DSB_CYCLES">IDQ.MS_DSB_CYCLES</span></td>
+		<td>Cycles when uops initiated by Decode Stream Buffer (DSB) are being delivered to Instruction Decode Queue (IDQ) while Microcode Sequenser (MS) is busy.</td>
 	</tr>
 	<tr>
-		<td><span id="ITLB_MISSES.WALK_COMPLETED">ITLB_MISSES.WALK_COMPLETED</span></td>
-		<td>Misses in all ITLB levels that cause completed page walks.</td>
+		<td><span id="IDQ.MS_DSB_OCCUR">IDQ.MS_DSB_OCCUR</span></td>
+		<td>Deliveries to Instruction Decode Queue (IDQ) initiated by Decode Stream Buffer (DSB) while Microcode Sequenser (MS) is busy.</td>
 	</tr>
 	<tr>
-		<td><span id="ITLB_MISSES.WALK_DURATION">ITLB_MISSES.WALK_DURATION</span></td>
-		<td>Cycle PMH is busy with a walk.</td>
+		<td><span id="IDQ.MS_DSB_UOPS">IDQ.MS_DSB_UOPS</span></td>
+		<td>Increment each cycle # of uops delivered to IDQ when MS_busy by DSB. Set Cmask = 1 to count cycles. Add Edge=1 to count # of delivery.</td>
 	</tr>
 	<tr>
-		<td><span id="ITLB_MISSES.STLB_HIT">ITLB_MISSES.STLB_HIT</span></td>
-		<td>Number of cache load STLB hits. No page walk.</td>
+		<td><span id="IDQ.MS_MITE_UOPS">IDQ.MS_MITE_UOPS</span></td>
+		<td>Increment each cycle # of uops delivered to IDQ when MS_busy by MITE. Set Cmask = 1 to count cycles.</td>
 	</tr>
 	<tr>
-		<td><span id="ITLB_MISSES.LARGE_PAGE_WALK_COMPLETED">ITLB_MISSES.LARGE_PAGE_WALK_COMPLETED</span></td>
-		<td>Completed page walks in ITLB due to STLB load misses for large pages.</td>
+		<td><span id="IDQ.MS_SWITCHES">IDQ.MS_SWITCHES</span></td>
+		<td>Number of switches from DSB (Decode Stream Buffer) or MITE (legacy decode pipeline) to the Microcode Sequencer.</td>
 	</tr>
 	<tr>
-		<td><span id="ILD_STALL.LCP">ILD_STALL.LCP</span></td>
-		<td>Stalls caused by changing prefix length of the instruction.</td>
-	</tr>
-	<tr>
-		<td><span id="ILD_STALL.IQ_FULL">ILD_STALL.IQ_FULL</span></td>
-		<td>Stall cycles due to IQ is full.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.NONTAKEN_CONDITIONAL">BR_INST_EXEC.NONTAKEN_CONDITIONAL</span></td>
-		<td>Not taken macro-conditional branches.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.TAKEN_CONDITIONAL">BR_INST_EXEC.TAKEN_CONDITIONAL</span></td>
-		<td>Taken speculative and retired macro-conditional branches.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.TAKEN_DIRECT_JUMP">BR_INST_EXEC.TAKEN_DIRECT_JUMP</span></td>
-		<td>Taken speculative and retired macro-conditional branch instructions excluding calls and indirects.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET">BR_INST_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET</span></td>
-		<td>Taken speculative and retired indirect branches excluding calls and returns.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.TAKEN_INDIRECT_NEAR_RETURN">BR_INST_EXEC.TAKEN_INDIRECT_NEAR_RETURN</span></td>
-		<td>Taken speculative and retired indirect branches with return mnemonic.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.TAKEN_DIRECT_NEAR_CALL">BR_INST_EXEC.TAKEN_DIRECT_NEAR_CALL</span></td>
-		<td>Taken speculative and retired direct near calls.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.TAKEN_INDIRECT_NEAR_CALL">BR_INST_EXEC.TAKEN_INDIRECT_NEAR_CALL</span></td>
-		<td>Taken speculative and retired indirect calls.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.ALL_CONDITIONAL">BR_INST_EXEC.ALL_CONDITIONAL</span></td>
-		<td>Speculative and retired macro-conditional branches.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.ALL_DIRECT_JMP">BR_INST_EXEC.ALL_DIRECT_JMP</span></td>
-		<td>Speculative and retired macro-unconditional branches excluding calls and indirects.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET">BR_INST_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET</span></td>
-		<td>Speculative and retired indirect branches excluding calls and returns.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.ALL_INDIRECT_NEAR_RETURN">BR_INST_EXEC.ALL_INDIRECT_NEAR_RETURN</span></td>
-		<td>Speculative and retired indirect return branches.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.ALL_DIRECT_NEAR_CALL">BR_INST_EXEC.ALL_DIRECT_NEAR_CALL</span></td>
-		<td>Speculative and retired direct near calls.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_EXEC.ALL_BRANCHES">BR_INST_EXEC.ALL_BRANCHES</span></td>
-		<td>Counts all near executed branches (not necessarily retired).</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_EXEC.NONTAKEN_CONDITIONAL">BR_MISP_EXEC.NONTAKEN_CONDITIONAL</span></td>
-		<td>Not taken speculative and retired mispredicted macro conditional branches.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_EXEC.TAKEN_CONDITIONAL">BR_MISP_EXEC.TAKEN_CONDITIONAL</span></td>
-		<td>Taken speculative and retired mispredicted macro conditional branches.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET">BR_MISP_EXEC.TAKEN_INDIRECT_JUMP_NON_CALL_RET</span></td>
-		<td>Taken speculative and retired mispredicted indirect branches excluding calls and returns.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_EXEC.TAKEN_RETURN_NEAR">BR_MISP_EXEC.TAKEN_RETURN_NEAR</span></td>
-		<td>Taken speculative and retired mispredicted indirect branches with return mnemonic.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_EXEC.TAKEN_INDIRECT_NEAR_CALL">BR_MISP_EXEC.TAKEN_INDIRECT_NEAR_CALL</span></td>
-		<td>Taken speculative and retired mispredicted indirect calls.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_EXEC.ALL_CONDITIONAL">BR_MISP_EXEC.ALL_CONDITIONAL</span></td>
-		<td>Speculative and retired mispredicted macro conditional branches.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET">BR_MISP_EXEC.ALL_INDIRECT_JUMP_NON_CALL_RET</span></td>
-		<td>Mispredicted indirect branches excluding calls and returns.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_EXEC.ALL_BRANCHES">BR_MISP_EXEC.ALL_BRANCHES</span></td>
-		<td>Counts all near executed branches (not necessarily retired).</td>
+		<td><span id="IDQ.MS_UOPS">IDQ.MS_UOPS</span></td>
+		<td>Increment each cycle # of uops delivered to IDQ from MS by either DSB or MITE. Set Cmask = 1 to count cycles.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CORE">IDQ_UOPS_NOT_DELIVERED.CORE</span></td>
@@ -516,6 +476,10 @@
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE">IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE</span></td>
 		<td>Cycles per thread when 4 or more uops are not delivered to Resource Allocation Table (RAT) when backend of the machine is not stalled.</td>
+	</tr>
+	<tr>
+		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK">IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK</span></td>
+		<td>Counts cycles FE delivered 4 uops or Resource Allocation Table (RAT) was stalling FE.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_1_UOP_DELIV.CORE">IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_1_UOP_DELIV.CORE</span></td>
@@ -530,168 +494,16 @@
 		<td>Cycles with less than 3 uops delivered by the front end.</td>
 	</tr>
 	<tr>
-		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK">IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK</span></td>
-		<td>Counts cycles FE delivered 4 uops or Resource Allocation Table (RAT) was stalling FE.</td>
+		<td><span id="ILD_STALL.IQ_FULL">ILD_STALL.IQ_FULL</span></td>
+		<td>Stall cycles due to IQ is full.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_0">UOPS_DISPATCHED_PORT.PORT_0</span></td>
-		<td>Cycles which a Uop is dispatched on port 0.</td>
+		<td><span id="ILD_STALL.LCP">ILD_STALL.LCP</span></td>
+		<td>Stalls caused by changing prefix length of the instruction.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_1">UOPS_DISPATCHED_PORT.PORT_1</span></td>
-		<td>Cycles which a Uop is dispatched on port 1.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_4">UOPS_DISPATCHED_PORT.PORT_4</span></td>
-		<td>Cycles which a Uop is dispatched on port 4.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_5">UOPS_DISPATCHED_PORT.PORT_5</span></td>
-		<td>Cycles which a Uop is dispatched on port 5.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_0_CORE">UOPS_DISPATCHED_PORT.PORT_0_CORE</span></td>
-		<td>Cycles per core when uops are dispatched to port 0.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_1_CORE">UOPS_DISPATCHED_PORT.PORT_1_CORE</span></td>
-		<td>Cycles per core when uops are dispatched to port 1.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_4_CORE">UOPS_DISPATCHED_PORT.PORT_4_CORE</span></td>
-		<td>Cycles per core when uops are dispatched to port 4.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_5_CORE">UOPS_DISPATCHED_PORT.PORT_5_CORE</span></td>
-		<td>Cycles per core when uops are dispatched to port 5.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_2">UOPS_DISPATCHED_PORT.PORT_2</span></td>
-		<td>Cycles which a Uop is dispatched on port 2.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_3">UOPS_DISPATCHED_PORT.PORT_3</span></td>
-		<td>Cycles which a Uop is dispatched on port 3.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_2_CORE">UOPS_DISPATCHED_PORT.PORT_2_CORE</span></td>
-		<td>Uops dispatched to port 2, loads and stores per core (speculative and retired).</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_DISPATCHED_PORT.PORT_3_CORE">UOPS_DISPATCHED_PORT.PORT_3_CORE</span></td>
-		<td>Cycles per core when load or STA uops are dispatched to port 3.</td>
-	</tr>
-	<tr>
-		<td><span id="RESOURCE_STALLS.ANY">RESOURCE_STALLS.ANY</span></td>
-		<td>Cycles Allocation is stalled due to Resource Related reason.</td>
-	</tr>
-	<tr>
-		<td><span id="RESOURCE_STALLS.RS">RESOURCE_STALLS.RS</span></td>
-		<td>Cycles stalled due to no eligible RS entry available.</td>
-	</tr>
-	<tr>
-		<td><span id="RESOURCE_STALLS.SB">RESOURCE_STALLS.SB</span></td>
-		<td>Cycles stalled due to no store buffers available (not including draining form sync).</td>
-	</tr>
-	<tr>
-		<td><span id="RESOURCE_STALLS.ROB">RESOURCE_STALLS.ROB</span></td>
-		<td>Cycles stalled due to re-order buffer full.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLE_ACTIVITY.CYCLES_L2_PENDING">CYCLE_ACTIVITY.CYCLES_L2_PENDING</span></td>
-		<td>Cycles with pending L2 miss loads. Set AnyThread to count per core.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLE_ACTIVITY.CYCLES_L1D_PENDING">CYCLE_ACTIVITY.CYCLES_L1D_PENDING</span></td>
-		<td>Cycles with pending L1 cache miss loads. Set AnyThread to count per core.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLE_ACTIVITY.CYCLES_LDM_PENDING">CYCLE_ACTIVITY.CYCLES_LDM_PENDING</span></td>
-		<td>Cycles with pending memory loads. Set AnyThread to count per core.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLE_ACTIVITY.CYCLES_NO_EXECUTE">CYCLE_ACTIVITY.CYCLES_NO_EXECUTE</span></td>
-		<td>Total execution stalls.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLE_ACTIVITY.STALLS_L2_PENDING">CYCLE_ACTIVITY.STALLS_L2_PENDING</span></td>
-		<td>Number of loads missed L2.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLE_ACTIVITY.STALLS_LDM_PENDING">CYCLE_ACTIVITY.STALLS_LDM_PENDING</span></td>
-		<td>Execution stalls due to memory subsystem.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLE_ACTIVITY.STALLS_L1D_PENDING">CYCLE_ACTIVITY.STALLS_L1D_PENDING</span></td>
-		<td>Execution stalls due to L1 data cache miss loads. Set Cmask=0CH.</td>
-	</tr>
-	<tr>
-		<td><span id="LSD.UOPS">LSD.UOPS</span></td>
-		<td>Number of Uops delivered by the LSD.</td>
-	</tr>
-	<tr>
-		<td><span id="LSD.CYCLES_ACTIVE">LSD.CYCLES_ACTIVE</span></td>
-		<td>Cycles Uops delivered by the LSD, but didn&#39;t come from the decoder.</td>
-	</tr>
-	<tr>
-		<td><span id="DSB2MITE_SWITCHES.COUNT">DSB2MITE_SWITCHES.COUNT</span></td>
-		<td>Number of DSB to MITE switches.</td>
-	</tr>
-	<tr>
-		<td><span id="DSB2MITE_SWITCHES.PENALTY_CYCLES">DSB2MITE_SWITCHES.PENALTY_CYCLES</span></td>
-		<td>Cycles DSB to MITE switches caused delay.</td>
-	</tr>
-	<tr>
-		<td><span id="DSB_FILL.EXCEED_DSB_LINES">DSB_FILL.EXCEED_DSB_LINES</span></td>
-		<td>DSB Fill encountered &gt; 3 DSB lines.</td>
-	</tr>
-	<tr>
-		<td><span id="ITLB.ITLB_FLUSH">ITLB.ITLB_FLUSH</span></td>
-		<td>Counts the number of ITLB flushes, includes 4k/2M/4M pages.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS.DEMAND_DATA_RD">OFFCORE_REQUESTS.DEMAND_DATA_RD</span></td>
-		<td>Demand data read requests sent to uncore.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS.DEMAND_CODE_RD">OFFCORE_REQUESTS.DEMAND_CODE_RD</span></td>
-		<td>Demand code read requests sent to uncore.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS.DEMAND_RFO">OFFCORE_REQUESTS.DEMAND_RFO</span></td>
-		<td>Demand RFO read requests sent to uncore, including regular RFOs, locks, ItoM.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS.ALL_DATA_RD">OFFCORE_REQUESTS.ALL_DATA_RD</span></td>
-		<td>Data read requests sent to uncore (demand and prefetch).</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_EXECUTED.THREAD">UOPS_EXECUTED.THREAD</span></td>
-		<td>Counts total number of uops to be executed per-thread each cycle. Set Cmask = 1, INV =1 to count stall cycles.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_EXECUTED.CORE">UOPS_EXECUTED.CORE</span></td>
-		<td>Counts total number of uops to be executed per-core each cycle.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_EXECUTED.STALL_CYCLES">UOPS_EXECUTED.STALL_CYCLES</span></td>
-		<td>Counts number of cycles no uops were dispatched to be executed on this thread.</td>
-	</tr>
-	<tr>
-		<td><span id="OFFCORE_REQUESTS_BUFFER.SQ_FULL">OFFCORE_REQUESTS_BUFFER.SQ_FULL</span></td>
-		<td>Cases when offcore requests buffer cannot take more entries for core.</td>
-	</tr>
-	<tr>
-		<td><span id="TLB_FLUSH.DTLB_THREAD">TLB_FLUSH.DTLB_THREAD</span></td>
-		<td>DTLB flush attempts of the thread-specific entries.</td>
-	</tr>
-	<tr>
-		<td><span id="TLB_FLUSH.STLB_ANY">TLB_FLUSH.STLB_ANY</span></td>
-		<td>Count number of STLB flush attempts.</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.LLC_MISS">PAGE_WALKS.LLC_MISS</span></td>
-		<td>Number of any page walk that had a miss in LLC.</td>
+		<td><span id="INST_RETIRED.ANY">INST_RETIRED.ANY</span></td>
+		<td>Instructions retired from execution.</td>
 	</tr>
 	<tr>
 		<td><span id="INST_RETIRED.ANY_P">INST_RETIRED.ANY_P</span></td>
@@ -702,364 +514,184 @@
 		<td>Precise instruction retired event with HW to reduce effect of PEBS shadow in IP distribution.</td>
 	</tr>
 	<tr>
-		<td><span id="OTHER_ASSISTS.AVX_STORE">OTHER_ASSISTS.AVX_STORE</span></td>
-		<td>Number of assists associated with 256-bit AVX store operations.</td>
+		<td><span id="INT_MISC.RECOVERY_CYCLES">INT_MISC.RECOVERY_CYCLES</span></td>
+		<td>Number of cycles waiting for the checkpoints in Resource Allocation Table (RAT) to be recovered after Nuke due to all other cases except JEClear (e.g. whenever a ucode assist is needed like SSE exception, memory disambiguation, etc.)</td>
 	</tr>
 	<tr>
-		<td><span id="OTHER_ASSISTS.AVX_TO_SSE">OTHER_ASSISTS.AVX_TO_SSE</span></td>
-		<td>Number of transitions from AVX-256 to legacy SSE when penalty applicable.</td>
+		<td><span id="INT_MISC.RECOVERY_CYCLES_ANY">INT_MISC.RECOVERY_CYCLES_ANY</span></td>
+		<td>Core cycles the allocator was stalled due to recovery from earlier clear event for any thread running on the physical core (e.g. misprediction or memory nuke).</td>
 	</tr>
 	<tr>
-		<td><span id="OTHER_ASSISTS.SSE_TO_AVX">OTHER_ASSISTS.SSE_TO_AVX</span></td>
-		<td>Number of transitions from SSE to AVX-256 when penalty applicable.</td>
+		<td><span id="INT_MISC.RECOVERY_STALLS_COUNT">INT_MISC.RECOVERY_STALLS_COUNT</span></td>
+		<td>Number of occurences waiting for the checkpoints in Resource Allocation Table (RAT) to be recovered after Nuke due to all other cases except JEClear (e.g. whenever a ucode assist is needed like SSE exception, memory disambiguation, etc.)</td>
 	</tr>
 	<tr>
-		<td><span id="OTHER_ASSISTS.ANY_WB_ASSIST">OTHER_ASSISTS.ANY_WB_ASSIST</span></td>
-		<td>Number of times any microcode assist is invoked by HW upon uop writeback.</td>
+		<td><span id="ITLB.ITLB_FLUSH">ITLB.ITLB_FLUSH</span></td>
+		<td>Counts the number of ITLB flushes, includes 4k/2M/4M pages.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.ALL">UOPS_RETIRED.ALL</span></td>
-		<td>Counts the number of micro-ops retired, Use cmask=1 and invert to count active cycles or stalled cycles.</td>
+		<td><span id="ITLB_MISSES.LARGE_PAGE_WALK_COMPLETED">ITLB_MISSES.LARGE_PAGE_WALK_COMPLETED</span></td>
+		<td>Completed page walks in ITLB due to STLB load misses for large pages.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.RETIRE_SLOTS">UOPS_RETIRED.RETIRE_SLOTS</span></td>
-		<td>Counts the number of retirement slots used each cycle.</td>
+		<td><span id="ITLB_MISSES.MISS_CAUSES_A_WALK">ITLB_MISSES.MISS_CAUSES_A_WALK</span></td>
+		<td>Misses in all ITLB levels that cause page walks.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.ALL_PS">UOPS_RETIRED.ALL_PS</span></td>
-		<td>Retired uops.</td>
+		<td><span id="ITLB_MISSES.STLB_HIT">ITLB_MISSES.STLB_HIT</span></td>
+		<td>Number of cache load STLB hits. No page walk.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.STALL_CYCLES">UOPS_RETIRED.STALL_CYCLES</span></td>
-		<td>Cycles without actually retired uops.</td>
+		<td><span id="ITLB_MISSES.WALK_COMPLETED">ITLB_MISSES.WALK_COMPLETED</span></td>
+		<td>Misses in all ITLB levels that cause completed page walks.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.TOTAL_CYCLES">UOPS_RETIRED.TOTAL_CYCLES</span></td>
-		<td>Cycles with less than 10 actually retired uops.</td>
+		<td><span id="ITLB_MISSES.WALK_DURATION">ITLB_MISSES.WALK_DURATION</span></td>
+		<td>Cycle PMH is busy with a walk.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.RETIRE_SLOTS_PS">UOPS_RETIRED.RETIRE_SLOTS_PS</span></td>
-		<td>Retirement slots used.</td>
+		<td><span id="L1D.REPLACEMENT">L1D.REPLACEMENT</span></td>
+		<td>Counts the number of lines brought into the L1 data cache.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.CORE_STALL_CYCLES">UOPS_RETIRED.CORE_STALL_CYCLES</span></td>
-		<td>Cycles without actually retired uops.</td>
+		<td><span id="L1D_PEND_MISS.FB_FULL">L1D_PEND_MISS.FB_FULL</span></td>
+		<td>Cycles a demand request was blocked due to Fill Buffers inavailability.</td>
 	</tr>
 	<tr>
-		<td><span id="MACHINE_CLEARS.MEMORY_ORDERING">MACHINE_CLEARS.MEMORY_ORDERING</span></td>
-		<td>Counts the number of machine clears due to memory order conflicts.</td>
+		<td><span id="L1D_PEND_MISS.PENDING">L1D_PEND_MISS.PENDING</span></td>
+		<td>Increments the number of outstanding L1D misses every cycle. Set Cmask = 1 and Edge =1 to count occurrences.</td>
 	</tr>
 	<tr>
-		<td><span id="MACHINE_CLEARS.SMC">MACHINE_CLEARS.SMC</span></td>
-		<td>Number of self-modifying-code machine clears detected.</td>
+		<td><span id="L1D_PEND_MISS.PENDING_CYCLES">L1D_PEND_MISS.PENDING_CYCLES</span></td>
+		<td>Cycles with L1D load Misses outstanding.</td>
 	</tr>
 	<tr>
-		<td><span id="MACHINE_CLEARS.MASKMOV">MACHINE_CLEARS.MASKMOV</span></td>
-		<td>Counts the number of executed AVX masked load operations that refer to an illegal address range with the mask bits set to 0.</td>
+		<td><span id="L1D_PEND_MISS.PENDING_CYCLES_ANY">L1D_PEND_MISS.PENDING_CYCLES_ANY</span></td>
+		<td>Cycles with L1D load Misses outstanding from any thread on physical core.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.CONDITIONAL">BR_INST_RETIRED.CONDITIONAL</span></td>
-		<td>Counts the number of conditional branch instructions retired.</td>
+		<td><span id="L2_L1D_WB_RQSTS.ALL">L2_L1D_WB_RQSTS.ALL</span></td>
+		<td>Not rejected writebacks from L1D to L2 cache lines in any state.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_CALL">BR_INST_RETIRED.NEAR_CALL</span></td>
-		<td>Direct and indirect near call instructions retired.</td>
+		<td><span id="L2_L1D_WB_RQSTS.HIT_E">L2_L1D_WB_RQSTS.HIT_E</span></td>
+		<td>Not rejected writebacks from L1D to L2 cache lines in E state.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.ALL_BRANCHES">BR_INST_RETIRED.ALL_BRANCHES</span></td>
-		<td>Branch instructions at retirement.</td>
+		<td><span id="L2_L1D_WB_RQSTS.HIT_M">L2_L1D_WB_RQSTS.HIT_M</span></td>
+		<td>Not rejected writebacks from L1D to L2 cache lines in M state.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_RETURN">BR_INST_RETIRED.NEAR_RETURN</span></td>
-		<td>Counts the number of near return instructions retired.</td>
+		<td><span id="L2_L1D_WB_RQSTS.MISS">L2_L1D_WB_RQSTS.MISS</span></td>
+		<td>Not rejected writebacks that missed LLC.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NOT_TAKEN">BR_INST_RETIRED.NOT_TAKEN</span></td>
-		<td>Counts the number of not taken branch instructions retired.</td>
+		<td><span id="L2_LINES_IN.ALL">L2_LINES_IN.ALL</span></td>
+		<td>L2 cache lines filling L2.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_TAKEN">BR_INST_RETIRED.NEAR_TAKEN</span></td>
-		<td>Number of near taken branches retired.</td>
+		<td><span id="L2_LINES_IN.E">L2_LINES_IN.E</span></td>
+		<td>L2 cache lines in E state filling L2.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.FAR_BRANCH">BR_INST_RETIRED.FAR_BRANCH</span></td>
-		<td>Number of far branches retired.</td>
+		<td><span id="L2_LINES_IN.I">L2_LINES_IN.I</span></td>
+		<td>L2 cache lines in I state filling L2.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.CONDITIONAL_PS">BR_INST_RETIRED.CONDITIONAL_PS</span></td>
-		<td>Conditional branch instructions retired.</td>
+		<td><span id="L2_LINES_IN.S">L2_LINES_IN.S</span></td>
+		<td>L2 cache lines in S state filling L2.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_CALL_PS">BR_INST_RETIRED.NEAR_CALL_PS</span></td>
-		<td>Direct and indirect near call instructions retired.</td>
+		<td><span id="L2_LINES_OUT.DEMAND_CLEAN">L2_LINES_OUT.DEMAND_CLEAN</span></td>
+		<td>Clean L2 cache lines evicted by demand.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.ALL_BRANCHES_PS">BR_INST_RETIRED.ALL_BRANCHES_PS</span></td>
-		<td>All (macro) branch instructions retired.</td>
+		<td><span id="L2_LINES_OUT.DEMAND_DIRTY">L2_LINES_OUT.DEMAND_DIRTY</span></td>
+		<td>Dirty L2 cache lines evicted by demand.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_RETURN_PS">BR_INST_RETIRED.NEAR_RETURN_PS</span></td>
-		<td>Return instructions retired.</td>
+		<td><span id="L2_LINES_OUT.DIRTY_ALL">L2_LINES_OUT.DIRTY_ALL</span></td>
+		<td>Dirty L2 cache lines filling the L2.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_TAKEN_PS">BR_INST_RETIRED.NEAR_TAKEN_PS</span></td>
-		<td>Taken branch instructions retired.</td>
+		<td><span id="L2_LINES_OUT.PF_CLEAN">L2_LINES_OUT.PF_CLEAN</span></td>
+		<td>Clean L2 cache lines evicted by the MLC prefetcher.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3">BR_INST_RETIRED.NEAR_CALL_R3</span></td>
-		<td>Direct and indirect macro near call instructions retired (captured in ring 3).</td>
+		<td><span id="L2_LINES_OUT.PF_DIRTY">L2_LINES_OUT.PF_DIRTY</span></td>
+		<td>Dirty L2 cache lines evicted by the MLC prefetcher.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3_PS">BR_INST_RETIRED.NEAR_CALL_R3_PS</span></td>
-		<td>Direct and indirect macro near call instructions retired (captured in ring 3).</td>
+		<td><span id="L2_RQSTS.ALL_CODE_RD">L2_RQSTS.ALL_CODE_RD</span></td>
+		<td>Counts all L2 code requests.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_MISP_RETIRED.CONDITIONAL">BR_MISP_RETIRED.CONDITIONAL</span></td>
-		<td>Mispredicted conditional branch instructions retired.</td>
+		<td><span id="L2_RQSTS.ALL_DEMAND_DATA_RD">L2_RQSTS.ALL_DEMAND_DATA_RD</span></td>
+		<td>Counts any demand and L1 HW prefetch data load requests to L2.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES">BR_MISP_RETIRED.ALL_BRANCHES</span></td>
-		<td>Mispredicted branch instructions at retirement.</td>
+		<td><span id="L2_RQSTS.ALL_PF">L2_RQSTS.ALL_PF</span></td>
+		<td>Counts all L2 HW prefetcher requests.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_MISP_RETIRED.NEAR_TAKEN">BR_MISP_RETIRED.NEAR_TAKEN</span></td>
-		<td>Mispredicted taken branch instructions retired.</td>
+		<td><span id="L2_RQSTS.ALL_RFO">L2_RQSTS.ALL_RFO</span></td>
+		<td>Counts all L2 store RFO requests.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_MISP_RETIRED.CONDITIONAL_PS">BR_MISP_RETIRED.CONDITIONAL_PS</span></td>
-		<td>Mispredicted conditional branch instructions retired.</td>
+		<td><span id="L2_RQSTS.CODE_RD_HIT">L2_RQSTS.CODE_RD_HIT</span></td>
+		<td>Number of instruction fetches that hit the L2 cache.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES_PS">BR_MISP_RETIRED.ALL_BRANCHES_PS</span></td>
-		<td>Mispredicted macro branch instructions retired.</td>
+		<td><span id="L2_RQSTS.CODE_RD_MISS">L2_RQSTS.CODE_RD_MISS</span></td>
+		<td>Number of instruction fetches that missed the L2 cache.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_MISP_RETIRED.NEAR_TAKEN_PS">BR_MISP_RETIRED.NEAR_TAKEN_PS</span></td>
-		<td>number of near branch instructions retired that were mispredicted and taken.</td>
+		<td><span id="L2_RQSTS.DEMAND_DATA_RD_HIT">L2_RQSTS.DEMAND_DATA_RD_HIT</span></td>
+		<td>Demand Data Read requests that hit L2 cache.</td>
 	</tr>
 	<tr>
-		<td><span id="FP_ASSIST.X87_OUTPUT">FP_ASSIST.X87_OUTPUT</span></td>
-		<td>Number of X87 FP assists due to output values.</td>
+		<td><span id="L2_RQSTS.PF_HIT">L2_RQSTS.PF_HIT</span></td>
+		<td>Counts all L2 HW prefetcher requests that hit L2.</td>
 	</tr>
 	<tr>
-		<td><span id="FP_ASSIST.X87_INPUT">FP_ASSIST.X87_INPUT</span></td>
-		<td>Number of X87 FP assists due to input values.</td>
+		<td><span id="L2_RQSTS.PF_MISS">L2_RQSTS.PF_MISS</span></td>
+		<td>Counts all L2 HW prefetcher requests that missed L2.</td>
 	</tr>
 	<tr>
-		<td><span id="FP_ASSIST.SIMD_OUTPUT">FP_ASSIST.SIMD_OUTPUT</span></td>
-		<td>Number of SIMD FP assists due to output values.</td>
+		<td><span id="L2_RQSTS.RFO_HIT">L2_RQSTS.RFO_HIT</span></td>
+		<td>RFO requests that hit L2 cache.</td>
 	</tr>
 	<tr>
-		<td><span id="FP_ASSIST.SIMD_INPUT">FP_ASSIST.SIMD_INPUT</span></td>
-		<td>Number of SIMD FP assists due to input values.</td>
+		<td><span id="L2_RQSTS.RFO_MISS">L2_RQSTS.RFO_MISS</span></td>
+		<td>Counts the number of store RFO requests that miss the L2 cache.</td>
 	</tr>
 	<tr>
-		<td><span id="FP_ASSIST.ANY">FP_ASSIST.ANY</span></td>
-		<td>Cycles with any input/output SSE* or FP assists.</td>
+		<td><span id="L2_STORE_LOCK_RQSTS.ALL">L2_STORE_LOCK_RQSTS.ALL</span></td>
+		<td>RFOs that access cache lines in any state.</td>
 	</tr>
 	<tr>
-		<td><span id="ROB_MISC_EVENTS.LBR_INSERTS">ROB_MISC_EVENTS.LBR_INSERTS</span></td>
-		<td>Count cases of saving new LBR records by hardware.</td>
+		<td><span id="L2_STORE_LOCK_RQSTS.HIT_M">L2_STORE_LOCK_RQSTS.HIT_M</span></td>
+		<td>RFOs that hit cache lines in M state.</td>
 	</tr>
 	<tr>
-		<td><span id="MEM_TRANS_RETIRED.PRECISE_STORE">MEM_TRANS_RETIRED.PRECISE_STORE</span></td>
-		<td>Sample stores and collect precise store operation via PEBS record. PMC3 only.</td>
+		<td><span id="L2_STORE_LOCK_RQSTS.MISS">L2_STORE_LOCK_RQSTS.MISS</span></td>
+		<td>RFOs that miss cache lines.</td>
 	</tr>
 	<tr>
-		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_4">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_4</span></td>
-		<td>Loads with latency value being above 4.</td>
+		<td><span id="L2_TRANS.ALL_PF">L2_TRANS.ALL_PF</span></td>
+		<td>Any MLC or LLC HW prefetch accessing L2, including rejects.</td>
 	</tr>
 	<tr>
-		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8</span></td>
-		<td>Loads with latency value being above 8.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_16">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_16</span></td>
-		<td>Loads with latency value being above 16.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_32">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_32</span></td>
-		<td>Loads with latency value being above 32.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_64">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_64</span></td>
-		<td>Loads with latency value being above 64.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128</span></td>
-		<td>Loads with latency value being above 128.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_256">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_256</span></td>
-		<td>Loads with latency value being above 256.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_512">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_512</span></td>
-		<td>Loads with latency value being above 512.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_LOADS">MEM_UOPS_RETIRED.STLB_MISS_LOADS</span></td>
-		<td>Retired load uops that miss the STLB.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_STORES">MEM_UOPS_RETIRED.STLB_MISS_STORES</span></td>
-		<td>Retired store uops that miss the STLB.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.LOCK_LOADS">MEM_UOPS_RETIRED.LOCK_LOADS</span></td>
-		<td>Retired load uops with locked access.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.SPLIT_LOADS">MEM_UOPS_RETIRED.SPLIT_LOADS</span></td>
-		<td>Retired load uops that split across a cacheline boundary.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.SPLIT_STORES">MEM_UOPS_RETIRED.SPLIT_STORES</span></td>
-		<td>Retired store uops that split across a cacheline boundary.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.ALL_LOADS">MEM_UOPS_RETIRED.ALL_LOADS</span></td>
-		<td>All retired load uops.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.ALL_STORES">MEM_UOPS_RETIRED.ALL_STORES</span></td>
-		<td>All retired store uops.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_LOADS_PS">MEM_UOPS_RETIRED.STLB_MISS_LOADS_PS</span></td>
-		<td>Retired load uops that miss the STLB. (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_STORES_PS">MEM_UOPS_RETIRED.STLB_MISS_STORES_PS</span></td>
-		<td>Retired store uops that miss the STLB. (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.LOCK_LOADS_PS">MEM_UOPS_RETIRED.LOCK_LOADS_PS</span></td>
-		<td>Retired load uops with locked access. (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.SPLIT_LOADS_PS">MEM_UOPS_RETIRED.SPLIT_LOADS_PS</span></td>
-		<td>Retired load uops that split across a cacheline boundary. (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.SPLIT_STORES_PS">MEM_UOPS_RETIRED.SPLIT_STORES_PS</span></td>
-		<td>Retired store uops that split across a cacheline boundary. (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.ALL_LOADS_PS">MEM_UOPS_RETIRED.ALL_LOADS_PS</span></td>
-		<td>All retired load uops. (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_UOPS_RETIRED.ALL_STORES_PS">MEM_UOPS_RETIRED.ALL_STORES_PS</span></td>
-		<td>All retired store uops. (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_HIT">MEM_LOAD_UOPS_RETIRED.L1_HIT</span></td>
-		<td>Retired load uops with L1 cache hits as data sources.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_HIT">MEM_LOAD_UOPS_RETIRED.L2_HIT</span></td>
-		<td>Retired load uops with L2 cache hits as data sources.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.LLC_HIT">MEM_LOAD_UOPS_RETIRED.LLC_HIT</span></td>
-		<td>Retired load uops whose data source was LLC hit with no snoop required.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_MISS">MEM_LOAD_UOPS_RETIRED.L1_MISS</span></td>
-		<td>Retired load uops whose data source followed an L1 miss.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_MISS">MEM_LOAD_UOPS_RETIRED.L2_MISS</span></td>
-		<td>Retired load uops that missed L2, excluding unknown sources.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.LLC_MISS">MEM_LOAD_UOPS_RETIRED.LLC_MISS</span></td>
-		<td>Retired load uops whose data source is LLC miss.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.HIT_LFB">MEM_LOAD_UOPS_RETIRED.HIT_LFB</span></td>
-		<td>Retired load uops which data sources were load uops missed L1 but hit FB due to preceding miss to the same cache line with data not ready.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_HIT_PS">MEM_LOAD_UOPS_RETIRED.L1_HIT_PS</span></td>
-		<td>Retired load uops with L1 cache hits as data sources.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_HIT_PS">MEM_LOAD_UOPS_RETIRED.L2_HIT_PS</span></td>
-		<td>Retired load uops with L2 cache hits as data sources.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.LLC_HIT_PS">MEM_LOAD_UOPS_RETIRED.LLC_HIT_PS</span></td>
-		<td>Retired load uops which data sources were data hits in LLC without snoops required.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_MISS_PS">MEM_LOAD_UOPS_RETIRED.L1_MISS_PS</span></td>
-		<td>Retired load uops which data sources following L1 data-cache miss.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_MISS_PS">MEM_LOAD_UOPS_RETIRED.L2_MISS_PS</span></td>
-		<td>Retired load uops with L2 cache misses as data sources.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.LLC_MISS_PS">MEM_LOAD_UOPS_RETIRED.LLC_MISS_PS</span></td>
-		<td>Miss in last-level (L3) cache. Excludes Unknown data-source.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_RETIRED.HIT_LFB_PS">MEM_LOAD_UOPS_RETIRED.HIT_LFB_PS</span></td>
-		<td>Retired load uops which data sources were load uops missed L1 but hit FB due to preceding miss to the same cache line with data not ready.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_MISS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_MISS</span></td>
-		<td>Retired load uops whose data source was an on-package core cache LLC hit and cross-core snoop missed.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HIT">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HIT</span></td>
-		<td>Retired load uops whose data source was an on-package LLC hit and cross-core snoop hits.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HITM">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HITM</span></td>
-		<td>Retired load uops whose data source was an on-package core cache with HitM responses.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_NONE">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_NONE</span></td>
-		<td>Retired load uops whose data source was LLC hit with no snoop required.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_MISS_PS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_MISS_PS</span></td>
-		<td>Retired load uops which data sources were LLC hit and cross-core snoop missed in on-pkg core cache.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HIT_PS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HIT_PS</span></td>
-		<td>Retired load uops which data sources were LLC and cross-core snoop hits in on-pkg core cache.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HITM_PS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HITM_PS</span></td>
-		<td>Retired load uops which data sources were HitM responses from shared LLC.</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_NONE_PS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_NONE_PS</span></td>
-		<td>Retired load uops which data sources were hits in LLC without snoops required.</td>
-	</tr>
-	<tr>
-		<td><span id="BACLEARS.ANY">BACLEARS.ANY</span></td>
-		<td>Number of front end re-steers due to BPU misprediction.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_TRANS.DEMAND_DATA_RD">L2_TRANS.DEMAND_DATA_RD</span></td>
-		<td>Demand Data Read requests that access L2 cache.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_TRANS.RFO">L2_TRANS.RFO</span></td>
-		<td>RFO requests that access L2 cache.</td>
+		<td><span id="L2_TRANS.ALL_REQUESTS">L2_TRANS.ALL_REQUESTS</span></td>
+		<td>Transactions accessing L2 pipe.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_TRANS.CODE_RD">L2_TRANS.CODE_RD</span></td>
 		<td>L2 cache accesses when fetching instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_TRANS.ALL_PF">L2_TRANS.ALL_PF</span></td>
-		<td>Any MLC or LLC HW prefetch accessing L2, including rejects.</td>
+		<td><span id="L2_TRANS.DEMAND_DATA_RD">L2_TRANS.DEMAND_DATA_RD</span></td>
+		<td>Demand Data Read requests that access L2 cache.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_TRANS.L1D_WB">L2_TRANS.L1D_WB</span></td>
@@ -1074,140 +706,456 @@
 		<td>L2 writebacks that access L2 cache.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_TRANS.ALL_REQUESTS">L2_TRANS.ALL_REQUESTS</span></td>
-		<td>Transactions accessing L2 pipe.</td>
+		<td><span id="L2_TRANS.RFO">L2_TRANS.RFO</span></td>
+		<td>RFO requests that access L2 cache.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_IN.I">L2_LINES_IN.I</span></td>
-		<td>L2 cache lines in I state filling L2.</td>
+		<td><span id="LD_BLOCKS.NO_SR">LD_BLOCKS.NO_SR</span></td>
+		<td>The number of times that split load operations are temporarily blocked because all resources for handling the split accesses are in use.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_IN.S">L2_LINES_IN.S</span></td>
-		<td>L2 cache lines in S state filling L2.</td>
+		<td><span id="LD_BLOCKS.STORE_FORWARD">LD_BLOCKS.STORE_FORWARD</span></td>
+		<td>Loads blocked by overlapping with store buffer that cannot be forwarded.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_IN.E">L2_LINES_IN.E</span></td>
-		<td>L2 cache lines in E state filling L2.</td>
+		<td><span id="LD_BLOCKS_PARTIAL.ADDRESS_ALIAS">LD_BLOCKS_PARTIAL.ADDRESS_ALIAS</span></td>
+		<td>False dependencies in MOB due to partial compare on address.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_IN.ALL">L2_LINES_IN.ALL</span></td>
-		<td>L2 cache lines filling L2.</td>
+		<td><span id="LOAD_HIT_PRE.HW_PF">LOAD_HIT_PRE.HW_PF</span></td>
+		<td>Non-SW-prefetch load dispatches that hit fill buffer allocated for H/W prefetch.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_OUT.DEMAND_CLEAN">L2_LINES_OUT.DEMAND_CLEAN</span></td>
-		<td>Clean L2 cache lines evicted by demand.</td>
+		<td><span id="LOAD_HIT_PRE.SW_PF">LOAD_HIT_PRE.SW_PF</span></td>
+		<td>Non-SW-prefetch load dispatches that hit fill buffer allocated for S/W prefetch.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_OUT.DEMAND_DIRTY">L2_LINES_OUT.DEMAND_DIRTY</span></td>
-		<td>Dirty L2 cache lines evicted by demand.</td>
+		<td><span id="LOCK_CYCLES.CACHE_LOCK_DURATION">LOCK_CYCLES.CACHE_LOCK_DURATION</span></td>
+		<td>Cycles in which the L1D is locked.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_OUT.PF_CLEAN">L2_LINES_OUT.PF_CLEAN</span></td>
-		<td>Clean L2 cache lines evicted by the MLC prefetcher.</td>
+		<td><span id="LOCK_CYCLES.SPLIT_LOCK_UC_LOCK_DURATION">LOCK_CYCLES.SPLIT_LOCK_UC_LOCK_DURATION</span></td>
+		<td>Cycles in which the L1D and L2 are locked, due to a UC lock or split lock.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_OUT.PF_DIRTY">L2_LINES_OUT.PF_DIRTY</span></td>
-		<td>Dirty L2 cache lines evicted by the MLC prefetcher.</td>
+		<td><span id="LONGEST_LAT_CACHE.MISS">LONGEST_LAT_CACHE.MISS</span></td>
+		<td>This event counts each cache miss condition for references to the last level cache.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_LINES_OUT.DIRTY_ALL">L2_LINES_OUT.DIRTY_ALL</span></td>
-		<td>Dirty L2 cache lines filling the L2.</td>
-	</tr>
-	<tr>
-		<td><span id="SQ_MISC.SPLIT_LOCK">SQ_MISC.SPLIT_LOCK</span></td>
-		<td>Split locks in SQ</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC">UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC</span></td>
-		<td>Cycles where at least 1 uop was executed per-thread.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC">UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC</span></td>
-		<td>Cycles where at least 2 uops were executed per-thread.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC">UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC</span></td>
-		<td>Cycles where at least 3 uops were executed per-thread.</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_EXECUTED.CYCLES_GE_4_UOPS_EXEC">UOPS_EXECUTED.CYCLES_GE_4_UOPS_EXEC</span></td>
-		<td>Cycles where at least 4 uops were executed per-thread.</td>
-	</tr>
-	<tr>
-		<td><span id="DTLB_LOAD_MISSES.MISS_CAUSES_A_WALK">DTLB_LOAD_MISSES.MISS_CAUSES_A_WALK</span></td>
-		<td>Misses in all TLB levels that cause a page walk of any page size from demand loads.</td>
-	</tr>
-	<tr>
-		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED">DTLB_LOAD_MISSES.WALK_COMPLETED</span></td>
-		<td>Misses in all TLB levels that caused page walk completed of any size by demand loads.</td>
-	</tr>
-	<tr>
-		<td><span id="DTLB_LOAD_MISSES.WALK_DURATION">DTLB_LOAD_MISSES.WALK_DURATION</span></td>
-		<td>Cycle PMH is busy with a walk due to demand loads.</td>
-	</tr>
-	<tr>
-		<td><span id="RS_EVENTS.EMPTY_END">RS_EVENTS.EMPTY_END</span></td>
-		<td>Counts end of periods where the Reservation Station (RS) was empty. Could be useful to precisely locate Frontend Latency Bound issues.</td>
-	</tr>
-	<tr>
-		<td><span id="MACHINE_CLEARS.COUNT">MACHINE_CLEARS.COUNT</span></td>
-		<td>Number of machine clears (nukes) of any type.</td>
+		<td><span id="LONGEST_LAT_CACHE.REFERENCE">LONGEST_LAT_CACHE.REFERENCE</span></td>
+		<td>This event counts requests originating from the core that reference a cache line in the last level cache.</td>
 	</tr>
 	<tr>
 		<td><span id="LSD.CYCLES_4_UOPS">LSD.CYCLES_4_UOPS</span></td>
 		<td>Cycles 4 Uops delivered by the LSD, but didn&#39;t come from the decoder.</td>
 	</tr>
 	<tr>
+		<td><span id="LSD.CYCLES_ACTIVE">LSD.CYCLES_ACTIVE</span></td>
+		<td>Cycles Uops delivered by the LSD, but didn&#39;t come from the decoder.</td>
+	</tr>
+	<tr>
+		<td><span id="LSD.UOPS">LSD.UOPS</span></td>
+		<td>Number of Uops delivered by the LSD.</td>
+	</tr>
+	<tr>
+		<td><span id="MACHINE_CLEARS.COUNT">MACHINE_CLEARS.COUNT</span></td>
+		<td>Number of machine clears (nukes) of any type.</td>
+	</tr>
+	<tr>
+		<td><span id="MACHINE_CLEARS.MASKMOV">MACHINE_CLEARS.MASKMOV</span></td>
+		<td>Counts the number of executed AVX masked load operations that refer to an illegal address range with the mask bits set to 0.</td>
+	</tr>
+	<tr>
+		<td><span id="MACHINE_CLEARS.MEMORY_ORDERING">MACHINE_CLEARS.MEMORY_ORDERING</span></td>
+		<td>Counts the number of machine clears due to memory order conflicts.</td>
+	</tr>
+	<tr>
+		<td><span id="MACHINE_CLEARS.SMC">MACHINE_CLEARS.SMC</span></td>
+		<td>Number of self-modifying-code machine clears detected.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HIT">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HIT</span></td>
+		<td>Retired load uops whose data source was an on-package LLC hit and cross-core snoop hits.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HIT_PS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HIT_PS</span></td>
+		<td>Retired load uops which data sources were LLC and cross-core snoop hits in on-pkg core cache.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HITM">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HITM</span></td>
+		<td>Retired load uops whose data source was an on-package core cache with HitM responses.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HITM_PS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_HITM_PS</span></td>
+		<td>Retired load uops which data sources were HitM responses from shared LLC.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_MISS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_MISS</span></td>
+		<td>Retired load uops whose data source was an on-package core cache LLC hit and cross-core snoop missed.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_MISS_PS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_MISS_PS</span></td>
+		<td>Retired load uops which data sources were LLC hit and cross-core snoop missed in on-pkg core cache.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_NONE">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_NONE</span></td>
+		<td>Retired load uops whose data source was LLC hit with no snoop required.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_NONE_PS">MEM_LOAD_UOPS_LLC_HIT_RETIRED.XSNP_NONE_PS</span></td>
+		<td>Retired load uops which data sources were hits in LLC without snoops required.</td>
+	</tr>
+	<tr>
 		<td><span id="MEM_LOAD_UOPS_LLC_MISS_RETIRED.LOCAL_DRAM">MEM_LOAD_UOPS_LLC_MISS_RETIRED.LOCAL_DRAM</span></td>
 		<td>Retired load uops whose data source was local memory (cross-socket snoop not needed or missed).</td>
 	</tr>
 	<tr>
-		<td><span id="IDQ.MS_SWITCHES">IDQ.MS_SWITCHES</span></td>
-		<td>Number of switches from DSB (Decode Stream Buffer) or MITE (legacy decode pipeline) to the Microcode Sequencer.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.HIT_LFB">MEM_LOAD_UOPS_RETIRED.HIT_LFB</span></td>
+		<td>Retired load uops which data sources were load uops missed L1 but hit FB due to preceding miss to the same cache line with data not ready.</td>
 	</tr>
 	<tr>
-		<td><span id="CYCLE_ACTIVITY.CYCLES_L1D_MISS">CYCLE_ACTIVITY.CYCLES_L1D_MISS</span></td>
-		<td>Cycles while L1 cache miss demand load is outstanding.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.HIT_LFB_PS">MEM_LOAD_UOPS_RETIRED.HIT_LFB_PS</span></td>
+		<td>Retired load uops which data sources were load uops missed L1 but hit FB due to preceding miss to the same cache line with data not ready.</td>
 	</tr>
 	<tr>
-		<td><span id="CYCLE_ACTIVITY.CYCLES_L2_MISS">CYCLE_ACTIVITY.CYCLES_L2_MISS</span></td>
-		<td>Cycles while L2 cache miss load* is outstanding.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_HIT">MEM_LOAD_UOPS_RETIRED.L1_HIT</span></td>
+		<td>Retired load uops with L1 cache hits as data sources.</td>
 	</tr>
 	<tr>
-		<td><span id="CYCLE_ACTIVITY.CYCLES_MEM_ANY">CYCLE_ACTIVITY.CYCLES_MEM_ANY</span></td>
-		<td>Cycles while memory subsystem has an outstanding load.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_HIT_PS">MEM_LOAD_UOPS_RETIRED.L1_HIT_PS</span></td>
+		<td>Retired load uops with L1 cache hits as data sources.</td>
 	</tr>
 	<tr>
-		<td><span id="CYCLE_ACTIVITY.STALLS_TOTAL">CYCLE_ACTIVITY.STALLS_TOTAL</span></td>
-		<td>Total execution stalls.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_MISS">MEM_LOAD_UOPS_RETIRED.L1_MISS</span></td>
+		<td>Retired load uops whose data source followed an L1 miss.</td>
 	</tr>
 	<tr>
-		<td><span id="CYCLE_ACTIVITY.STALLS_L1D_MISS">CYCLE_ACTIVITY.STALLS_L1D_MISS</span></td>
-		<td>Execution stalls while L1 cache miss demand load is outstanding.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_MISS_PS">MEM_LOAD_UOPS_RETIRED.L1_MISS_PS</span></td>
+		<td>Retired load uops which data sources following L1 data-cache miss.</td>
 	</tr>
 	<tr>
-		<td><span id="CYCLE_ACTIVITY.STALLS_L2_MISS">CYCLE_ACTIVITY.STALLS_L2_MISS</span></td>
-		<td>Execution stalls while L2 cache miss load* is outstanding.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_HIT">MEM_LOAD_UOPS_RETIRED.L2_HIT</span></td>
+		<td>Retired load uops with L2 cache hits as data sources.</td>
 	</tr>
 	<tr>
-		<td><span id="CYCLE_ACTIVITY.STALLS_MEM_ANY">CYCLE_ACTIVITY.STALLS_MEM_ANY</span></td>
-		<td>Execution stalls while memory subsystem has an outstanding load.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_HIT_PS">MEM_LOAD_UOPS_RETIRED.L2_HIT_PS</span></td>
+		<td>Retired load uops with L2 cache hits as data sources.</td>
 	</tr>
 	<tr>
-		<td><span id="CPU_CLK_UNHALTED.THREAD_ANY">CPU_CLK_UNHALTED.THREAD_ANY</span></td>
-		<td>Core cycles when at least one thread on the physical core is not in halt state.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_MISS">MEM_LOAD_UOPS_RETIRED.L2_MISS</span></td>
+		<td>Retired load uops that missed L2, excluding unknown sources.</td>
 	</tr>
 	<tr>
-		<td><span id="CPU_CLK_UNHALTED.THREAD_P_ANY">CPU_CLK_UNHALTED.THREAD_P_ANY</span></td>
-		<td>Core cycles when at least one thread on the physical core is not in halt state.</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_MISS_PS">MEM_LOAD_UOPS_RETIRED.L2_MISS_PS</span></td>
+		<td>Retired load uops with L2 cache misses as data sources.</td>
 	</tr>
 	<tr>
-		<td><span id="CPU_CLK_THREAD_UNHALTED.REF_XCLK_ANY">CPU_CLK_THREAD_UNHALTED.REF_XCLK_ANY</span></td>
-		<td>Reference cycles when the at least one thread on the physical core is unhalted. (counts at 100 MHz rate)</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.LLC_HIT">MEM_LOAD_UOPS_RETIRED.LLC_HIT</span></td>
+		<td>Retired load uops whose data source was LLC hit with no snoop required.</td>
 	</tr>
 	<tr>
-		<td><span id="INT_MISC.RECOVERY_CYCLES_ANY">INT_MISC.RECOVERY_CYCLES_ANY</span></td>
-		<td>Core cycles the allocator was stalled due to recovery from earlier clear event for any thread running on the physical core (e.g. misprediction or memory nuke).</td>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.LLC_HIT_PS">MEM_LOAD_UOPS_RETIRED.LLC_HIT_PS</span></td>
+		<td>Retired load uops which data sources were data hits in LLC without snoops required.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.LLC_MISS">MEM_LOAD_UOPS_RETIRED.LLC_MISS</span></td>
+		<td>Retired load uops whose data source is LLC miss.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_UOPS_RETIRED.LLC_MISS_PS">MEM_LOAD_UOPS_RETIRED.LLC_MISS_PS</span></td>
+		<td>Miss in last-level (L3) cache. Excludes Unknown data-source.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128</span></td>
+		<td>Loads with latency value being above 128.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_16">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_16</span></td>
+		<td>Loads with latency value being above 16.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_256">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_256</span></td>
+		<td>Loads with latency value being above 256.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_32">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_32</span></td>
+		<td>Loads with latency value being above 32.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_4">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_4</span></td>
+		<td>Loads with latency value being above 4.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_512">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_512</span></td>
+		<td>Loads with latency value being above 512.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_64">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_64</span></td>
+		<td>Loads with latency value being above 64.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8">MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8</span></td>
+		<td>Loads with latency value being above 8.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_TRANS_RETIRED.PRECISE_STORE">MEM_TRANS_RETIRED.PRECISE_STORE</span></td>
+		<td>Sample stores and collect precise store operation via PEBS record. PMC3 only.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.ALL_LOADS">MEM_UOPS_RETIRED.ALL_LOADS</span></td>
+		<td>All retired load uops.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.ALL_LOADS_PS">MEM_UOPS_RETIRED.ALL_LOADS_PS</span></td>
+		<td>All retired load uops. (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.ALL_STORES">MEM_UOPS_RETIRED.ALL_STORES</span></td>
+		<td>All retired store uops.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.ALL_STORES_PS">MEM_UOPS_RETIRED.ALL_STORES_PS</span></td>
+		<td>All retired store uops. (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.LOCK_LOADS">MEM_UOPS_RETIRED.LOCK_LOADS</span></td>
+		<td>Retired load uops with locked access.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.LOCK_LOADS_PS">MEM_UOPS_RETIRED.LOCK_LOADS_PS</span></td>
+		<td>Retired load uops with locked access. (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.SPLIT_LOADS">MEM_UOPS_RETIRED.SPLIT_LOADS</span></td>
+		<td>Retired load uops that split across a cacheline boundary.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.SPLIT_LOADS_PS">MEM_UOPS_RETIRED.SPLIT_LOADS_PS</span></td>
+		<td>Retired load uops that split across a cacheline boundary. (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.SPLIT_STORES">MEM_UOPS_RETIRED.SPLIT_STORES</span></td>
+		<td>Retired store uops that split across a cacheline boundary.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.SPLIT_STORES_PS">MEM_UOPS_RETIRED.SPLIT_STORES_PS</span></td>
+		<td>Retired store uops that split across a cacheline boundary. (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_LOADS">MEM_UOPS_RETIRED.STLB_MISS_LOADS</span></td>
+		<td>Retired load uops that miss the STLB.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_LOADS_PS">MEM_UOPS_RETIRED.STLB_MISS_LOADS_PS</span></td>
+		<td>Retired load uops that miss the STLB. (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_STORES">MEM_UOPS_RETIRED.STLB_MISS_STORES</span></td>
+		<td>Retired store uops that miss the STLB.</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_STORES_PS">MEM_UOPS_RETIRED.STLB_MISS_STORES_PS</span></td>
+		<td>Retired store uops that miss the STLB. (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MISALIGN_MEM_REF.LOADS">MISALIGN_MEM_REF.LOADS</span></td>
+		<td>Speculative cache-line split load uops dispatched to L1D.</td>
+	</tr>
+	<tr>
+		<td><span id="MISALIGN_MEM_REF.STORES">MISALIGN_MEM_REF.STORES</span></td>
+		<td>Speculative cache-line split Store-address uops dispatched to L1D.</td>
+	</tr>
+	<tr>
+		<td><span id="MOVE_ELIMINATION.INT_ELIMINATED">MOVE_ELIMINATION.INT_ELIMINATED</span></td>
+		<td>Number of integer Move Elimination candidate uops that were eliminated.</td>
+	</tr>
+	<tr>
+		<td><span id="MOVE_ELIMINATION.INT_NOT_ELIMINATED">MOVE_ELIMINATION.INT_NOT_ELIMINATED</span></td>
+		<td>Number of integer Move Elimination candidate uops that were not eliminated.</td>
+	</tr>
+	<tr>
+		<td><span id="MOVE_ELIMINATION.SIMD_ELIMINATED">MOVE_ELIMINATION.SIMD_ELIMINATED</span></td>
+		<td>Number of SIMD Move Elimination candidate uops that were eliminated.</td>
+	</tr>
+	<tr>
+		<td><span id="MOVE_ELIMINATION.SIMD_NOT_ELIMINATED">MOVE_ELIMINATION.SIMD_NOT_ELIMINATED</span></td>
+		<td>Number of SIMD Move Elimination candidate uops that were not eliminated.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.ALL_DATA_RD">OFFCORE_REQUESTS.ALL_DATA_RD</span></td>
+		<td>Data read requests sent to uncore (demand and prefetch).</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.DEMAND_CODE_RD">OFFCORE_REQUESTS.DEMAND_CODE_RD</span></td>
+		<td>Demand code read requests sent to uncore.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.DEMAND_DATA_RD">OFFCORE_REQUESTS.DEMAND_DATA_RD</span></td>
+		<td>Demand data read requests sent to uncore.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS.DEMAND_RFO">OFFCORE_REQUESTS.DEMAND_RFO</span></td>
+		<td>Demand RFO read requests sent to uncore, including regular RFOs, locks, ItoM.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_BUFFER.SQ_FULL">OFFCORE_REQUESTS_BUFFER.SQ_FULL</span></td>
+		<td>Cases when offcore requests buffer cannot take more entries for core.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD</span></td>
+		<td>Offcore outstanding cacheable data read transactions in SQ to uncore. Set Cmask=1 to count cycles.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD</span></td>
+		<td>Cycles when offcore outstanding cacheable Core Data Read transactions are present in SuperQueue (SQ), queue to uncore.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_CODE_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_CODE_RD</span></td>
+		<td>Offcore outstanding code reads transactions in SuperQueue (SQ), queue to uncore, every cycle.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD</span></td>
+		<td>Cycles when offcore outstanding Demand Data Read transactions are present in SuperQueue (SQ), queue to uncore.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO</span></td>
+		<td>Offcore outstanding demand rfo reads transactions in SuperQueue (SQ), queue to uncore, every cycle.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD</span></td>
+		<td>Offcore outstanding Demand Code Read transactions in SQ to uncore. Set Cmask=1 to count cycles.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD</span></td>
+		<td>Offcore outstanding Demand Data Read transactions in SQ to uncore. Set Cmask=1 to count cycles.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6</span></td>
+		<td>Cycles with at least 6 offcore outstanding Demand Data Read transactions in uncore queue.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO</span></td>
+		<td>Offcore outstanding RFO store transactions in SQ to uncore. Set Cmask=1 to count cycles.</td>
+	</tr>
+	<tr>
+		<td><span id="OTHER_ASSISTS.ANY_WB_ASSIST">OTHER_ASSISTS.ANY_WB_ASSIST</span></td>
+		<td>Number of times any microcode assist is invoked by HW upon uop writeback.</td>
+	</tr>
+	<tr>
+		<td><span id="OTHER_ASSISTS.AVX_STORE">OTHER_ASSISTS.AVX_STORE</span></td>
+		<td>Number of assists associated with 256-bit AVX store operations.</td>
+	</tr>
+	<tr>
+		<td><span id="OTHER_ASSISTS.AVX_TO_SSE">OTHER_ASSISTS.AVX_TO_SSE</span></td>
+		<td>Number of transitions from AVX-256 to legacy SSE when penalty applicable.</td>
+	</tr>
+	<tr>
+		<td><span id="OTHER_ASSISTS.SSE_TO_AVX">OTHER_ASSISTS.SSE_TO_AVX</span></td>
+		<td>Number of transitions from SSE to AVX-256 when penalty applicable.</td>
+	</tr>
+	<tr>
+		<td><span id="PAGE_WALKS.LLC_MISS">PAGE_WALKS.LLC_MISS</span></td>
+		<td>Number of any page walk that had a miss in LLC.</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.ANY">RESOURCE_STALLS.ANY</span></td>
+		<td>Cycles Allocation is stalled due to Resource Related reason.</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.ROB">RESOURCE_STALLS.ROB</span></td>
+		<td>Cycles stalled due to re-order buffer full.</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.RS">RESOURCE_STALLS.RS</span></td>
+		<td>Cycles stalled due to no eligible RS entry available.</td>
+	</tr>
+	<tr>
+		<td><span id="RESOURCE_STALLS.SB">RESOURCE_STALLS.SB</span></td>
+		<td>Cycles stalled due to no store buffers available (not including draining form sync).</td>
+	</tr>
+	<tr>
+		<td><span id="ROB_MISC_EVENTS.LBR_INSERTS">ROB_MISC_EVENTS.LBR_INSERTS</span></td>
+		<td>Count cases of saving new LBR records by hardware.</td>
+	</tr>
+	<tr>
+		<td><span id="RS_EVENTS.EMPTY_CYCLES">RS_EVENTS.EMPTY_CYCLES</span></td>
+		<td>Cycles the RS is empty for the thread.</td>
+	</tr>
+	<tr>
+		<td><span id="RS_EVENTS.EMPTY_END">RS_EVENTS.EMPTY_END</span></td>
+		<td>Counts end of periods where the Reservation Station (RS) was empty. Could be useful to precisely locate Frontend Latency Bound issues.</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_FP_256.PACKED_DOUBLE">SIMD_FP_256.PACKED_DOUBLE</span></td>
+		<td>Counts 256-bit packed double-precision floating-point instructions.</td>
+	</tr>
+	<tr>
+		<td><span id="SIMD_FP_256.PACKED_SINGLE">SIMD_FP_256.PACKED_SINGLE</span></td>
+		<td>Counts 256-bit packed single-precision floating-point instructions.</td>
+	</tr>
+	<tr>
+		<td><span id="SQ_MISC.SPLIT_LOCK">SQ_MISC.SPLIT_LOCK</span></td>
+		<td>Split locks in SQ</td>
+	</tr>
+	<tr>
+		<td><span id="TLB_FLUSH.DTLB_THREAD">TLB_FLUSH.DTLB_THREAD</span></td>
+		<td>DTLB flush attempts of the thread-specific entries.</td>
+	</tr>
+	<tr>
+		<td><span id="TLB_FLUSH.STLB_ANY">TLB_FLUSH.STLB_ANY</span></td>
+		<td>Count number of STLB flush attempts.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_0">UOPS_DISPATCHED_PORT.PORT_0</span></td>
+		<td>Cycles which a Uop is dispatched on port 0.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_0_CORE">UOPS_DISPATCHED_PORT.PORT_0_CORE</span></td>
+		<td>Cycles per core when uops are dispatched to port 0.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_1">UOPS_DISPATCHED_PORT.PORT_1</span></td>
+		<td>Cycles which a Uop is dispatched on port 1.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_1_CORE">UOPS_DISPATCHED_PORT.PORT_1_CORE</span></td>
+		<td>Cycles per core when uops are dispatched to port 1.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_2">UOPS_DISPATCHED_PORT.PORT_2</span></td>
+		<td>Cycles which a Uop is dispatched on port 2.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_2_CORE">UOPS_DISPATCHED_PORT.PORT_2_CORE</span></td>
+		<td>Uops dispatched to port 2, loads and stores per core (speculative and retired).</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_3">UOPS_DISPATCHED_PORT.PORT_3</span></td>
+		<td>Cycles which a Uop is dispatched on port 3.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_3_CORE">UOPS_DISPATCHED_PORT.PORT_3_CORE</span></td>
+		<td>Cycles per core when load or STA uops are dispatched to port 3.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_4">UOPS_DISPATCHED_PORT.PORT_4</span></td>
+		<td>Cycles which a Uop is dispatched on port 4.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_4_CORE">UOPS_DISPATCHED_PORT.PORT_4_CORE</span></td>
+		<td>Cycles per core when uops are dispatched to port 4.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_5">UOPS_DISPATCHED_PORT.PORT_5</span></td>
+		<td>Cycles which a Uop is dispatched on port 5.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_DISPATCHED_PORT.PORT_5_CORE">UOPS_DISPATCHED_PORT.PORT_5_CORE</span></td>
+		<td>Cycles per core when uops are dispatched to port 5.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_EXECUTED.CORE">UOPS_EXECUTED.CORE</span></td>
+		<td>Counts total number of uops to be executed per-core each cycle.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_EXECUTED.CORE_CYCLES_GE_1">UOPS_EXECUTED.CORE_CYCLES_GE_1</span></td>
@@ -1230,108 +1178,80 @@
 		<td>Cycles with no micro-ops executed from any thread on physical core.</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6</span></td>
-		<td>Cycles with at least 6 offcore outstanding Demand Data Read transactions in uncore queue.</td>
+		<td><span id="UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC">UOPS_EXECUTED.CYCLES_GE_1_UOP_EXEC</span></td>
+		<td>Cycles where at least 1 uop was executed per-thread.</td>
 	</tr>
 	<tr>
-		<td><span id="L1D_PEND_MISS.PENDING_CYCLES_ANY">L1D_PEND_MISS.PENDING_CYCLES_ANY</span></td>
-		<td>Cycles with L1D load Misses outstanding from any thread on physical core.</td>
+		<td><span id="UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC">UOPS_EXECUTED.CYCLES_GE_2_UOPS_EXEC</span></td>
+		<td>Cycles where at least 2 uops were executed per-thread.</td>
 	</tr>
 	<tr>
-		<td><span id="L1D_PEND_MISS.FB_FULL">L1D_PEND_MISS.FB_FULL</span></td>
-		<td>Cycles a demand request was blocked due to Fill Buffers inavailability.</td>
+		<td><span id="UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC">UOPS_EXECUTED.CYCLES_GE_3_UOPS_EXEC</span></td>
+		<td>Cycles where at least 3 uops were executed per-thread.</td>
 	</tr>
 	<tr>
-		<td><span id="CPU_CLK_UNHALTED.REF_XCLK">CPU_CLK_UNHALTED.REF_XCLK</span></td>
-		<td>Reference cycles when the thread is unhalted. (counts at 100 MHz rate)</td>
+		<td><span id="UOPS_EXECUTED.CYCLES_GE_4_UOPS_EXEC">UOPS_EXECUTED.CYCLES_GE_4_UOPS_EXEC</span></td>
+		<td>Cycles where at least 4 uops were executed per-thread.</td>
 	</tr>
 	<tr>
-		<td><span id="CPU_CLK_UNHALTED.REF_XCLK_ANY">CPU_CLK_UNHALTED.REF_XCLK_ANY</span></td>
-		<td>Reference cycles when the at least one thread on the physical core is unhalted. (counts at 100 MHz rate)</td>
+		<td><span id="UOPS_EXECUTED.STALL_CYCLES">UOPS_EXECUTED.STALL_CYCLES</span></td>
+		<td>Counts number of cycles no uops were dispatched to be executed on this thread.</td>
 	</tr>
 	<tr>
-		<td><span id="CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE">CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE</span></td>
-		<td>Count XClk pulses when this thread is unhalted and the other thread is halted.</td>
+		<td><span id="UOPS_EXECUTED.THREAD">UOPS_EXECUTED.THREAD</span></td>
+		<td>Counts total number of uops to be executed per-thread each cycle. Set Cmask = 1, INV =1 to count stall cycles.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.MISS">UNC_CBO_XSNP_RESPONSE.MISS</span></td>
-		<td>A snoop misses in some processor core.</td>
+		<td><span id="UOPS_ISSUED.ANY">UOPS_ISSUED.ANY</span></td>
+		<td>Increments each cycle the # of Uops issued by the RAT to RS. Set Cmask = 1, Inv = 1, Any= 1to count stalled cycles of this core.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.INVAL">UNC_CBO_XSNP_RESPONSE.INVAL</span></td>
-		<td>A snoop invalidates a non-modified line in some processor core.</td>
+		<td><span id="UOPS_ISSUED.CORE_STALL_CYCLES">UOPS_ISSUED.CORE_STALL_CYCLES</span></td>
+		<td>Cycles when Resource Allocation Table (RAT) does not issue Uops to Reservation Station (RS) for all threads.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.HIT">UNC_CBO_XSNP_RESPONSE.HIT</span></td>
-		<td>A snoop hits a non-modified line in some processor core.</td>
+		<td><span id="UOPS_ISSUED.FLAGS_MERGE">UOPS_ISSUED.FLAGS_MERGE</span></td>
+		<td>Number of flags-merge uops allocated. Such uops adds delay.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.HITM">UNC_CBO_XSNP_RESPONSE.HITM</span></td>
-		<td>A snoop hits a modified line in some processor core.</td>
+		<td><span id="UOPS_ISSUED.SINGLE_MUL">UOPS_ISSUED.SINGLE_MUL</span></td>
+		<td>Number of multiply packed/scalar single precision uops allocated.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.INVAL_M">UNC_CBO_XSNP_RESPONSE.INVAL_M</span></td>
-		<td>A snoop invalidates a modified line in some processor core.</td>
+		<td><span id="UOPS_ISSUED.SLOW_LEA">UOPS_ISSUED.SLOW_LEA</span></td>
+		<td>Number of slow LEA or similar uops allocated. Such uop has 3 sources (e.g. 2 sources + immediate) regardless if as a result of LEA instruction or not.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.EXTERNAL_FILTER">UNC_CBO_XSNP_RESPONSE.EXTERNAL_FILTER</span></td>
-		<td>Filter on cross-core snoops initiated by this Cbox due to external snoop request.</td>
+		<td><span id="UOPS_ISSUED.STALL_CYCLES">UOPS_ISSUED.STALL_CYCLES</span></td>
+		<td>Cycles when Resource Allocation Table (RAT) does not issue Uops to Reservation Station (RS) for the thread.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.XCORE_FILTER">UNC_CBO_XSNP_RESPONSE.XCORE_FILTER</span></td>
-		<td>Filter on cross-core snoops initiated by this Cbox due to processor core memory request.</td>
+		<td><span id="UOPS_RETIRED.ALL">UOPS_RETIRED.ALL</span></td>
+		<td>Counts the number of micro-ops retired, Use cmask=1 and invert to count active cycles or stalled cycles.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.EVICTION_FILTER">UNC_CBO_XSNP_RESPONSE.EVICTION_FILTER</span></td>
-		<td>Filter on cross-core snoops initiated by this Cbox due to LLC eviction.</td>
+		<td><span id="UOPS_RETIRED.ALL_PS">UOPS_RETIRED.ALL_PS</span></td>
+		<td>Retired uops.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.M">UNC_CBO_CACHE_LOOKUP.M</span></td>
-		<td>LLC lookup request that access cache and found line in M-state.</td>
+		<td><span id="UOPS_RETIRED.CORE_STALL_CYCLES">UOPS_RETIRED.CORE_STALL_CYCLES</span></td>
+		<td>Cycles without actually retired uops.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.E">UNC_CBO_CACHE_LOOKUP.E</span></td>
-		<td>LLC lookup request that access cache and found line in E-state.</td>
+		<td><span id="UOPS_RETIRED.RETIRE_SLOTS">UOPS_RETIRED.RETIRE_SLOTS</span></td>
+		<td>Counts the number of retirement slots used each cycle.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.S">UNC_CBO_CACHE_LOOKUP.S</span></td>
-		<td>LLC lookup request that access cache and found line in S-state.</td>
+		<td><span id="UOPS_RETIRED.RETIRE_SLOTS_PS">UOPS_RETIRED.RETIRE_SLOTS_PS</span></td>
+		<td>Retirement slots used.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.I">UNC_CBO_CACHE_LOOKUP.I</span></td>
-		<td>LLC lookup request that access cache and found line in I-state.</td>
+		<td><span id="UOPS_RETIRED.STALL_CYCLES">UOPS_RETIRED.STALL_CYCLES</span></td>
+		<td>Cycles without actually retired uops.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.READ_FILTER">UNC_CBO_CACHE_LOOKUP.READ_FILTER</span></td>
-		<td>Filter on processor core initiated cacheable read requests.</td>
-	</tr>
-	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.WRITE_FILTER">UNC_CBO_CACHE_LOOKUP.WRITE_FILTER</span></td>
-		<td>Filter on processor core initiated cacheable write requests.</td>
-	</tr>
-	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.EXTSNP_FILTER">UNC_CBO_CACHE_LOOKUP.EXTSNP_FILTER</span></td>
-		<td>Filter on external snoop requests.</td>
-	</tr>
-	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.ANY_REQUEST_FILTER">UNC_CBO_CACHE_LOOKUP.ANY_REQUEST_FILTER</span></td>
-		<td>Filter on any IRQ or IPQ initiated requests including uncacheable, non-coherent requests.</td>
-	</tr>
-	<tr>
-		<td><span id="UNC_ARB_TRK_OCCUPANCY.ALL">UNC_ARB_TRK_OCCUPANCY.ALL</span></td>
-		<td>Counts cycles weighted by the number of requests waiting for data returning from the memory controller. Accounts for coherent and non-coherent requests initiated by IA cores, processor graphic units, or LLC.</td>
-	</tr>
-	<tr>
-		<td><span id="UNC_ARB_TRK_REQUESTS.ALL">UNC_ARB_TRK_REQUESTS.ALL</span></td>
-		<td>Counts the number of coherent and in-coherent requests initiated by IA cores, processor graphic units, or LLC.</td>
-	</tr>
-	<tr>
-		<td><span id="UNC_ARB_TRK_REQUESTS.WRITES">UNC_ARB_TRK_REQUESTS.WRITES</span></td>
-		<td>Counts the number of allocated write entries, include full, partial, and LLC evictions.</td>
-	</tr>
-	<tr>
-		<td><span id="UNC_ARB_TRK_REQUESTS.EVICTIONS">UNC_ARB_TRK_REQUESTS.EVICTIONS</span></td>
-		<td>Counts the number of LLC evictions allocated.</td>
+		<td><span id="UOPS_RETIRED.TOTAL_CYCLES">UOPS_RETIRED.TOTAL_CYCLES</span></td>
+		<td>Cycles with less than 10 actually retired uops.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_ARB_COH_TRK_OCCUPANCY.ALL">UNC_ARB_COH_TRK_OCCUPANCY.ALL</span></td>
@@ -1342,628 +1262,708 @@
 		<td>Number of requests allocated in Coherency Tracker.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_ARB_TRK_OCCUPANCY.CYCLES_WITH_ANY_REQUEST">UNC_ARB_TRK_OCCUPANCY.CYCLES_WITH_ANY_REQUEST</span></td>
-		<td>Cycles with at least one request outstanding is waiting for data return from memory controller. Account for coherent and non-coherent requests initiated by IA Cores, Processor Graphics Unit, or LLC.</td>
+		<td><span id="UNC_ARB_TRK_OCCUPANCY.ALL">UNC_ARB_TRK_OCCUPANCY.ALL</span></td>
+		<td>Counts cycles weighted by the number of requests waiting for data returning from the memory controller. Accounts for coherent and non-coherent requests initiated by IA cores, processor graphic units, or LLC.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_ARB_TRK_OCCUPANCY.CYCLES_OVER_HALF_FULL">UNC_ARB_TRK_OCCUPANCY.CYCLES_OVER_HALF_FULL</span></td>
 		<td>Cycles with at least half of the requests outstanding are waiting for data return from memory controller. Account for coherent and non-coherent requests initiated by IA Cores, Processor Graphics Unit, or LLC.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CLOCK.SOCKET">UNC_CLOCK.SOCKET</span></td>
-		<td>This 48-bit fixed counter counts the UCLK cycles.</td>
+		<td><span id="UNC_ARB_TRK_OCCUPANCY.CYCLES_WITH_ANY_REQUEST">UNC_ARB_TRK_OCCUPANCY.CYCLES_WITH_ANY_REQUEST</span></td>
+		<td>Cycles with at least one request outstanding is waiting for data return from memory controller. Account for coherent and non-coherent requests initiated by IA Cores, Processor Graphics Unit, or LLC.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ARB_TRK_REQUESTS.ALL">UNC_ARB_TRK_REQUESTS.ALL</span></td>
+		<td>Counts the number of coherent and in-coherent requests initiated by IA cores, processor graphic units, or LLC.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ARB_TRK_REQUESTS.EVICTIONS">UNC_ARB_TRK_REQUESTS.EVICTIONS</span></td>
+		<td>Counts the number of LLC evictions allocated.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_ARB_TRK_REQUESTS.WRITES">UNC_ARB_TRK_REQUESTS.WRITES</span></td>
+		<td>Counts the number of allocated write entries, include full, partial, and LLC evictions.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.ANY_REQUEST_FILTER">UNC_CBO_CACHE_LOOKUP.ANY_REQUEST_FILTER</span></td>
+		<td>Filter on any IRQ or IPQ initiated requests including uncacheable, non-coherent requests.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.E">UNC_CBO_CACHE_LOOKUP.E</span></td>
+		<td>LLC lookup request that access cache and found line in E-state.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_CBO_CACHE_LOOKUP.ES">UNC_CBO_CACHE_LOOKUP.ES</span></td>
 		<td>LLC lookup request that access cache and found line in E-state or S-state.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_DATA_RDRespondsLLC_HIT.ANY_RESPONSE">RequestDEMAND_DATA_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts demand data reads that hit in the LLC</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.EXTSNP_FILTER">UNC_CBO_CACHE_LOOKUP.EXTSNP_FILTER</span></td>
+		<td>Filter on external snoop requests.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestDEMAND_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts demand data reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.I">UNC_CBO_CACHE_LOOKUP.I</span></td>
+		<td>LLC lookup request that access cache and found line in I-state.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_DATA_RDRespondsLLC_HIT.SNOOP_MISS">RequestDEMAND_DATA_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts demand data reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.M">UNC_CBO_CACHE_LOOKUP.M</span></td>
+		<td>LLC lookup request that access cache and found line in M-state.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestDEMAND_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts demand data reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.READ_FILTER">UNC_CBO_CACHE_LOOKUP.READ_FILTER</span></td>
+		<td>Filter on processor core initiated cacheable read requests.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestDEMAND_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts demand data reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.S">UNC_CBO_CACHE_LOOKUP.S</span></td>
+		<td>LLC lookup request that access cache and found line in S-state.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_DATA_RDRespondsLLC_MISS.ANY_RESPONSE">RequestDEMAND_DATA_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts demand data reads that miss in the LLC</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.WRITE_FILTER">UNC_CBO_CACHE_LOOKUP.WRITE_FILTER</span></td>
+		<td>Filter on processor core initiated cacheable write requests.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_DATA_RDRespondsLLC_MISS.LOCAL_DRAM">RequestDEMAND_DATA_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts demand data reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.EVICTION_FILTER">UNC_CBO_XSNP_RESPONSE.EVICTION_FILTER</span></td>
+		<td>Filter on cross-core snoops initiated by this Cbox due to LLC eviction.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_DATA_RDRespondsLLC_MISS.ANY_DRAM">RequestDEMAND_DATA_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts demand data reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.EXTERNAL_FILTER">UNC_CBO_XSNP_RESPONSE.EXTERNAL_FILTER</span></td>
+		<td>Filter on cross-core snoops initiated by this Cbox due to external snoop request.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_RFORespondsLLC_HIT.ANY_RESPONSE">RequestDEMAND_RFORespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all demand data writes (RFOs) that hit in the LLC</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.HIT">UNC_CBO_XSNP_RESPONSE.HIT</span></td>
+		<td>A snoop hits a non-modified line in some processor core.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_RFORespondsLLC_HIT.NO_SNOOP_NEEDED">RequestDEMAND_RFORespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all demand data writes (RFOs) that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.HITM">UNC_CBO_XSNP_RESPONSE.HITM</span></td>
+		<td>A snoop hits a modified line in some processor core.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_RFORespondsLLC_HIT.SNOOP_MISS">RequestDEMAND_RFORespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all demand data writes (RFOs) that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.INVAL">UNC_CBO_XSNP_RESPONSE.INVAL</span></td>
+		<td>A snoop invalidates a non-modified line in some processor core.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestDEMAND_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all demand data writes (RFOs) that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.INVAL_M">UNC_CBO_XSNP_RESPONSE.INVAL_M</span></td>
+		<td>A snoop invalidates a modified line in some processor core.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_RFORespondsLLC_HIT.HITM_OTHER_CORE">RequestDEMAND_RFORespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all demand data writes (RFOs) that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.MISS">UNC_CBO_XSNP_RESPONSE.MISS</span></td>
+		<td>A snoop misses in some processor core.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_RFORespondsLLC_MISS.ANY_RESPONSE">RequestDEMAND_RFORespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all demand data writes (RFOs) that miss in the LLC</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.XCORE_FILTER">UNC_CBO_XSNP_RESPONSE.XCORE_FILTER</span></td>
+		<td>Filter on cross-core snoops initiated by this Cbox due to processor core memory request.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_RFORespondsLLC_MISS.LOCAL_DRAM">RequestDEMAND_RFORespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all demand data writes (RFOs) that miss the LLC and the data returned from local dram</td>
+		<td><span id="UNC_CLOCK.SOCKET">UNC_CLOCK.SOCKET</span></td>
+		<td>This 48-bit fixed counter counts the UCLK cycles.</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_RFORespondsLLC_MISS.ANY_DRAM">RequestDEMAND_RFORespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all demand data writes (RFOs) that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts demand data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_CODE_RDRespondsLLC_HIT.ANY_RESPONSE">RequestDEMAND_CODE_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all demand code reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts demand data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestDEMAND_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all demand code reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts demand data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_CODE_RDRespondsLLC_HIT.SNOOP_MISS">RequestDEMAND_CODE_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all demand code reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts demand data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestDEMAND_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all demand code reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts demand data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestDEMAND_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all demand code reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts demand data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_CODE_RDRespondsLLC_MISS.ANY_RESPONSE">RequestDEMAND_CODE_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all demand code reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts demand data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_CODE_RDRespondsLLC_MISS.LOCAL_DRAM">RequestDEMAND_CODE_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all demand code reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts demand data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestDEMAND_CODE_RDRespondsLLC_MISS.ANY_DRAM">RequestDEMAND_CODE_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all demand code reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all demand data writes (RFOs)  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestCOREWBRespondsLLC_HIT.ANY_RESPONSE">RequestCOREWBRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts core writebacks due to L2 evictions or L1 writeback requests that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all demand data writes (RFOs)  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestCOREWBRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestCOREWBRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts core writebacks due to L2 evictions or L1 writeback requests that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all demand data writes (RFOs)  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestCOREWBRespondsLLC_HIT.SNOOP_MISS">RequestCOREWBRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts core writebacks due to L2 evictions or L1 writeback requests that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all demand data writes (RFOs)  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestCOREWBRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestCOREWBRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts core writebacks due to L2 evictions or L1 writeback requests that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all demand data writes (RFOs)  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestCOREWBRespondsLLC_HIT.HITM_OTHER_CORE">RequestCOREWBRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts core writebacks due to L2 evictions or L1 writeback requests that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all demand data writes (RFOs)  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestCOREWBRespondsLLC_MISS.ANY_RESPONSE">RequestCOREWBRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts core writebacks due to L2 evictions or L1 writeback requests that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all demand data writes (RFOs)  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestCOREWBRespondsLLC_MISS.LOCAL_DRAM">RequestCOREWBRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts core writebacks due to L2 evictions or L1 writeback requests that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all demand data writes (RFOs)  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestCOREWBRespondsLLC_MISS.ANY_DRAM">RequestCOREWBRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts core writebacks due to L2 evictions or L1 writeback requests that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all demand code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_DATA_RDRespondsLLC_HIT.ANY_RESPONSE">RequestPF_L2_DATA_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts prefetch (that bring data to L2) data reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all demand code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestPF_L2_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts prefetch (that bring data to L2) data reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all demand code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_DATA_RDRespondsLLC_HIT.SNOOP_MISS">RequestPF_L2_DATA_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts prefetch (that bring data to L2) data reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all demand code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestPF_L2_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts prefetch (that bring data to L2) data reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all demand code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestPF_L2_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts prefetch (that bring data to L2) data reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all demand code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_DATA_RDRespondsLLC_MISS.ANY_RESPONSE">RequestPF_L2_DATA_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts prefetch (that bring data to L2) data reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all demand code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_DATA_RDRespondsLLC_MISS.LOCAL_DRAM">RequestPF_L2_DATA_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts prefetch (that bring data to L2) data reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all demand code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_DATA_RDRespondsLLC_MISS.ANY_DRAM">RequestPF_L2_DATA_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts prefetch (that bring data to L2) data reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_RFORespondsLLC_HIT.ANY_RESPONSE">RequestPF_L2_RFORespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch (that bring data to L2) RFOs that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_RFORespondsLLC_HIT.NO_SNOOP_NEEDED">RequestPF_L2_RFORespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all prefetch (that bring data to L2) RFOs that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_RFORespondsLLC_HIT.SNOOP_MISS">RequestPF_L2_RFORespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all prefetch (that bring data to L2) RFOs that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestPF_L2_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all prefetch (that bring data to L2) RFOs that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_RFORespondsLLC_HIT.HITM_OTHER_CORE">RequestPF_L2_RFORespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all prefetch (that bring data to L2) RFOs that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_RFORespondsLLC_MISS.ANY_RESPONSE">RequestPF_L2_RFORespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch (that bring data to L2) RFOs that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_RFORespondsLLC_MISS.LOCAL_DRAM">RequestPF_L2_RFORespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all prefetch (that bring data to L2) RFOs that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_RFORespondsLLC_MISS.ANY_DRAM">RequestPF_L2_RFORespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all prefetch (that bring data to L2) RFOs that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_CODE_RDRespondsLLC_HIT.ANY_RESPONSE">RequestPF_L2_CODE_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) code reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestPF_L2_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) code reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_CODE_RDRespondsLLC_HIT.SNOOP_MISS">RequestPF_L2_CODE_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) code reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestPF_L2_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) code reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestPF_L2_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) code reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts prefetch (that bring data to L2) data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_CODE_RDRespondsLLC_MISS.ANY_RESPONSE">RequestPF_L2_CODE_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) code reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts prefetch (that bring data to L2) data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_CODE_RDRespondsLLC_MISS.LOCAL_DRAM">RequestPF_L2_CODE_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) code reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts prefetch (that bring data to L2) data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_L2_CODE_RDRespondsLLC_MISS.ANY_DRAM">RequestPF_L2_CODE_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) code reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_DATA_RDRespondsLLC_HIT.ANY_RESPONSE">RequestPF_LLC_DATA_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) data reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestPF_LLC_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) data reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_DATA_RDRespondsLLC_HIT.SNOOP_MISS">RequestPF_LLC_DATA_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) data reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestPF_LLC_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) data reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestPF_LLC_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) data reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch (that bring data to L2) RFOs  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_DATA_RDRespondsLLC_MISS.ANY_RESPONSE">RequestPF_LLC_DATA_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) data reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all prefetch (that bring data to L2) RFOs  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_DATA_RDRespondsLLC_MISS.LOCAL_DRAM">RequestPF_LLC_DATA_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) data reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all prefetch (that bring data to L2) RFOs  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_DATA_RDRespondsLLC_MISS.ANY_DRAM">RequestPF_LLC_DATA_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) data reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_RFORespondsLLC_HIT.ANY_RESPONSE">RequestPF_LLC_RFORespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) RFOs that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_RFORespondsLLC_HIT.NO_SNOOP_NEEDED">RequestPF_LLC_RFORespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) RFOs that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_RFORespondsLLC_HIT.SNOOP_MISS">RequestPF_LLC_RFORespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) RFOs that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestPF_LLC_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) RFOs that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_RFORespondsLLC_HIT.HITM_OTHER_CORE">RequestPF_LLC_RFORespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) RFOs that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_RFORespondsLLC_MISS.ANY_RESPONSE">RequestPF_LLC_RFORespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) RFOs that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_RFORespondsLLC_MISS.LOCAL_DRAM">RequestPF_LLC_RFORespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) RFOs that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_RFORespondsLLC_MISS.ANY_DRAM">RequestPF_LLC_RFORespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all prefetch (that bring data to LLC only) RFOs that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_CODE_RDRespondsLLC_HIT.ANY_RESPONSE">RequestPF_LLC_CODE_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts prefetch (that bring data to LLC only) code reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestPF_LLC_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts prefetch (that bring data to LLC only) code reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_CODE_RDRespondsLLC_HIT.SNOOP_MISS">RequestPF_LLC_CODE_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts prefetch (that bring data to LLC only) code reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestPF_LLC_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts prefetch (that bring data to LLC only) code reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestPF_LLC_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts prefetch (that bring data to LLC only) code reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_CODE_RDRespondsLLC_MISS.ANY_RESPONSE">RequestPF_LLC_CODE_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts prefetch (that bring data to LLC only) code reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_CODE_RDRespondsLLC_MISS.LOCAL_DRAM">RequestPF_LLC_CODE_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts prefetch (that bring data to LLC only) code reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestPF_LLC_CODE_RDRespondsLLC_MISS.ANY_DRAM">RequestPF_LLC_CODE_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts prefetch (that bring data to LLC only) code reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestOTHERRespondsLLC_HIT.ANY_RESPONSE">RequestOTHERRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts any other requests that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestOTHERRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestOTHERRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts any other requests that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestOTHERRespondsLLC_HIT.SNOOP_MISS">RequestOTHERRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts any other requests that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestOTHERRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestOTHERRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts any other requests that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestOTHERRespondsLLC_HIT.HITM_OTHER_CORE">RequestOTHERRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts any other requests that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) RFOs  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestOTHERRespondsLLC_MISS.ANY_RESPONSE">RequestOTHERRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts any other requests that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) RFOs  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestOTHERRespondsLLC_MISS.LOCAL_DRAM">RequestOTHERRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts any other requests that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all prefetch (that bring data to LLC only) RFOs  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestOTHERRespondsLLC_MISS.ANY_DRAM">RequestOTHERRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts any other requests that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_DATA_RDRespondsLLC_HIT.ANY_RESPONSE">RequestALL_PF_DATA_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch data reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestALL_PF_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all prefetch data reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_DATA_RDRespondsLLC_HIT.SNOOP_MISS">RequestALL_PF_DATA_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all prefetch data reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestALL_PF_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all prefetch data reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestALL_PF_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all prefetch data reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts prefetch (that bring data to LLC only) code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_DATA_RDRespondsLLC_MISS.ANY_RESPONSE">RequestALL_PF_DATA_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch data reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts prefetch (that bring data to LLC only) code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_DATA_RDRespondsLLC_MISS.LOCAL_DRAM">RequestALL_PF_DATA_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all prefetch data reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts prefetch (that bring data to LLC only) code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_DATA_RDRespondsLLC_MISS.ANY_DRAM">RequestALL_PF_DATA_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all prefetch data reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts any other requests  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_RFORespondsLLC_HIT.ANY_RESPONSE">RequestALL_PF_RFORespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts prefetch RFOs that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts any other requests  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_RFORespondsLLC_HIT.NO_SNOOP_NEEDED">RequestALL_PF_RFORespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts prefetch RFOs that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts any other requests  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_RFORespondsLLC_HIT.SNOOP_MISS">RequestALL_PF_RFORespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts prefetch RFOs that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts any other requests  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestALL_PF_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts prefetch RFOs that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts any other requests  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_RFORespondsLLC_HIT.HITM_OTHER_CORE">RequestALL_PF_RFORespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts prefetch RFOs that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts any other requests  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_RFORespondsLLC_MISS.ANY_RESPONSE">RequestALL_PF_RFORespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts prefetch RFOs that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts any other requests  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_RFORespondsLLC_MISS.LOCAL_DRAM">RequestALL_PF_RFORespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts prefetch RFOs that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts any other requests  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_RFORespondsLLC_MISS.ANY_DRAM">RequestALL_PF_RFORespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts prefetch RFOs that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_CODE_RDRespondsLLC_HIT.ANY_RESPONSE">RequestALL_PF_CODE_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch code reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all prefetch data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestALL_PF_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all prefetch code reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all prefetch data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_CODE_RDRespondsLLC_HIT.SNOOP_MISS">RequestALL_PF_CODE_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all prefetch code reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all prefetch data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestALL_PF_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all prefetch code reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all prefetch data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestALL_PF_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all prefetch code reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_CODE_RDRespondsLLC_MISS.ANY_RESPONSE">RequestALL_PF_CODE_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all prefetch code reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all prefetch data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_CODE_RDRespondsLLC_MISS.LOCAL_DRAM">RequestALL_PF_CODE_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all prefetch code reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all prefetch data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_PF_CODE_RDRespondsLLC_MISS.ANY_DRAM">RequestALL_PF_CODE_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all prefetch code reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts prefetch RFOs  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_DATA_RDRespondsLLC_HIT.ANY_RESPONSE">RequestALL_DATA_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all demand &amp; prefetch data reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts prefetch RFOs  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestALL_DATA_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all demand &amp; prefetch data reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts prefetch RFOs  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_DATA_RDRespondsLLC_HIT.SNOOP_MISS">RequestALL_DATA_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all demand &amp; prefetch data reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts prefetch RFOs  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestALL_DATA_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all demand &amp; prefetch data reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts prefetch RFOs  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestALL_DATA_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all demand &amp; prefetch data reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts prefetch RFOs  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_DATA_RDRespondsLLC_MISS.ANY_RESPONSE">RequestALL_DATA_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all demand &amp; prefetch data reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts prefetch RFOs  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_DATA_RDRespondsLLC_MISS.LOCAL_DRAM">RequestALL_DATA_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all demand &amp; prefetch data reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts prefetch RFOs  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_DATA_RDRespondsLLC_MISS.ANY_DRAM">RequestALL_DATA_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all demand &amp; prefetch data reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_RFORespondsLLC_HIT.ANY_RESPONSE">RequestALL_RFORespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all demand &amp; prefetch RFOs that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all prefetch code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_RFORespondsLLC_HIT.NO_SNOOP_NEEDED">RequestALL_RFORespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all demand &amp; prefetch RFOs that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all prefetch code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_RFORespondsLLC_HIT.SNOOP_MISS">RequestALL_RFORespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all demand &amp; prefetch RFOs that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all prefetch code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestALL_RFORespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all demand &amp; prefetch RFOs that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all prefetch code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_RFORespondsLLC_HIT.HITM_OTHER_CORE">RequestALL_RFORespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all demand &amp; prefetch RFOs that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all prefetch code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_RFORespondsLLC_MISS.ANY_RESPONSE">RequestALL_RFORespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all demand &amp; prefetch RFOs that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all prefetch code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_RFORespondsLLC_MISS.LOCAL_DRAM">RequestALL_RFORespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all demand &amp; prefetch RFOs that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all prefetch code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_RFORespondsLLC_MISS.ANY_DRAM">RequestALL_RFORespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all demand &amp; prefetch RFOs that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_CODE_RDRespondsLLC_HIT.ANY_RESPONSE">RequestALL_CODE_RDRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all demand &amp; prefetch code reads that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestALL_CODE_RDRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all demand &amp; prefetch code reads that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_CODE_RDRespondsLLC_HIT.SNOOP_MISS">RequestALL_CODE_RDRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all demand &amp; prefetch code reads that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestALL_CODE_RDRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all demand &amp; prefetch code reads that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE">RequestALL_CODE_RDRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all demand &amp; prefetch code reads that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all demand &amp; prefetch data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_CODE_RDRespondsLLC_MISS.ANY_RESPONSE">RequestALL_CODE_RDRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all demand &amp; prefetch code reads that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all demand &amp; prefetch data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_CODE_RDRespondsLLC_MISS.LOCAL_DRAM">RequestALL_CODE_RDRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all demand &amp; prefetch code reads that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all demand &amp; prefetch data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_CODE_RDRespondsLLC_MISS.ANY_DRAM">RequestALL_CODE_RDRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all demand &amp; prefetch code reads that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_READSRespondsLLC_HIT.ANY_RESPONSE">RequestALL_READSRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all data/code/rfo reads (demand &amp; prefetch) that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_READSRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestALL_READSRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all data/code/rfo reads (demand &amp; prefetch) that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_READSRespondsLLC_HIT.SNOOP_MISS">RequestALL_READSRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all data/code/rfo reads (demand &amp; prefetch) that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_READSRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestALL_READSRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all data/code/rfo reads (demand &amp; prefetch) that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_READSRespondsLLC_HIT.HITM_OTHER_CORE">RequestALL_READSRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all data/code/rfo reads (demand &amp; prefetch) that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all demand &amp; prefetch RFOs  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_READSRespondsLLC_MISS.ANY_RESPONSE">RequestALL_READSRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all data/code/rfo reads (demand &amp; prefetch) that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all demand &amp; prefetch RFOs  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_READSRespondsLLC_MISS.LOCAL_DRAM">RequestALL_READSRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all data/code/rfo reads (demand &amp; prefetch) that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all demand &amp; prefetch RFOs  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_READSRespondsLLC_MISS.ANY_DRAM">RequestALL_READSRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all data/code/rfo reads (demand &amp; prefetch) that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_REQUESTSRespondsLLC_HIT.ANY_RESPONSE">RequestALL_REQUESTSRespondsLLC_HIT.ANY_RESPONSE</span></td>
-		<td>Counts all requests that hit in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_REQUESTSRespondsLLC_HIT.NO_SNOOP_NEEDED">RequestALL_REQUESTSRespondsLLC_HIT.NO_SNOOP_NEEDED</span></td>
-		<td>Counts all requests that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_REQUESTSRespondsLLC_HIT.SNOOP_MISS">RequestALL_REQUESTSRespondsLLC_HIT.SNOOP_MISS</span></td>
-		<td>Counts all requests that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_REQUESTSRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD">RequestALL_REQUESTSRespondsLLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
-		<td>Counts all requests that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_REQUESTSRespondsLLC_HIT.HITM_OTHER_CORE">RequestALL_REQUESTSRespondsLLC_HIT.HITM_OTHER_CORE</span></td>
-		<td>Counts all requests that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all demand &amp; prefetch code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_REQUESTSRespondsLLC_MISS.ANY_RESPONSE">RequestALL_REQUESTSRespondsLLC_MISS.ANY_RESPONSE</span></td>
-		<td>Counts all requests that miss in the LLC</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all demand &amp; prefetch code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_REQUESTSRespondsLLC_MISS.LOCAL_DRAM">RequestALL_REQUESTSRespondsLLC_MISS.LOCAL_DRAM</span></td>
-		<td>Counts all requests that miss the LLC and the data returned from local dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all demand &amp; prefetch code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="RequestALL_REQUESTSRespondsLLC_MISS.ANY_DRAM">RequestALL_REQUESTSRespondsLLC_MISS.ANY_DRAM</span></td>
-		<td>Counts all requests that miss the LLC and the data returned from local or remote dram</td>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that miss in the LLC</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that miss the LLC and the data returned from local dram</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that miss the LLC and the data returned from local or remote dram</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td>Counts all requests  that hit in the LLC</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts all requests  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td>Counts all requests  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts all requests  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts all requests  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td>Counts all requests  that miss in the LLC</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td>Counts all requests  that miss the LLC and the data returned from local dram</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_DRAM</span></td>
+		<td>Counts all requests  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 </table>
 

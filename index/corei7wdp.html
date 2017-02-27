@@ -4,7 +4,7 @@
 <body>
 <h3>Westmere EP-DP</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
 <li>Intel&reg; Xeon&reg; / Core i7 980X processor</li><p>
-<table class="table table-responsive">
+<table class="table table-responsive" style="table-layout:fixed;width:100%">
 	<tr>
 		<th>EventName</th>
 		<th>Description</th>
@@ -94,7 +94,15 @@
 		<td>Retired branch instructions (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="BR_INST_RETIRED.ALL_BRANCHES_PS">BR_INST_RETIRED.ALL_BRANCHES_PS</span></td>
+		<td>Retired branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="BR_INST_RETIRED.CONDITIONAL">BR_INST_RETIRED.CONDITIONAL</span></td>
+		<td>Retired conditional branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.CONDITIONAL_PS">BR_INST_RETIRED.CONDITIONAL_PS</span></td>
 		<td>Retired conditional branch instructions (Precise Event)</td>
 	</tr>
 	<tr>
@@ -102,7 +110,15 @@
 		<td>Retired near call instructions (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL_PS">BR_INST_RETIRED.NEAR_CALL_PS</span></td>
+		<td>Retired near call instructions (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3">BR_INST_RETIRED.NEAR_CALL_R3</span></td>
+		<td>Retired near call instructions Ring 3 only(Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3_PS">BR_INST_RETIRED.NEAR_CALL_R3_PS</span></td>
 		<td>Retired near call instructions Ring 3 only(Precise Event)</td>
 	</tr>
 	<tr>
@@ -150,11 +166,23 @@
 		<td>Mispredicted retired branch instructions (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES_PS">BR_MISP_RETIRED.ALL_BRANCHES_PS</span></td>
+		<td>Mispredicted retired branch instructions (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="BR_MISP_RETIRED.CONDITIONAL">BR_MISP_RETIRED.CONDITIONAL</span></td>
 		<td>Mispredicted conditional retired branches (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="BR_MISP_RETIRED.CONDITIONAL_PS">BR_MISP_RETIRED.CONDITIONAL_PS</span></td>
+		<td>Mispredicted conditional retired branches (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="BR_MISP_RETIRED.NEAR_CALL">BR_MISP_RETIRED.NEAR_CALL</span></td>
+		<td>Mispredicted near retired calls (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="BR_MISP_RETIRED.NEAR_CALL_PS">BR_MISP_RETIRED.NEAR_CALL_PS</span></td>
 		<td>Mispredicted near retired calls (Precise Event)</td>
 	</tr>
 	<tr>
@@ -246,11 +274,23 @@
 		<td>X87 Floating point assists (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="FP_ASSIST.ALL_PS">FP_ASSIST.ALL_PS</span></td>
+		<td>X87 Floating point assists (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="FP_ASSIST.INPUT">FP_ASSIST.INPUT</span></td>
 		<td>X87 Floating poiint assists for invalid input value (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="FP_ASSIST.INPUT_PS">FP_ASSIST.INPUT_PS</span></td>
+		<td>X87 Floating poiint assists for invalid input value (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="FP_ASSIST.OUTPUT">FP_ASSIST.OUTPUT</span></td>
+		<td>X87 Floating point assists for invalid output value (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.OUTPUT_PS">FP_ASSIST.OUTPUT_PS</span></td>
 		<td>X87 Floating point assists for invalid output value (Precise Event)</td>
 	</tr>
 	<tr>
@@ -338,7 +378,15 @@
 		<td>Instructions retired (Programmable counter and Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="INST_RETIRED.ANY_P_PS">INST_RETIRED.ANY_P_PS</span></td>
+		<td>Instructions retired (Programmable counter and Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="INST_RETIRED.MMX">INST_RETIRED.MMX</span></td>
+		<td>Retired MMX instructions (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.MMX_PS">INST_RETIRED.MMX_PS</span></td>
 		<td>Retired MMX instructions (Precise Event)</td>
 	</tr>
 	<tr>
@@ -346,7 +394,15 @@
 		<td>Total cycles (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="INST_RETIRED.TOTAL_CYCLES_PS">INST_RETIRED.TOTAL_CYCLES_PS</span></td>
+		<td>Total cycles (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="INST_RETIRED.X87">INST_RETIRED.X87</span></td>
+		<td>Retired floating-point operations (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="INST_RETIRED.X87_PS">INST_RETIRED.X87_PS</span></td>
 		<td>Retired floating-point operations (Precise Event)</td>
 	</tr>
 	<tr>
@@ -359,6 +415,10 @@
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISS_RETIRED">ITLB_MISS_RETIRED</span></td>
+		<td>Retired instructions that missed the ITLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISS_RETIRED_PS">ITLB_MISS_RETIRED_PS</span></td>
 		<td>Retired instructions that missed the ITLB (Precise Event)</td>
 	</tr>
 	<tr>
@@ -722,7 +782,71 @@
 		<td>Macro-fused instructions decoded</td>
 	</tr>
 	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_0">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_0</span></td>
+		<td>Memory instructions retired above 0 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_1024">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_1024</span></td>
+		<td>Memory instructions retired above 1024 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_128">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_128</span></td>
+		<td>Memory instructions retired above 128 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16</span></td>
+		<td>Memory instructions retired above 16 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16384">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16384</span></td>
+		<td>Memory instructions retired above 16384 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_2048">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_2048</span></td>
+		<td>Memory instructions retired above 2048 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_256">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_256</span></td>
+		<td>Memory instructions retired above 256 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32</span></td>
+		<td>Memory instructions retired above 32 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32768">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32768</span></td>
+		<td>Memory instructions retired above 32768 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4</span></td>
+		<td>Memory instructions retired above 4 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4096">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4096</span></td>
+		<td>Memory instructions retired above 4096 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_512">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_512</span></td>
+		<td>Memory instructions retired above 512 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_64">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_64</span></td>
+		<td>Memory instructions retired above 64 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8</span></td>
+		<td>Memory instructions retired above 8 clocks (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8192">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8192</span></td>
+		<td>Memory instructions retired above 8192 clocks (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="MEM_INST_RETIRED.LOADS">MEM_INST_RETIRED.LOADS</span></td>
+		<td>Instructions retired which contains a load (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_INST_RETIRED.LOADS_PS">MEM_INST_RETIRED.LOADS_PS</span></td>
 		<td>Instructions retired which contains a load (Precise Event)</td>
 	</tr>
 	<tr>
@@ -730,7 +854,15 @@
 		<td>Instructions retired which contains a store (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="MEM_INST_RETIRED.STORES_PS">MEM_INST_RETIRED.STORES_PS</span></td>
+		<td>Instructions retired which contains a store (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS">MEM_LOAD_RETIRED.DTLB_MISS</span></td>
+		<td>Retired loads that miss the DTLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS_PS">MEM_LOAD_RETIRED.DTLB_MISS_PS</span></td>
 		<td>Retired loads that miss the DTLB (Precise Event)</td>
 	</tr>
 	<tr>
@@ -738,7 +870,15 @@
 		<td>Retired loads that miss L1D and hit an previously allocated LFB (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="MEM_LOAD_RETIRED.HIT_LFB_PS">MEM_LOAD_RETIRED.HIT_LFB_PS</span></td>
+		<td>Retired loads that miss L1D and hit an previously allocated LFB (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L1D_HIT">MEM_LOAD_RETIRED.L1D_HIT</span></td>
+		<td>Retired loads that hit the L1 data cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.L1D_HIT_PS">MEM_LOAD_RETIRED.L1D_HIT_PS</span></td>
 		<td>Retired loads that hit the L1 data cache (Precise Event)</td>
 	</tr>
 	<tr>
@@ -746,7 +886,15 @@
 		<td>Retired loads that hit the L2 cache (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="MEM_LOAD_RETIRED.L2_HIT_PS">MEM_LOAD_RETIRED.L2_HIT_PS</span></td>
+		<td>Retired loads that hit the L2 cache (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="MEM_LOAD_RETIRED.LLC_MISS">MEM_LOAD_RETIRED.LLC_MISS</span></td>
+		<td>Retired loads that miss the LLC cache (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_LOAD_RETIRED.LLC_MISS_PS">MEM_LOAD_RETIRED.LLC_MISS_PS</span></td>
 		<td>Retired loads that miss the LLC cache (Precise Event)</td>
 	</tr>
 	<tr>
@@ -754,11 +902,23 @@
 		<td>Retired loads that hit valid versions in the LLC cache (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="MEM_LOAD_RETIRED.LLC_UNSHARED_HIT_PS">MEM_LOAD_RETIRED.LLC_UNSHARED_HIT_PS</span></td>
+		<td>Retired loads that hit valid versions in the LLC cache (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM">MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM</span></td>
 		<td>Retired loads that hit sibling core&#39;s L2 in modified or unmodified states (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM_PS">MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM_PS</span></td>
+		<td>Retired loads that hit sibling core&#39;s L2 in modified or unmodified states (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="MEM_STORE_RETIRED.DTLB_MISS">MEM_STORE_RETIRED.DTLB_MISS</span></td>
+		<td>Retired stores that miss the DTLB (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="MEM_STORE_RETIRED.DTLB_MISS_PS">MEM_STORE_RETIRED.DTLB_MISS_PS</span></td>
 		<td>Retired stores that miss the DTLB (Precise Event)</td>
 	</tr>
 	<tr>
@@ -1014,7 +1174,15 @@
 		<td>SIMD Packed-Double Uops retired (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.PACKED_DOUBLE_PS">SSEX_UOPS_RETIRED.PACKED_DOUBLE_PS</span></td>
+		<td>SIMD Packed-Double Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="SSEX_UOPS_RETIRED.PACKED_SINGLE">SSEX_UOPS_RETIRED.PACKED_SINGLE</span></td>
+		<td>SIMD Packed-Single Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.PACKED_SINGLE_PS">SSEX_UOPS_RETIRED.PACKED_SINGLE_PS</span></td>
 		<td>SIMD Packed-Single Uops retired (Precise Event)</td>
 	</tr>
 	<tr>
@@ -1022,11 +1190,23 @@
 		<td>SIMD Scalar-Double Uops retired (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.SCALAR_DOUBLE_PS">SSEX_UOPS_RETIRED.SCALAR_DOUBLE_PS</span></td>
+		<td>SIMD Scalar-Double Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="SSEX_UOPS_RETIRED.SCALAR_SINGLE">SSEX_UOPS_RETIRED.SCALAR_SINGLE</span></td>
 		<td>SIMD Scalar-Single Uops retired (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.SCALAR_SINGLE_PS">SSEX_UOPS_RETIRED.SCALAR_SINGLE_PS</span></td>
+		<td>SIMD Scalar-Single Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="SSEX_UOPS_RETIRED.VECTOR_INTEGER">SSEX_UOPS_RETIRED.VECTOR_INTEGER</span></td>
+		<td>SIMD Vector Integer Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="SSEX_UOPS_RETIRED.VECTOR_INTEGER_PS">SSEX_UOPS_RETIRED.VECTOR_INTEGER_PS</span></td>
 		<td>SIMD Vector Integer Uops retired (Precise Event)</td>
 	</tr>
 	<tr>
@@ -1146,7 +1326,15 @@
 		<td>Cycles Uops are being retired</td>
 	</tr>
 	<tr>
+		<td><span id="UOPS_RETIRED.ACTIVE_CYCLES_PS">UOPS_RETIRED.ACTIVE_CYCLES_PS</span></td>
+		<td>Cycles Uops are being retired</td>
+	</tr>
+	<tr>
 		<td><span id="UOPS_RETIRED.ANY">UOPS_RETIRED.ANY</span></td>
+		<td>Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.ANY_PS">UOPS_RETIRED.ANY_PS</span></td>
 		<td>Uops retired (Precise Event)</td>
 	</tr>
 	<tr>
@@ -1154,7 +1342,15 @@
 		<td>Macro-fused Uops retired (Precise Event)</td>
 	</tr>
 	<tr>
+		<td><span id="UOPS_RETIRED.MACRO_FUSED_PS">UOPS_RETIRED.MACRO_FUSED_PS</span></td>
+		<td>Macro-fused Uops retired (Precise Event)</td>
+	</tr>
+	<tr>
 		<td><span id="UOPS_RETIRED.RETIRE_SLOTS">UOPS_RETIRED.RETIRE_SLOTS</span></td>
+		<td>Retirement slots used (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.RETIRE_SLOTS_PS">UOPS_RETIRED.RETIRE_SLOTS_PS</span></td>
 		<td>Retirement slots used (Precise Event)</td>
 	</tr>
 	<tr>
@@ -1162,208 +1358,12 @@
 		<td>Cycles Uops are not retiring (Precise Event)</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.TOTAL_CYCLES">UOPS_RETIRED.TOTAL_CYCLES</span></td>
-		<td>Total cycles using precise uop retired event (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_RETIRED.ALL_BRANCHES_PS">BR_INST_RETIRED.ALL_BRANCHES_PS</span></td>
-		<td>Retired branch instructions (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_RETIRED.CONDITIONAL_PS">BR_INST_RETIRED.CONDITIONAL_PS</span></td>
-		<td>Retired conditional branch instructions (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_CALL_PS">BR_INST_RETIRED.NEAR_CALL_PS</span></td>
-		<td>Retired near call instructions (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3_PS">BR_INST_RETIRED.NEAR_CALL_R3_PS</span></td>
-		<td>Retired near call instructions Ring 3 only(Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES_PS">BR_MISP_RETIRED.ALL_BRANCHES_PS</span></td>
-		<td>Mispredicted retired branch instructions (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_RETIRED.CONDITIONAL_PS">BR_MISP_RETIRED.CONDITIONAL_PS</span></td>
-		<td>Mispredicted conditional retired branches (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISP_RETIRED.NEAR_CALL_PS">BR_MISP_RETIRED.NEAR_CALL_PS</span></td>
-		<td>Mispredicted near retired calls (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="FP_ASSIST.ALL_PS">FP_ASSIST.ALL_PS</span></td>
-		<td>X87 Floating point assists (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="FP_ASSIST.INPUT_PS">FP_ASSIST.INPUT_PS</span></td>
-		<td>X87 Floating poiint assists for invalid input value (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="FP_ASSIST.OUTPUT_PS">FP_ASSIST.OUTPUT_PS</span></td>
-		<td>X87 Floating point assists for invalid output value (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="INST_RETIRED.ANY_P_PS">INST_RETIRED.ANY_P_PS</span></td>
-		<td>Instructions retired (Programmable counter and Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="INST_RETIRED.MMX_PS">INST_RETIRED.MMX_PS</span></td>
-		<td>Retired MMX instructions (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="INST_RETIRED.TOTAL_CYCLES_PS">INST_RETIRED.TOTAL_CYCLES_PS</span></td>
-		<td>Total cycles (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="INST_RETIRED.X87_PS">INST_RETIRED.X87_PS</span></td>
-		<td>Retired floating-point operations (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="ITLB_MISS_RETIRED_PS">ITLB_MISS_RETIRED_PS</span></td>
-		<td>Retired instructions that missed the ITLB (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_0">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_0</span></td>
-		<td>Memory instructions retired above 0 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_1024">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_1024</span></td>
-		<td>Memory instructions retired above 1024 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_128">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_128</span></td>
-		<td>Memory instructions retired above 128 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16</span></td>
-		<td>Memory instructions retired above 16 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16384">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_16384</span></td>
-		<td>Memory instructions retired above 16384 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_2048">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_2048</span></td>
-		<td>Memory instructions retired above 2048 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_256">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_256</span></td>
-		<td>Memory instructions retired above 256 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32</span></td>
-		<td>Memory instructions retired above 32 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32768">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_32768</span></td>
-		<td>Memory instructions retired above 32768 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4</span></td>
-		<td>Memory instructions retired above 4 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4096">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_4096</span></td>
-		<td>Memory instructions retired above 4096 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_512">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_512</span></td>
-		<td>Memory instructions retired above 512 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_64">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_64</span></td>
-		<td>Memory instructions retired above 64 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8</span></td>
-		<td>Memory instructions retired above 8 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8192">MEM_INST_RETIRED.LATENCY_ABOVE_THRESHOLD_8192</span></td>
-		<td>Memory instructions retired above 8192 clocks (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.LOADS_PS">MEM_INST_RETIRED.LOADS_PS</span></td>
-		<td>Instructions retired which contains a load (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_INST_RETIRED.STORES_PS">MEM_INST_RETIRED.STORES_PS</span></td>
-		<td>Instructions retired which contains a store (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS_PS">MEM_LOAD_RETIRED.DTLB_MISS_PS</span></td>
-		<td>Retired loads that miss the DTLB (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_RETIRED.HIT_LFB_PS">MEM_LOAD_RETIRED.HIT_LFB_PS</span></td>
-		<td>Retired loads that miss L1D and hit an previously allocated LFB (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_RETIRED.L1D_HIT_PS">MEM_LOAD_RETIRED.L1D_HIT_PS</span></td>
-		<td>Retired loads that hit the L1 data cache (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_RETIRED.L2_HIT_PS">MEM_LOAD_RETIRED.L2_HIT_PS</span></td>
-		<td>Retired loads that hit the L2 cache (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_RETIRED.LLC_MISS_PS">MEM_LOAD_RETIRED.LLC_MISS_PS</span></td>
-		<td>Retired loads that miss the LLC cache (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_RETIRED.LLC_UNSHARED_HIT_PS">MEM_LOAD_RETIRED.LLC_UNSHARED_HIT_PS</span></td>
-		<td>Retired loads that hit valid versions in the LLC cache (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM_PS">MEM_LOAD_RETIRED.OTHER_CORE_L2_HIT_HITM_PS</span></td>
-		<td>Retired loads that hit sibling core&#39;s L2 in modified or unmodified states (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="MEM_STORE_RETIRED.DTLB_MISS_PS">MEM_STORE_RETIRED.DTLB_MISS_PS</span></td>
-		<td>Retired stores that miss the DTLB (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="SSEX_UOPS_RETIRED.PACKED_DOUBLE_PS">SSEX_UOPS_RETIRED.PACKED_DOUBLE_PS</span></td>
-		<td>SIMD Packed-Double Uops retired (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="SSEX_UOPS_RETIRED.PACKED_SINGLE_PS">SSEX_UOPS_RETIRED.PACKED_SINGLE_PS</span></td>
-		<td>SIMD Packed-Single Uops retired (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="SSEX_UOPS_RETIRED.SCALAR_DOUBLE_PS">SSEX_UOPS_RETIRED.SCALAR_DOUBLE_PS</span></td>
-		<td>SIMD Scalar-Double Uops retired (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="SSEX_UOPS_RETIRED.SCALAR_SINGLE_PS">SSEX_UOPS_RETIRED.SCALAR_SINGLE_PS</span></td>
-		<td>SIMD Scalar-Single Uops retired (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="SSEX_UOPS_RETIRED.VECTOR_INTEGER_PS">SSEX_UOPS_RETIRED.VECTOR_INTEGER_PS</span></td>
-		<td>SIMD Vector Integer Uops retired (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_RETIRED.ACTIVE_CYCLES_PS">UOPS_RETIRED.ACTIVE_CYCLES_PS</span></td>
-		<td>Cycles Uops are being retired</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_RETIRED.ANY_PS">UOPS_RETIRED.ANY_PS</span></td>
-		<td>Uops retired (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_RETIRED.MACRO_FUSED_PS">UOPS_RETIRED.MACRO_FUSED_PS</span></td>
-		<td>Macro-fused Uops retired (Precise Event)</td>
-	</tr>
-	<tr>
-		<td><span id="UOPS_RETIRED.RETIRE_SLOTS_PS">UOPS_RETIRED.RETIRE_SLOTS_PS</span></td>
-		<td>Retirement slots used (Precise Event)</td>
-	</tr>
-	<tr>
 		<td><span id="UOPS_RETIRED.STALL_CYCLES_PS">UOPS_RETIRED.STALL_CYCLES_PS</span></td>
 		<td>Cycles Uops are not retiring (Precise Event)</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.TOTAL_CYCLES">UOPS_RETIRED.TOTAL_CYCLES</span></td>
+		<td>Total cycles using precise uop retired event (Precise Event)</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.TOTAL_CYCLES_PS">UOPS_RETIRED.TOTAL_CYCLES_PS</span></td>

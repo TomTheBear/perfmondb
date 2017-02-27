@@ -4,594 +4,106 @@
 <body>
 <h3>Intel&reg; microarchitecture code named Bonnel Events</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
 <li>Intel&reg; Atom&#8482 processor</li><p>
-<table class="table table-responsive">
+<table class="table table-responsive" style="table-layout:fixed;width:100%">
 	<tr>
 		<th>EventName</th>
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td><span id="STORE_FORWARDS.ANY">STORE_FORWARDS.ANY</span></td>
-		<td>All store forwards</td>
+		<td><span id="BACLEARS.ANY">BACLEARS.ANY</span></td>
+		<td>BACLEARS asserted.</td>
 	</tr>
 	<tr>
-		<td><span id="STORE_FORWARDS.GOOD">STORE_FORWARDS.GOOD</span></td>
-		<td>Good store forwards</td>
+		<td><span id="BOGUS_BR">BOGUS_BR</span></td>
+		<td>Bogus branches</td>
 	</tr>
 	<tr>
-		<td><span id="REISSUE.ANY">REISSUE.ANY</span></td>
-		<td>Micro-op reissues for any cause</td>
+		<td><span id="BR_INST_DECODED">BR_INST_DECODED</span></td>
+		<td>Branch instructions decoded</td>
 	</tr>
 	<tr>
-		<td><span id="REISSUE.ANY.AR">REISSUE.ANY.AR</span></td>
-		<td>Micro-op reissues for any cause (At Retirement)</td>
+		<td><span id="BR_INST_RETIRED.ANY">BR_INST_RETIRED.ANY</span></td>
+		<td>Retired branch instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.SPLIT">MISALIGN_MEM_REF.SPLIT</span></td>
-		<td>Memory references that cross an 8-byte boundary.</td>
+		<td><span id="BR_INST_RETIRED.ANY1">BR_INST_RETIRED.ANY1</span></td>
+		<td>Retired branch instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.LD_SPLIT">MISALIGN_MEM_REF.LD_SPLIT</span></td>
-		<td>Load splits</td>
+		<td><span id="BR_INST_RETIRED.MISPRED">BR_INST_RETIRED.MISPRED</span></td>
+		<td>Retired mispredicted branch instructions (precise event).</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.ST_SPLIT">MISALIGN_MEM_REF.ST_SPLIT</span></td>
-		<td>Store splits</td>
+		<td><span id="BR_INST_RETIRED.MISPRED.PS">BR_INST_RETIRED.MISPRED.PS</span></td>
+		<td>Retired mispredicted branch instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.SPLIT.AR">MISALIGN_MEM_REF.SPLIT.AR</span></td>
-		<td>Memory references that cross an 8-byte boundary (At Retirement)</td>
+		<td><span id="BR_INST_RETIRED.MISPRED_NOT_TAKEN">BR_INST_RETIRED.MISPRED_NOT_TAKEN</span></td>
+		<td>Retired branch instructions that were mispredicted not-taken.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.LD_SPLIT.AR">MISALIGN_MEM_REF.LD_SPLIT.AR</span></td>
-		<td>Load splits (At Retirement)</td>
+		<td><span id="BR_INST_RETIRED.MISPRED_TAKEN">BR_INST_RETIRED.MISPRED_TAKEN</span></td>
+		<td>Retired branch instructions that were mispredicted taken.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.ST_SPLIT.AR">MISALIGN_MEM_REF.ST_SPLIT.AR</span></td>
-		<td>Store splits (Ar Retirement)</td>
+		<td><span id="BR_INST_RETIRED.PRED_NOT_TAKEN">BR_INST_RETIRED.PRED_NOT_TAKEN</span></td>
+		<td>Retired branch instructions that were predicted not-taken.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.RMW_SPLIT">MISALIGN_MEM_REF.RMW_SPLIT</span></td>
-		<td>ld-op-st splits</td>
+		<td><span id="BR_INST_RETIRED.PRED_TAKEN">BR_INST_RETIRED.PRED_TAKEN</span></td>
+		<td>Retired branch instructions that were predicted taken.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.BUBBLE">MISALIGN_MEM_REF.BUBBLE</span></td>
-		<td>Nonzero segbase 1 bubble</td>
+		<td><span id="BR_INST_RETIRED.TAKEN">BR_INST_RETIRED.TAKEN</span></td>
+		<td>Retired taken branch instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.LD_BUBBLE">MISALIGN_MEM_REF.LD_BUBBLE</span></td>
-		<td>Nonzero segbase load 1 bubble</td>
+		<td><span id="BR_INST_TYPE_RETIRED.COND">BR_INST_TYPE_RETIRED.COND</span></td>
+		<td>All macro conditional branch instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.ST_BUBBLE">MISALIGN_MEM_REF.ST_BUBBLE</span></td>
-		<td>Nonzero segbase store 1 bubble</td>
+		<td><span id="BR_INST_TYPE_RETIRED.COND_TAKEN">BR_INST_TYPE_RETIRED.COND_TAKEN</span></td>
+		<td>Only taken macro conditional branch instructions</td>
 	</tr>
 	<tr>
-		<td><span id="MISALIGN_MEM_REF.RMW_BUBBLE">MISALIGN_MEM_REF.RMW_BUBBLE</span></td>
-		<td>Nonzero segbase ld-op-st 1 bubble</td>
+		<td><span id="BR_INST_TYPE_RETIRED.DIR_CALL">BR_INST_TYPE_RETIRED.DIR_CALL</span></td>
+		<td>All non-indirect calls</td>
 	</tr>
 	<tr>
-		<td><span id="SEGMENT_REG_LOADS.ANY">SEGMENT_REG_LOADS.ANY</span></td>
-		<td>Number of segment register loads.</td>
+		<td><span id="BR_INST_TYPE_RETIRED.IND">BR_INST_TYPE_RETIRED.IND</span></td>
+		<td>All indirect branches that are not calls.</td>
 	</tr>
 	<tr>
-		<td><span id="PREFETCH.PREFETCHT0">PREFETCH.PREFETCHT0</span></td>
-		<td>Streaming SIMD Extensions (SSE) PrefetchT0 instructions executed.</td>
+		<td><span id="BR_INST_TYPE_RETIRED.IND_CALL">BR_INST_TYPE_RETIRED.IND_CALL</span></td>
+		<td>All indirect calls, including both register and memory indirect.</td>
 	</tr>
 	<tr>
-		<td><span id="PREFETCH.PREFETCHT1">PREFETCH.PREFETCHT1</span></td>
-		<td>Streaming SIMD Extensions (SSE) PrefetchT1 instructions executed.</td>
+		<td><span id="BR_INST_TYPE_RETIRED.RET">BR_INST_TYPE_RETIRED.RET</span></td>
+		<td>All indirect branches that have a return mnemonic</td>
 	</tr>
 	<tr>
-		<td><span id="PREFETCH.PREFETCHT2">PREFETCH.PREFETCHT2</span></td>
-		<td>Streaming SIMD Extensions (SSE) PrefetchT2 instructions executed.</td>
+		<td><span id="BR_INST_TYPE_RETIRED.UNCOND">BR_INST_TYPE_RETIRED.UNCOND</span></td>
+		<td>All macro unconditional branch instructions, excluding calls and indirects</td>
 	</tr>
 	<tr>
-		<td><span id="PREFETCH.SW_L2">PREFETCH.SW_L2</span></td>
-		<td>Streaming SIMD Extensions (SSE) PrefetchT1 and PrefetchT2 instructions executed</td>
+		<td><span id="BR_MISSP_TYPE_RETIRED.COND">BR_MISSP_TYPE_RETIRED.COND</span></td>
+		<td>Mispredicted cond branch instructions retired</td>
 	</tr>
 	<tr>
-		<td><span id="PREFETCH.PREFETCHNTA">PREFETCH.PREFETCHNTA</span></td>
-		<td>Streaming SIMD Extensions (SSE) Prefetch NTA instructions executed</td>
+		<td><span id="BR_MISSP_TYPE_RETIRED.COND_TAKEN">BR_MISSP_TYPE_RETIRED.COND_TAKEN</span></td>
+		<td>Mispredicted and taken cond branch instructions retired</td>
 	</tr>
 	<tr>
-		<td><span id="PREFETCH.HW_PREFETCH">PREFETCH.HW_PREFETCH</span></td>
-		<td>L1 hardware prefetch request</td>
+		<td><span id="BR_MISSP_TYPE_RETIRED.IND">BR_MISSP_TYPE_RETIRED.IND</span></td>
+		<td>Mispredicted ind branches that are not calls</td>
 	</tr>
 	<tr>
-		<td><span id="PREFETCH.SOFTWARE_PREFETCH">PREFETCH.SOFTWARE_PREFETCH</span></td>
-		<td>Any Software prefetch</td>
+		<td><span id="BR_MISSP_TYPE_RETIRED.IND_CALL">BR_MISSP_TYPE_RETIRED.IND_CALL</span></td>
+		<td>Mispredicted indirect calls, including both register and memory indirect. </td>
 	</tr>
 	<tr>
-		<td><span id="PREFETCH.SOFTWARE_PREFETCH.AR">PREFETCH.SOFTWARE_PREFETCH.AR</span></td>
-		<td>Any Software prefetch</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_TLB_MISSES.DTLB_MISS">DATA_TLB_MISSES.DTLB_MISS</span></td>
-		<td>Memory accesses that missed the DTLB.</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_TLB_MISSES.DTLB_MISS_LD">DATA_TLB_MISSES.DTLB_MISS_LD</span></td>
-		<td>DTLB misses due to load operations.</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_TLB_MISSES.L0_DTLB_MISS_LD">DATA_TLB_MISSES.L0_DTLB_MISS_LD</span></td>
-		<td>L0 DTLB misses due to load operations.</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_TLB_MISSES.DTLB_MISS_ST">DATA_TLB_MISSES.DTLB_MISS_ST</span></td>
-		<td>DTLB misses due to store operations.</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_TLB_MISSES.L0_DTLB_MISS_ST">DATA_TLB_MISSES.L0_DTLB_MISS_ST</span></td>
-		<td>L0 DTLB misses due to store operations</td>
-	</tr>
-	<tr>
-		<td><span id="DISPATCH_BLOCKED.ANY">DISPATCH_BLOCKED.ANY</span></td>
-		<td>Memory cluster signals to block micro-op dispatch for any reason</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.WALKS">PAGE_WALKS.WALKS</span></td>
-		<td>Number of page-walks executed.</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.CYCLES">PAGE_WALKS.CYCLES</span></td>
-		<td>Duration of page-walks in core cycles</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.D_SIDE_WALKS">PAGE_WALKS.D_SIDE_WALKS</span></td>
-		<td>Number of D-side only page walks</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.D_SIDE_CYCLES">PAGE_WALKS.D_SIDE_CYCLES</span></td>
-		<td>Duration of D-side only page walks</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.I_SIDE_WALKS">PAGE_WALKS.I_SIDE_WALKS</span></td>
-		<td>Number of I-Side page walks</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.I_SIDE_CYCLES">PAGE_WALKS.I_SIDE_CYCLES</span></td>
-		<td>Duration of I-Side page walks</td>
-	</tr>
-	<tr>
-		<td><span id="X87_COMP_OPS_EXE.ANY.S">X87_COMP_OPS_EXE.ANY.S</span></td>
-		<td>Floating point computational micro-ops executed.</td>
-	</tr>
-	<tr>
-		<td><span id="X87_COMP_OPS_EXE.ANY.AR">X87_COMP_OPS_EXE.ANY.AR</span></td>
-		<td>Floating point computational micro-ops retired.</td>
-	</tr>
-	<tr>
-		<td><span id="X87_COMP_OPS_EXE.FXCH.S">X87_COMP_OPS_EXE.FXCH.S</span></td>
-		<td>FXCH uops executed.</td>
-	</tr>
-	<tr>
-		<td><span id="X87_COMP_OPS_EXE.FXCH.AR">X87_COMP_OPS_EXE.FXCH.AR</span></td>
-		<td>FXCH uops retired.</td>
-	</tr>
-	<tr>
-		<td><span id="FP_ASSIST.S">FP_ASSIST.S</span></td>
-		<td>Floating point assists.</td>
-	</tr>
-	<tr>
-		<td><span id="FP_ASSIST.AR">FP_ASSIST.AR</span></td>
-		<td>Floating point assists for retired operations.</td>
-	</tr>
-	<tr>
-		<td><span id="MUL.S">MUL.S</span></td>
-		<td>Multiply operations executed.</td>
-	</tr>
-	<tr>
-		<td><span id="MUL.AR">MUL.AR</span></td>
-		<td>Multiply operations retired</td>
-	</tr>
-	<tr>
-		<td><span id="DIV.S">DIV.S</span></td>
-		<td>Divide operations executed.</td>
-	</tr>
-	<tr>
-		<td><span id="DIV.AR">DIV.AR</span></td>
-		<td>Divide operations retired</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLES_DIV_BUSY">CYCLES_DIV_BUSY</span></td>
-		<td>Cycles the divider is busy.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_ADS.SELF">L2_ADS.SELF</span></td>
-		<td>Cycles L2 address bus is in use.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DBUS_BUSY.SELF">L2_DBUS_BUSY.SELF</span></td>
-		<td>Cycles the L2 cache data bus is busy.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DBUS_BUSY_RD.SELF">L2_DBUS_BUSY_RD.SELF</span></td>
-		<td>Cycles the L2 transfers data to the core.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LINES_IN.SELF.ANY">L2_LINES_IN.SELF.ANY</span></td>
-		<td>L2 cache misses.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LINES_IN.SELF.DEMAND">L2_LINES_IN.SELF.DEMAND</span></td>
-		<td>L2 cache misses.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LINES_IN.SELF.PREFETCH">L2_LINES_IN.SELF.PREFETCH</span></td>
-		<td>L2 cache misses.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_M_LINES_IN.SELF">L2_M_LINES_IN.SELF</span></td>
-		<td>L2 cache line modifications.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LINES_OUT.SELF.ANY">L2_LINES_OUT.SELF.ANY</span></td>
-		<td>L2 cache lines evicted.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LINES_OUT.SELF.DEMAND">L2_LINES_OUT.SELF.DEMAND</span></td>
-		<td>L2 cache lines evicted.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LINES_OUT.SELF.PREFETCH">L2_LINES_OUT.SELF.PREFETCH</span></td>
-		<td>L2 cache lines evicted.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_M_LINES_OUT.SELF.ANY">L2_M_LINES_OUT.SELF.ANY</span></td>
-		<td>Modified lines evicted from the L2 cache</td>
-	</tr>
-	<tr>
-		<td><span id="L2_M_LINES_OUT.SELF.DEMAND">L2_M_LINES_OUT.SELF.DEMAND</span></td>
-		<td>Modified lines evicted from the L2 cache</td>
-	</tr>
-	<tr>
-		<td><span id="L2_M_LINES_OUT.SELF.PREFETCH">L2_M_LINES_OUT.SELF.PREFETCH</span></td>
-		<td>Modified lines evicted from the L2 cache</td>
-	</tr>
-	<tr>
-		<td><span id="L2_IFETCH.SELF.E_STATE">L2_IFETCH.SELF.E_STATE</span></td>
-		<td>L2 cacheable instruction fetch requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_IFETCH.SELF.I_STATE">L2_IFETCH.SELF.I_STATE</span></td>
-		<td>L2 cacheable instruction fetch requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_IFETCH.SELF.M_STATE">L2_IFETCH.SELF.M_STATE</span></td>
-		<td>L2 cacheable instruction fetch requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_IFETCH.SELF.S_STATE">L2_IFETCH.SELF.S_STATE</span></td>
-		<td>L2 cacheable instruction fetch requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_IFETCH.SELF.MESI">L2_IFETCH.SELF.MESI</span></td>
-		<td>L2 cacheable instruction fetch requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.ANY.E_STATE">L2_LD.SELF.ANY.E_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.ANY.I_STATE">L2_LD.SELF.ANY.I_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.ANY.M_STATE">L2_LD.SELF.ANY.M_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.ANY.S_STATE">L2_LD.SELF.ANY.S_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.ANY.MESI">L2_LD.SELF.ANY.MESI</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.DEMAND.E_STATE">L2_LD.SELF.DEMAND.E_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.DEMAND.I_STATE">L2_LD.SELF.DEMAND.I_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.DEMAND.M_STATE">L2_LD.SELF.DEMAND.M_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.DEMAND.S_STATE">L2_LD.SELF.DEMAND.S_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.DEMAND.MESI">L2_LD.SELF.DEMAND.MESI</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.PREFETCH.E_STATE">L2_LD.SELF.PREFETCH.E_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.PREFETCH.I_STATE">L2_LD.SELF.PREFETCH.I_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.PREFETCH.M_STATE">L2_LD.SELF.PREFETCH.M_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.PREFETCH.S_STATE">L2_LD.SELF.PREFETCH.S_STATE</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD.SELF.PREFETCH.MESI">L2_LD.SELF.PREFETCH.MESI</span></td>
-		<td>L2 cache reads</td>
-	</tr>
-	<tr>
-		<td><span id="L2_ST.SELF.E_STATE">L2_ST.SELF.E_STATE</span></td>
-		<td>L2 store requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_ST.SELF.I_STATE">L2_ST.SELF.I_STATE</span></td>
-		<td>L2 store requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_ST.SELF.M_STATE">L2_ST.SELF.M_STATE</span></td>
-		<td>L2 store requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_ST.SELF.S_STATE">L2_ST.SELF.S_STATE</span></td>
-		<td>L2 store requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_ST.SELF.MESI">L2_ST.SELF.MESI</span></td>
-		<td>L2 store requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LOCK.SELF.E_STATE">L2_LOCK.SELF.E_STATE</span></td>
-		<td>L2 locked accesses</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LOCK.SELF.I_STATE">L2_LOCK.SELF.I_STATE</span></td>
-		<td>L2 locked accesses</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LOCK.SELF.M_STATE">L2_LOCK.SELF.M_STATE</span></td>
-		<td>L2 locked accesses</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LOCK.SELF.S_STATE">L2_LOCK.SELF.S_STATE</span></td>
-		<td>L2 locked accesses</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LOCK.SELF.MESI">L2_LOCK.SELF.MESI</span></td>
-		<td>L2 locked accesses</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_RQSTS.SELF.E_STATE">L2_DATA_RQSTS.SELF.E_STATE</span></td>
-		<td>All data requests from the L1 data cache</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_RQSTS.SELF.I_STATE">L2_DATA_RQSTS.SELF.I_STATE</span></td>
-		<td>All data requests from the L1 data cache</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_RQSTS.SELF.M_STATE">L2_DATA_RQSTS.SELF.M_STATE</span></td>
-		<td>All data requests from the L1 data cache</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_RQSTS.SELF.S_STATE">L2_DATA_RQSTS.SELF.S_STATE</span></td>
-		<td>All data requests from the L1 data cache</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_RQSTS.SELF.MESI">L2_DATA_RQSTS.SELF.MESI</span></td>
-		<td>All data requests from the L1 data cache</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD_IFETCH.SELF.E_STATE">L2_LD_IFETCH.SELF.E_STATE</span></td>
-		<td>All read requests from L1 instruction and data caches</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD_IFETCH.SELF.I_STATE">L2_LD_IFETCH.SELF.I_STATE</span></td>
-		<td>All read requests from L1 instruction and data caches</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD_IFETCH.SELF.M_STATE">L2_LD_IFETCH.SELF.M_STATE</span></td>
-		<td>All read requests from L1 instruction and data caches</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD_IFETCH.SELF.S_STATE">L2_LD_IFETCH.SELF.S_STATE</span></td>
-		<td>All read requests from L1 instruction and data caches</td>
-	</tr>
-	<tr>
-		<td><span id="L2_LD_IFETCH.SELF.MESI">L2_LD_IFETCH.SELF.MESI</span></td>
-		<td>All read requests from L1 instruction and data caches</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.ANY.E_STATE">L2_RQSTS.SELF.ANY.E_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.ANY.I_STATE">L2_RQSTS.SELF.ANY.I_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.ANY.M_STATE">L2_RQSTS.SELF.ANY.M_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.ANY.S_STATE">L2_RQSTS.SELF.ANY.S_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.ANY.MESI">L2_RQSTS.SELF.ANY.MESI</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.DEMAND.E_STATE">L2_RQSTS.SELF.DEMAND.E_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.DEMAND.M_STATE">L2_RQSTS.SELF.DEMAND.M_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.DEMAND.S_STATE">L2_RQSTS.SELF.DEMAND.S_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.PREFETCH.E_STATE">L2_RQSTS.SELF.PREFETCH.E_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.PREFETCH.I_STATE">L2_RQSTS.SELF.PREFETCH.I_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.PREFETCH.M_STATE">L2_RQSTS.SELF.PREFETCH.M_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.PREFETCH.S_STATE">L2_RQSTS.SELF.PREFETCH.S_STATE</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.PREFETCH.MESI">L2_RQSTS.SELF.PREFETCH.MESI</span></td>
-		<td>L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.DEMAND.I_STATE">L2_RQSTS.SELF.DEMAND.I_STATE</span></td>
-		<td>L2 cache demand requests from this core that missed the L2</td>
-	</tr>
-	<tr>
-		<td><span id="L2_RQSTS.SELF.DEMAND.MESI">L2_RQSTS.SELF.DEMAND.MESI</span></td>
-		<td>L2 cache demand requests from this core</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.ANY.E_STATE">L2_REJECT_BUSQ.SELF.ANY.E_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.ANY.I_STATE">L2_REJECT_BUSQ.SELF.ANY.I_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.ANY.M_STATE">L2_REJECT_BUSQ.SELF.ANY.M_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.ANY.S_STATE">L2_REJECT_BUSQ.SELF.ANY.S_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.ANY.MESI">L2_REJECT_BUSQ.SELF.ANY.MESI</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.E_STATE">L2_REJECT_BUSQ.SELF.DEMAND.E_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.I_STATE">L2_REJECT_BUSQ.SELF.DEMAND.I_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.M_STATE">L2_REJECT_BUSQ.SELF.DEMAND.M_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.S_STATE">L2_REJECT_BUSQ.SELF.DEMAND.S_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.MESI">L2_REJECT_BUSQ.SELF.DEMAND.MESI</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.E_STATE">L2_REJECT_BUSQ.SELF.PREFETCH.E_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.I_STATE">L2_REJECT_BUSQ.SELF.PREFETCH.I_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.M_STATE">L2_REJECT_BUSQ.SELF.PREFETCH.M_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.S_STATE">L2_REJECT_BUSQ.SELF.PREFETCH.S_STATE</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.MESI">L2_REJECT_BUSQ.SELF.PREFETCH.MESI</span></td>
-		<td>Rejected L2 cache requests</td>
-	</tr>
-	<tr>
-		<td><span id="L2_NO_REQ.SELF">L2_NO_REQ.SELF</span></td>
-		<td>Cycles no L2 cache requests are pending</td>
-	</tr>
-	<tr>
-		<td><span id="EIST_TRANS">EIST_TRANS</span></td>
-		<td>Number of Enhanced Intel SpeedStep(R) Technology (EIST) transitions</td>
-	</tr>
-	<tr>
-		<td><span id="THERMAL_TRIP">THERMAL_TRIP</span></td>
-		<td>Number of thermal trips</td>
-	</tr>
-	<tr>
-		<td><span id="CPU_CLK_UNHALTED.CORE_P">CPU_CLK_UNHALTED.CORE_P</span></td>
-		<td>Core cycles when core is not halted</td>
-	</tr>
-	<tr>
-		<td><span id="CPU_CLK_UNHALTED.BUS">CPU_CLK_UNHALTED.BUS</span></td>
-		<td>Bus cycles when core is not halted</td>
-	</tr>
-	<tr>
-		<td><span id="CPU_CLK_UNHALTED.CORE">CPU_CLK_UNHALTED.CORE</span></td>
-		<td>Core cycles when core is not halted</td>
-	</tr>
-	<tr>
-		<td><span id="CPU_CLK_UNHALTED.REF">CPU_CLK_UNHALTED.REF</span></td>
-		<td>Reference cycles when core is not halted.</td>
-	</tr>
-	<tr>
-		<td><span id="L1D_CACHE.LD">L1D_CACHE.LD</span></td>
-		<td>L1 Cacheable Data Reads</td>
-	</tr>
-	<tr>
-		<td><span id="L1D_CACHE.ST">L1D_CACHE.ST</span></td>
-		<td>L1 Cacheable Data Writes</td>
-	</tr>
-	<tr>
-		<td><span id="L1D_CACHE.ALL_REF">L1D_CACHE.ALL_REF</span></td>
-		<td>L1 Data reads and writes</td>
-	</tr>
-	<tr>
-		<td><span id="L1D_CACHE.ALL_CACHE_REF">L1D_CACHE.ALL_CACHE_REF</span></td>
-		<td>L1 Data Cacheable reads and writes</td>
-	</tr>
-	<tr>
-		<td><span id="L1D_CACHE.REPL">L1D_CACHE.REPL</span></td>
-		<td>L1 Data line replacements</td>
-	</tr>
-	<tr>
-		<td><span id="L1D_CACHE.REPLM">L1D_CACHE.REPLM</span></td>
-		<td>Modified cache lines allocated in the L1 data cache</td>
-	</tr>
-	<tr>
-		<td><span id="L1D_CACHE.EVICT">L1D_CACHE.EVICT</span></td>
-		<td>Modified cache lines evicted from the L1 data cache</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_REQUEST_OUTSTANDING.ALL_AGENTS">BUS_REQUEST_OUTSTANDING.ALL_AGENTS</span></td>
-		<td>Outstanding cacheable data read bus requests duration.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_REQUEST_OUTSTANDING.SELF">BUS_REQUEST_OUTSTANDING.SELF</span></td>
-		<td>Outstanding cacheable data read bus requests duration.</td>
+		<td><span id="BR_MISSP_TYPE_RETIRED.RETURN">BR_MISSP_TYPE_RETIRED.RETURN</span></td>
+		<td>Mispredicted return branches</td>
 	</tr>
 	<tr>
 		<td><span id="BUS_BNR_DRV.ALL_AGENTS">BUS_BNR_DRV.ALL_AGENTS</span></td>
@@ -602,152 +114,16 @@
 		<td>Number of Bus Not Ready signals asserted.</td>
 	</tr>
 	<tr>
+		<td><span id="BUS_DATA_RCV.SELF">BUS_DATA_RCV.SELF</span></td>
+		<td>Bus cycles while processor receives data.</td>
+	</tr>
+	<tr>
 		<td><span id="BUS_DRDY_CLOCKS.ALL_AGENTS">BUS_DRDY_CLOCKS.ALL_AGENTS</span></td>
 		<td>Bus cycles when data is sent on the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="BUS_DRDY_CLOCKS.THIS_AGENT">BUS_DRDY_CLOCKS.THIS_AGENT</span></td>
 		<td>Bus cycles when data is sent on the bus.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_LOCK_CLOCKS.ALL_AGENTS">BUS_LOCK_CLOCKS.ALL_AGENTS</span></td>
-		<td>Bus cycles when a LOCK signal is asserted.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_LOCK_CLOCKS.SELF">BUS_LOCK_CLOCKS.SELF</span></td>
-		<td>Bus cycles when a LOCK signal is asserted.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_DATA_RCV.SELF">BUS_DATA_RCV.SELF</span></td>
-		<td>Bus cycles while processor receives data.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_BRD.ALL_AGENTS">BUS_TRANS_BRD.ALL_AGENTS</span></td>
-		<td>Burst read bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_BRD.SELF">BUS_TRANS_BRD.SELF</span></td>
-		<td>Burst read bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_RFO.ALL_AGENTS">BUS_TRANS_RFO.ALL_AGENTS</span></td>
-		<td>RFO bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_RFO.SELF">BUS_TRANS_RFO.SELF</span></td>
-		<td>RFO bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_WB.ALL_AGENTS">BUS_TRANS_WB.ALL_AGENTS</span></td>
-		<td>Explicit writeback bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_WB.SELF">BUS_TRANS_WB.SELF</span></td>
-		<td>Explicit writeback bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_IFETCH.ALL_AGENTS">BUS_TRANS_IFETCH.ALL_AGENTS</span></td>
-		<td>Instruction-fetch bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_IFETCH.SELF">BUS_TRANS_IFETCH.SELF</span></td>
-		<td>Instruction-fetch bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_INVAL.ALL_AGENTS">BUS_TRANS_INVAL.ALL_AGENTS</span></td>
-		<td>Invalidate bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_INVAL.SELF">BUS_TRANS_INVAL.SELF</span></td>
-		<td>Invalidate bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_PWR.ALL_AGENTS">BUS_TRANS_PWR.ALL_AGENTS</span></td>
-		<td>Partial write bus transaction.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_PWR.SELF">BUS_TRANS_PWR.SELF</span></td>
-		<td>Partial write bus transaction.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_P.ALL_AGENTS">BUS_TRANS_P.ALL_AGENTS</span></td>
-		<td>Partial bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_P.SELF">BUS_TRANS_P.SELF</span></td>
-		<td>Partial bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_IO.ALL_AGENTS">BUS_TRANS_IO.ALL_AGENTS</span></td>
-		<td>IO bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_IO.SELF">BUS_TRANS_IO.SELF</span></td>
-		<td>IO bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_DEF.ALL_AGENTS">BUS_TRANS_DEF.ALL_AGENTS</span></td>
-		<td>Deferred bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_DEF.SELF">BUS_TRANS_DEF.SELF</span></td>
-		<td>Deferred bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_BURST.ALL_AGENTS">BUS_TRANS_BURST.ALL_AGENTS</span></td>
-		<td>Burst (full cache-line) bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_BURST.SELF">BUS_TRANS_BURST.SELF</span></td>
-		<td>Burst (full cache-line) bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_MEM.ALL_AGENTS">BUS_TRANS_MEM.ALL_AGENTS</span></td>
-		<td>Memory bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_MEM.SELF">BUS_TRANS_MEM.SELF</span></td>
-		<td>Memory bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_ANY.ALL_AGENTS">BUS_TRANS_ANY.ALL_AGENTS</span></td>
-		<td>All bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="BUS_TRANS_ANY.SELF">BUS_TRANS_ANY.SELF</span></td>
-		<td>All bus transactions.</td>
-	</tr>
-	<tr>
-		<td><span id="EXT_SNOOP.THIS_AGENT.ANY">EXT_SNOOP.THIS_AGENT.ANY</span></td>
-		<td>External snoops.</td>
-	</tr>
-	<tr>
-		<td><span id="EXT_SNOOP.THIS_AGENT.CLEAN">EXT_SNOOP.THIS_AGENT.CLEAN</span></td>
-		<td>External snoops.</td>
-	</tr>
-	<tr>
-		<td><span id="EXT_SNOOP.THIS_AGENT.HIT">EXT_SNOOP.THIS_AGENT.HIT</span></td>
-		<td>External snoops.</td>
-	</tr>
-	<tr>
-		<td><span id="EXT_SNOOP.THIS_AGENT.HITM">EXT_SNOOP.THIS_AGENT.HITM</span></td>
-		<td>External snoops.</td>
-	</tr>
-	<tr>
-		<td><span id="EXT_SNOOP.ALL_AGENTS.ANY">EXT_SNOOP.ALL_AGENTS.ANY</span></td>
-		<td>External snoops.</td>
-	</tr>
-	<tr>
-		<td><span id="EXT_SNOOP.ALL_AGENTS.CLEAN">EXT_SNOOP.ALL_AGENTS.CLEAN</span></td>
-		<td>External snoops.</td>
-	</tr>
-	<tr>
-		<td><span id="EXT_SNOOP.ALL_AGENTS.HIT">EXT_SNOOP.ALL_AGENTS.HIT</span></td>
-		<td>External snoops.</td>
-	</tr>
-	<tr>
-		<td><span id="EXT_SNOOP.ALL_AGENTS.HITM">EXT_SNOOP.ALL_AGENTS.HITM</span></td>
-		<td>External snoops.</td>
 	</tr>
 	<tr>
 		<td><span id="BUS_HIT_DRV.ALL_AGENTS">BUS_HIT_DRV.ALL_AGENTS</span></td>
@@ -766,20 +142,244 @@
 		<td>HITM signal asserted.</td>
 	</tr>
 	<tr>
+		<td><span id="BUS_IO_WAIT.SELF">BUS_IO_WAIT.SELF</span></td>
+		<td>IO requests waiting in the bus queue.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_LOCK_CLOCKS.ALL_AGENTS">BUS_LOCK_CLOCKS.ALL_AGENTS</span></td>
+		<td>Bus cycles when a LOCK signal is asserted.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_LOCK_CLOCKS.SELF">BUS_LOCK_CLOCKS.SELF</span></td>
+		<td>Bus cycles when a LOCK signal is asserted.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_REQUEST_OUTSTANDING.ALL_AGENTS">BUS_REQUEST_OUTSTANDING.ALL_AGENTS</span></td>
+		<td>Outstanding cacheable data read bus requests duration.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_REQUEST_OUTSTANDING.SELF">BUS_REQUEST_OUTSTANDING.SELF</span></td>
+		<td>Outstanding cacheable data read bus requests duration.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_ANY.ALL_AGENTS">BUS_TRANS_ANY.ALL_AGENTS</span></td>
+		<td>All bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_ANY.SELF">BUS_TRANS_ANY.SELF</span></td>
+		<td>All bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_BRD.ALL_AGENTS">BUS_TRANS_BRD.ALL_AGENTS</span></td>
+		<td>Burst read bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_BRD.SELF">BUS_TRANS_BRD.SELF</span></td>
+		<td>Burst read bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_BURST.ALL_AGENTS">BUS_TRANS_BURST.ALL_AGENTS</span></td>
+		<td>Burst (full cache-line) bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_BURST.SELF">BUS_TRANS_BURST.SELF</span></td>
+		<td>Burst (full cache-line) bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_DEF.ALL_AGENTS">BUS_TRANS_DEF.ALL_AGENTS</span></td>
+		<td>Deferred bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_DEF.SELF">BUS_TRANS_DEF.SELF</span></td>
+		<td>Deferred bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_IFETCH.ALL_AGENTS">BUS_TRANS_IFETCH.ALL_AGENTS</span></td>
+		<td>Instruction-fetch bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_IFETCH.SELF">BUS_TRANS_IFETCH.SELF</span></td>
+		<td>Instruction-fetch bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_INVAL.ALL_AGENTS">BUS_TRANS_INVAL.ALL_AGENTS</span></td>
+		<td>Invalidate bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_INVAL.SELF">BUS_TRANS_INVAL.SELF</span></td>
+		<td>Invalidate bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_IO.ALL_AGENTS">BUS_TRANS_IO.ALL_AGENTS</span></td>
+		<td>IO bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_IO.SELF">BUS_TRANS_IO.SELF</span></td>
+		<td>IO bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_MEM.ALL_AGENTS">BUS_TRANS_MEM.ALL_AGENTS</span></td>
+		<td>Memory bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_MEM.SELF">BUS_TRANS_MEM.SELF</span></td>
+		<td>Memory bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_P.ALL_AGENTS">BUS_TRANS_P.ALL_AGENTS</span></td>
+		<td>Partial bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_P.SELF">BUS_TRANS_P.SELF</span></td>
+		<td>Partial bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_PWR.ALL_AGENTS">BUS_TRANS_PWR.ALL_AGENTS</span></td>
+		<td>Partial write bus transaction.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_PWR.SELF">BUS_TRANS_PWR.SELF</span></td>
+		<td>Partial write bus transaction.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_RFO.ALL_AGENTS">BUS_TRANS_RFO.ALL_AGENTS</span></td>
+		<td>RFO bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_RFO.SELF">BUS_TRANS_RFO.SELF</span></td>
+		<td>RFO bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_WB.ALL_AGENTS">BUS_TRANS_WB.ALL_AGENTS</span></td>
+		<td>Explicit writeback bus transactions.</td>
+	</tr>
+	<tr>
+		<td><span id="BUS_TRANS_WB.SELF">BUS_TRANS_WB.SELF</span></td>
+		<td>Explicit writeback bus transactions.</td>
+	</tr>
+	<tr>
 		<td><span id="BUSQ_EMPTY.SELF">BUSQ_EMPTY.SELF</span></td>
 		<td>Bus queue is empty.</td>
 	</tr>
 	<tr>
-		<td><span id="SNOOP_STALL_DRV.ALL_AGENTS">SNOOP_STALL_DRV.ALL_AGENTS</span></td>
-		<td>Bus stalled for snoops.</td>
+		<td><span id="CPU_CLK_UNHALTED.BUS">CPU_CLK_UNHALTED.BUS</span></td>
+		<td>Bus cycles when core is not halted</td>
 	</tr>
 	<tr>
-		<td><span id="SNOOP_STALL_DRV.SELF">SNOOP_STALL_DRV.SELF</span></td>
-		<td>Bus stalled for snoops.</td>
+		<td><span id="CPU_CLK_UNHALTED.CORE">CPU_CLK_UNHALTED.CORE</span></td>
+		<td>Core cycles when core is not halted</td>
 	</tr>
 	<tr>
-		<td><span id="BUS_IO_WAIT.SELF">BUS_IO_WAIT.SELF</span></td>
-		<td>IO requests waiting in the bus queue.</td>
+		<td><span id="CPU_CLK_UNHALTED.CORE_P">CPU_CLK_UNHALTED.CORE_P</span></td>
+		<td>Core cycles when core is not halted</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED.REF">CPU_CLK_UNHALTED.REF</span></td>
+		<td>Reference cycles when core is not halted.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLES_DIV_BUSY">CYCLES_DIV_BUSY</span></td>
+		<td>Cycles the divider is busy.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLES_ICACHE_MEM_STALLED.ICACHE_MEM_STALLED">CYCLES_ICACHE_MEM_STALLED.ICACHE_MEM_STALLED</span></td>
+		<td>Cycles during which instruction fetches are  stalled.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLES_INT_MASKED.CYCLES_INT_MASKED">CYCLES_INT_MASKED.CYCLES_INT_MASKED</span></td>
+		<td>Cycles during which interrupts are disabled.</td>
+	</tr>
+	<tr>
+		<td><span id="CYCLES_INT_MASKED.CYCLES_INT_PENDING_AND_MASKED">CYCLES_INT_MASKED.CYCLES_INT_PENDING_AND_MASKED</span></td>
+		<td>Cycles during which interrupts are pending and disabled.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_TLB_MISSES.DTLB_MISS">DATA_TLB_MISSES.DTLB_MISS</span></td>
+		<td>Memory accesses that missed the DTLB.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_TLB_MISSES.DTLB_MISS_LD">DATA_TLB_MISSES.DTLB_MISS_LD</span></td>
+		<td>DTLB misses due to load operations.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_TLB_MISSES.DTLB_MISS_ST">DATA_TLB_MISSES.DTLB_MISS_ST</span></td>
+		<td>DTLB misses due to store operations.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_TLB_MISSES.L0_DTLB_MISS_LD">DATA_TLB_MISSES.L0_DTLB_MISS_LD</span></td>
+		<td>L0 DTLB misses due to load operations.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_TLB_MISSES.L0_DTLB_MISS_ST">DATA_TLB_MISSES.L0_DTLB_MISS_ST</span></td>
+		<td>L0 DTLB misses due to store operations</td>
+	</tr>
+	<tr>
+		<td><span id="DECODE_STALL.IQ_FULL">DECODE_STALL.IQ_FULL</span></td>
+		<td>Decode stall due to IQ full</td>
+	</tr>
+	<tr>
+		<td><span id="DECODE_STALL.PFB_EMPTY">DECODE_STALL.PFB_EMPTY</span></td>
+		<td>Decode stall due to PFB empty</td>
+	</tr>
+	<tr>
+		<td><span id="DISPATCH_BLOCKED.ANY">DISPATCH_BLOCKED.ANY</span></td>
+		<td>Memory cluster signals to block micro-op dispatch for any reason</td>
+	</tr>
+	<tr>
+		<td><span id="DIV.AR">DIV.AR</span></td>
+		<td>Divide operations retired</td>
+	</tr>
+	<tr>
+		<td><span id="DIV.S">DIV.S</span></td>
+		<td>Divide operations executed.</td>
+	</tr>
+	<tr>
+		<td><span id="EIST_TRANS">EIST_TRANS</span></td>
+		<td>Number of Enhanced Intel SpeedStep(R) Technology (EIST) transitions</td>
+	</tr>
+	<tr>
+		<td><span id="EXT_SNOOP.ALL_AGENTS.ANY">EXT_SNOOP.ALL_AGENTS.ANY</span></td>
+		<td>External snoops.</td>
+	</tr>
+	<tr>
+		<td><span id="EXT_SNOOP.ALL_AGENTS.CLEAN">EXT_SNOOP.ALL_AGENTS.CLEAN</span></td>
+		<td>External snoops.</td>
+	</tr>
+	<tr>
+		<td><span id="EXT_SNOOP.ALL_AGENTS.HIT">EXT_SNOOP.ALL_AGENTS.HIT</span></td>
+		<td>External snoops.</td>
+	</tr>
+	<tr>
+		<td><span id="EXT_SNOOP.ALL_AGENTS.HITM">EXT_SNOOP.ALL_AGENTS.HITM</span></td>
+		<td>External snoops.</td>
+	</tr>
+	<tr>
+		<td><span id="EXT_SNOOP.THIS_AGENT.ANY">EXT_SNOOP.THIS_AGENT.ANY</span></td>
+		<td>External snoops.</td>
+	</tr>
+	<tr>
+		<td><span id="EXT_SNOOP.THIS_AGENT.CLEAN">EXT_SNOOP.THIS_AGENT.CLEAN</span></td>
+		<td>External snoops.</td>
+	</tr>
+	<tr>
+		<td><span id="EXT_SNOOP.THIS_AGENT.HIT">EXT_SNOOP.THIS_AGENT.HIT</span></td>
+		<td>External snoops.</td>
+	</tr>
+	<tr>
+		<td><span id="EXT_SNOOP.THIS_AGENT.HITM">EXT_SNOOP.THIS_AGENT.HITM</span></td>
+		<td>External snoops.</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.AR">FP_ASSIST.AR</span></td>
+		<td>Floating point assists for retired operations.</td>
+	</tr>
+	<tr>
+		<td><span id="FP_ASSIST.S">FP_ASSIST.S</span></td>
+		<td>Floating point assists.</td>
+	</tr>
+	<tr>
+		<td><span id="HW_INT_RCV">HW_INT_RCV</span></td>
+		<td>Hardware interrupts received.</td>
 	</tr>
 	<tr>
 		<td><span id="ICACHE.ACCESSES">ICACHE.ACCESSES</span></td>
@@ -794,256 +394,412 @@
 		<td>Icache miss</td>
 	</tr>
 	<tr>
-		<td><span id="ITLB.HIT">ITLB.HIT</span></td>
-		<td>ITLB hits.</td>
-	</tr>
-	<tr>
-		<td><span id="ITLB.FLUSH">ITLB.FLUSH</span></td>
-		<td>ITLB flushes.</td>
-	</tr>
-	<tr>
-		<td><span id="ITLB.MISSES">ITLB.MISSES</span></td>
-		<td>ITLB misses.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLES_ICACHE_MEM_STALLED.ICACHE_MEM_STALLED">CYCLES_ICACHE_MEM_STALLED.ICACHE_MEM_STALLED</span></td>
-		<td>Cycles during which instruction fetches are  stalled.</td>
-	</tr>
-	<tr>
-		<td><span id="DECODE_STALL.PFB_EMPTY">DECODE_STALL.PFB_EMPTY</span></td>
-		<td>Decode stall due to PFB empty</td>
-	</tr>
-	<tr>
-		<td><span id="DECODE_STALL.IQ_FULL">DECODE_STALL.IQ_FULL</span></td>
-		<td>Decode stall due to IQ full</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_TYPE_RETIRED.COND">BR_INST_TYPE_RETIRED.COND</span></td>
-		<td>All macro conditional branch instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_TYPE_RETIRED.UNCOND">BR_INST_TYPE_RETIRED.UNCOND</span></td>
-		<td>All macro unconditional branch instructions, excluding calls and indirects</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_TYPE_RETIRED.IND">BR_INST_TYPE_RETIRED.IND</span></td>
-		<td>All indirect branches that are not calls.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_TYPE_RETIRED.RET">BR_INST_TYPE_RETIRED.RET</span></td>
-		<td>All indirect branches that have a return mnemonic</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_TYPE_RETIRED.DIR_CALL">BR_INST_TYPE_RETIRED.DIR_CALL</span></td>
-		<td>All non-indirect calls</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_TYPE_RETIRED.IND_CALL">BR_INST_TYPE_RETIRED.IND_CALL</span></td>
-		<td>All indirect calls, including both register and memory indirect.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_TYPE_RETIRED.COND_TAKEN">BR_INST_TYPE_RETIRED.COND_TAKEN</span></td>
-		<td>Only taken macro conditional branch instructions</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISSP_TYPE_RETIRED.COND">BR_MISSP_TYPE_RETIRED.COND</span></td>
-		<td>Mispredicted cond branch instructions retired</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISSP_TYPE_RETIRED.IND">BR_MISSP_TYPE_RETIRED.IND</span></td>
-		<td>Mispredicted ind branches that are not calls</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISSP_TYPE_RETIRED.RETURN">BR_MISSP_TYPE_RETIRED.RETURN</span></td>
-		<td>Mispredicted return branches</td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISSP_TYPE_RETIRED.IND_CALL">BR_MISSP_TYPE_RETIRED.IND_CALL</span></td>
-		<td>Mispredicted indirect calls, including both register and memory indirect. </td>
-	</tr>
-	<tr>
-		<td><span id="BR_MISSP_TYPE_RETIRED.COND_TAKEN">BR_MISSP_TYPE_RETIRED.COND_TAKEN</span></td>
-		<td>Mispredicted and taken cond branch instructions retired</td>
-	</tr>
-	<tr>
-		<td><span id="MACRO_INSTS.NON_CISC_DECODED">MACRO_INSTS.NON_CISC_DECODED</span></td>
-		<td>Non-CISC nacro instructions decoded</td>
-	</tr>
-	<tr>
-		<td><span id="MACRO_INSTS.CISC_DECODED">MACRO_INSTS.CISC_DECODED</span></td>
-		<td>CISC macro instructions decoded</td>
-	</tr>
-	<tr>
-		<td><span id="MACRO_INSTS.ALL_DECODED">MACRO_INSTS.ALL_DECODED</span></td>
-		<td>All Instructions decoded</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOPS_EXEC.S">SIMD_UOPS_EXEC.S</span></td>
-		<td>SIMD micro-ops executed (excluding stores).</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOPS_EXEC.AR">SIMD_UOPS_EXEC.AR</span></td>
-		<td>SIMD micro-ops retired (excluding stores).</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_SAT_UOP_EXEC.S">SIMD_SAT_UOP_EXEC.S</span></td>
-		<td>SIMD saturated arithmetic micro-ops executed.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_SAT_UOP_EXEC.AR">SIMD_SAT_UOP_EXEC.AR</span></td>
-		<td>SIMD saturated arithmetic micro-ops retired.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.MUL.S">SIMD_UOP_TYPE_EXEC.MUL.S</span></td>
-		<td>SIMD packed multiply micro-ops executed</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.MUL.AR">SIMD_UOP_TYPE_EXEC.MUL.AR</span></td>
-		<td>SIMD packed multiply micro-ops retired</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.SHIFT.S">SIMD_UOP_TYPE_EXEC.SHIFT.S</span></td>
-		<td>SIMD packed shift micro-ops executed</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.SHIFT.AR">SIMD_UOP_TYPE_EXEC.SHIFT.AR</span></td>
-		<td>SIMD packed shift micro-ops retired</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.PACK.S">SIMD_UOP_TYPE_EXEC.PACK.S</span></td>
-		<td>SIMD packed micro-ops executed</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.PACK.AR">SIMD_UOP_TYPE_EXEC.PACK.AR</span></td>
-		<td>SIMD packed micro-ops retired</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.UNPACK.S">SIMD_UOP_TYPE_EXEC.UNPACK.S</span></td>
-		<td>SIMD unpacked micro-ops executed</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.UNPACK.AR">SIMD_UOP_TYPE_EXEC.UNPACK.AR</span></td>
-		<td>SIMD unpacked micro-ops retired</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.LOGICAL.S">SIMD_UOP_TYPE_EXEC.LOGICAL.S</span></td>
-		<td>SIMD packed logical micro-ops executed</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.LOGICAL.AR">SIMD_UOP_TYPE_EXEC.LOGICAL.AR</span></td>
-		<td>SIMD packed logical micro-ops retired</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.ARITHMETIC.S">SIMD_UOP_TYPE_EXEC.ARITHMETIC.S</span></td>
-		<td>SIMD packed arithmetic micro-ops executed</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_UOP_TYPE_EXEC.ARITHMETIC.AR">SIMD_UOP_TYPE_EXEC.ARITHMETIC.AR</span></td>
-		<td>SIMD packed arithmetic micro-ops retired</td>
+		<td><span id="INST_RETIRED.ANY">INST_RETIRED.ANY</span></td>
+		<td>Instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="INST_RETIRED.ANY_P">INST_RETIRED.ANY_P</span></td>
 		<td>Instructions retired (precise event).</td>
 	</tr>
 	<tr>
-		<td><span id="INST_RETIRED.ANY">INST_RETIRED.ANY</span></td>
-		<td>Instructions retired.</td>
+		<td><span id="ITLB.FLUSH">ITLB.FLUSH</span></td>
+		<td>ITLB flushes.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.ANY">UOPS_RETIRED.ANY</span></td>
-		<td>Micro-ops retired.</td>
+		<td><span id="ITLB.HIT">ITLB.HIT</span></td>
+		<td>ITLB hits.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.STALLED_CYCLES">UOPS_RETIRED.STALLED_CYCLES</span></td>
-		<td>Cycles no micro-ops retired.</td>
+		<td><span id="ITLB.MISSES">ITLB.MISSES</span></td>
+		<td>ITLB misses.</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS_RETIRED.STALLS">UOPS_RETIRED.STALLS</span></td>
-		<td>Periods no micro-ops retired.</td>
+		<td><span id="L1D_CACHE.ALL_CACHE_REF">L1D_CACHE.ALL_CACHE_REF</span></td>
+		<td>L1 Data Cacheable reads and writes</td>
 	</tr>
 	<tr>
-		<td><span id="UOPS.MS_CYCLES">UOPS.MS_CYCLES</span></td>
-		<td>This event counts the cycles where 1 or more uops are issued by the micro-sequencer (MS), including microcode assists and inserted flows, and written to the IQ. </td>
+		<td><span id="L1D_CACHE.ALL_REF">L1D_CACHE.ALL_REF</span></td>
+		<td>L1 Data reads and writes</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_CACHE.EVICT">L1D_CACHE.EVICT</span></td>
+		<td>Modified cache lines evicted from the L1 data cache</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_CACHE.LD">L1D_CACHE.LD</span></td>
+		<td>L1 Cacheable Data Reads</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_CACHE.REPL">L1D_CACHE.REPL</span></td>
+		<td>L1 Data line replacements</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_CACHE.REPLM">L1D_CACHE.REPLM</span></td>
+		<td>Modified cache lines allocated in the L1 data cache</td>
+	</tr>
+	<tr>
+		<td><span id="L1D_CACHE.ST">L1D_CACHE.ST</span></td>
+		<td>L1 Cacheable Data Writes</td>
+	</tr>
+	<tr>
+		<td><span id="L2_ADS.SELF">L2_ADS.SELF</span></td>
+		<td>Cycles L2 address bus is in use.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.SELF.E_STATE">L2_DATA_RQSTS.SELF.E_STATE</span></td>
+		<td>All data requests from the L1 data cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.SELF.I_STATE">L2_DATA_RQSTS.SELF.I_STATE</span></td>
+		<td>All data requests from the L1 data cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.SELF.M_STATE">L2_DATA_RQSTS.SELF.M_STATE</span></td>
+		<td>All data requests from the L1 data cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.SELF.MESI">L2_DATA_RQSTS.SELF.MESI</span></td>
+		<td>All data requests from the L1 data cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_RQSTS.SELF.S_STATE">L2_DATA_RQSTS.SELF.S_STATE</span></td>
+		<td>All data requests from the L1 data cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DBUS_BUSY.SELF">L2_DBUS_BUSY.SELF</span></td>
+		<td>Cycles the L2 cache data bus is busy.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DBUS_BUSY_RD.SELF">L2_DBUS_BUSY_RD.SELF</span></td>
+		<td>Cycles the L2 transfers data to the core.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_IFETCH.SELF.E_STATE">L2_IFETCH.SELF.E_STATE</span></td>
+		<td>L2 cacheable instruction fetch requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_IFETCH.SELF.I_STATE">L2_IFETCH.SELF.I_STATE</span></td>
+		<td>L2 cacheable instruction fetch requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_IFETCH.SELF.M_STATE">L2_IFETCH.SELF.M_STATE</span></td>
+		<td>L2 cacheable instruction fetch requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_IFETCH.SELF.MESI">L2_IFETCH.SELF.MESI</span></td>
+		<td>L2 cacheable instruction fetch requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_IFETCH.SELF.S_STATE">L2_IFETCH.SELF.S_STATE</span></td>
+		<td>L2 cacheable instruction fetch requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.ANY.E_STATE">L2_LD.SELF.ANY.E_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.ANY.I_STATE">L2_LD.SELF.ANY.I_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.ANY.M_STATE">L2_LD.SELF.ANY.M_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.ANY.MESI">L2_LD.SELF.ANY.MESI</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.ANY.S_STATE">L2_LD.SELF.ANY.S_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.DEMAND.E_STATE">L2_LD.SELF.DEMAND.E_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.DEMAND.I_STATE">L2_LD.SELF.DEMAND.I_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.DEMAND.M_STATE">L2_LD.SELF.DEMAND.M_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.DEMAND.MESI">L2_LD.SELF.DEMAND.MESI</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.DEMAND.S_STATE">L2_LD.SELF.DEMAND.S_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.PREFETCH.E_STATE">L2_LD.SELF.PREFETCH.E_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.PREFETCH.I_STATE">L2_LD.SELF.PREFETCH.I_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.PREFETCH.M_STATE">L2_LD.SELF.PREFETCH.M_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.PREFETCH.MESI">L2_LD.SELF.PREFETCH.MESI</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD.SELF.PREFETCH.S_STATE">L2_LD.SELF.PREFETCH.S_STATE</span></td>
+		<td>L2 cache reads</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD_IFETCH.SELF.E_STATE">L2_LD_IFETCH.SELF.E_STATE</span></td>
+		<td>All read requests from L1 instruction and data caches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD_IFETCH.SELF.I_STATE">L2_LD_IFETCH.SELF.I_STATE</span></td>
+		<td>All read requests from L1 instruction and data caches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD_IFETCH.SELF.M_STATE">L2_LD_IFETCH.SELF.M_STATE</span></td>
+		<td>All read requests from L1 instruction and data caches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD_IFETCH.SELF.MESI">L2_LD_IFETCH.SELF.MESI</span></td>
+		<td>All read requests from L1 instruction and data caches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LD_IFETCH.SELF.S_STATE">L2_LD_IFETCH.SELF.S_STATE</span></td>
+		<td>All read requests from L1 instruction and data caches</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_IN.SELF.ANY">L2_LINES_IN.SELF.ANY</span></td>
+		<td>L2 cache misses.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_IN.SELF.DEMAND">L2_LINES_IN.SELF.DEMAND</span></td>
+		<td>L2 cache misses.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_IN.SELF.PREFETCH">L2_LINES_IN.SELF.PREFETCH</span></td>
+		<td>L2 cache misses.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_OUT.SELF.ANY">L2_LINES_OUT.SELF.ANY</span></td>
+		<td>L2 cache lines evicted.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_OUT.SELF.DEMAND">L2_LINES_OUT.SELF.DEMAND</span></td>
+		<td>L2 cache lines evicted.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LINES_OUT.SELF.PREFETCH">L2_LINES_OUT.SELF.PREFETCH</span></td>
+		<td>L2 cache lines evicted.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LOCK.SELF.E_STATE">L2_LOCK.SELF.E_STATE</span></td>
+		<td>L2 locked accesses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LOCK.SELF.I_STATE">L2_LOCK.SELF.I_STATE</span></td>
+		<td>L2 locked accesses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LOCK.SELF.M_STATE">L2_LOCK.SELF.M_STATE</span></td>
+		<td>L2 locked accesses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LOCK.SELF.MESI">L2_LOCK.SELF.MESI</span></td>
+		<td>L2 locked accesses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_LOCK.SELF.S_STATE">L2_LOCK.SELF.S_STATE</span></td>
+		<td>L2 locked accesses</td>
+	</tr>
+	<tr>
+		<td><span id="L2_M_LINES_IN.SELF">L2_M_LINES_IN.SELF</span></td>
+		<td>L2 cache line modifications.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_M_LINES_OUT.SELF.ANY">L2_M_LINES_OUT.SELF.ANY</span></td>
+		<td>Modified lines evicted from the L2 cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_M_LINES_OUT.SELF.DEMAND">L2_M_LINES_OUT.SELF.DEMAND</span></td>
+		<td>Modified lines evicted from the L2 cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_M_LINES_OUT.SELF.PREFETCH">L2_M_LINES_OUT.SELF.PREFETCH</span></td>
+		<td>Modified lines evicted from the L2 cache</td>
+	</tr>
+	<tr>
+		<td><span id="L2_NO_REQ.SELF">L2_NO_REQ.SELF</span></td>
+		<td>Cycles no L2 cache requests are pending</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.ANY.E_STATE">L2_REJECT_BUSQ.SELF.ANY.E_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.ANY.I_STATE">L2_REJECT_BUSQ.SELF.ANY.I_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.ANY.M_STATE">L2_REJECT_BUSQ.SELF.ANY.M_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.ANY.MESI">L2_REJECT_BUSQ.SELF.ANY.MESI</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.ANY.S_STATE">L2_REJECT_BUSQ.SELF.ANY.S_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.E_STATE">L2_REJECT_BUSQ.SELF.DEMAND.E_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.I_STATE">L2_REJECT_BUSQ.SELF.DEMAND.I_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.M_STATE">L2_REJECT_BUSQ.SELF.DEMAND.M_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.MESI">L2_REJECT_BUSQ.SELF.DEMAND.MESI</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.DEMAND.S_STATE">L2_REJECT_BUSQ.SELF.DEMAND.S_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.E_STATE">L2_REJECT_BUSQ.SELF.PREFETCH.E_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.I_STATE">L2_REJECT_BUSQ.SELF.PREFETCH.I_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.M_STATE">L2_REJECT_BUSQ.SELF.PREFETCH.M_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.MESI">L2_REJECT_BUSQ.SELF.PREFETCH.MESI</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_REJECT_BUSQ.SELF.PREFETCH.S_STATE">L2_REJECT_BUSQ.SELF.PREFETCH.S_STATE</span></td>
+		<td>Rejected L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.ANY.E_STATE">L2_RQSTS.SELF.ANY.E_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.ANY.I_STATE">L2_RQSTS.SELF.ANY.I_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.ANY.M_STATE">L2_RQSTS.SELF.ANY.M_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.ANY.MESI">L2_RQSTS.SELF.ANY.MESI</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.ANY.S_STATE">L2_RQSTS.SELF.ANY.S_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.DEMAND.E_STATE">L2_RQSTS.SELF.DEMAND.E_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.DEMAND.I_STATE">L2_RQSTS.SELF.DEMAND.I_STATE</span></td>
+		<td>L2 cache demand requests from this core that missed the L2</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.DEMAND.M_STATE">L2_RQSTS.SELF.DEMAND.M_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.DEMAND.MESI">L2_RQSTS.SELF.DEMAND.MESI</span></td>
+		<td>L2 cache demand requests from this core</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.DEMAND.S_STATE">L2_RQSTS.SELF.DEMAND.S_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.PREFETCH.E_STATE">L2_RQSTS.SELF.PREFETCH.E_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.PREFETCH.I_STATE">L2_RQSTS.SELF.PREFETCH.I_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.PREFETCH.M_STATE">L2_RQSTS.SELF.PREFETCH.M_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.PREFETCH.MESI">L2_RQSTS.SELF.PREFETCH.MESI</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_RQSTS.SELF.PREFETCH.S_STATE">L2_RQSTS.SELF.PREFETCH.S_STATE</span></td>
+		<td>L2 cache requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_ST.SELF.E_STATE">L2_ST.SELF.E_STATE</span></td>
+		<td>L2 store requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_ST.SELF.I_STATE">L2_ST.SELF.I_STATE</span></td>
+		<td>L2 store requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_ST.SELF.M_STATE">L2_ST.SELF.M_STATE</span></td>
+		<td>L2 store requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_ST.SELF.MESI">L2_ST.SELF.MESI</span></td>
+		<td>L2 store requests</td>
+	</tr>
+	<tr>
+		<td><span id="L2_ST.SELF.S_STATE">L2_ST.SELF.S_STATE</span></td>
+		<td>L2 store requests</td>
 	</tr>
 	<tr>
 		<td><span id="MACHINE_CLEARS.SMC">MACHINE_CLEARS.SMC</span></td>
 		<td>Self-Modifying Code detected.</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.ANY">BR_INST_RETIRED.ANY</span></td>
-		<td>Retired branch instructions.</td>
+		<td><span id="MACRO_INSTS.ALL_DECODED">MACRO_INSTS.ALL_DECODED</span></td>
+		<td>All Instructions decoded</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.PRED_NOT_TAKEN">BR_INST_RETIRED.PRED_NOT_TAKEN</span></td>
-		<td>Retired branch instructions that were predicted not-taken.</td>
+		<td><span id="MACRO_INSTS.CISC_DECODED">MACRO_INSTS.CISC_DECODED</span></td>
+		<td>CISC macro instructions decoded</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.MISPRED_NOT_TAKEN">BR_INST_RETIRED.MISPRED_NOT_TAKEN</span></td>
-		<td>Retired branch instructions that were mispredicted not-taken.</td>
+		<td><span id="MACRO_INSTS.NON_CISC_DECODED">MACRO_INSTS.NON_CISC_DECODED</span></td>
+		<td>Non-CISC nacro instructions decoded</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.PRED_TAKEN">BR_INST_RETIRED.PRED_TAKEN</span></td>
-		<td>Retired branch instructions that were predicted taken.</td>
+		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS">MEM_LOAD_RETIRED.DTLB_MISS</span></td>
+		<td>Retired loads that miss the DTLB (precise event).</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_RETIRED.MISPRED_TAKEN">BR_INST_RETIRED.MISPRED_TAKEN</span></td>
-		<td>Retired branch instructions that were mispredicted taken.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_RETIRED.MISPRED.PS">BR_INST_RETIRED.MISPRED.PS</span></td>
-		<td>Retired mispredicted branch instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_RETIRED.TAKEN">BR_INST_RETIRED.TAKEN</span></td>
-		<td>Retired taken branch instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_RETIRED.ANY1">BR_INST_RETIRED.ANY1</span></td>
-		<td>Retired branch instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="BR_INST_RETIRED.MISPRED">BR_INST_RETIRED.MISPRED</span></td>
-		<td>Retired mispredicted branch instructions (precise event).</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLES_INT_MASKED.CYCLES_INT_MASKED">CYCLES_INT_MASKED.CYCLES_INT_MASKED</span></td>
-		<td>Cycles during which interrupts are disabled.</td>
-	</tr>
-	<tr>
-		<td><span id="CYCLES_INT_MASKED.CYCLES_INT_PENDING_AND_MASKED">CYCLES_INT_MASKED.CYCLES_INT_PENDING_AND_MASKED</span></td>
-		<td>Cycles during which interrupts are pending and disabled.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_INST_RETIRED.PACKED_SINGLE">SIMD_INST_RETIRED.PACKED_SINGLE</span></td>
-		<td>Retired Streaming SIMD Extensions (SSE) packed-single instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_INST_RETIRED.SCALAR_SINGLE">SIMD_INST_RETIRED.SCALAR_SINGLE</span></td>
-		<td>Retired Streaming SIMD Extensions (SSE) scalar-single instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_INST_RETIRED.SCALAR_DOUBLE">SIMD_INST_RETIRED.SCALAR_DOUBLE</span></td>
-		<td>Retired Streaming SIMD Extensions 2 (SSE2) scalar-double instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_INST_RETIRED.VECTOR">SIMD_INST_RETIRED.VECTOR</span></td>
-		<td>Retired Streaming SIMD Extensions 2 (SSE2) vector instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="HW_INT_RCV">HW_INT_RCV</span></td>
-		<td>Hardware interrupts received.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_COMP_INST_RETIRED.PACKED_SINGLE">SIMD_COMP_INST_RETIRED.PACKED_SINGLE</span></td>
-		<td>Retired computational Streaming SIMD Extensions (SSE) packed-single instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_COMP_INST_RETIRED.SCALAR_SINGLE">SIMD_COMP_INST_RETIRED.SCALAR_SINGLE</span></td>
-		<td>Retired computational Streaming SIMD Extensions (SSE) scalar-single instructions.</td>
-	</tr>
-	<tr>
-		<td><span id="SIMD_COMP_INST_RETIRED.SCALAR_DOUBLE">SIMD_COMP_INST_RETIRED.SCALAR_DOUBLE</span></td>
-		<td>Retired computational Streaming SIMD Extensions 2 (SSE2) scalar-double instructions.</td>
+		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS.PS">MEM_LOAD_RETIRED.DTLB_MISS.PS</span></td>
+		<td>Retired loads that miss the DTLB (precise event).</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L2_HIT">MEM_LOAD_RETIRED.L2_HIT</span></td>
@@ -1062,40 +818,120 @@
 		<td>Retired loads that miss the L2 cache (precise event).</td>
 	</tr>
 	<tr>
-		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS">MEM_LOAD_RETIRED.DTLB_MISS</span></td>
-		<td>Retired loads that miss the DTLB (precise event).</td>
+		<td><span id="MISALIGN_MEM_REF.BUBBLE">MISALIGN_MEM_REF.BUBBLE</span></td>
+		<td>Nonzero segbase 1 bubble</td>
 	</tr>
 	<tr>
-		<td><span id="MEM_LOAD_RETIRED.DTLB_MISS.PS">MEM_LOAD_RETIRED.DTLB_MISS.PS</span></td>
-		<td>Retired loads that miss the DTLB (precise event).</td>
+		<td><span id="MISALIGN_MEM_REF.LD_BUBBLE">MISALIGN_MEM_REF.LD_BUBBLE</span></td>
+		<td>Nonzero segbase load 1 bubble</td>
 	</tr>
 	<tr>
-		<td><span id="SIMD_ASSIST">SIMD_ASSIST</span></td>
-		<td>SIMD assists invoked.</td>
+		<td><span id="MISALIGN_MEM_REF.LD_SPLIT">MISALIGN_MEM_REF.LD_SPLIT</span></td>
+		<td>Load splits</td>
 	</tr>
 	<tr>
-		<td><span id="SIMD_INSTR_RETIRED">SIMD_INSTR_RETIRED</span></td>
-		<td>SIMD Instructions retired.</td>
+		<td><span id="MISALIGN_MEM_REF.LD_SPLIT.AR">MISALIGN_MEM_REF.LD_SPLIT.AR</span></td>
+		<td>Load splits (At Retirement)</td>
 	</tr>
 	<tr>
-		<td><span id="SIMD_SAT_INSTR_RETIRED">SIMD_SAT_INSTR_RETIRED</span></td>
-		<td>Saturated arithmetic instructions retired.</td>
+		<td><span id="MISALIGN_MEM_REF.RMW_BUBBLE">MISALIGN_MEM_REF.RMW_BUBBLE</span></td>
+		<td>Nonzero segbase ld-op-st 1 bubble</td>
 	</tr>
 	<tr>
-		<td><span id="RESOURCE_STALLS.DIV_BUSY">RESOURCE_STALLS.DIV_BUSY</span></td>
-		<td>Cycles issue is stalled due to div busy.</td>
+		<td><span id="MISALIGN_MEM_REF.RMW_SPLIT">MISALIGN_MEM_REF.RMW_SPLIT</span></td>
+		<td>ld-op-st splits</td>
 	</tr>
 	<tr>
-		<td><span id="BR_INST_DECODED">BR_INST_DECODED</span></td>
-		<td>Branch instructions decoded</td>
+		<td><span id="MISALIGN_MEM_REF.SPLIT">MISALIGN_MEM_REF.SPLIT</span></td>
+		<td>Memory references that cross an 8-byte boundary.</td>
 	</tr>
 	<tr>
-		<td><span id="BOGUS_BR">BOGUS_BR</span></td>
-		<td>Bogus branches</td>
+		<td><span id="MISALIGN_MEM_REF.SPLIT.AR">MISALIGN_MEM_REF.SPLIT.AR</span></td>
+		<td>Memory references that cross an 8-byte boundary (At Retirement)</td>
 	</tr>
 	<tr>
-		<td><span id="BACLEARS.ANY">BACLEARS.ANY</span></td>
-		<td>BACLEARS asserted.</td>
+		<td><span id="MISALIGN_MEM_REF.ST_BUBBLE">MISALIGN_MEM_REF.ST_BUBBLE</span></td>
+		<td>Nonzero segbase store 1 bubble</td>
+	</tr>
+	<tr>
+		<td><span id="MISALIGN_MEM_REF.ST_SPLIT">MISALIGN_MEM_REF.ST_SPLIT</span></td>
+		<td>Store splits</td>
+	</tr>
+	<tr>
+		<td><span id="MISALIGN_MEM_REF.ST_SPLIT.AR">MISALIGN_MEM_REF.ST_SPLIT.AR</span></td>
+		<td>Store splits (Ar Retirement)</td>
+	</tr>
+	<tr>
+		<td><span id="MUL.AR">MUL.AR</span></td>
+		<td>Multiply operations retired</td>
+	</tr>
+	<tr>
+		<td><span id="MUL.S">MUL.S</span></td>
+		<td>Multiply operations executed.</td>
+	</tr>
+	<tr>
+		<td><span id="PAGE_WALKS.CYCLES">PAGE_WALKS.CYCLES</span></td>
+		<td>Duration of page-walks in core cycles</td>
+	</tr>
+	<tr>
+		<td><span id="PAGE_WALKS.D_SIDE_CYCLES">PAGE_WALKS.D_SIDE_CYCLES</span></td>
+		<td>Duration of D-side only page walks</td>
+	</tr>
+	<tr>
+		<td><span id="PAGE_WALKS.D_SIDE_WALKS">PAGE_WALKS.D_SIDE_WALKS</span></td>
+		<td>Number of D-side only page walks</td>
+	</tr>
+	<tr>
+		<td><span id="PAGE_WALKS.I_SIDE_CYCLES">PAGE_WALKS.I_SIDE_CYCLES</span></td>
+		<td>Duration of I-Side page walks</td>
+	</tr>
+	<tr>
+		<td><span id="PAGE_WALKS.I_SIDE_WALKS">PAGE_WALKS.I_SIDE_WALKS</span></td>
+		<td>Number of I-Side page walks</td>
+	</tr>
+	<tr>
+		<td><span id="PAGE_WALKS.WALKS">PAGE_WALKS.WALKS</span></td>
+		<td>Number of page-walks executed.</td>
+	</tr>
+	<tr>
+		<td><span id="PREFETCH.HW_PREFETCH">PREFETCH.HW_PREFETCH</span></td>
+		<td>L1 hardware prefetch request</td>
+	</tr>
+	<tr>
+		<td><span id="PREFETCH.PREFETCHNTA">PREFETCH.PREFETCHNTA</span></td>
+		<td>Streaming SIMD Extensions (SSE) Prefetch NTA instructions executed</td>
+	</tr>
+	<tr>
+		<td><span id="PREFETCH.PREFETCHT0">PREFETCH.PREFETCHT0</span></td>
+		<td>Streaming SIMD Extensions (SSE) PrefetchT0 instructions executed.</td>
+	</tr>
+	<tr>
+		<td><span id="PREFETCH.PREFETCHT1">PREFETCH.PREFETCHT1</span></td>
+		<td>Streaming SIMD Extensions (SSE) PrefetchT1 instructions executed.</td>
+	</tr>
+	<tr>
+		<td><span id="PREFETCH.PREFETCHT2">PREFETCH.PREFETCHT2</span></td>
+		<td>Streaming SIMD Extensions (SSE) PrefetchT2 instructions executed.</td>
+	</tr>
+	<tr>
+		<td><span id="PREFETCH.SOFTWARE_PREFETCH">PREFETCH.SOFTWARE_PREFETCH</span></td>
+		<td>Any Software prefetch</td>
+	</tr>
+	<tr>
+		<td><span id="PREFETCH.SOFTWARE_PREFETCH.AR">PREFETCH.SOFTWARE_PREFETCH.AR</span></td>
+		<td>Any Software prefetch</td>
+	</tr>
+	<tr>
+		<td><span id="PREFETCH.SW_L2">PREFETCH.SW_L2</span></td>
+		<td>Streaming SIMD Extensions (SSE) PrefetchT1 and PrefetchT2 instructions executed</td>
+	</tr>
+	<tr>
+		<td><span id="REISSUE.ANY">REISSUE.ANY</span></td>
+		<td>Micro-op reissues for any cause</td>
+	</tr>
+	<tr>
+		<td><span id="REISSUE.ANY.AR">REISSUE.ANY.AR</span></td>
+		<td>Micro-op reissues for any cause (At Retirement)</td>
 	</tr>
 	<tr>
 		<td><span id="REISSUE.OVERLAP_STORE">REISSUE.OVERLAP_STORE</span></td>
@@ -1106,192 +942,316 @@
 		<td>Micro-op reissues on a store-load collision (At Retirement)</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_CORE_CLKS">GMCH_CORE_CLKS</span></td>
-		<td>Counts the number of GMCH core clocks</td>
+		<td><span id="RESOURCE_STALLS.DIV_BUSY">RESOURCE_STALLS.DIV_BUSY</span></td>
+		<td>Cycles issue is stalled due to div busy.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_REQ.HB">GMCH_PARTIAL_WR_REQ.HB</span></td>
-		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+		<td><span id="SEGMENT_REG_LOADS.ANY">SEGMENT_REG_LOADS.ANY</span></td>
+		<td>Number of segment register loads.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_REQ.GB0">GMCH_PARTIAL_WR_REQ.GB0</span></td>
-		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+		<td><span id="SIMD_ASSIST">SIMD_ASSIST</span></td>
+		<td>SIMD assists invoked.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_REQ.GB1">GMCH_PARTIAL_WR_REQ.GB1</span></td>
-		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+		<td><span id="SIMD_COMP_INST_RETIRED.PACKED_SINGLE">SIMD_COMP_INST_RETIRED.PACKED_SINGLE</span></td>
+		<td>Retired computational Streaming SIMD Extensions (SSE) packed-single instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_REQ.AB0">GMCH_PARTIAL_WR_REQ.AB0</span></td>
-		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+		<td><span id="SIMD_COMP_INST_RETIRED.SCALAR_DOUBLE">SIMD_COMP_INST_RETIRED.SCALAR_DOUBLE</span></td>
+		<td>Retired computational Streaming SIMD Extensions 2 (SSE2) scalar-double instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_REQ.AB1">GMCH_PARTIAL_WR_REQ.AB1</span></td>
-		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+		<td><span id="SIMD_COMP_INST_RETIRED.SCALAR_SINGLE">SIMD_COMP_INST_RETIRED.SCALAR_SINGLE</span></td>
+		<td>Retired computational Streaming SIMD Extensions (SSE) scalar-single instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_REQ.IB">GMCH_PARTIAL_WR_REQ.IB</span></td>
-		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+		<td><span id="SIMD_INST_RETIRED.PACKED_SINGLE">SIMD_INST_RETIRED.PACKED_SINGLE</span></td>
+		<td>Retired Streaming SIMD Extensions (SSE) packed-single instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_REQ.PB">GMCH_PARTIAL_WR_REQ.PB</span></td>
-		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+		<td><span id="SIMD_INST_RETIRED.SCALAR_DOUBLE">SIMD_INST_RETIRED.SCALAR_DOUBLE</span></td>
+		<td>Retired Streaming SIMD Extensions 2 (SSE2) scalar-double instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_REQ.ANY">GMCH_PARTIAL_WR_REQ.ANY</span></td>
-		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+		<td><span id="SIMD_INST_RETIRED.SCALAR_SINGLE">SIMD_INST_RETIRED.SCALAR_SINGLE</span></td>
+		<td>Retired Streaming SIMD Extensions (SSE) scalar-single instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_DRAM.CH0">GMCH_PARTIAL_WR_DRAM.CH0</span></td>
-		<td>This event counts partial write requests to DRAM channel 0.</td>
+		<td><span id="SIMD_INST_RETIRED.VECTOR">SIMD_INST_RETIRED.VECTOR</span></td>
+		<td>Retired Streaming SIMD Extensions 2 (SSE2) vector instructions.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_DRAM.CH1">GMCH_PARTIAL_WR_DRAM.CH1</span></td>
-		<td>This event counts partial write requests to DRAM channel 1.</td>
+		<td><span id="SIMD_INSTR_RETIRED">SIMD_INSTR_RETIRED</span></td>
+		<td>SIMD Instructions retired.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_PARTIAL_WR_DRAM.ANY">GMCH_PARTIAL_WR_DRAM.ANY</span></td>
-		<td>This event counts partial write requests to DRAM.  This event can be used to count the number of combined requests. Subtracting this event from Event 0x0 gives us the number of combined requests.</td>
+		<td><span id="SIMD_SAT_INSTR_RETIRED">SIMD_SAT_INSTR_RETIRED</span></td>
+		<td>Saturated arithmetic instructions retired.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_PARTIAL_CH0">GMCH_B_ALL_REQUESTS.RD_PARTIAL_CH0</span></td>
-		<td>Counts the partial read requests to channel 0 entering the Bunit.</td>
+		<td><span id="SIMD_SAT_UOP_EXEC.AR">SIMD_SAT_UOP_EXEC.AR</span></td>
+		<td>SIMD saturated arithmetic micro-ops retired.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_PARTIAL_CH1">GMCH_B_ALL_REQUESTS.RD_PARTIAL_CH1</span></td>
-		<td>Counts the partial read requests to channel 1 entering the Bunit.</td>
+		<td><span id="SIMD_SAT_UOP_EXEC.S">SIMD_SAT_UOP_EXEC.S</span></td>
+		<td>SIMD saturated arithmetic micro-ops executed.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_PARTIAL_ANY">GMCH_B_ALL_REQUESTS.RD_PARTIAL_ANY</span></td>
-		<td>Counts the partial read requests entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.ARITHMETIC.AR">SIMD_UOP_TYPE_EXEC.ARITHMETIC.AR</span></td>
+		<td>SIMD packed arithmetic micro-ops retired</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_PARTIAL_CH0">GMCH_B_ALL_REQUESTS.WR_PARTIAL_CH0</span></td>
-		<td>Counts the partial write requests to channel 0 entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.ARITHMETIC.S">SIMD_UOP_TYPE_EXEC.ARITHMETIC.S</span></td>
+		<td>SIMD packed arithmetic micro-ops executed</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_PARTIAL_CH1">GMCH_B_ALL_REQUESTS.WR_PARTIAL_CH1</span></td>
-		<td>Counts the partial write requests to channel 1 entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.LOGICAL.AR">SIMD_UOP_TYPE_EXEC.LOGICAL.AR</span></td>
+		<td>SIMD packed logical micro-ops retired</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_PARTIAL_ANY">GMCH_B_ALL_REQUESTS.WR_PARTIAL_ANY</span></td>
-		<td>Counts the partial write requests entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.LOGICAL.S">SIMD_UOP_TYPE_EXEC.LOGICAL.S</span></td>
+		<td>SIMD packed logical micro-ops executed</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_32B_CH0">GMCH_B_ALL_REQUESTS.RD_32B_CH0</span></td>
-		<td>Counts the 32 byte read requests to channel 0 entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.MUL.AR">SIMD_UOP_TYPE_EXEC.MUL.AR</span></td>
+		<td>SIMD packed multiply micro-ops retired</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_32B_CH1">GMCH_B_ALL_REQUESTS.RD_32B_CH1</span></td>
-		<td>Counts the 32 byte read requests to channel 1 entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.MUL.S">SIMD_UOP_TYPE_EXEC.MUL.S</span></td>
+		<td>SIMD packed multiply micro-ops executed</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_32B_ANY">GMCH_B_ALL_REQUESTS.RD_32B_ANY</span></td>
-		<td>Counts the 32 byte read requests entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.PACK.AR">SIMD_UOP_TYPE_EXEC.PACK.AR</span></td>
+		<td>SIMD packed micro-ops retired</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_32B_CH0">GMCH_B_ALL_REQUESTS.WR_32B_CH0</span></td>
-		<td>Counts the 32 byte write requests to channel 0 entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.PACK.S">SIMD_UOP_TYPE_EXEC.PACK.S</span></td>
+		<td>SIMD packed micro-ops executed</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_32B_CH1">GMCH_B_ALL_REQUESTS.WR_32B_CH1</span></td>
-		<td>Counts the 32 byte write requests to channel 1 entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.SHIFT.AR">SIMD_UOP_TYPE_EXEC.SHIFT.AR</span></td>
+		<td>SIMD packed shift micro-ops retired</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_32B_ANY">GMCH_B_ALL_REQUESTS.WR_32B_ANY</span></td>
-		<td>Counts the 32 byte write requests entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.SHIFT.S">SIMD_UOP_TYPE_EXEC.SHIFT.S</span></td>
+		<td>SIMD packed shift micro-ops executed</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_64B_CH0">GMCH_B_ALL_REQUESTS.RD_64B_CH0</span></td>
-		<td>Counts the 64 byte read requests to channel 0 entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.UNPACK.AR">SIMD_UOP_TYPE_EXEC.UNPACK.AR</span></td>
+		<td>SIMD unpacked micro-ops retired</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_64B_CH1">GMCH_B_ALL_REQUESTS.RD_64B_CH1</span></td>
-		<td>Counts the 64 byte read requests to channel 1 entering the Bunit.</td>
+		<td><span id="SIMD_UOP_TYPE_EXEC.UNPACK.S">SIMD_UOP_TYPE_EXEC.UNPACK.S</span></td>
+		<td>SIMD unpacked micro-ops executed</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.RD_64B_ANY">GMCH_B_ALL_REQUESTS.RD_64B_ANY</span></td>
-		<td>Counts the 64 byte read requests entering the Bunit.</td>
+		<td><span id="SIMD_UOPS_EXEC.AR">SIMD_UOPS_EXEC.AR</span></td>
+		<td>SIMD micro-ops retired (excluding stores).</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_64B_CH0">GMCH_B_ALL_REQUESTS.WR_64B_CH0</span></td>
-		<td>Counts the 64 byte write requests to channel 0 entering the Bunit.</td>
+		<td><span id="SIMD_UOPS_EXEC.S">SIMD_UOPS_EXEC.S</span></td>
+		<td>SIMD micro-ops executed (excluding stores).</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_64B_CH1">GMCH_B_ALL_REQUESTS.WR_64B_CH1</span></td>
-		<td>Counts the 64 byte write requests to channel 1 entering the Bunit.</td>
+		<td><span id="SNOOP_STALL_DRV.ALL_AGENTS">SNOOP_STALL_DRV.ALL_AGENTS</span></td>
+		<td>Bus stalled for snoops.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_B_ALL_REQUESTS.WR_64B_ANY">GMCH_B_ALL_REQUESTS.WR_64B_ANY</span></td>
-		<td>Counts the 64 byte write requests entering the Bunit.</td>
+		<td><span id="SNOOP_STALL_DRV.SELF">SNOOP_STALL_DRV.SELF</span></td>
+		<td>Bus stalled for snoops.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH0_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.CH0_EMPTY</span></td>
-		<td>Ch0 Empty. This should count only if we have at least 1 valid request (RD or WR) in Bunit.</td>
+		<td><span id="STORE_FORWARDS.ANY">STORE_FORWARDS.ANY</span></td>
+		<td>All store forwards</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH1_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.CH1_EMPTY</span></td>
-		<td>Ch1 Empty. This should count only if we have at least 1 valid request (RD or WR) in Bunit.</td>
+		<td><span id="STORE_FORWARDS.GOOD">STORE_FORWARDS.GOOD</span></td>
+		<td>Good store forwards</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.BOTH_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.BOTH_EMPTY</span></td>
-		<td>Ch0 &amp; Ch1 are Empty. This should count only if we have at least 1 valid request (RD or WR) in Bunit.</td>
+		<td><span id="THERMAL_TRIP">THERMAL_TRIP</span></td>
+		<td>Number of thermal trips</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH0_FULL">GMCH_DUAL_CHANNEL_QUEUES.CH0_FULL</span></td>
-		<td>Ch0 Full. If a ready request is blocked due to the full queue.</td>
+		<td><span id="UOPS.MS_CYCLES">UOPS.MS_CYCLES</span></td>
+		<td>This event counts the cycles where 1 or more uops are issued by the micro-sequencer (MS), including microcode assists and inserted flows, and written to the IQ. </td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH1_FULL">GMCH_DUAL_CHANNEL_QUEUES.CH1_FULL</span></td>
-		<td>Ch1 Full. If a ready request is blocked due to the full queue.</td>
+		<td><span id="UOPS_RETIRED.ANY">UOPS_RETIRED.ANY</span></td>
+		<td>Micro-ops retired.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH0_EMPTY_CH1_NOT_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.CH0_EMPTY_CH1_NOT_EMPTY</span></td>
-		<td>Ch0 is Empty while Ch1 is Not Empty.</td>
+		<td><span id="UOPS_RETIRED.STALLED_CYCLES">UOPS_RETIRED.STALLED_CYCLES</span></td>
+		<td>Cycles no micro-ops retired.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH1_EMPTY_CH0_NOT_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.CH1_EMPTY_CH0_NOT_EMPTY</span></td>
-		<td>Ch1 is Empty while Ch0 is Not Empty.</td>
+		<td><span id="UOPS_RETIRED.STALLS">UOPS_RETIRED.STALLS</span></td>
+		<td>Periods no micro-ops retired.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_WR_FLUSH.CH0">GMCH_WR_FLUSH.CH0</span></td>
-		<td>Count Write Flushes, which happens when the number of writes exceeds the high watermark level.  Request on Channel 0. This should be used in conjunction with the other masks.</td>
+		<td><span id="X87_COMP_OPS_EXE.ANY.AR">X87_COMP_OPS_EXE.ANY.AR</span></td>
+		<td>Floating point computational micro-ops retired.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_WR_FLUSH.CH1">GMCH_WR_FLUSH.CH1</span></td>
-		<td>Count Write Flushes, which happens when the number of writes exceeds the high watermark level.  Request on Channel 1. This should be used in conjunction with the other masks.</td>
+		<td><span id="X87_COMP_OPS_EXE.ANY.S">X87_COMP_OPS_EXE.ANY.S</span></td>
+		<td>Floating point computational micro-ops executed.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_WR_FLUSH.ANY">GMCH_WR_FLUSH.ANY</span></td>
-		<td>Count Write Flushes, which happens when the number of writes exceeds the high watermark level.  </td>
+		<td><span id="X87_COMP_OPS_EXE.FXCH.AR">X87_COMP_OPS_EXE.FXCH.AR</span></td>
+		<td>FXCH uops retired.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.HOST">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.HOST</span></td>
-		<td>Counts the number of request queue entries occupied for breq_queue_host, each clock.</td>
+		<td><span id="X87_COMP_OPS_EXE.FXCH.S">X87_COMP_OPS_EXE.FXCH.S</span></td>
+		<td>FXCH uops executed.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.GB0">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.GB0</span></td>
-		<td>Counts the number of request queue entries occupied for breq_queue_GB0, each clock.</td>
+		<td><span id="GMCH_AB0_REQUESTS.RD_32B_ANY">GMCH_AB0_REQUESTS.RD_32B_ANY</span></td>
+		<td>Counts the number of AB0 read 32 byte requests</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.GB1">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.GB1</span></td>
-		<td>Counts the number of request queue entries occupied for breq_queue_GB1, each clock.</td>
+		<td><span id="GMCH_AB0_REQUESTS.RD_32B_CH0">GMCH_AB0_REQUESTS.RD_32B_CH0</span></td>
+		<td>Counts the number of AB0 read 32 byte requests to channel 0</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.AB0">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.AB0</span></td>
-		<td>Counts the number of request queue entries occupied for breq_queue_AB0, each clock.</td>
+		<td><span id="GMCH_AB0_REQUESTS.RD_32B_CH1">GMCH_AB0_REQUESTS.RD_32B_CH1</span></td>
+		<td>Counts the number of AB0 read 32 byte requests to channel 1</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.AB1">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.AB1</span></td>
-		<td>Counts the number of request queue entries occupied for breq_queue_AB1, each clock.</td>
+		<td><span id="GMCH_AB0_REQUESTS.RD_64B_ANY">GMCH_AB0_REQUESTS.RD_64B_ANY</span></td>
+		<td>Counts the number of AB0 read 64 byte requests</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.IB">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.IB</span></td>
-		<td>Counts the number of request queue entries occupied for breq_queue_IB, each clock.</td>
+		<td><span id="GMCH_AB0_REQUESTS.RD_64B_CH0">GMCH_AB0_REQUESTS.RD_64B_CH0</span></td>
+		<td>Counts the number of AB0 read 64 byte requests to channel 0</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.PB">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.PB</span></td>
-		<td>Counts the number of request queue entries occupied for breq_queue_PB, each clock.</td>
+		<td><span id="GMCH_AB0_REQUESTS.RD_64B_CH1">GMCH_AB0_REQUESTS.RD_64B_CH1</span></td>
+		<td>Counts the number of AB0 read 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.RD_PARTIAL_ANY">GMCH_AB0_REQUESTS.RD_PARTIAL_ANY</span></td>
+		<td>Counts the number of AB0 partial read requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.RD_PARTIAL_CH0">GMCH_AB0_REQUESTS.RD_PARTIAL_CH0</span></td>
+		<td>Counts the number of AB0 partial read requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.RD_PARTIAL_CH1">GMCH_AB0_REQUESTS.RD_PARTIAL_CH1</span></td>
+		<td>Counts the number of AB0 partial read requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_32B_ANY">GMCH_AB0_REQUESTS.WR_32B_ANY</span></td>
+		<td>Counts the number of AB0 write 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_32B_CH0">GMCH_AB0_REQUESTS.WR_32B_CH0</span></td>
+		<td>Counts the number of AB0 write 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_32B_CH1">GMCH_AB0_REQUESTS.WR_32B_CH1</span></td>
+		<td>Counts the number of AB0 write 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_64B_ANY">GMCH_AB0_REQUESTS.WR_64B_ANY</span></td>
+		<td>Counts the number of AB0 write 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_64B_CH0">GMCH_AB0_REQUESTS.WR_64B_CH0</span></td>
+		<td>Counts the number of AB0 write 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_64B_CH1">GMCH_AB0_REQUESTS.WR_64B_CH1</span></td>
+		<td>Counts the number of AB0 write 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_PARTIAL_ANY">GMCH_AB0_REQUESTS.WR_PARTIAL_ANY</span></td>
+		<td>Counts the number of AB0 partial write requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_PARTIAL_CH0">GMCH_AB0_REQUESTS.WR_PARTIAL_CH0</span></td>
+		<td>Counts the number of AB0 partial write requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB0_REQUESTS.WR_PARTIAL_CH1">GMCH_AB0_REQUESTS.WR_PARTIAL_CH1</span></td>
+		<td>Counts the number of AB0 partial write requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_32B_ANY">GMCH_AB1_REQUESTS.RD_32B_ANY</span></td>
+		<td>Counts the number of AB1 read 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_32B_CH0">GMCH_AB1_REQUESTS.RD_32B_CH0</span></td>
+		<td>Counts the number of AB1 read 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_32B_CH1">GMCH_AB1_REQUESTS.RD_32B_CH1</span></td>
+		<td>Counts the number of AB1 read 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_64B_ANY">GMCH_AB1_REQUESTS.RD_64B_ANY</span></td>
+		<td>Counts the number of AB1 read 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_64B_CH0">GMCH_AB1_REQUESTS.RD_64B_CH0</span></td>
+		<td>Counts the number of AB1 read 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_64B_CH1">GMCH_AB1_REQUESTS.RD_64B_CH1</span></td>
+		<td>Counts the number of AB1 read 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_PARTIAL_ANY">GMCH_AB1_REQUESTS.RD_PARTIAL_ANY</span></td>
+		<td>Counts the number of AB1 partial read requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_PARTIAL_CH0">GMCH_AB1_REQUESTS.RD_PARTIAL_CH0</span></td>
+		<td>Counts the number of AB1 partial read requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.RD_PARTIAL_CH1">GMCH_AB1_REQUESTS.RD_PARTIAL_CH1</span></td>
+		<td>Counts the number of AB1 partial read requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_32B_ANY">GMCH_AB1_REQUESTS.WR_32B_ANY</span></td>
+		<td>Counts the number of AB1 write 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_32B_CH0">GMCH_AB1_REQUESTS.WR_32B_CH0</span></td>
+		<td>Counts the number of AB1 write 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_32B_CH1">GMCH_AB1_REQUESTS.WR_32B_CH1</span></td>
+		<td>Counts the number of AB1 write 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_64B_ANY">GMCH_AB1_REQUESTS.WR_64B_ANY</span></td>
+		<td>Counts the number of AB1 write 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_64B_CH0">GMCH_AB1_REQUESTS.WR_64B_CH0</span></td>
+		<td>Counts the number of AB1 write 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_64B_CH1">GMCH_AB1_REQUESTS.WR_64B_CH1</span></td>
+		<td>Counts the number of AB1 write 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_PARTIAL_ANY">GMCH_AB1_REQUESTS.WR_PARTIAL_ANY</span></td>
+		<td>Counts the number of AB1 partial write requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_PARTIAL_CH0">GMCH_AB1_REQUESTS.WR_PARTIAL_CH0</span></td>
+		<td>Counts the number of AB1 partial write requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AB1_REQUESTS.WR_PARTIAL_CH1">GMCH_AB1_REQUESTS.WR_PARTIAL_CH1</span></td>
+		<td>Counts the number of AB1 partial write requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQDOWN_HA_REQ">GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQDOWN_HA_REQ</span></td>
+		<td>Counts when Aunit request queue allocated for reqdown_ha_req</td>
 	</tr>
 	<tr>
 		<td><span id="GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQDOWN_RSP0">GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQDOWN_RSP0</span></td>
@@ -1300,10 +1260,6 @@
 	<tr>
 		<td><span id="GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQDOWN_RSP1">GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQDOWN_RSP1</span></td>
 		<td>Counts when Aunit request queue allocated for reqdown_rsp1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQDOWN_HA_REQ">GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQDOWN_HA_REQ</span></td>
-		<td>Counts when Aunit request queue allocated for reqdown_ha_req</td>
 	</tr>
 	<tr>
 		<td><span id="GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQUP_CMD0">GMCH_AUNIT_QUEUE_ENTRIES_ADDED.REQUP_CMD0</span></td>
@@ -1322,16 +1278,76 @@
 		<td>Counts when Aunit request queue allocated for requp_data1</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.HOST">GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.HOST</span></td>
-		<td>Counts when bunit request queue allocated for host</td>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_32B_ANY">GMCH_B_ALL_REQUESTS.RD_32B_ANY</span></td>
+		<td>Counts the 32 byte read requests entering the Bunit.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.GB0">GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.GB0</span></td>
-		<td>Counts when bunit request queue allocated for GB0</td>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_32B_CH0">GMCH_B_ALL_REQUESTS.RD_32B_CH0</span></td>
+		<td>Counts the 32 byte read requests to channel 0 entering the Bunit.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.GB1">GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.GB1</span></td>
-		<td>Counts when bunit request queue allocated for GB1</td>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_32B_CH1">GMCH_B_ALL_REQUESTS.RD_32B_CH1</span></td>
+		<td>Counts the 32 byte read requests to channel 1 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_64B_ANY">GMCH_B_ALL_REQUESTS.RD_64B_ANY</span></td>
+		<td>Counts the 64 byte read requests entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_64B_CH0">GMCH_B_ALL_REQUESTS.RD_64B_CH0</span></td>
+		<td>Counts the 64 byte read requests to channel 0 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_64B_CH1">GMCH_B_ALL_REQUESTS.RD_64B_CH1</span></td>
+		<td>Counts the 64 byte read requests to channel 1 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_PARTIAL_ANY">GMCH_B_ALL_REQUESTS.RD_PARTIAL_ANY</span></td>
+		<td>Counts the partial read requests entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_PARTIAL_CH0">GMCH_B_ALL_REQUESTS.RD_PARTIAL_CH0</span></td>
+		<td>Counts the partial read requests to channel 0 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.RD_PARTIAL_CH1">GMCH_B_ALL_REQUESTS.RD_PARTIAL_CH1</span></td>
+		<td>Counts the partial read requests to channel 1 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_32B_ANY">GMCH_B_ALL_REQUESTS.WR_32B_ANY</span></td>
+		<td>Counts the 32 byte write requests entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_32B_CH0">GMCH_B_ALL_REQUESTS.WR_32B_CH0</span></td>
+		<td>Counts the 32 byte write requests to channel 0 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_32B_CH1">GMCH_B_ALL_REQUESTS.WR_32B_CH1</span></td>
+		<td>Counts the 32 byte write requests to channel 1 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_64B_ANY">GMCH_B_ALL_REQUESTS.WR_64B_ANY</span></td>
+		<td>Counts the 64 byte write requests entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_64B_CH0">GMCH_B_ALL_REQUESTS.WR_64B_CH0</span></td>
+		<td>Counts the 64 byte write requests to channel 0 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_64B_CH1">GMCH_B_ALL_REQUESTS.WR_64B_CH1</span></td>
+		<td>Counts the 64 byte write requests to channel 1 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_PARTIAL_ANY">GMCH_B_ALL_REQUESTS.WR_PARTIAL_ANY</span></td>
+		<td>Counts the partial write requests entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_PARTIAL_CH0">GMCH_B_ALL_REQUESTS.WR_PARTIAL_CH0</span></td>
+		<td>Counts the partial write requests to channel 0 entering the Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_B_ALL_REQUESTS.WR_PARTIAL_CH1">GMCH_B_ALL_REQUESTS.WR_PARTIAL_CH1</span></td>
+		<td>Counts the partial write requests to channel 1 entering the Bunit.</td>
 	</tr>
 	<tr>
 		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.AB0">GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.AB0</span></td>
@@ -1342,6 +1358,18 @@
 		<td>Counts when bunit request queue allocated for AB1</td>
 	</tr>
 	<tr>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.GB0">GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.GB0</span></td>
+		<td>Counts when bunit request queue allocated for GB0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.GB1">GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.GB1</span></td>
+		<td>Counts when bunit request queue allocated for GB1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.HOST">GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.HOST</span></td>
+		<td>Counts when bunit request queue allocated for host</td>
+	</tr>
+	<tr>
 		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.IB">GMCH_BUNIT_REQ_QUEUE_ENTRIES_ADDED.IB</span></td>
 		<td>Counts when bunit request queue allocated for IB</td>
 	</tr>
@@ -1350,616 +1378,32 @@
 		<td>Counts when bunit request queue allocated for PB</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_PARTIAL_CH0">GMCH_HB_REQUESTS.RD_PARTIAL_CH0</span></td>
-		<td>Counts the number of HB partial read requests to channel 0</td>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.AB0">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.AB0</span></td>
+		<td>Counts the number of request queue entries occupied for breq_queue_AB0, each clock.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_PARTIAL_CH1">GMCH_HB_REQUESTS.RD_PARTIAL_CH1</span></td>
-		<td>Counts the number of HB partial read requests to channel 1</td>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.AB1">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.AB1</span></td>
+		<td>Counts the number of request queue entries occupied for breq_queue_AB1, each clock.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_PARTIAL_ANY">GMCH_HB_REQUESTS.RD_PARTIAL_ANY</span></td>
-		<td>Counts the number of HB partial read requests</td>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.GB0">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.GB0</span></td>
+		<td>Counts the number of request queue entries occupied for breq_queue_GB0, each clock.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_PARTIAL_CH0">GMCH_HB_REQUESTS.WR_PARTIAL_CH0</span></td>
-		<td>Counts the number of HB partial write requests to channel 0</td>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.GB1">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.GB1</span></td>
+		<td>Counts the number of request queue entries occupied for breq_queue_GB1, each clock.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_PARTIAL_CH1">GMCH_HB_REQUESTS.WR_PARTIAL_CH1</span></td>
-		<td>Counts the number of HB partial write requests to channel 1</td>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.HOST">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.HOST</span></td>
+		<td>Counts the number of request queue entries occupied for breq_queue_host, each clock.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_PARTIAL_ANY">GMCH_HB_REQUESTS.WR_PARTIAL_ANY</span></td>
-		<td>Counts the number of HB partial write requests</td>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.IB">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.IB</span></td>
+		<td>Counts the number of request queue entries occupied for breq_queue_IB, each clock.</td>
 	</tr>
 	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_32B_CH0">GMCH_HB_REQUESTS.RD_32B_CH0</span></td>
-		<td>Counts the number of HB read 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_32B_CH1">GMCH_HB_REQUESTS.RD_32B_CH1</span></td>
-		<td>Counts the number of HB read 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_32B_ANY">GMCH_HB_REQUESTS.RD_32B_ANY</span></td>
-		<td>Counts the number of HB read 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_32B_CH0">GMCH_HB_REQUESTS.WR_32B_CH0</span></td>
-		<td>Counts the number of HB write 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_32B_CH1">GMCH_HB_REQUESTS.WR_32B_CH1</span></td>
-		<td>Counts the number of HB write 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_32B_ANY">GMCH_HB_REQUESTS.WR_32B_ANY</span></td>
-		<td>Counts the number of HB write 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_64B_CH0">GMCH_HB_REQUESTS.RD_64B_CH0</span></td>
-		<td>Counts the number of HB read 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_64B_CH1">GMCH_HB_REQUESTS.RD_64B_CH1</span></td>
-		<td>Counts the number of HB read 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.RD_64B_ANY">GMCH_HB_REQUESTS.RD_64B_ANY</span></td>
-		<td>Counts the number of HB read 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_64B_CH0">GMCH_HB_REQUESTS.WR_64B_CH0</span></td>
-		<td>Counts the number of HB write 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_64B_CH1">GMCH_HB_REQUESTS.WR_64B_CH1</span></td>
-		<td>Counts the number of HB write 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_HB_REQUESTS.WR_64B_ANY">GMCH_HB_REQUESTS.WR_64B_ANY</span></td>
-		<td>Counts the number of HB write 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_PARTIAL_CH0">GMCH_GB0_REQUESTS.RD_PARTIAL_CH0</span></td>
-		<td>Counts the number of GB0 partial read requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_PARTIAL_CH1">GMCH_GB0_REQUESTS.RD_PARTIAL_CH1</span></td>
-		<td>Counts the number of GB0 partial read requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_PARTIAL_ANY">GMCH_GB0_REQUESTS.RD_PARTIAL_ANY</span></td>
-		<td>Counts the number of GB0 partial read requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_PARTIAL_CH0">GMCH_GB0_REQUESTS.WR_PARTIAL_CH0</span></td>
-		<td>Counts the number of GB0 partial write requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_PARTIAL_CH1">GMCH_GB0_REQUESTS.WR_PARTIAL_CH1</span></td>
-		<td>Counts the number of GB0 partial write requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_PARTIAL_ANY">GMCH_GB0_REQUESTS.WR_PARTIAL_ANY</span></td>
-		<td>Counts the number of GB0 partial write requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_32B_CH0">GMCH_GB0_REQUESTS.RD_32B_CH0</span></td>
-		<td>Counts the number of GB0 read 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_32B_CH1">GMCH_GB0_REQUESTS.RD_32B_CH1</span></td>
-		<td>Counts the number of GB0 read 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_32B_ANY">GMCH_GB0_REQUESTS.RD_32B_ANY</span></td>
-		<td>Counts the number of GB0 read 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_32B_CH0">GMCH_GB0_REQUESTS.WR_32B_CH0</span></td>
-		<td>Counts the number of GB0 write 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_32B_CH1">GMCH_GB0_REQUESTS.WR_32B_CH1</span></td>
-		<td>Counts the number of GB0 write 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_32B_ANY">GMCH_GB0_REQUESTS.WR_32B_ANY</span></td>
-		<td>Counts the number of GB0 write 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_64B_CH0">GMCH_GB0_REQUESTS.RD_64B_CH0</span></td>
-		<td>Counts the number of GB0 read 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_64B_CH1">GMCH_GB0_REQUESTS.RD_64B_CH1</span></td>
-		<td>Counts the number of GB0 read 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.RD_64B_ANY">GMCH_GB0_REQUESTS.RD_64B_ANY</span></td>
-		<td>Counts the number of GB0 read 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_64B_CH0">GMCH_GB0_REQUESTS.WR_64B_CH0</span></td>
-		<td>Counts the number of GB0 write 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_64B_CH1">GMCH_GB0_REQUESTS.WR_64B_CH1</span></td>
-		<td>Counts the number of GB0 write 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB0_REQUESTS.WR_64B_ANY">GMCH_GB0_REQUESTS.WR_64B_ANY</span></td>
-		<td>Counts the number of GB0 write 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_PARTIAL_CH0">GMCH_GB1_REQUESTS.RD_PARTIAL_CH0</span></td>
-		<td>Counts the number of GB1 partial read requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_PARTIAL_CH1">GMCH_GB1_REQUESTS.RD_PARTIAL_CH1</span></td>
-		<td>Counts the number of GB1 partial read requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_PARTIAL_ANY">GMCH_GB1_REQUESTS.RD_PARTIAL_ANY</span></td>
-		<td>Counts the number of GB1 partial read requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_PARTIAL_CH0">GMCH_GB1_REQUESTS.WR_PARTIAL_CH0</span></td>
-		<td>Counts the number of GB1 partial write requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_PARTIAL_CH1">GMCH_GB1_REQUESTS.WR_PARTIAL_CH1</span></td>
-		<td>Counts the number of GB1 partial write requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_PARTIAL_ANY">GMCH_GB1_REQUESTS.WR_PARTIAL_ANY</span></td>
-		<td>Counts the number of GB1 partial write requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_32B_CH0">GMCH_GB1_REQUESTS.RD_32B_CH0</span></td>
-		<td>Counts the number of GB1 read 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_32B_CH1">GMCH_GB1_REQUESTS.RD_32B_CH1</span></td>
-		<td>Counts the number of GB1 read 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_32B_ANY">GMCH_GB1_REQUESTS.RD_32B_ANY</span></td>
-		<td>Counts the number of GB1 read 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_32B_CH0">GMCH_GB1_REQUESTS.WR_32B_CH0</span></td>
-		<td>Counts the number of GB1 write 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_32B_CH1">GMCH_GB1_REQUESTS.WR_32B_CH1</span></td>
-		<td>Counts the number of GB1 write 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_32B_ANY">GMCH_GB1_REQUESTS.WR_32B_ANY</span></td>
-		<td>Counts the number of GB1 write 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_64B_CH0">GMCH_GB1_REQUESTS.RD_64B_CH0</span></td>
-		<td>Counts the number of GB1 read 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_64B_CH1">GMCH_GB1_REQUESTS.RD_64B_CH1</span></td>
-		<td>Counts the number of GB1 read 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.RD_64B_ANY">GMCH_GB1_REQUESTS.RD_64B_ANY</span></td>
-		<td>Counts the number of GB1 read 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_64B_CH0">GMCH_GB1_REQUESTS.WR_64B_CH0</span></td>
-		<td>Counts the number of GB1 write 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_64B_CH1">GMCH_GB1_REQUESTS.WR_64B_CH1</span></td>
-		<td>Counts the number of GB1 write 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GB1_REQUESTS.WR_64B_ANY">GMCH_GB1_REQUESTS.WR_64B_ANY</span></td>
-		<td>Counts the number of GB1 write 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_PARTIAL_CH0">GMCH_AB0_REQUESTS.RD_PARTIAL_CH0</span></td>
-		<td>Counts the number of AB0 partial read requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_PARTIAL_CH1">GMCH_AB0_REQUESTS.RD_PARTIAL_CH1</span></td>
-		<td>Counts the number of AB0 partial read requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_PARTIAL_ANY">GMCH_AB0_REQUESTS.RD_PARTIAL_ANY</span></td>
-		<td>Counts the number of AB0 partial read requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_PARTIAL_CH0">GMCH_AB0_REQUESTS.WR_PARTIAL_CH0</span></td>
-		<td>Counts the number of AB0 partial write requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_PARTIAL_CH1">GMCH_AB0_REQUESTS.WR_PARTIAL_CH1</span></td>
-		<td>Counts the number of AB0 partial write requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_PARTIAL_ANY">GMCH_AB0_REQUESTS.WR_PARTIAL_ANY</span></td>
-		<td>Counts the number of AB0 partial write requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_32B_CH0">GMCH_AB0_REQUESTS.RD_32B_CH0</span></td>
-		<td>Counts the number of AB0 read 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_32B_CH1">GMCH_AB0_REQUESTS.RD_32B_CH1</span></td>
-		<td>Counts the number of AB0 read 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_32B_ANY">GMCH_AB0_REQUESTS.RD_32B_ANY</span></td>
-		<td>Counts the number of AB0 read 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_32B_CH0">GMCH_AB0_REQUESTS.WR_32B_CH0</span></td>
-		<td>Counts the number of AB0 write 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_32B_CH1">GMCH_AB0_REQUESTS.WR_32B_CH1</span></td>
-		<td>Counts the number of AB0 write 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_32B_ANY">GMCH_AB0_REQUESTS.WR_32B_ANY</span></td>
-		<td>Counts the number of AB0 write 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_64B_CH0">GMCH_AB0_REQUESTS.RD_64B_CH0</span></td>
-		<td>Counts the number of AB0 read 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_64B_CH1">GMCH_AB0_REQUESTS.RD_64B_CH1</span></td>
-		<td>Counts the number of AB0 read 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.RD_64B_ANY">GMCH_AB0_REQUESTS.RD_64B_ANY</span></td>
-		<td>Counts the number of AB0 read 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_64B_CH0">GMCH_AB0_REQUESTS.WR_64B_CH0</span></td>
-		<td>Counts the number of AB0 write 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_64B_CH1">GMCH_AB0_REQUESTS.WR_64B_CH1</span></td>
-		<td>Counts the number of AB0 write 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB0_REQUESTS.WR_64B_ANY">GMCH_AB0_REQUESTS.WR_64B_ANY</span></td>
-		<td>Counts the number of AB0 write 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_PARTIAL_CH0">GMCH_AB1_REQUESTS.RD_PARTIAL_CH0</span></td>
-		<td>Counts the number of AB1 partial read requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_PARTIAL_CH1">GMCH_AB1_REQUESTS.RD_PARTIAL_CH1</span></td>
-		<td>Counts the number of AB1 partial read requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_PARTIAL_ANY">GMCH_AB1_REQUESTS.RD_PARTIAL_ANY</span></td>
-		<td>Counts the number of AB1 partial read requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_PARTIAL_CH0">GMCH_AB1_REQUESTS.WR_PARTIAL_CH0</span></td>
-		<td>Counts the number of AB1 partial write requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_PARTIAL_CH1">GMCH_AB1_REQUESTS.WR_PARTIAL_CH1</span></td>
-		<td>Counts the number of AB1 partial write requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_PARTIAL_ANY">GMCH_AB1_REQUESTS.WR_PARTIAL_ANY</span></td>
-		<td>Counts the number of AB1 partial write requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_32B_CH0">GMCH_AB1_REQUESTS.RD_32B_CH0</span></td>
-		<td>Counts the number of AB1 read 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_32B_CH1">GMCH_AB1_REQUESTS.RD_32B_CH1</span></td>
-		<td>Counts the number of AB1 read 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_32B_ANY">GMCH_AB1_REQUESTS.RD_32B_ANY</span></td>
-		<td>Counts the number of AB1 read 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_32B_CH0">GMCH_AB1_REQUESTS.WR_32B_CH0</span></td>
-		<td>Counts the number of AB1 write 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_32B_CH1">GMCH_AB1_REQUESTS.WR_32B_CH1</span></td>
-		<td>Counts the number of AB1 write 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_32B_ANY">GMCH_AB1_REQUESTS.WR_32B_ANY</span></td>
-		<td>Counts the number of AB1 write 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_64B_CH0">GMCH_AB1_REQUESTS.RD_64B_CH0</span></td>
-		<td>Counts the number of AB1 read 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_64B_CH1">GMCH_AB1_REQUESTS.RD_64B_CH1</span></td>
-		<td>Counts the number of AB1 read 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.RD_64B_ANY">GMCH_AB1_REQUESTS.RD_64B_ANY</span></td>
-		<td>Counts the number of AB1 read 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_64B_CH0">GMCH_AB1_REQUESTS.WR_64B_CH0</span></td>
-		<td>Counts the number of AB1 write 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_64B_CH1">GMCH_AB1_REQUESTS.WR_64B_CH1</span></td>
-		<td>Counts the number of AB1 write 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_AB1_REQUESTS.WR_64B_ANY">GMCH_AB1_REQUESTS.WR_64B_ANY</span></td>
-		<td>Counts the number of AB1 write 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_PARTIAL_CH0">GMCH_IB_REQUESTS.RD_PARTIAL_CH0</span></td>
-		<td>Counts the number of IB partial read requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_PARTIAL_CH1">GMCH_IB_REQUESTS.RD_PARTIAL_CH1</span></td>
-		<td>Counts the number of IB partial read requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_PARTIAL_ANY">GMCH_IB_REQUESTS.RD_PARTIAL_ANY</span></td>
-		<td>Counts the number of IB partial read requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_PARTIAL_CH0">GMCH_IB_REQUESTS.WR_PARTIAL_CH0</span></td>
-		<td>Counts the number of IB partial write requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_PARTIAL_CH1">GMCH_IB_REQUESTS.WR_PARTIAL_CH1</span></td>
-		<td>Counts the number of IB partial write requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_PARTIAL_ANY">GMCH_IB_REQUESTS.WR_PARTIAL_ANY</span></td>
-		<td>Counts the number of IB partial write requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_32B_CH0">GMCH_IB_REQUESTS.RD_32B_CH0</span></td>
-		<td>Counts the number of IB read 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_32B_CH1">GMCH_IB_REQUESTS.RD_32B_CH1</span></td>
-		<td>Counts the number of IB read 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_32B_ANY">GMCH_IB_REQUESTS.RD_32B_ANY</span></td>
-		<td>Counts the number of IB read 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_32B_CH0">GMCH_IB_REQUESTS.WR_32B_CH0</span></td>
-		<td>Counts the number of IB write 32 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_32B_CH1">GMCH_IB_REQUESTS.WR_32B_CH1</span></td>
-		<td>Counts the number of IB write 32 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_32B_ANY">GMCH_IB_REQUESTS.WR_32B_ANY</span></td>
-		<td>Counts the number of IB write 32 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_64B_CH0">GMCH_IB_REQUESTS.RD_64B_CH0</span></td>
-		<td>Counts the number of IB read 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_64B_CH1">GMCH_IB_REQUESTS.RD_64B_CH1</span></td>
-		<td>Counts the number of IB read 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.RD_64B_ANY">GMCH_IB_REQUESTS.RD_64B_ANY</span></td>
-		<td>Counts the number of IB read 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_64B_CH0">GMCH_IB_REQUESTS.WR_64B_CH0</span></td>
-		<td>Counts the number of IB write 64 byte requests to channel 0</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_64B_CH1">GMCH_IB_REQUESTS.WR_64B_CH1</span></td>
-		<td>Counts the number of IB write 64 byte requests to channel 1</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IB_REQUESTS.WR_64B_ANY">GMCH_IB_REQUESTS.WR_64B_ANY</span></td>
-		<td>Counts the number of IB write 64 byte requests</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_COMMANDS.ACTIVATE">GMCH_DRAM_COMMANDS.ACTIVATE</span></td>
-		<td>Counts the number of DRAM activates. a DRAM page is activated or opened before issued a read or write command if the page is not already opened.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_COMMANDS.REFRESH">GMCH_DRAM_COMMANDS.REFRESH</span></td>
-		<td>Counts the number of DRAM refreshes, a DRAM command send periodically to refresh DRAM memory.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_COMMANDS.ENTER_PWRDOWN">GMCH_DRAM_COMMANDS.ENTER_PWRDOWN</span></td>
-		<td>Counts the number of DRAM power down entries, which places the DRAM in power saving mode.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_COMMANDS.ENTER_SELF_REFRESH.SHALLOW">GMCH_DRAM_COMMANDS.ENTER_SELF_REFRESH.SHALLOW</span></td>
-		<td>Counts the number of shallow self refresh entries.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_COMMANDS.ENTER_SELF_REFRESH.DEEP">GMCH_DRAM_COMMANDS.ENTER_SELF_REFRESH.DEEP</span></td>
-		<td>Counts the number of deep self refresh entries.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_COMMANDS.EXIT_SELF_REFRESH_OR_PWRDOWN">GMCH_DRAM_COMMANDS.EXIT_SELF_REFRESH_OR_PWRDOWN</span></td>
-		<td>Counts the number of self refresh/power down exits.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_REQ_TYPE.RD_32B">GMCH_DRAM_REQ_TYPE.RD_32B</span></td>
-		<td>Counts the number of read 32 byte requests to DRAM.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_REQ_TYPE.RD_64B">GMCH_DRAM_REQ_TYPE.RD_64B</span></td>
-		<td>Counts the number of read 64 byte requests to DRAM.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_REQ_TYPE.RD_ANY">GMCH_DRAM_REQ_TYPE.RD_ANY</span></td>
-		<td>Counts the number of read requests to DRAM.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_REQ_TYPE.WR_32B">GMCH_DRAM_REQ_TYPE.WR_32B</span></td>
-		<td>Counts the number of write 32 byte requests to DRAM.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_REQ_TYPE.WR_64B">GMCH_DRAM_REQ_TYPE.WR_64B</span></td>
-		<td>Counts the number of write 64 byte requests to DRAM.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_REQ_TYPE.WR_ANY">GMCH_DRAM_REQ_TYPE.WR_ANY</span></td>
-		<td>Counts the number of write requests to DRAM.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PRECHARGE.PAGE_CLOSE">GMCH_DRAM_PRECHARGE.PAGE_CLOSE</span></td>
-		<td>Counts the number of DRAM page close precharges, a DRAM command issued to CLOSE a page due to page idle timer expiration.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PRECHARGE.PAGE_MISS">GMCH_DRAM_PRECHARGE.PAGE_MISS</span></td>
-		<td>Counts the number of precharges (PRE) that were issued because there was a page miss. Page miss refers to a situation in which a page is currently open and different page from the same bank needs to open. The new page experiences a page miss. Closing of the old page is done by issuing a PRE.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PRECHARGE.ALL">GMCH_DRAM_PRECHARGE.ALL</span></td>
-		<td>Counts the number of DRAM Precharge-all events, A single precharge-all (PREALL) cmd closes all open pages in a rank. PREALL is issued when DRAM needs to be refreshed or needs to go into any of the power down modes.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_OPEN_PAGES">GMCH_DRAM_OPEN_PAGES</span></td>
-		<td>Counts the number of DRAM pages open each cycle.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PAGE_STATUS.PAGE_HIT">GMCH_DRAM_PAGE_STATUS.PAGE_HIT</span></td>
-		<td>Counts the number of DRAM Page Hits, a new request address is within an already opened page</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PAGE_STATUS.PAGE_MISS">GMCH_DRAM_PAGE_STATUS.PAGE_MISS</span></td>
-		<td>Counts the number of DRAM Page Misses, a new request address is within the same bank but not within an already opened page. The old page needs to close before the new page can be opened.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PAGE_STATUS.PAGE_EMPTY">GMCH_DRAM_PAGE_STATUS.PAGE_EMPTY</span></td>
-		<td>Counts the number of DRAM Page Empty, a new request address is not within any of the opened pages in any bank. A new page will be opened.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE">GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE</span></td>
-		<td>Counts the number of DRAM Page Hit/Miss/Empty within address range. Limit the Hit/Miss/Empty address compare to within a specified range</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_BANK">GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_BANK</span></td>
-		<td>Counts the DRAM Page Hit/Miss/Empty within bank. Limit the Hit/Miss/Empty address compare to within a selected bank.  Use registers GMCH_PERF_BANK_SEL as documented in next section to set the bank.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_SELECT">GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_SELECT</span></td>
-		<td>DRAM Page Hit/Miss/Empty within bank. Limit the Hit/Miss/Empty address compare to within a selected bank.  Use registers GMCH_PERF_BANK_SEL as documented in next section to set the bank.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_BANK_SELECT">GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_BANK_SELECT</span></td>
-		<td>DRAM Page Hit/Miss/Empty from selectedsource. Limit the Hit/Miss/Empty address compare to within a select source.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_POWER_SAVE.CYCLES_PWRDOWN">GMCH_DRAM_POWER_SAVE.CYCLES_PWRDOWN</span></td>
-		<td>DRAM Power Down Mode. Counts every cycle DRAM is in power down mode.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_POWER_SAVE.CYCLES_SELF_REFRESH.SHALLOW">GMCH_DRAM_POWER_SAVE.CYCLES_SELF_REFRESH.SHALLOW</span></td>
-		<td>DRAM Self Refresh - Shallow Mode. Counts every cycle DRAM is in shallow Self Refresh mode.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_POWER_SAVE.CYCLES_SELF_REFRESH.DEEP">GMCH_DRAM_POWER_SAVE.CYCLES_SELF_REFRESH.DEEP</span></td>
-		<td>DRAM Self Refresh - Deep Mode. Counts every cycle DRAM is in Deep Self Refresh mode.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.RD_WR">GMCH_DRAM_SCHED_SEQUENCE.RD_WR</span></td>
-		<td>Counts the occurances of the specific sequence: any read followed by write.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.WR_RD">GMCH_DRAM_SCHED_SEQUENCE.WR_RD</span></td>
-		<td>Counts the occurances of the specific sequence: any write followed by read.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.RD_RD">GMCH_DRAM_SCHED_SEQUENCE.RD_RD</span></td>
-		<td>Counts the occurances of the specific sequence: any read followed by read.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.WR_WR">GMCH_DRAM_SCHED_SEQUENCE.WR_WR</span></td>
-		<td>Counts the occurances of the specific sequence: any read followed by read.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.RDWR_WRRD_SAME_RANKBANK_DIFF_PAGE">GMCH_DRAM_SCHED_SEQUENCE.RDWR_WRRD_SAME_RANKBANK_DIFF_PAGE</span></td>
-		<td>Rd/wr followed by rd/wr, Same rank &amp; bank, diff page. The above &quot;&quot;op followed by op&quot;&quot; sequences, further qualified by both being in the same rank and bank but different page. Needs to be combined with one of the masks above.</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_MEM_REQUEST.BURST_RD_ALL">GMCH_GFX_MEM_REQUEST.BURST_RD_ALL</span></td>
-		<td>Counts the burst mode read requests from GFX</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_MEM_REQUEST.BURST_NONMASKED_WR_ALL">GMCH_GFX_MEM_REQUEST.BURST_NONMASKED_WR_ALL</span></td>
-		<td>Counts the burst mode non-masked write requests from GFX</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_MEM_REQUEST.BURST_MASKED_WR_ALL">GMCH_GFX_MEM_REQUEST.BURST_MASKED_WR_ALL</span></td>
-		<td>Counts the burst mode masked write requests from GFX</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_MEM_REQUEST.NONBURST_RD_ALL">GMCH_GFX_MEM_REQUEST.NONBURST_RD_ALL</span></td>
-		<td>Counts the non-burst mode read requests from GFX</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_MEM_REQUEST.NONBURST_NONMASKED_WR_ALL">GMCH_GFX_MEM_REQUEST.NONBURST_NONMASKED_WR_ALL</span></td>
-		<td>Counts the non-burst mode non-masked write requests from GFX</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_MEM_REQUEST.NONBURST_MASKED_WR_ALL">GMCH_GFX_MEM_REQUEST.NONBURST_MASKED_WR_ALL</span></td>
-		<td>Counts the non-burst mode masked write requests from GFX</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_ALL_AND_STALLS.RD">GMCH_GFX_ALL_AND_STALLS.RD</span></td>
-		<td>Read request from GFX</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_ALL_AND_STALLS.RD_STALLED">GMCH_GFX_ALL_AND_STALLS.RD_STALLED</span></td>
-		<td>Read request from GFX stalled by GVD</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_ALL_AND_STALLS.WR">GMCH_GFX_ALL_AND_STALLS.WR</span></td>
-		<td>Write request from GFX</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_GFX_ALL_AND_STALLS.WR_STALLED">GMCH_GFX_ALL_AND_STALLS.WR_STALLED</span></td>
-		<td>Write request from GFX stalled by GVD</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IUNIT_REQUEST.WR_64B">GMCH_IUNIT_REQUEST.WR_64B</span></td>
-		<td>64B write requests on IB interface</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IUNIT_REQUEST.WR_32B">GMCH_IUNIT_REQUEST.WR_32B</span></td>
-		<td>32B write requests on IB interface</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IUNIT_REQUEST.RD_64B">GMCH_IUNIT_REQUEST.RD_64B</span></td>
-		<td>64B read requests on IB interface</td>
-	</tr>
-	<tr>
-		<td><span id="GMCH_IUNIT_REQUEST.RD_32B">GMCH_IUNIT_REQUEST.RD_32B</span></td>
-		<td>32B read requests on IB interface</td>
+		<td><span id="GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.PB">GMCH_BUNIT_REQ_QUEUE_ENTRIES_OCCUPIED.PB</span></td>
+		<td>Counts the number of request queue entries occupied for breq_queue_PB, each clock.</td>
 	</tr>
 	<tr>
 		<td><span id="GMCH_C_STATE_CYCLES.C2">GMCH_C_STATE_CYCLES.C2</span></td>
@@ -1992,6 +1436,562 @@
 	<tr>
 		<td><span id="GMCH_C_STATE_TRANSITION_CYCLES.C6">GMCH_C_STATE_TRANSITION_CYCLES.C6</span></td>
 		<td>Cycles taken for C6 transition. Count cycles between SCL LVL6 read request and last message sent by P unit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_CORE_CLKS">GMCH_CORE_CLKS</span></td>
+		<td>Counts the number of GMCH core clocks</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_COMMANDS.ACTIVATE">GMCH_DRAM_COMMANDS.ACTIVATE</span></td>
+		<td>Counts the number of DRAM activates. a DRAM page is activated or opened before issued a read or write command if the page is not already opened.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_COMMANDS.ENTER_PWRDOWN">GMCH_DRAM_COMMANDS.ENTER_PWRDOWN</span></td>
+		<td>Counts the number of DRAM power down entries, which places the DRAM in power saving mode.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_COMMANDS.ENTER_SELF_REFRESH.DEEP">GMCH_DRAM_COMMANDS.ENTER_SELF_REFRESH.DEEP</span></td>
+		<td>Counts the number of deep self refresh entries.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_COMMANDS.ENTER_SELF_REFRESH.SHALLOW">GMCH_DRAM_COMMANDS.ENTER_SELF_REFRESH.SHALLOW</span></td>
+		<td>Counts the number of shallow self refresh entries.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_COMMANDS.EXIT_SELF_REFRESH_OR_PWRDOWN">GMCH_DRAM_COMMANDS.EXIT_SELF_REFRESH_OR_PWRDOWN</span></td>
+		<td>Counts the number of self refresh/power down exits.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_COMMANDS.REFRESH">GMCH_DRAM_COMMANDS.REFRESH</span></td>
+		<td>Counts the number of DRAM refreshes, a DRAM command send periodically to refresh DRAM memory.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_OPEN_PAGES">GMCH_DRAM_OPEN_PAGES</span></td>
+		<td>Counts the number of DRAM pages open each cycle.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PAGE_STATUS.PAGE_EMPTY">GMCH_DRAM_PAGE_STATUS.PAGE_EMPTY</span></td>
+		<td>Counts the number of DRAM Page Empty, a new request address is not within any of the opened pages in any bank. A new page will be opened.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PAGE_STATUS.PAGE_HIT">GMCH_DRAM_PAGE_STATUS.PAGE_HIT</span></td>
+		<td>Counts the number of DRAM Page Hits, a new request address is within an already opened page</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PAGE_STATUS.PAGE_MISS">GMCH_DRAM_PAGE_STATUS.PAGE_MISS</span></td>
+		<td>Counts the number of DRAM Page Misses, a new request address is within the same bank but not within an already opened page. The old page needs to close before the new page can be opened.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE">GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE</span></td>
+		<td>Counts the number of DRAM Page Hit/Miss/Empty within address range. Limit the Hit/Miss/Empty address compare to within a specified range</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_BANK">GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_BANK</span></td>
+		<td>Counts the DRAM Page Hit/Miss/Empty within bank. Limit the Hit/Miss/Empty address compare to within a selected bank.  Use registers GMCH_PERF_BANK_SEL as documented in next section to set the bank.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_BANK_SELECT">GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_BANK_SELECT</span></td>
+		<td>DRAM Page Hit/Miss/Empty from selectedsource. Limit the Hit/Miss/Empty address compare to within a select source.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_SELECT">GMCH_DRAM_PAGE_STATUS.WITHIN_ADDR_RANGE_SELECT</span></td>
+		<td>DRAM Page Hit/Miss/Empty within bank. Limit the Hit/Miss/Empty address compare to within a selected bank.  Use registers GMCH_PERF_BANK_SEL as documented in next section to set the bank.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_POWER_SAVE.CYCLES_PWRDOWN">GMCH_DRAM_POWER_SAVE.CYCLES_PWRDOWN</span></td>
+		<td>DRAM Power Down Mode. Counts every cycle DRAM is in power down mode.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_POWER_SAVE.CYCLES_SELF_REFRESH.DEEP">GMCH_DRAM_POWER_SAVE.CYCLES_SELF_REFRESH.DEEP</span></td>
+		<td>DRAM Self Refresh - Deep Mode. Counts every cycle DRAM is in Deep Self Refresh mode.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_POWER_SAVE.CYCLES_SELF_REFRESH.SHALLOW">GMCH_DRAM_POWER_SAVE.CYCLES_SELF_REFRESH.SHALLOW</span></td>
+		<td>DRAM Self Refresh - Shallow Mode. Counts every cycle DRAM is in shallow Self Refresh mode.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PRECHARGE.ALL">GMCH_DRAM_PRECHARGE.ALL</span></td>
+		<td>Counts the number of DRAM Precharge-all events, A single precharge-all (PREALL) cmd closes all open pages in a rank. PREALL is issued when DRAM needs to be refreshed or needs to go into any of the power down modes.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PRECHARGE.PAGE_CLOSE">GMCH_DRAM_PRECHARGE.PAGE_CLOSE</span></td>
+		<td>Counts the number of DRAM page close precharges, a DRAM command issued to CLOSE a page due to page idle timer expiration.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_PRECHARGE.PAGE_MISS">GMCH_DRAM_PRECHARGE.PAGE_MISS</span></td>
+		<td>Counts the number of precharges (PRE) that were issued because there was a page miss. Page miss refers to a situation in which a page is currently open and different page from the same bank needs to open. The new page experiences a page miss. Closing of the old page is done by issuing a PRE.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_REQ_TYPE.RD_32B">GMCH_DRAM_REQ_TYPE.RD_32B</span></td>
+		<td>Counts the number of read 32 byte requests to DRAM.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_REQ_TYPE.RD_64B">GMCH_DRAM_REQ_TYPE.RD_64B</span></td>
+		<td>Counts the number of read 64 byte requests to DRAM.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_REQ_TYPE.RD_ANY">GMCH_DRAM_REQ_TYPE.RD_ANY</span></td>
+		<td>Counts the number of read requests to DRAM.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_REQ_TYPE.WR_32B">GMCH_DRAM_REQ_TYPE.WR_32B</span></td>
+		<td>Counts the number of write 32 byte requests to DRAM.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_REQ_TYPE.WR_64B">GMCH_DRAM_REQ_TYPE.WR_64B</span></td>
+		<td>Counts the number of write 64 byte requests to DRAM.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_REQ_TYPE.WR_ANY">GMCH_DRAM_REQ_TYPE.WR_ANY</span></td>
+		<td>Counts the number of write requests to DRAM.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.RD_RD">GMCH_DRAM_SCHED_SEQUENCE.RD_RD</span></td>
+		<td>Counts the occurances of the specific sequence: any read followed by read.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.RD_WR">GMCH_DRAM_SCHED_SEQUENCE.RD_WR</span></td>
+		<td>Counts the occurances of the specific sequence: any read followed by write.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.RDWR_WRRD_SAME_RANKBANK_DIFF_PAGE">GMCH_DRAM_SCHED_SEQUENCE.RDWR_WRRD_SAME_RANKBANK_DIFF_PAGE</span></td>
+		<td>Rd/wr followed by rd/wr, Same rank &amp; bank, diff page. The above &quot;&quot;op followed by op&quot;&quot; sequences, further qualified by both being in the same rank and bank but different page. Needs to be combined with one of the masks above.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.WR_RD">GMCH_DRAM_SCHED_SEQUENCE.WR_RD</span></td>
+		<td>Counts the occurances of the specific sequence: any write followed by read.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DRAM_SCHED_SEQUENCE.WR_WR">GMCH_DRAM_SCHED_SEQUENCE.WR_WR</span></td>
+		<td>Counts the occurances of the specific sequence: any read followed by read.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.BOTH_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.BOTH_EMPTY</span></td>
+		<td>Ch0 &amp; Ch1 are Empty. This should count only if we have at least 1 valid request (RD or WR) in Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH0_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.CH0_EMPTY</span></td>
+		<td>Ch0 Empty. This should count only if we have at least 1 valid request (RD or WR) in Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH0_EMPTY_CH1_NOT_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.CH0_EMPTY_CH1_NOT_EMPTY</span></td>
+		<td>Ch0 is Empty while Ch1 is Not Empty.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH0_FULL">GMCH_DUAL_CHANNEL_QUEUES.CH0_FULL</span></td>
+		<td>Ch0 Full. If a ready request is blocked due to the full queue.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH1_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.CH1_EMPTY</span></td>
+		<td>Ch1 Empty. This should count only if we have at least 1 valid request (RD or WR) in Bunit.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH1_EMPTY_CH0_NOT_EMPTY">GMCH_DUAL_CHANNEL_QUEUES.CH1_EMPTY_CH0_NOT_EMPTY</span></td>
+		<td>Ch1 is Empty while Ch0 is Not Empty.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_DUAL_CHANNEL_QUEUES.CH1_FULL">GMCH_DUAL_CHANNEL_QUEUES.CH1_FULL</span></td>
+		<td>Ch1 Full. If a ready request is blocked due to the full queue.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_32B_ANY">GMCH_GB0_REQUESTS.RD_32B_ANY</span></td>
+		<td>Counts the number of GB0 read 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_32B_CH0">GMCH_GB0_REQUESTS.RD_32B_CH0</span></td>
+		<td>Counts the number of GB0 read 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_32B_CH1">GMCH_GB0_REQUESTS.RD_32B_CH1</span></td>
+		<td>Counts the number of GB0 read 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_64B_ANY">GMCH_GB0_REQUESTS.RD_64B_ANY</span></td>
+		<td>Counts the number of GB0 read 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_64B_CH0">GMCH_GB0_REQUESTS.RD_64B_CH0</span></td>
+		<td>Counts the number of GB0 read 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_64B_CH1">GMCH_GB0_REQUESTS.RD_64B_CH1</span></td>
+		<td>Counts the number of GB0 read 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_PARTIAL_ANY">GMCH_GB0_REQUESTS.RD_PARTIAL_ANY</span></td>
+		<td>Counts the number of GB0 partial read requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_PARTIAL_CH0">GMCH_GB0_REQUESTS.RD_PARTIAL_CH0</span></td>
+		<td>Counts the number of GB0 partial read requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.RD_PARTIAL_CH1">GMCH_GB0_REQUESTS.RD_PARTIAL_CH1</span></td>
+		<td>Counts the number of GB0 partial read requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_32B_ANY">GMCH_GB0_REQUESTS.WR_32B_ANY</span></td>
+		<td>Counts the number of GB0 write 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_32B_CH0">GMCH_GB0_REQUESTS.WR_32B_CH0</span></td>
+		<td>Counts the number of GB0 write 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_32B_CH1">GMCH_GB0_REQUESTS.WR_32B_CH1</span></td>
+		<td>Counts the number of GB0 write 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_64B_ANY">GMCH_GB0_REQUESTS.WR_64B_ANY</span></td>
+		<td>Counts the number of GB0 write 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_64B_CH0">GMCH_GB0_REQUESTS.WR_64B_CH0</span></td>
+		<td>Counts the number of GB0 write 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_64B_CH1">GMCH_GB0_REQUESTS.WR_64B_CH1</span></td>
+		<td>Counts the number of GB0 write 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_PARTIAL_ANY">GMCH_GB0_REQUESTS.WR_PARTIAL_ANY</span></td>
+		<td>Counts the number of GB0 partial write requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_PARTIAL_CH0">GMCH_GB0_REQUESTS.WR_PARTIAL_CH0</span></td>
+		<td>Counts the number of GB0 partial write requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB0_REQUESTS.WR_PARTIAL_CH1">GMCH_GB0_REQUESTS.WR_PARTIAL_CH1</span></td>
+		<td>Counts the number of GB0 partial write requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_32B_ANY">GMCH_GB1_REQUESTS.RD_32B_ANY</span></td>
+		<td>Counts the number of GB1 read 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_32B_CH0">GMCH_GB1_REQUESTS.RD_32B_CH0</span></td>
+		<td>Counts the number of GB1 read 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_32B_CH1">GMCH_GB1_REQUESTS.RD_32B_CH1</span></td>
+		<td>Counts the number of GB1 read 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_64B_ANY">GMCH_GB1_REQUESTS.RD_64B_ANY</span></td>
+		<td>Counts the number of GB1 read 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_64B_CH0">GMCH_GB1_REQUESTS.RD_64B_CH0</span></td>
+		<td>Counts the number of GB1 read 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_64B_CH1">GMCH_GB1_REQUESTS.RD_64B_CH1</span></td>
+		<td>Counts the number of GB1 read 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_PARTIAL_ANY">GMCH_GB1_REQUESTS.RD_PARTIAL_ANY</span></td>
+		<td>Counts the number of GB1 partial read requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_PARTIAL_CH0">GMCH_GB1_REQUESTS.RD_PARTIAL_CH0</span></td>
+		<td>Counts the number of GB1 partial read requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.RD_PARTIAL_CH1">GMCH_GB1_REQUESTS.RD_PARTIAL_CH1</span></td>
+		<td>Counts the number of GB1 partial read requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_32B_ANY">GMCH_GB1_REQUESTS.WR_32B_ANY</span></td>
+		<td>Counts the number of GB1 write 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_32B_CH0">GMCH_GB1_REQUESTS.WR_32B_CH0</span></td>
+		<td>Counts the number of GB1 write 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_32B_CH1">GMCH_GB1_REQUESTS.WR_32B_CH1</span></td>
+		<td>Counts the number of GB1 write 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_64B_ANY">GMCH_GB1_REQUESTS.WR_64B_ANY</span></td>
+		<td>Counts the number of GB1 write 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_64B_CH0">GMCH_GB1_REQUESTS.WR_64B_CH0</span></td>
+		<td>Counts the number of GB1 write 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_64B_CH1">GMCH_GB1_REQUESTS.WR_64B_CH1</span></td>
+		<td>Counts the number of GB1 write 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_PARTIAL_ANY">GMCH_GB1_REQUESTS.WR_PARTIAL_ANY</span></td>
+		<td>Counts the number of GB1 partial write requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_PARTIAL_CH0">GMCH_GB1_REQUESTS.WR_PARTIAL_CH0</span></td>
+		<td>Counts the number of GB1 partial write requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GB1_REQUESTS.WR_PARTIAL_CH1">GMCH_GB1_REQUESTS.WR_PARTIAL_CH1</span></td>
+		<td>Counts the number of GB1 partial write requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_ALL_AND_STALLS.RD">GMCH_GFX_ALL_AND_STALLS.RD</span></td>
+		<td>Read request from GFX</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_ALL_AND_STALLS.RD_STALLED">GMCH_GFX_ALL_AND_STALLS.RD_STALLED</span></td>
+		<td>Read request from GFX stalled by GVD</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_ALL_AND_STALLS.WR">GMCH_GFX_ALL_AND_STALLS.WR</span></td>
+		<td>Write request from GFX</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_ALL_AND_STALLS.WR_STALLED">GMCH_GFX_ALL_AND_STALLS.WR_STALLED</span></td>
+		<td>Write request from GFX stalled by GVD</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_MEM_REQUEST.BURST_MASKED_WR_ALL">GMCH_GFX_MEM_REQUEST.BURST_MASKED_WR_ALL</span></td>
+		<td>Counts the burst mode masked write requests from GFX</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_MEM_REQUEST.BURST_NONMASKED_WR_ALL">GMCH_GFX_MEM_REQUEST.BURST_NONMASKED_WR_ALL</span></td>
+		<td>Counts the burst mode non-masked write requests from GFX</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_MEM_REQUEST.BURST_RD_ALL">GMCH_GFX_MEM_REQUEST.BURST_RD_ALL</span></td>
+		<td>Counts the burst mode read requests from GFX</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_MEM_REQUEST.NONBURST_MASKED_WR_ALL">GMCH_GFX_MEM_REQUEST.NONBURST_MASKED_WR_ALL</span></td>
+		<td>Counts the non-burst mode masked write requests from GFX</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_MEM_REQUEST.NONBURST_NONMASKED_WR_ALL">GMCH_GFX_MEM_REQUEST.NONBURST_NONMASKED_WR_ALL</span></td>
+		<td>Counts the non-burst mode non-masked write requests from GFX</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_GFX_MEM_REQUEST.NONBURST_RD_ALL">GMCH_GFX_MEM_REQUEST.NONBURST_RD_ALL</span></td>
+		<td>Counts the non-burst mode read requests from GFX</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_32B_ANY">GMCH_HB_REQUESTS.RD_32B_ANY</span></td>
+		<td>Counts the number of HB read 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_32B_CH0">GMCH_HB_REQUESTS.RD_32B_CH0</span></td>
+		<td>Counts the number of HB read 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_32B_CH1">GMCH_HB_REQUESTS.RD_32B_CH1</span></td>
+		<td>Counts the number of HB read 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_64B_ANY">GMCH_HB_REQUESTS.RD_64B_ANY</span></td>
+		<td>Counts the number of HB read 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_64B_CH0">GMCH_HB_REQUESTS.RD_64B_CH0</span></td>
+		<td>Counts the number of HB read 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_64B_CH1">GMCH_HB_REQUESTS.RD_64B_CH1</span></td>
+		<td>Counts the number of HB read 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_PARTIAL_ANY">GMCH_HB_REQUESTS.RD_PARTIAL_ANY</span></td>
+		<td>Counts the number of HB partial read requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_PARTIAL_CH0">GMCH_HB_REQUESTS.RD_PARTIAL_CH0</span></td>
+		<td>Counts the number of HB partial read requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.RD_PARTIAL_CH1">GMCH_HB_REQUESTS.RD_PARTIAL_CH1</span></td>
+		<td>Counts the number of HB partial read requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_32B_ANY">GMCH_HB_REQUESTS.WR_32B_ANY</span></td>
+		<td>Counts the number of HB write 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_32B_CH0">GMCH_HB_REQUESTS.WR_32B_CH0</span></td>
+		<td>Counts the number of HB write 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_32B_CH1">GMCH_HB_REQUESTS.WR_32B_CH1</span></td>
+		<td>Counts the number of HB write 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_64B_ANY">GMCH_HB_REQUESTS.WR_64B_ANY</span></td>
+		<td>Counts the number of HB write 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_64B_CH0">GMCH_HB_REQUESTS.WR_64B_CH0</span></td>
+		<td>Counts the number of HB write 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_64B_CH1">GMCH_HB_REQUESTS.WR_64B_CH1</span></td>
+		<td>Counts the number of HB write 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_PARTIAL_ANY">GMCH_HB_REQUESTS.WR_PARTIAL_ANY</span></td>
+		<td>Counts the number of HB partial write requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_PARTIAL_CH0">GMCH_HB_REQUESTS.WR_PARTIAL_CH0</span></td>
+		<td>Counts the number of HB partial write requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_HB_REQUESTS.WR_PARTIAL_CH1">GMCH_HB_REQUESTS.WR_PARTIAL_CH1</span></td>
+		<td>Counts the number of HB partial write requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_32B_ANY">GMCH_IB_REQUESTS.RD_32B_ANY</span></td>
+		<td>Counts the number of IB read 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_32B_CH0">GMCH_IB_REQUESTS.RD_32B_CH0</span></td>
+		<td>Counts the number of IB read 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_32B_CH1">GMCH_IB_REQUESTS.RD_32B_CH1</span></td>
+		<td>Counts the number of IB read 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_64B_ANY">GMCH_IB_REQUESTS.RD_64B_ANY</span></td>
+		<td>Counts the number of IB read 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_64B_CH0">GMCH_IB_REQUESTS.RD_64B_CH0</span></td>
+		<td>Counts the number of IB read 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_64B_CH1">GMCH_IB_REQUESTS.RD_64B_CH1</span></td>
+		<td>Counts the number of IB read 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_PARTIAL_ANY">GMCH_IB_REQUESTS.RD_PARTIAL_ANY</span></td>
+		<td>Counts the number of IB partial read requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_PARTIAL_CH0">GMCH_IB_REQUESTS.RD_PARTIAL_CH0</span></td>
+		<td>Counts the number of IB partial read requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.RD_PARTIAL_CH1">GMCH_IB_REQUESTS.RD_PARTIAL_CH1</span></td>
+		<td>Counts the number of IB partial read requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_32B_ANY">GMCH_IB_REQUESTS.WR_32B_ANY</span></td>
+		<td>Counts the number of IB write 32 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_32B_CH0">GMCH_IB_REQUESTS.WR_32B_CH0</span></td>
+		<td>Counts the number of IB write 32 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_32B_CH1">GMCH_IB_REQUESTS.WR_32B_CH1</span></td>
+		<td>Counts the number of IB write 32 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_64B_ANY">GMCH_IB_REQUESTS.WR_64B_ANY</span></td>
+		<td>Counts the number of IB write 64 byte requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_64B_CH0">GMCH_IB_REQUESTS.WR_64B_CH0</span></td>
+		<td>Counts the number of IB write 64 byte requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_64B_CH1">GMCH_IB_REQUESTS.WR_64B_CH1</span></td>
+		<td>Counts the number of IB write 64 byte requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_PARTIAL_ANY">GMCH_IB_REQUESTS.WR_PARTIAL_ANY</span></td>
+		<td>Counts the number of IB partial write requests</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_PARTIAL_CH0">GMCH_IB_REQUESTS.WR_PARTIAL_CH0</span></td>
+		<td>Counts the number of IB partial write requests to channel 0</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IB_REQUESTS.WR_PARTIAL_CH1">GMCH_IB_REQUESTS.WR_PARTIAL_CH1</span></td>
+		<td>Counts the number of IB partial write requests to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IUNIT_REQUEST.RD_32B">GMCH_IUNIT_REQUEST.RD_32B</span></td>
+		<td>32B read requests on IB interface</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IUNIT_REQUEST.RD_64B">GMCH_IUNIT_REQUEST.RD_64B</span></td>
+		<td>64B read requests on IB interface</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IUNIT_REQUEST.WR_32B">GMCH_IUNIT_REQUEST.WR_32B</span></td>
+		<td>32B write requests on IB interface</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_IUNIT_REQUEST.WR_64B">GMCH_IUNIT_REQUEST.WR_64B</span></td>
+		<td>64B write requests on IB interface</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_DRAM.ANY">GMCH_PARTIAL_WR_DRAM.ANY</span></td>
+		<td>This event counts partial write requests to DRAM.  This event can be used to count the number of combined requests. Subtracting this event from Event 0x0 gives us the number of combined requests.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_DRAM.CH0">GMCH_PARTIAL_WR_DRAM.CH0</span></td>
+		<td>This event counts partial write requests to DRAM channel 0.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_DRAM.CH1">GMCH_PARTIAL_WR_DRAM.CH1</span></td>
+		<td>This event counts partial write requests to DRAM channel 1.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_REQ.AB0">GMCH_PARTIAL_WR_REQ.AB0</span></td>
+		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_REQ.AB1">GMCH_PARTIAL_WR_REQ.AB1</span></td>
+		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_REQ.ANY">GMCH_PARTIAL_WR_REQ.ANY</span></td>
+		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_REQ.GB0">GMCH_PARTIAL_WR_REQ.GB0</span></td>
+		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_REQ.GB1">GMCH_PARTIAL_WR_REQ.GB1</span></td>
+		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_REQ.HB">GMCH_PARTIAL_WR_REQ.HB</span></td>
+		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_REQ.IB">GMCH_PARTIAL_WR_REQ.IB</span></td>
+		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_PARTIAL_WR_REQ.PB">GMCH_PARTIAL_WR_REQ.PB</span></td>
+		<td>The event counts partial write requests from different sources. It is useful to see the effect of the write-combining which occurs in the Bunit SRAM, which affects DRAM bandwidth and utilization. To also check if it was a good investment to add the combining (the byte enables).</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_WR_FLUSH.ANY">GMCH_WR_FLUSH.ANY</span></td>
+		<td>Count Write Flushes, which happens when the number of writes exceeds the high watermark level.  </td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_WR_FLUSH.CH0">GMCH_WR_FLUSH.CH0</span></td>
+		<td>Count Write Flushes, which happens when the number of writes exceeds the high watermark level.  Request on Channel 0. This should be used in conjunction with the other masks.</td>
+	</tr>
+	<tr>
+		<td><span id="GMCH_WR_FLUSH.CH1">GMCH_WR_FLUSH.CH1</span></td>
+		<td>Count Write Flushes, which happens when the number of writes exceeds the high watermark level.  Request on Channel 1. This should be used in conjunction with the other masks.</td>
 	</tr>
 </table>
 

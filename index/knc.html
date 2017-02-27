@@ -4,58 +4,78 @@
 <body>
 <h3>Intel&reg; Microarchitecture code named Knights Corner Events</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
 <li>Intel&reg; Xeon Phi&#8482 coprocessor</li><p>
-<table class="table table-responsive">
+<table class="table table-responsive" style="table-layout:fixed;width:100%">
 	<tr>
 		<th>EventName</th>
 		<th>Description</th>
-	</tr>
-	<tr>
-		<td><span id="DATA_READ">DATA_READ</span></td>
-		<td>Number of memory data reads which hit the internal data cache (L1). Cache accesses resulting from prefetch instructions are included.</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_WRITE">DATA_WRITE</span></td>
-		<td>Number of memory data writes which hit the internal data cache (L1).</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_PAGE_WALK">DATA_PAGE_WALK</span></td>
-		<td>Counts misses in the L1 TLB, at the hardware thread level.  TLB Misses could have been caused by either demand data loads and stores or data prefetches.</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_READ_MISS">DATA_READ_MISS</span></td>
-		<td>Number of memory read accesses that miss the internal data cache whether or not the access is cacheable or noncacheable. Cache accesses resulting from prefetch instructions are included.</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_WRITE_MISS">DATA_WRITE_MISS</span></td>
-		<td>Number of memory write accesses that miss the internal data cache whether or not the access is cacheable or noncacheable</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_CACHE_LINES_WRITTEN_BACK">DATA_CACHE_LINES_WRITTEN_BACK</span></td>
-		<td>Number of dirty lines (all) that are written back, regardless of the cause</td>
-	</tr>
-	<tr>
-		<td><span id="MEMORY_ACCESSES_IN_BOTH_PIPES">MEMORY_ACCESSES_IN_BOTH_PIPES</span></td>
-		<td>Number of data memory reads or writes that are paired in both pipes of the pipeline</td>
 	</tr>
 	<tr>
 		<td><span id="BANK_CONFLICTS">BANK_CONFLICTS</span></td>
 		<td>Number of actual bank conflicts</td>
 	</tr>
 	<tr>
-		<td><span id="CODE_READ">CODE_READ</span></td>
-		<td>Number of instruction reads; whether the read is cacheable or noncacheable</td>
-	</tr>
-	<tr>
-		<td><span id="L1_DATA_PF1">L1_DATA_PF1</span></td>
-		<td>Counts software prefetches that are intended for the local L1 cache.  May include both L1 and L2 prefetches.  This event counts at the hardware thread level.</td>
-	</tr>
-	<tr>
 		<td><span id="BRANCHES">BRANCHES</span></td>
 		<td>Number of taken and not taken branches, including: conditional branches, jumps, calls, returns, software interrupts, and interrupt returns</td>
 	</tr>
 	<tr>
-		<td><span id="PIPELINE_FLUSHES">PIPELINE_FLUSHES</span></td>
-		<td>Number of pipeline flushes that occur</td>
+		<td><span id="BRANCHES_MISPREDICTED">BRANCHES_MISPREDICTED</span></td>
+		<td>Number of branch mispredictions that occurred on BTB hits. BTB misses are not considered branch mispredicts because no prediction exists for them yet.</td>
+	</tr>
+	<tr>
+		<td><span id="CODE_READ">CODE_READ</span></td>
+		<td>Number of instruction reads; whether the read is cacheable or noncacheable</td>
+	</tr>
+	<tr>
+		<td><span id="CPU_CLK_UNHALTED">CPU_CLK_UNHALTED</span></td>
+		<td>The number of cycles (commonly known as clockticks) where any thread on a core is active.  A core is active if any thread on that core is not halted.  This event is counted at the core level – at any given time, all the hardware threads running on the same core will have the same value.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_CACHE_LINES_WRITTEN_BACK">DATA_CACHE_LINES_WRITTEN_BACK</span></td>
+		<td>Number of dirty lines (all) that are written back, regardless of the cause</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_PAGE_WALK">DATA_PAGE_WALK</span></td>
+		<td>Counts misses in the L1 TLB, at the hardware thread level.  TLB Misses could have been caused by either demand data loads and stores or data prefetches.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_READ">DATA_READ</span></td>
+		<td>Number of memory data reads which hit the internal data cache (L1). Cache accesses resulting from prefetch instructions are included.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_READ_MISS">DATA_READ_MISS</span></td>
+		<td>Number of memory read accesses that miss the internal data cache whether or not the access is cacheable or noncacheable. Cache accesses resulting from prefetch instructions are included.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_READ_MISS_OR_WRITE_MISS">DATA_READ_MISS_OR_WRITE_MISS</span></td>
+		<td>Counts demand data loads and stores that missed the L1 cache, at the hardware thread level.  This event does not include misses for cachelines that were in the process of being prefetched into L1.  This event does not count data cache misses due to hardware or software prefetches.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_READ_OR_WRITE">DATA_READ_OR_WRITE</span></td>
+		<td>Counts demand data loads and stores, at the hardware thread level.  This event could also be referred to as L1 data cache accesses.  This event does not count data cache accesses due to hardware or software prefetches.  It does include VPU loads generated by instructions like vgather/vloadunpack/etc.  VPU_DATA_READ and VPU_DATA_WRITE are subsets of this event.</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_WRITE">DATA_WRITE</span></td>
+		<td>Number of memory data writes which hit the internal data cache (L1).</td>
+	</tr>
+	<tr>
+		<td><span id="DATA_WRITE_MISS">DATA_WRITE_MISS</span></td>
+		<td>Number of memory write accesses that miss the internal data cache whether or not the access is cacheable or noncacheable</td>
+	</tr>
+	<tr>
+		<td><span id="EXEC_STAGE_CYCLES">EXEC_STAGE_CYCLES</span></td>
+		<td>Counts the number of cycles where an instruction was in execution stage, except in the FP or VPU execution units.  Counts at the hardware thread level.</td>
+	</tr>
+	<tr>
+		<td><span id="FE_STALLED">FE_STALLED</span></td>
+		<td>Number of cycles where the front-end could not advance. Any multi-cycle instructions which delay pipeline advance and apply backpressure to the front-end will be included, e.g. read-modify-write instructions. Includes cycles when the front-end did not hav</td>
+	</tr>
+	<tr>
+		<td><span id="HARDWARE_INTERRUPTS">HARDWARE_INTERRUPTS</span></td>
+		<td>Number of taken INTR and NMI interrupts</td>
+	</tr>
+	<tr>
+		<td><span id="HWP_L2MISS">HWP_L2MISS</span></td>
+		<td>Counts hardware prefetches that missed the L2 data cache.  This event counts at the hardware thread level.</td>
 	</tr>
 	<tr>
 		<td><span id="INSTRUCTIONS_EXECUTED">INSTRUCTIONS_EXECUTED</span></td>
@@ -66,64 +86,44 @@
 		<td>Counts the number of instructions executed on the alternate pipeline, called the V-pipe.  Two instructions can be executed every clock cycle, one on the U-pipe, and one on the V-pipe. The V-pipe cannot execute all instruction types, and will execute instructions only when pairing rules are met.  This event can be used to see the extent of instruction pairing on a workload.  It is included in INSTRUCTIONS_EXECUTED.  It counts at the hardware thread level.</td>
 	</tr>
 	<tr>
-		<td><span id="L1_DATA_PF1_MISS">L1_DATA_PF1_MISS</span></td>
-		<td>Counts software prefetches that missed the local L1 cache.  May include both L1 and L2 prefetches.  This event counts at the hardware thread level.</td>
-	</tr>
-	<tr>
-		<td><span id="PIPELINE_AGI_STALLS">PIPELINE_AGI_STALLS</span></td>
-		<td>Number of address generation interlock (AGI) stalls. An AGI occurring in both the U- and V- pipelines in the same clock signals this event twice.</td>
-	</tr>
-	<tr>
 		<td><span id="L1_DATA_HIT_INFLIGHT_PF1">L1_DATA_HIT_INFLIGHT_PF1</span></td>
 		<td>Counts demand data loads and stores that missed the L1 cache, but did hit a prefetch buffer.  This means the cacheline was already in the process of being prefetched into L1.  This is a second type of miss and is not included in DATA_READ_MISS_OR_WRITE_MISS.  It is counted at the hardware thread level.  This event does not count data cache misses due to hardware or software prefetches.</td>
 	</tr>
 	<tr>
-		<td><span id="PIPELINE_SG_AGI_STALLS">PIPELINE_SG_AGI_STALLS</span></td>
-		<td>Number of address generation interlock (AGI) stalls due to vscatter* and vgather* instructions.</td>
+		<td><span id="L1_DATA_PF1">L1_DATA_PF1</span></td>
+		<td>Counts software prefetches that are intended for the local L1 cache.  May include both L1 and L2 prefetches.  This event counts at the hardware thread level.</td>
 	</tr>
 	<tr>
-		<td><span id="HARDWARE_INTERRUPTS">HARDWARE_INTERRUPTS</span></td>
-		<td>Number of taken INTR and NMI interrupts</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_READ_OR_WRITE">DATA_READ_OR_WRITE</span></td>
-		<td>Counts demand data loads and stores, at the hardware thread level.  This event could also be referred to as L1 data cache accesses.  This event does not count data cache accesses due to hardware or software prefetches.  It does include VPU loads generated by instructions like vgather/vloadunpack/etc.  VPU_DATA_READ and VPU_DATA_WRITE are subsets of this event.</td>
-	</tr>
-	<tr>
-		<td><span id="DATA_READ_MISS_OR_WRITE_MISS">DATA_READ_MISS_OR_WRITE_MISS</span></td>
-		<td>Counts demand data loads and stores that missed the L1 cache, at the hardware thread level.  This event does not include misses for cachelines that were in the process of being prefetched into L1.  This event does not count data cache misses due to hardware or software prefetches.</td>
-	</tr>
-	<tr>
-		<td><span id="CPU_CLK_UNHALTED">CPU_CLK_UNHALTED</span></td>
-		<td>The number of cycles (commonly known as clockticks) where any thread on a core is active.  A core is active if any thread on that core is not halted.  This event is counted at the core level – at any given time, all the hardware threads running on the same core will have the same value.</td>
-	</tr>
-	<tr>
-		<td><span id="BRANCHES_MISPREDICTED">BRANCHES_MISPREDICTED</span></td>
-		<td>Number of branch mispredictions that occurred on BTB hits. BTB misses are not considered branch mispredicts because no prediction exists for them yet.</td>
-	</tr>
-	<tr>
-		<td><span id="MICROCODE_CYCLES">MICROCODE_CYCLES</span></td>
-		<td>The number of cycles microcode is executing. While microcode is executing, all other threads are stalled.</td>
-	</tr>
-	<tr>
-		<td><span id="FE_STALLED">FE_STALLED</span></td>
-		<td>Number of cycles where the front-end could not advance. Any multi-cycle instructions which delay pipeline advance and apply backpressure to the front-end will be included, e.g. read-modify-write instructions. Includes cycles when the front-end did not hav</td>
-	</tr>
-	<tr>
-		<td><span id="EXEC_STAGE_CYCLES">EXEC_STAGE_CYCLES</span></td>
-		<td>Counts the number of cycles where an instruction was in execution stage, except in the FP or VPU execution units.  Counts at the hardware thread level.</td>
+		<td><span id="L1_DATA_PF1_MISS">L1_DATA_PF1_MISS</span></td>
+		<td>Counts software prefetches that missed the local L1 cache.  May include both L1 and L2 prefetches.  This event counts at the hardware thread level.</td>
 	</tr>
 	<tr>
 		<td><span id="L1_DATA_PF2">L1_DATA_PF2</span></td>
 		<td>Number of data vprefetch0, vprefetch1 and vprefetch2 requests seen by the L1. This is not necessarily the same number as seen by the L2 because this count includes requests that are dropped by the core.</td>
 	</tr>
 	<tr>
-		<td><span id="LONG_DATA_PAGE_WALK">LONG_DATA_PAGE_WALK</span></td>
-		<td>Counts misses in the L2 TLB, at the hardware thread level.  TLB Misses could have been caused by either demand data loads and stores or data prefetches.</td>
+		<td><span id="L2_DATA_PF2">L2_DATA_PF2</span></td>
+		<td>Counts software prefetches that are intended for the local L2 cache.  May include both L1 and L2 prefetches.  This event counts at the hardware thread level.</td>
 	</tr>
 	<tr>
-		<td><span id="HWP_L2MISS">HWP_L2MISS</span></td>
-		<td>Counts hardware prefetches that missed the L2 data cache.  This event counts at the hardware thread level.</td>
+		<td><span id="L2_DATA_PF2_MISS">L2_DATA_PF2_MISS</span></td>
+		<td>Counts software prefetches that missed the local L2 cache.  May include both L1 and L2 prefetches.  This event counts at the hardware thread level.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_READ_MISS_CACHE_FILL">L2_DATA_READ_MISS_CACHE_FILL</span></td>
+		<td>Counts data loads that missed the local L2 cache, but were serviced by a remote L2 cache on the same Intel Xeon Phi coprocessor.   This event counts at the hardware thread level.  It includes L2 prefetches that missed the local L2 cache and so is not useful for determining demand cache fills.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_READ_MISS_MEM_FILL">L2_DATA_READ_MISS_MEM_FILL</span></td>
+		<td>Counts data loads that missed the local L2 cache, and were serviced from memory (on the same Intel Xeon Phi coprocessor).   This event counts at the hardware thread level.  It includes L2 prefetches that missed the local L2 cache and so is not useful for determining demand cache fills or standard metrics like L2 Hit/Miss Rate.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_WRITE_MISS_CACHE_FILL">L2_DATA_WRITE_MISS_CACHE_FILL</span></td>
+		<td>Counts data Reads for Ownership (due to a store operation) that missed the local L2 cache, but were serviced by a remote L2 cache on the same Intel Xeon Phi coprocessor.   This event counts at the hardware thread level.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_DATA_WRITE_MISS_MEM_FILL">L2_DATA_WRITE_MISS_MEM_FILL</span></td>
+		<td>Counts data Reads for Ownership (due to a store operation) that missed the local L2 cache, and were serviced from memory (on the same Intel Xeon Phi coprocessor).   This event counts at the hardware thread level.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_READ_HIT_E">L2_READ_HIT_E</span></td>
@@ -142,12 +142,44 @@
 		<td>Counts data loads that missed the local L2 cache, at the hardware thread level.  It includes L2 prefetches that missed the local L2 cache and so is not useful for determining standard metrics like L2 Hit/Miss rate that are normally based on demand misses.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_WRITE_HIT">L2_WRITE_HIT</span></td>
-		<td>L2 Write HIT</td>
+		<td><span id="L2_STRONGLY_ORDERED_STREAMING_VSTORES_MISS">L2_STRONGLY_ORDERED_STREAMING_VSTORES_MISS</span></td>
+		<td>Number of strongly ordered streaming vector stores that missed the L2 and were sent to the ring.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_VICTIM_REQ_WITH_DATA">L2_VICTIM_REQ_WITH_DATA</span></td>
 		<td>Counts the number of modified cachelines evicted from the L2 Data cache.  These result in a memory write operation, also known as an explicit L2 write-back.  This event counts at the hardware core level; at any given time, every executing hardware thread on the core has the same value for this counter.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WEAKLY_ORDERED_STREAMING_VSTORE_MISS">L2_WEAKLY_ORDERED_STREAMING_VSTORE_MISS</span></td>
+		<td>Number of weakly ordered streaming vector stores that missed the L2 and were sent to the ring.</td>
+	</tr>
+	<tr>
+		<td><span id="L2_WRITE_HIT">L2_WRITE_HIT</span></td>
+		<td>L2 Write HIT</td>
+	</tr>
+	<tr>
+		<td><span id="LONG_DATA_PAGE_WALK">LONG_DATA_PAGE_WALK</span></td>
+		<td>Counts misses in the L2 TLB, at the hardware thread level.  TLB Misses could have been caused by either demand data loads and stores or data prefetches.</td>
+	</tr>
+	<tr>
+		<td><span id="MEMORY_ACCESSES_IN_BOTH_PIPES">MEMORY_ACCESSES_IN_BOTH_PIPES</span></td>
+		<td>Number of data memory reads or writes that are paired in both pipes of the pipeline</td>
+	</tr>
+	<tr>
+		<td><span id="MICROCODE_CYCLES">MICROCODE_CYCLES</span></td>
+		<td>The number of cycles microcode is executing. While microcode is executing, all other threads are stalled.</td>
+	</tr>
+	<tr>
+		<td><span id="PIPELINE_AGI_STALLS">PIPELINE_AGI_STALLS</span></td>
+		<td>Number of address generation interlock (AGI) stalls. An AGI occurring in both the U- and V- pipelines in the same clock signals this event twice.</td>
+	</tr>
+	<tr>
+		<td><span id="PIPELINE_FLUSHES">PIPELINE_FLUSHES</span></td>
+		<td>Number of pipeline flushes that occur</td>
+	</tr>
+	<tr>
+		<td><span id="PIPELINE_SG_AGI_STALLS">PIPELINE_SG_AGI_STALLS</span></td>
+		<td>Number of address generation interlock (AGI) stalls due to vscatter* and vgather* instructions.</td>
 	</tr>
 	<tr>
 		<td><span id="SNP_HIT_L2">SNP_HIT_L2</span></td>
@@ -158,48 +190,24 @@
 		<td>Counts incoming snoops that hit a modified cacheline in a hardware thread&#39;s local L2.  These result in a cache-to-cache transfer: the line will be evicted from the local L2, written back to memory (also called an implicit write-back), and the line will be loaded exclusively into the requesting core&#39;s cache.  This event counts at the hardware core level; at any given time, every executing hardware thread on the core has the same value for this counter.</td>
 	</tr>
 	<tr>
-		<td><span id="L2_DATA_READ_MISS_CACHE_FILL">L2_DATA_READ_MISS_CACHE_FILL</span></td>
-		<td>Counts data loads that missed the local L2 cache, but were serviced by a remote L2 cache on the same Intel Xeon Phi coprocessor.   This event counts at the hardware thread level.  It includes L2 prefetches that missed the local L2 cache and so is not useful for determining demand cache fills.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_WRITE_MISS_CACHE_FILL">L2_DATA_WRITE_MISS_CACHE_FILL</span></td>
-		<td>Counts data Reads for Ownership (due to a store operation) that missed the local L2 cache, but were serviced by a remote L2 cache on the same Intel Xeon Phi coprocessor.   This event counts at the hardware thread level.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_READ_MISS_MEM_FILL">L2_DATA_READ_MISS_MEM_FILL</span></td>
-		<td>Counts data loads that missed the local L2 cache, and were serviced from memory (on the same Intel Xeon Phi coprocessor).   This event counts at the hardware thread level.  It includes L2 prefetches that missed the local L2 cache and so is not useful for determining demand cache fills or standard metrics like L2 Hit/Miss Rate.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_WRITE_MISS_MEM_FILL">L2_DATA_WRITE_MISS_MEM_FILL</span></td>
-		<td>Counts data Reads for Ownership (due to a store operation) that missed the local L2 cache, and were serviced from memory (on the same Intel Xeon Phi coprocessor).   This event counts at the hardware thread level.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_PF2">L2_DATA_PF2</span></td>
-		<td>Counts software prefetches that are intended for the local L2 cache.  May include both L1 and L2 prefetches.  This event counts at the hardware thread level.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_DATA_PF2_MISS">L2_DATA_PF2_MISS</span></td>
-		<td>Counts software prefetches that missed the local L2 cache.  May include both L1 and L2 prefetches.  This event counts at the hardware thread level.</td>
-	</tr>
-	<tr>
 		<td><span id="VPU_DATA_READ">VPU_DATA_READ</span></td>
 		<td>Number of read transactions that were issued. In general each read transaction will read 1 64B cacheline.  If there are alignment issues, then reads against multiple cache lines will each be counted individually.</td>
-	</tr>
-	<tr>
-		<td><span id="VPU_DATA_WRITE">VPU_DATA_WRITE</span></td>
-		<td>Number of write transactions that were issued. In general each write transaction will write 1 64B cacheline.  If there are alignment issues, then write against multiple cache lines will each be counted individually.</td>
 	</tr>
 	<tr>
 		<td><span id="VPU_DATA_READ_MISS">VPU_DATA_READ_MISS</span></td>
 		<td>VPU L1 data cache readmiss. Counts the number of occurrences.</td>
 	</tr>
 	<tr>
+		<td><span id="VPU_DATA_WRITE">VPU_DATA_WRITE</span></td>
+		<td>Number of write transactions that were issued. In general each write transaction will write 1 64B cacheline.  If there are alignment issues, then write against multiple cache lines will each be counted individually.</td>
+	</tr>
+	<tr>
 		<td><span id="VPU_DATA_WRITE_MISS">VPU_DATA_WRITE_MISS</span></td>
 		<td>VPU L1 data cache write miss. Counts the number of occurrences.</td>
 	</tr>
 	<tr>
-		<td><span id="VPU_STALL_REG">VPU_STALL_REG</span></td>
-		<td>VPU stall on Register Dependency. Counts the number of occurrences.  Dependencies will include RAW, WAW, WAR.</td>
+		<td><span id="VPU_ELEMENTS_ACTIVE">VPU_ELEMENTS_ACTIVE</span></td>
+		<td>Increments by 1 for every element to which an executed VPU instruction applies.  For example, if a VPU instruction executes with a mask register containing 1, it applies to only one element and so this event increments by 1.  If a VPU instruction executes with a mask register containing 0xFF, this event is incremented by 8.  Counts at the hardware thread level.</td>
 	</tr>
 	<tr>
 		<td><span id="VPU_INSTRUCTIONS_EXECUTED">VPU_INSTRUCTIONS_EXECUTED</span></td>
@@ -210,32 +218,24 @@
 		<td>Counts the number of VPU instructions that paired and executed in the v-pipe.</td>
 	</tr>
 	<tr>
-		<td><span id="VPU_ELEMENTS_ACTIVE">VPU_ELEMENTS_ACTIVE</span></td>
-		<td>Increments by 1 for every element to which an executed VPU instruction applies.  For example, if a VPU instruction executes with a mask register containing 1, it applies to only one element and so this event increments by 1.  If a VPU instruction executes with a mask register containing 0xFF, this event is incremented by 8.  Counts at the hardware thread level.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_STRONGLY_ORDERED_STREAMING_VSTORES_MISS">L2_STRONGLY_ORDERED_STREAMING_VSTORES_MISS</span></td>
-		<td>Number of strongly ordered streaming vector stores that missed the L2 and were sent to the ring.</td>
-	</tr>
-	<tr>
-		<td><span id="L2_WEAKLY_ORDERED_STREAMING_VSTORE_MISS">L2_WEAKLY_ORDERED_STREAMING_VSTORE_MISS</span></td>
-		<td>Number of weakly ordered streaming vector stores that missed the L2 and were sent to the ring.</td>
-	</tr>
-	<tr>
-		<td><span id="UNC_F_CH0_NORMAL_WRITE">UNC_F_CH0_NORMAL_WRITE</span></td>
-		<td>This counts the number of normal writes sent to channel 0</td>
+		<td><span id="VPU_STALL_REG">VPU_STALL_REG</span></td>
+		<td>VPU stall on Register Dependency. Counts the number of occurrences.  Dependencies will include RAW, WAW, WAR.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_F_CH0_NORMAL_READ">UNC_F_CH0_NORMAL_READ</span></td>
 		<td>This counts the number of normal reads sent to channel 0</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_F_CH1_NORMAL_WRITE">UNC_F_CH1_NORMAL_WRITE</span></td>
-		<td>This counts the number of normal writes sent to channel 1</td>
+		<td><span id="UNC_F_CH0_NORMAL_WRITE">UNC_F_CH0_NORMAL_WRITE</span></td>
+		<td>This counts the number of normal writes sent to channel 0</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_F_CH1_NORMAL_READ">UNC_F_CH1_NORMAL_READ</span></td>
 		<td>This counts the number of normal reads sent to channel 1</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_F_CH1_NORMAL_WRITE">UNC_F_CH1_NORMAL_WRITE</span></td>
+		<td>This counts the number of normal writes sent to channel 1</td>
 	</tr>
 </table>
 
