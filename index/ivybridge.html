@@ -1358,611 +1358,611 @@
 		<td>This 48-bit fixed counter counts the UCLK cycles.</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts demand data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts demand data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts demand data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts demand data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts demand data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts demand data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts demand data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts demand data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all demand data writes (RFOs)  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all demand data writes (RFOs)  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all demand data writes (RFOs)  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all demand data writes (RFOs)  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all demand data writes (RFOs)  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all demand data writes (RFOs)  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all demand data writes (RFOs)  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_RFO: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all demand data writes (RFOs)  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all demand code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all demand code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all demand code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all demand code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all demand code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all demand code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all demand code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all demand code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=COREWB: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=COREWB: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts core writebacks due to L2 evictions or L1 writeback requests  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts prefetch (that bring data to L2) data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts prefetch (that bring data to L2) data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts prefetch (that bring data to L2) data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts prefetch (that bring data to L2) data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all prefetch (that bring data to L2) RFOs  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch (that bring data to L2) RFOs  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all prefetch (that bring data to L2) RFOs  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_RFO: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all prefetch (that bring data to L2) RFOs  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_DATA_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_DATA_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_DATA_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_DATA_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_DATA_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_DATA_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_DATA_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_DATA_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_RFO:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_RFO:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_RFO:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_RFO:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_RFO:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) RFOs  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_RFO:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) RFOs  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_RFO:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) RFOs  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_RFO:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_RFO: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all prefetch (that bring data to LLC only) RFOs  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_CODE_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_CODE_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_CODE_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_CODE_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_CODE_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts prefetch (that bring data to LLC only) code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_CODE_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts prefetch (that bring data to LLC only) code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_CODE_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts prefetch (that bring data to LLC only) code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:PF_LLC_CODE_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=PF_LLC_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts prefetch (that bring data to LLC only) code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts any other requests  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts any other requests  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts any other requests  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts any other requests  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=OTHER: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts any other requests  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts any other requests  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts any other requests  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=OTHER: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts any other requests  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all prefetch data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all prefetch data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all prefetch data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all prefetch data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all prefetch data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all prefetch data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_RFO:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts prefetch RFOs  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_RFO:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts prefetch RFOs  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_RFO:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts prefetch RFOs  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_RFO:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts prefetch RFOs  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_RFO:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts prefetch RFOs  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_RFO:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts prefetch RFOs  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_RFO:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts prefetch RFOs  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_RFO:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_RFO: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts prefetch RFOs  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_CODE_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_CODE_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all prefetch code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_CODE_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all prefetch code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_CODE_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all prefetch code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_CODE_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all prefetch code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_CODE_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all prefetch code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_CODE_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all prefetch code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_CODE_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_PF_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all prefetch code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_DATA_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_DATA_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_DATA_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_DATA_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_DATA_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all demand &amp; prefetch data reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_DATA_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all demand &amp; prefetch data reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_DATA_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all demand &amp; prefetch data reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_DATA_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_DATA_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all demand &amp; prefetch data reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_RFO:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_RFO:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_RFO:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_RFO:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_RFO:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all demand &amp; prefetch RFOs  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_RFO:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all demand &amp; prefetch RFOs  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_RFO:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all demand &amp; prefetch RFOs  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_RFO:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_RFO: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all demand &amp; prefetch RFOs  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_CODE_RD:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_CODE_RD:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_CODE_RD:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_CODE_RD:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_CODE_RD:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all demand &amp; prefetch code reads  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_CODE_RD:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all demand &amp; prefetch code reads  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_CODE_RD:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all demand &amp; prefetch code reads  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_CODE_RD:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_CODE_RD: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all demand &amp; prefetch code reads  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_READS:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_READS:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_READS:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_READS:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_READS:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_READS:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_READS:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_READS:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_READS: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all data/code/rfo reads (demand &amp; prefetch)  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_REQUESTS:response:LLC_HIT.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.ANY_RESPONSE</span></td>
 		<td>Counts all requests  that hit in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_REQUESTS:response:LLC_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.NO_SNOOP_NEEDED</span></td>
 		<td>Counts all requests  that hit in the LLC and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.SNOOP_MISS</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_REQUESTS:response:LLC_HIT.SNOOP_MISS">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.SNOOP_MISS</span></td>
 		<td>Counts all requests  that hit in the LLC and the snoops sent to sibling cores return clean response</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_REQUESTS:response:LLC_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
 		<td>Counts all requests  that hit in the LLC and the snoops to sibling cores hit in either E/S state and the line is not forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HITM_OTHER_CORE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_REQUESTS:response:LLC_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_HIT.HITM_OTHER_CORE</span></td>
 		<td>Counts all requests  that hit in the LLC and the snoop to one of the sibling cores hits the line in M state and the line is forwarded</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_RESPONSE</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_REQUESTS:response:LLC_MISS.ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_RESPONSE</span></td>
 		<td>Counts all requests  that miss in the LLC</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.LOCAL_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_REQUESTS:response:LLC_MISS.LOCAL_DRAM">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.LOCAL_DRAM</span></td>
 		<td>Counts all requests  that miss the LLC and the data returned from local dram</td>
 	</tr>
 	<tr>
-		<td><span id="OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_DRAM</span></td>
+		<td><span id="OFFCORE_RESPONSE:request:ALL_REQUESTS:response:LLC_MISS.ANY_DRAM">OFFCORE_RESPONSE:request=ALL_REQUESTS: response=LLC_MISS.ANY_DRAM</span></td>
 		<td>Counts all requests  that miss the LLC and the data returned from local or remote dram</td>
 	</tr>
 </table>
