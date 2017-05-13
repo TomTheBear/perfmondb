@@ -45,12 +45,12 @@ GenuineIntel-6-3F,V19,/HSX/haswellx_matrix_v19.json,offcore
 GenuineIntel-6-3F,V19,/HSX/haswellx_uncore_v19.json,uncore
 GenuineIntel-6-3D,V19,/BDW/broadwell_core_v19.json,core
 GenuineIntel-6-3D,V19,/BDW/broadwell_matrix_v19.json,offcore
-GenuineIntel-6-3D,V19,/BDW/broadwell_uncore_V19.json,uncore
+GenuineIntel-6-3D,V19,/BDW/broadwell_uncore_v19.json,uncore
 GenuineIntel-6-3D,V19,/BDW/broadwell_fp_arith_inst_v19.json,fp_arith_inst
 GenuineIntel-6-47,V19,/BDW/broadwell_core_v19.json,core
 GenuineIntel-6-47,V19,/BDW/broadwell_matrix_v19.json,offcore
 GenuineIntel-6-47,V19,/BDW/broadwell_uncore_v19.json,uncore
-GenuineIntel-6-47,V19,/BDW/broadwell_fp_arith_inst_v19.jsons,fp_arith_inst
+GenuineIntel-6-47,V19,/BDW/broadwell_fp_arith_inst_v19.json,fp_arith_inst
 GenuineIntel-6-4F,V12,/BDX/broadwellx_core_v12.json,core
 GenuineIntel-6-4F,V12,/BDX/broadwellx_matrix_v12.json,offcore
 GenuineIntel-6-4F,V12,/BDX/broadwellx_uncore_v12.json,uncore
