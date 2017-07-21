@@ -75,3 +75,6 @@ GenuineIntel-6-9E,V30,/SKL/skylake_fp_arith_inst_v30.json,fp_arith_inst
 GenuineIntel-6-57,V9,/KNL/KnightsLanding_core_V9.json,core
 GenuineIntel-6-57,V9,/KNL/KnightsLanding_matrix_V9.json,offcore
 GenuineIntel-6-57,V9,/KNL/KnightsLanding_uncore_V9.json,uncore
+GenuineIntel-6-55,V25,/SKX/skylakex_core_v25.json,core
+GenuineIntel-6-55,V25,/SKX/skylakex_matrix_v25.json,offcore
+GenuineIntel-6-55,V25,/SKX/skylakex_fp_arith_inst_v25.json,fp_arith_inst
