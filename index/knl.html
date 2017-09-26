@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="styles/intel_table_styles.css"></head>
 <body>
 <h3>Intel&reg; Microarchitecture code named Knights Landing Events</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
-<li>Intel&reg; Xeon Phi&#8482 coprocessor</li><p>
+<li>Intel&reg; Xeon Phi&#8482 processor</li><p>
 <table class="table table-responsive" style="table-layout:fixed;width:100%">
 	<tr>
 		<th>EventName</th>
@@ -2337,6 +2337,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts demand cacheable data and L1 prefetch data reads  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:L2_MISS">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=L2_MISS</span></td>
+		<td>Counts demand cacheable data and L1 prefetch data reads  that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=ANY_RESPONSE</span></td>
 		<td>Counts Demand cacheable data writes  that accounts for any response</td>
 	</tr>
@@ -2411,6 +2415,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts Demand cacheable data writes  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:L2_MISS">OFFCORE_RESPONSE:request=DEMAND_RFO: response=L2_MISS</span></td>
+		<td>Counts Demand cacheable data writes  that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=ANY_RESPONSE</span></td>
@@ -2489,6 +2497,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts demand code reads and prefetch code reads  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:L2_MISS">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=L2_MISS</span></td>
+		<td>Counts demand code reads and prefetch code reads  that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=ANY_RESPONSE</span></td>
 		<td>Counts L2 data RFO prefetches (includes PREFETCHW instruction)  that accounts for any response</td>
 	</tr>
@@ -2563,6 +2575,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts L2 data RFO prefetches (includes PREFETCHW instruction)  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:L2_MISS">OFFCORE_RESPONSE:request=PF_L2_RFO: response=L2_MISS</span></td>
+		<td>Counts L2 data RFO prefetches (includes PREFETCHW instruction)  that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=ANY_RESPONSE</span></td>
@@ -2641,6 +2657,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts L2 code HW prefetches  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_CODE_RD:response:L2_MISS">OFFCORE_RESPONSE:request=PF_L2_CODE_RD: response=L2_MISS</span></td>
+		<td>Counts L2 code HW prefetches  that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_READS:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PARTIAL_READS: response=ANY_RESPONSE</span></td>
 		<td>Counts Partial reads (UC or WC and is valid only for Outstanding response type).   that accounts for any response</td>
 	</tr>
@@ -2715,6 +2735,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_READS:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=PARTIAL_READS: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts Partial reads (UC or WC and is valid only for Outstanding response type).   that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_READS:response:L2_MISS">OFFCORE_RESPONSE:request=PARTIAL_READS: response=L2_MISS</span></td>
+		<td>Counts Partial reads (UC or WC and is valid only for Outstanding response type).   that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_WRITES:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PARTIAL_WRITES: response=ANY_RESPONSE</span></td>
@@ -2793,6 +2817,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts Partial writes (UC or WT or WP and should be programmed on PMC1)  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_WRITES:response:L2_MISS">OFFCORE_RESPONSE:request=PARTIAL_WRITES: response=L2_MISS</span></td>
+		<td>Counts Partial writes (UC or WT or WP and should be programmed on PMC1)  that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:UC_CODE_READS:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=UC_CODE_READS: response=ANY_RESPONSE</span></td>
 		<td>Counts UC code reads (valid only for Outstanding response type)   that accounts for any response</td>
 	</tr>
@@ -2867,6 +2895,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:UC_CODE_READS:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=UC_CODE_READS: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts UC code reads (valid only for Outstanding response type)   that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:UC_CODE_READS:response:L2_MISS">OFFCORE_RESPONSE:request=UC_CODE_READS: response=L2_MISS</span></td>
+		<td>Counts UC code reads (valid only for Outstanding response type)   that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:BUS_LOCKS:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=BUS_LOCKS: response=ANY_RESPONSE</span></td>
@@ -2945,6 +2977,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts Bus locks and split lock requests  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:BUS_LOCKS:response:L2_MISS">OFFCORE_RESPONSE:request=BUS_LOCKS: response=L2_MISS</span></td>
+		<td>Counts Bus locks and split lock requests  that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:FULL_STREAMING_STORES:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=FULL_STREAMING_STORES: response=ANY_RESPONSE</span></td>
 		<td>Counts Full streaming stores (WC and should be programmed on PMC1)  that accounts for any response</td>
 	</tr>
@@ -3019,6 +3055,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:FULL_STREAMING_STORES:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=FULL_STREAMING_STORES: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts Full streaming stores (WC and should be programmed on PMC1)  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:FULL_STREAMING_STORES:response:L2_MISS">OFFCORE_RESPONSE:request=FULL_STREAMING_STORES: response=L2_MISS</span></td>
+		<td>Counts Full streaming stores (WC and should be programmed on PMC1)  that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_SOFTWARE:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_SOFTWARE: response=ANY_RESPONSE</span></td>
@@ -3097,6 +3137,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts Software Prefetches  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PF_SOFTWARE:response:L2_MISS">OFFCORE_RESPONSE:request=PF_SOFTWARE: response=L2_MISS</span></td>
+		<td>Counts Software Prefetches  that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L1_DATA_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L1_DATA_RD: response=ANY_RESPONSE</span></td>
 		<td>Counts L1 data HW prefetches  that accounts for any response</td>
 	</tr>
@@ -3171,6 +3215,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L1_DATA_RD:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=PF_L1_DATA_RD: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts L1 data HW prefetches  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L1_DATA_RD:response:L2_MISS">OFFCORE_RESPONSE:request=PF_L1_DATA_RD: response=L2_MISS</span></td>
+		<td>Counts L1 data HW prefetches  that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_STREAMING_STORES:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PARTIAL_STREAMING_STORES: response=ANY_RESPONSE</span></td>
@@ -3249,6 +3297,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts Partial streaming stores (WC and should be programmed on PMC1)  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_STREAMING_STORES:response:L2_MISS">OFFCORE_RESPONSE:request=PARTIAL_STREAMING_STORES: response=L2_MISS</span></td>
+		<td>Counts Partial streaming stores (WC and should be programmed on PMC1)  that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:STREAMING_STORES:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=STREAMING_STORES: response=ANY_RESPONSE</span></td>
 		<td>Counts all streaming stores (WC and should be programmed on PMC1)  that accounts for any response</td>
 	</tr>
@@ -3323,6 +3375,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:STREAMING_STORES:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=STREAMING_STORES: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts all streaming stores (WC and should be programmed on PMC1)  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:STREAMING_STORES:response:L2_MISS">OFFCORE_RESPONSE:request=STREAMING_STORES: response=L2_MISS</span></td>
+		<td>Counts all streaming stores (WC and should be programmed on PMC1)  that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_REQUEST:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_REQUEST: response=ANY_RESPONSE</span></td>
@@ -3401,6 +3457,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts any request  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_REQUEST:response:L2_MISS">OFFCORE_RESPONSE:request=ANY_REQUEST: response=L2_MISS</span></td>
+		<td>Counts any request  that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_DATA_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_DATA_RD: response=ANY_RESPONSE</span></td>
 		<td>Counts Demand cacheable data and L1 prefetch data read requests   that accounts for any response</td>
 	</tr>
@@ -3475,6 +3535,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_DATA_RD:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=ANY_DATA_RD: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts Demand cacheable data and L1 prefetch data read requests   that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_DATA_RD:response:L2_MISS">OFFCORE_RESPONSE:request=ANY_DATA_RD: response=L2_MISS</span></td>
+		<td>Counts Demand cacheable data and L1 prefetch data read requests   that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_RFO:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_RFO: response=ANY_RESPONSE</span></td>
@@ -3553,6 +3617,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts Demand cacheable data write requests   that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_RFO:response:L2_MISS">OFFCORE_RESPONSE:request=ANY_RFO: response=L2_MISS</span></td>
+		<td>Counts Demand cacheable data write requests   that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_CODE_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_CODE_RD: response=ANY_RESPONSE</span></td>
 		<td>Counts Demand code reads and prefetch code read requests   that accounts for any response</td>
 	</tr>
@@ -3627,6 +3695,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_CODE_RD:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=ANY_CODE_RD: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts Demand code reads and prefetch code read requests   that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_CODE_RD:response:L2_MISS">OFFCORE_RESPONSE:request=ANY_CODE_RD: response=L2_MISS</span></td>
+		<td>Counts Demand code reads and prefetch code read requests   that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_READ:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_READ: response=ANY_RESPONSE</span></td>
@@ -3705,6 +3777,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 		<td>Counts any Read request   that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_READ:response:L2_MISS">OFFCORE_RESPONSE:request=ANY_READ: response=L2_MISS</span></td>
+		<td>Counts any Read request   that Accounts for responses which miss its own tile&#39;s L2.</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_PF_L2:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_PF_L2: response=ANY_RESPONSE</span></td>
 		<td>Counts any Prefetch requests  that accounts for any response</td>
 	</tr>
@@ -3779,6 +3855,10 @@ This event is defined at the micro-op level and not instruction level. Most inst
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_PF_L2:response:L2_HIT_FAR_TILE">OFFCORE_RESPONSE:request=ANY_PF_L2: response=L2_HIT_FAR_TILE</span></td>
 		<td>Counts any Prefetch requests  that accounts for reponses from snoop request hit with data forwarded from it Far(not in the same quadrant as the request)-other tile L2 in E/F/M state. Valid only in SNC4 Cluster mode.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_PF_L2:response:L2_MISS">OFFCORE_RESPONSE:request=ANY_PF_L2: response=L2_MISS</span></td>
+		<td>Counts any Prefetch requests  that Accounts for responses which miss its own tile&#39;s L2.</td>
 	</tr>
 </table>
 
