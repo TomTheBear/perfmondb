@@ -1,7 +1,6 @@
 <!DOCTYPE html><html>
 <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="styles/intel_table_styles.css">
-</head>
+<link rel="stylesheet" href="styles/intel_table_styles.css"></head>
 <body>
 <h3>Intel&reg; Microarchitecture code named Broadwell Events</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
 <li>5th generation Intel&reg; Core&#8482 processor family</li><p><li>Intel&reg; microarchitecture code named Broadwell</li><p>
@@ -1281,7 +1280,7 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="TX_EXEC.MISC1">TX_EXEC.MISC1</span></td>
-		<td>Unfriendly TSX abort triggered by  a flowmarker.</td>
+		<td>Counts the number of times a class of instructions that may cause a transactional abort was executed. Since this is the count of execution, it may not always cause a transactional abort.</td>
 	</tr>
 	<tr>
 		<td><span id="TX_EXEC.MISC2">TX_EXEC.MISC2</span></td>

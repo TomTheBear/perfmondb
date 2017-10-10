@@ -1,5 +1,5 @@
 # Performance Monitoring Events for the Fourth Generation Intel Core Processors Based on the Haswell Microarchitecture - V26
-# 4/25/2017 1:00:09 PM
+# 10/4/2017 11:41:44 AM
 # Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
 EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue	MSRIndex	MSRValue	TakenAlone	CounterMask	Invert	AnyThread	EdgeDetect	PEBS	Data_LA	L1_Hit_Indication	Errata
 0xB7, 0xBB	0x01	OFFCORE_RESPONSE.ALL_REQUESTS.L3_MISS.ANY_RESPONSE	Counts all requests that miss in the L3	0,1,2,3	0,1,2,3	100003	0x1a6,0x1a7	0x3fffc08fff	0	0	0	0	0	0	0	0	null

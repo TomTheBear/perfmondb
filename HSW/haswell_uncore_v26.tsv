@@ -1,5 +1,5 @@
 # Performance Monitoring Events for the Fourth Generation Intel Core Processors Based on the Haswell Microarchitecture - V26
-# 4/25/2017 1:00:09 PM
+# 10/4/2017 11:41:44 AM
 # Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
 Unit	EventCode	UMask	EventName	Description	Counter	CounterMask	Invert	EdgeDetect
 CBO	0x22	0x21	UNC_CBO_XSNP_RESPONSE.MISS_EXTERNAL	An external snoop misses in some processor core.	0,1	0	0	0

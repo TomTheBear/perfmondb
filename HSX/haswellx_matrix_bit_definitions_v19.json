@@ -4,7 +4,7 @@
     "BitIndex": "0",
     "Type": "1",
     "Description": "Counts demand data reads",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -13,7 +13,7 @@
     "BitIndex": "1",
     "Type": "1",
     "Description": "Counts all demand data writes (RFOs)",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -22,7 +22,7 @@
     "BitIndex": "2",
     "Type": "1",
     "Description": "Counts all demand code reads",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -31,7 +31,7 @@
     "BitIndex": "3",
     "Type": "1",
     "Description": "Counts writebacks (modified to exclusive)",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -40,7 +40,7 @@
     "BitIndex": "4",
     "Type": "1",
     "Description": "Counts prefetch (that bring data to L2) data reads",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -49,7 +49,7 @@
     "BitIndex": "5",
     "Type": "1",
     "Description": "Counts all prefetch (that bring data to L2) RFOs",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -58,7 +58,7 @@
     "BitIndex": "6",
     "Type": "1",
     "Description": "Counts all prefetch (that bring data to LLC only) code reads",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -67,7 +67,7 @@
     "BitIndex": "7",
     "Type": "1",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -76,7 +76,7 @@
     "BitIndex": "8",
     "Type": "1",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -85,7 +85,7 @@
     "BitIndex": "9",
     "Type": "1",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -94,7 +94,7 @@
     "BitIndex": "10",
     "Type": "1",
     "Description": "Counts all locks that are either split across cache line boundaries or to uncacheable addresses",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -103,7 +103,7 @@
     "BitIndex": "11",
     "Type": "1",
     "Description": "Counts all non-temporal stores",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -112,61 +112,61 @@
     "BitIndex": "15",
     "Type": "1",
     "Description": "Counts any other requests",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
   {
     "BitName": "ALL_PF_DATA_RD",
-    "BitIndex": "\"4,7\"",
+    "BitIndex": "4,7",
     "Type": "1",
     "Description": "Counts all prefetch data reads",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
   {
     "BitName": "ALL_PF_RFO",
-    "BitIndex": "\"5,8\"",
+    "BitIndex": "5,8",
     "Type": "1",
     "Description": "Counts prefetch RFOs",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
   {
     "BitName": "ALL_PF_CODE_RD",
-    "BitIndex": "\"6,9\"",
+    "BitIndex": "6,9",
     "Type": "1",
     "Description": "Counts all prefetch code reads",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
   {
     "BitName": "ALL_DATA_RD",
-    "BitIndex": "\"0,4,7\"",
+    "BitIndex": "0,4,7",
     "Type": "1",
     "Description": "Counts all demand & prefetch data reads",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
   {
     "BitName": "ALL_RFO",
-    "BitIndex": "\"1,5,8\"",
+    "BitIndex": "1,5,8",
     "Type": "1",
     "Description": "Counts all demand & prefetch RFOs",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
   {
     "BitName": "ALL_CODE_RD",
-    "BitIndex": "\"2,6,9\"",
+    "BitIndex": "2,6,9",
     "Type": "1",
     "Description": "Counts all demand & prefetch code reads",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -175,16 +175,16 @@
     "BitIndex": "0,1,2,4,5,6,7,8,9,10",
     "Type": "1",
     "Description": "Counts all data/code/rfo reads (demand & prefetch)",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
   {
     "BitName": "ALL_REQUESTS",
-    "BitIndex": "\"0,1,2,3,4,5,6,7,8,9,10,11,15\"",
+    "BitIndex": "0,1,2,3,4,5,6,7,8,9,10,11,15",
     "Type": "1",
     "Description": "Counts all requests",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -193,7 +193,7 @@
     "BitIndex": "16",
     "Type": "2",
     "Description": "have any response type.",
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -202,7 +202,7 @@
     "BitIndex": "17",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -211,7 +211,7 @@
     "BitIndex": "18",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -220,7 +220,7 @@
     "BitIndex": "19",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -229,7 +229,7 @@
     "BitIndex": "20",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -238,16 +238,16 @@
     "BitIndex": "21",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
   {
     "BitName": "L3_HIT",
-    "BitIndex": "\"18,19,20,21\"",
+    "BitIndex": "18,19,20,21",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -256,7 +256,7 @@
     "BitIndex": "22",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -265,7 +265,7 @@
     "BitIndex": "27",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -274,7 +274,7 @@
     "BitIndex": "28",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -283,16 +283,16 @@
     "BitIndex": "29",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
   {
     "BitName": "L3_MISS",
-    "BitIndex": "\"22,27,28,29\"",
+    "BitIndex": "22,27,28,29",
     "Type": "3",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "317,334,335,336,337,338,339,340,341,342",
     "Errata": "null"
   },
@@ -301,7 +301,7 @@
     "BitIndex": "31",
     "Type": "4",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -310,7 +310,7 @@
     "BitIndex": "32",
     "Type": "4",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -319,7 +319,7 @@
     "BitIndex": "33",
     "Type": "4",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -328,7 +328,7 @@
     "BitIndex": "34",
     "Type": "4",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -337,7 +337,7 @@
     "BitIndex": "35",
     "Type": "4",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -346,7 +346,7 @@
     "BitIndex": "36",
     "Type": "4",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -355,16 +355,16 @@
     "BitIndex": "37",
     "Type": "4",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
   {
     "BitName": "ANY_SNOOP",
-    "BitIndex": "\"31,32,33,34,35,36,37\"",
+    "BitIndex": "31,32,33,34,35,36,37",
     "Type": "4",
     "Description": null,
-    "MATRIX_REG": "\"0,1\"     ",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "",
     "Errata": "null"
   },
@@ -373,7 +373,7 @@
     "BitIndex": "18,19,20,21,31,32,33,34,35,36,37",
     "Type": "2",
     "Description": "hit in the L3",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -382,7 +382,7 @@
     "BitIndex": "18,19,20,21,32",
     "Type": "2",
     "Description": "hit in the L3 and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -391,7 +391,7 @@
     "BitIndex": "18,19,20,21,33",
     "Type": "2",
     "Description": "hit in the L3 and the snoops sent to sibling cores return clean response",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -400,7 +400,7 @@
     "BitIndex": "18,19,20,21,34",
     "Type": "2",
     "Description": "hit in the L3 and the snoops to sibling cores hit in either E/S state and the line is not forwarded",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -409,7 +409,7 @@
     "BitIndex": "18,19,20,21,36",
     "Type": "2",
     "Description": "hit in the L3 and the snoop to one of the sibling cores hits the line in M state and the line is forwarded",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -418,7 +418,7 @@
     "BitIndex": "22,23,24,25,26,27,28,29,31,32,33,34,35,36,37",
     "Type": "2",
     "Description": "miss in the L3",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -427,7 +427,7 @@
     "BitIndex": "22,33,34",
     "Type": "2",
     "Description": "miss the L3 and the data is returned from local dram",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -436,7 +436,7 @@
     "BitIndex": "23,24,25,26,27,28,29,33,34",
     "Type": "2",
     "Description": "miss the L3 and the data is returned from remote dram",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -445,7 +445,7 @@
     "BitIndex": "22,23,24,25,26,27,28,29,33,34",
     "Type": "2",
     "Description": "miss the L3 and the data is returned from local or remote dram",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -454,7 +454,7 @@
     "BitIndex": "22,23,24,25,26,27,28,29,36",
     "Type": "2",
     "Description": "miss the L3 and the modified data is transferred from remote cache",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -463,7 +463,7 @@
     "BitIndex": "22,23,24,25,26,27,28,29,35",
     "Type": "2",
     "Description": "miss the L3 and clean or shared data is transferred from remote cache",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -472,7 +472,7 @@
     "BitIndex": "7",
     "Type": "1",
     "Description": "Counts all prefetch (that bring data to LLC only) data reads",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -481,7 +481,7 @@
     "BitIndex": "8",
     "Type": "1",
     "Description": "Counts all prefetch (that bring data to LLC only) RFOs",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   },
@@ -490,7 +490,7 @@
     "BitIndex": "9",
     "Type": "1",
     "Description": "Counts prefetch (that bring data to LLC only) code reads",
-    "MATRIX_REG": "\"0,1\"",
+    "MATRIX_REG": "0,1",
     "BitsNotCombinedWith": "null",
     "Errata": "null"
   }

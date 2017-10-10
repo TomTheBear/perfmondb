@@ -15,11 +15,11 @@
 	</tr>
 	<tr>
 		<td><span id="BACLEARS.ANY">BACLEARS.ANY</span></td>
-		<td>Counts the total number when the front end is resteered, mainly when the BPU cannot provide a correct prediction and this is corrected by other branch handling mechanisms at the front end.</td>
+		<td>Counts the number of times the front-end is resteered when it finds a branch instruction in a fetch line. This occurs for the first time a branch instruction is fetched or when the branch is not tracked by the BPU (Branch Prediction Unit) anymore.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.ALL_BRANCHES">BR_INST_RETIRED.ALL_BRANCHES</span></td>
-		<td>This event counts all (macro) branch instructions retired.</td>
+		<td>Counts all (macro) branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.ALL_BRANCHES_PS">BR_INST_RETIRED.ALL_BRANCHES_PS</span></td>
@@ -71,7 +71,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES">BR_MISP_RETIRED.ALL_BRANCHES</span></td>
-		<td>This event counts all mispredicted macro branch instructions retired.</td>
+		<td>Counts all the retired branch instructions that were mispredicted by the processor. A branch misprediction occurs when the processor incorrectly predicts the destination of the branch.  When the misprediction is discovered at execution, all the instructions executed in the wrong (speculative) path must be discarded, and the processor must start fetching from the correct path.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES_PS">BR_MISP_RETIRED.ALL_BRANCHES_PS</span></td>
@@ -87,7 +87,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.NEAR_CALL">BR_MISP_RETIRED.NEAR_CALL</span></td>
-		<td>This event counts both taken and not taken retired mispredicted direct and indirect near calls, including both register and memory indirect.</td>
+		<td>Counts both taken and not taken retired mispredicted direct and indirect near calls, including both register and memory indirect.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.NEAR_CALL_PS">BR_MISP_RETIRED.NEAR_CALL_PS</span></td>
@@ -119,7 +119,7 @@
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_UNHALTED.REF_TSC">CPU_CLK_UNHALTED.REF_TSC</span></td>
-		<td>This event counts the number of reference cycles when the core is not in a halt state. The core enters the halt state when it is running the HLT instruction or the MWAIT instruction. This event is not affected by core frequency changes (for example, P states, TM2 transitions) but has the same incrementing frequency as the time stamp counter. This event can approximate elapsed time while the core was not in a halt state. This event has a constant ratio with the CPU_CLK_UNHALTED.REF_XCLK event. It is counted on a dedicated fixed counter, leaving the four (eight when Hyperthreading is disabled) programmable counters available for other events. Note: On all current platforms this event stops counting during &#39;throttling (TM)&#39; states duty off periods the processor is &#39;halted&#39;.  The counter update is done at a lower clock rate then the core clock the overflow status bit for this counter may appear &#39;sticky&#39;.  After the counter has overflowed and software clears the overflow status bit and resets the counter to less than MAX. The reset value to the counter is not clocked immediately so the overflow status bit will flip &#39;high (1)&#39; and generate another PMI (if enabled) after which the reset value gets clocked into the counter. Therefore, software will get the interrupt, read the overflow status bit &#39;1 for bit 34 while the counter value is less than MAX. Software should ignore this case.</td>
+		<td>Counts the number of reference cycles when the core is not in a halt state. The core enters the halt state when it is running the HLT instruction or the MWAIT instruction. This event is not affected by core frequency changes (for example, P states, TM2 transitions) but has the same incrementing frequency as the time stamp counter. This event can approximate elapsed time while the core was not in a halt state. This event has a constant ratio with the CPU_CLK_UNHALTED.REF_XCLK event. It is counted on a dedicated fixed counter, leaving the four (eight when Hyperthreading is disabled) programmable counters available for other events. Note: On all current platforms this event stops counting during &#39;throttling (TM)&#39; states duty off periods the processor is &#39;halted&#39;.  The counter update is done at a lower clock rate then the core clock the overflow status bit for this counter may appear &#39;sticky&#39;.  After the counter has overflowed and software clears the overflow status bit and resets the counter to less than MAX. The reset value to the counter is not clocked immediately so the overflow status bit will flip &#39;high (1)&#39; and generate another PMI (if enabled) after which the reset value gets clocked into the counter. Therefore, software will get the interrupt, read the overflow status bit &#39;1 for bit 34 while the counter value is less than MAX. Software should ignore this case.</td>
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_UNHALTED.REF_XCLK">CPU_CLK_UNHALTED.REF_XCLK</span></td>
@@ -131,11 +131,11 @@
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_UNHALTED.RING0_TRANS">CPU_CLK_UNHALTED.RING0_TRANS</span></td>
-		<td>This event counts when the Current Privilege Level (CPL) transitions from ring 1, 2 or 3 to ring 0 (Kernel).</td>
+		<td>Counts when the Current Privilege Level (CPL) transitions from ring 1, 2 or 3 to ring 0 (Kernel).</td>
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_UNHALTED.THREAD">CPU_CLK_UNHALTED.THREAD</span></td>
-		<td>This event counts the number of core cycles while the thread is not in a halt state. The thread enters the halt state when it is running the HLT instruction. This event is a component in many key event ratios. The core frequency may change from time to time due to transitions associated with Enhanced Intel SpeedStep Technology or TM2. For this reason this event may have a changing ratio with regards to time. When the core frequency is constant, this event can approximate elapsed time while the core was not in the halt state. It is counted on a dedicated fixed counter, leaving the four (eight when Hyperthreading is disabled) programmable counters available for other events.</td>
+		<td>Counts the number of core cycles while the thread is not in a halt state. The thread enters the halt state when it is running the HLT instruction. This event is a component in many key event ratios. The core frequency may change from time to time due to transitions associated with Enhanced Intel SpeedStep Technology or TM2. For this reason this event may have a changing ratio with regards to time. When the core frequency is constant, this event can approximate elapsed time while the core was not in the halt state. It is counted on a dedicated fixed counter, leaving the four (eight when Hyperthreading is disabled) programmable counters available for other events.</td>
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_UNHALTED.THREAD_ANY">CPU_CLK_UNHALTED.THREAD_ANY</span></td>
@@ -187,93 +187,91 @@
 	</tr>
 	<tr>
 		<td><span id="DSB2MITE_SWITCHES.PENALTY_CYCLES">DSB2MITE_SWITCHES.PENALTY_CYCLES</span></td>
-		<td>This event counts Decode Stream Buffer (DSB)-to-MITE switch true penalty cycles. These cycles do not include uops routed through because of the switch itself, for example, when Instruction Decode Queue (IDQ) pre-allocation is unavailable, or Instruction Decode Queue (IDQ) is full. SBD-to-MITE switch true penalty cycles happen after the merge mux (MM) receives Decode Stream Buffer (DSB) Sync-indication until receiving the first MITE uop. 
-MM is placed before Instruction Decode Queue (IDQ) to merge uops being fed from the MITE and Decode Stream Buffer (DSB) paths. Decode Stream Buffer (DSB) inserts the Sync-indication whenever a Decode Stream Buffer (DSB)-to-MITE switch occurs.
-Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DSB) miss can cost up to six cycles in which no uops are delivered to the IDQ. Most often, such switches from the Decode Stream Buffer (DSB) to the legacy pipeline cost 0–2 cycles.</td>
+		<td>Counts Decode Stream Buffer (DSB)-to-MITE switch true penalty cycles. These cycles do not include uops routed through because of the switch itself, for example, when Instruction Decode Queue (IDQ) pre-allocation is unavailable, or Instruction Decode Queue (IDQ) is full. SBD-to-MITE switch true penalty cycles happen after the merge mux (MM) receives Decode Stream Buffer (DSB) Sync-indication until receiving the first MITE uop. MM is placed before Instruction Decode Queue (IDQ) to merge uops being fed from the MITE and Decode Stream Buffer (DSB) paths. Decode Stream Buffer (DSB) inserts the Sync-indication whenever a Decode Stream Buffer (DSB)-to-MITE switch occurs.Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DSB) miss can cost up to six cycles in which no uops are delivered to the IDQ. Most often, such switches from the Decode Stream Buffer (DSB) to the legacy pipeline cost 0–2 cycles.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.MISS_CAUSES_A_WALK">DTLB_LOAD_MISSES.MISS_CAUSES_A_WALK</span></td>
-		<td>This event counts load misses in all DTLB levels that cause page walks of any page size (4K/2M/4M/1G).</td>
+		<td>Counts demand data loads that caused a page walk of any page size (4K/2M/4M/1G). This implies it missed in all TLB levels, but the walk need not have completed.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.STLB_HIT">DTLB_LOAD_MISSES.STLB_HIT</span></td>
-		<td>Loads that miss the DTLB and hit the STLB.</td>
+		<td>Counts loads that miss the DTLB (Data TLB) and hit the STLB (Second level TLB).</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.WALK_ACTIVE">DTLB_LOAD_MISSES.WALK_ACTIVE</span></td>
-		<td>Cycles when at least one PMH is busy with a page walk for a load. EPT page walk duration are excluded in Skylake. </td>
+		<td>Counts cycles when at least one PMH (Page Miss Handler) is busy with a page walk for a load.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED">DTLB_LOAD_MISSES.WALK_COMPLETED</span></td>
-		<td>Load miss in all TLB levels causes a page walk that completes. (All page sizes)</td>
+		<td>Counts demand data loads that caused a completed page walk of any page size (4K/2M/4M/1G). This implies it missed in all TLB levels. The page walk can end with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED_1G">DTLB_LOAD_MISSES.WALK_COMPLETED_1G</span></td>
-		<td>This event counts load misses in all DTLB levels that cause a completed page walk (1G  page size). The page walk can end with or without a fault.</td>
+		<td>Counts page walks completed due to demand data loads whose address translations missed in the TLB and were mapped to 4K pages.  The page walks can end with or without a page fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M">DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M</span></td>
-		<td>This event counts load misses in all DTLB levels that cause a completed page walk (2M and 4M page sizes). The page walk can end with or without a fault.</td>
+		<td>Counts page walks completed due to demand data loads whose address translations missed in the TLB and were mapped to 4K pages.  The page walks can end with or without a page fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED_4K">DTLB_LOAD_MISSES.WALK_COMPLETED_4K</span></td>
-		<td>This event counts load misses in all DTLB levels that cause a completed page walk (4K page size). The page walk can end with or without a fault.</td>
+		<td>Counts page walks completed due to demand data loads whose address translations missed in the TLB and were mapped to 4K pages.  The page walks can end with or without a page fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.WALK_PENDING">DTLB_LOAD_MISSES.WALK_PENDING</span></td>
-		<td>Counts 1 per cycle for each PMH that is busy with a page walk for a load. EPT page walk duration are excluded in Skylake. </td>
+		<td>Counts 1 per cycle for each PMH that is busy with a page walk for a load. EPT page walk duration are excluded in Skylake microarchitecture. </td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.MISS_CAUSES_A_WALK">DTLB_STORE_MISSES.MISS_CAUSES_A_WALK</span></td>
-		<td>This event counts store misses in all DTLB levels that cause page walks of any page size (4K/2M/4M/1G).</td>
+		<td>Counts demand data stores that caused a page walk of any page size (4K/2M/4M/1G). This implies it missed in all TLB levels, but the walk need not have completed.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.STLB_HIT">DTLB_STORE_MISSES.STLB_HIT</span></td>
-		<td>Stores that miss the DTLB and hit the STLB.</td>
+		<td>Stores that miss the DTLB (Data TLB) and hit the STLB (2nd Level TLB).</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.WALK_ACTIVE">DTLB_STORE_MISSES.WALK_ACTIVE</span></td>
-		<td>Cycles when at least one PMH is busy with a page walk for a store. EPT page walk duration are excluded in Skylake. </td>
+		<td>Counts cycles when at least one PMH (Page Miss Handler) is busy with a page walk for a store.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.WALK_COMPLETED">DTLB_STORE_MISSES.WALK_COMPLETED</span></td>
-		<td>Store misses in all TLB levels causes a page walk that completes. (All page sizes)</td>
+		<td>Counts demand data stores that caused a completed page walk of any page size (4K/2M/4M/1G). This implies it missed in all TLB levels. The page walk can end with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.WALK_COMPLETED_1G">DTLB_STORE_MISSES.WALK_COMPLETED_1G</span></td>
-		<td>This event counts store misses in all DTLB levels that cause a completed page walk (1G  page size). The page walk can end with or without a fault.</td>
+		<td>Counts page walks completed due to demand data stores whose address translations missed in the TLB and were mapped to 1G pages.  The page walks can end with or without a page fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.WALK_COMPLETED_2M_4M">DTLB_STORE_MISSES.WALK_COMPLETED_2M_4M</span></td>
-		<td>This event counts store misses in all DTLB levels that cause a completed page walk (2M and 4M page sizes). The page walk can end with or without a fault.</td>
+		<td>Counts page walks completed due to demand data stores whose address translations missed in the TLB and were mapped to 2M/4M pages.  The page walks can end with or without a page fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.WALK_COMPLETED_4K">DTLB_STORE_MISSES.WALK_COMPLETED_4K</span></td>
-		<td>This event counts store misses in all DTLB levels that cause a completed page walk (4K page size). The page walk can end with or without a fault.</td>
+		<td>Counts page walks completed due to demand data stores whose address translations missed in the TLB and were mapped to 4K pages.  The page walks can end with or without a page fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_STORE_MISSES.WALK_PENDING">DTLB_STORE_MISSES.WALK_PENDING</span></td>
-		<td>Counts 1 per cycle for each PMH that is busy with a page walk for a store. EPT page walk duration are excluded in Skylake. </td>
+		<td>Counts 1 per cycle for each PMH that is busy with a page walk for a store. EPT page walk duration are excluded in Skylake microarchitecture. </td>
 	</tr>
 	<tr>
 		<td><span id="EPT.WALK_PENDING">EPT.WALK_PENDING</span></td>
-		<td>Counts 1 per cycle for each PMH that is busy with a EPT (Extended Page Table) walk for any request type.</td>
+		<td>Counts cycles for each PMH (Page Miss Handler) that is busy with an EPT (Extended Page Table) walk for any request type.</td>
 	</tr>
 	<tr>
 		<td><span id="EXE_ACTIVITY.1_PORTS_UTIL">EXE_ACTIVITY.1_PORTS_UTIL</span></td>
-		<td>Cycles total of 1 uop is executed on all ports and Reservation Station was not empty.</td>
+		<td>Counts cycles during which a total of 1 uop was executed on all ports and Reservation Station (RS) was not empty.</td>
 	</tr>
 	<tr>
 		<td><span id="EXE_ACTIVITY.2_PORTS_UTIL">EXE_ACTIVITY.2_PORTS_UTIL</span></td>
-		<td>Cycles total of 2 uops are executed on all ports and Reservation Station was not empty.</td>
+		<td>Counts cycles during which a total of 2 uops were executed on all ports and Reservation Station (RS) was not empty.</td>
 	</tr>
 	<tr>
 		<td><span id="EXE_ACTIVITY.3_PORTS_UTIL">EXE_ACTIVITY.3_PORTS_UTIL</span></td>
-		<td>Cycles total of 3 uops are executed on all ports and Reservation Station was not empty.</td>
+		<td>Cycles total of 3 uops are executed on all ports and Reservation Station (RS) was not empty.</td>
 	</tr>
 	<tr>
 		<td><span id="EXE_ACTIVITY.4_PORTS_UTIL">EXE_ACTIVITY.4_PORTS_UTIL</span></td>
-		<td>Cycles total of 4 uops are executed on all ports and Reservation Station was not empty.</td>
+		<td>Cycles total of 4 uops are executed on all ports and Reservation Station (RS) was not empty.</td>
 	</tr>
 	<tr>
 		<td><span id="EXE_ACTIVITY.BOUND_ON_STORES">EXE_ACTIVITY.BOUND_ON_STORES</span></td>
@@ -281,7 +279,7 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="EXE_ACTIVITY.EXE_BOUND_0_PORTS">EXE_ACTIVITY.EXE_BOUND_0_PORTS</span></td>
-		<td>Cycles where no uops were executed, the Reservation Station was not empty, the Store Buffer was full and there was no outstanding load.</td>
+		<td>Counts cycles during which no uops were executed on all ports and Reservation Station (RS) was not empty.</td>
 	</tr>
 	<tr>
 		<td><span id="FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE">FP_ARITH_INST_RETIRED.128B_PACKED_DOUBLE</span></td>
@@ -309,23 +307,24 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="FP_ASSIST.ANY">FP_ASSIST.ANY</span></td>
-		<td>This event counts cycles with any input and output SSE or x87 FP assist. If an input and output assist are detected on the same cycle the event increments by 1.</td>
+		<td>Counts cycles with any input and output SSE or x87 FP assist. If an input and output assist are detected on the same cycle the event increments by 1.</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.DSB_MISS">FRONTEND_RETIRED.DSB_MISS</span></td>
-		<td>Retired Instructions who experienced decode stream buffer (DSB - the decoded instruction-cache) miss.</td>
+		<td>Counts retired Instructions that experienced DSB (Decode stream buffer i.e. the decoded instruction-cache) miss. </td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.DSB_MISS_PS">FRONTEND_RETIRED.DSB_MISS_PS</span></td>
-		<td>Retired Instructions who experienced decode stream buffer (DSB - the decoded instruction-cache) miss. Precise Event.</td>
+		<td>Counts retired Instructions that experienced DSB (Decode stream buffer i.e. the decoded instruction-cache) miss. 
+</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.ITLB_MISS">FRONTEND_RETIRED.ITLB_MISS</span></td>
-		<td>Retired Instructions who experienced iTLB true miss.</td>
+		<td>Counts retired Instructions that experienced iTLB (Instruction TLB) true miss.</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.ITLB_MISS_PS">FRONTEND_RETIRED.ITLB_MISS_PS</span></td>
-		<td>Retired Instructions who experienced iTLB true miss. Precise Event.</td>
+		<td>Counts retired Instructions that experienced iTLB (Instruction TLB) true miss.</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.L1I_MISS">FRONTEND_RETIRED.L1I_MISS</span></td>
@@ -353,11 +352,12 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_16">FRONTEND_RETIRED.LATENCY_GE_16</span></td>
-		<td>Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 16 cycles which was not interrupted by a back-end stall.</td>
+		<td>Counts retired instructions that are delivered to the back-end after a front-end stall of at least 16 cycles. During this period the front-end delivered no uops.</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_16_PS">FRONTEND_RETIRED.LATENCY_GE_16_PS</span></td>
-		<td>Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 16 cycles which was not interrupted by a back-end stall. Precise Event.</td>
+		<td>Counts retired instructions that are delivered to the back-end after a front-end stall of at least 16 cycles. During this period the front-end delivered no uops.
+</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_2">FRONTEND_RETIRED.LATENCY_GE_2</span></td>
@@ -365,11 +365,12 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_1">FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_1</span></td>
-		<td>Retired instructions that are fetched after an interval where the front-end had at least 1 bubble-slot for a period of 2 cycles which was not interrupted by a back-end stall.</td>
+		<td>Counts retired instructions that are delivered to the back-end after the front-end had at least 1 bubble-slot for a period of 2 cycles. A bubble-slot is an empty issue-pipeline slot while there was no RAT stall.</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_1_PS">FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_1_PS</span></td>
-		<td>Retired instructions that are fetched after an interval where the front-end had at least 1 bubble-slot for a period of 2 cycles which was not interrupted by a back-end stall. Precise Event.</td>
+		<td>Counts retired instructions that are delivered to the back-end after the front-end had at least 1 bubble-slot for a period of 2 cycles. A bubble-slot is an empty issue-pipeline slot while there was no RAT stall.
+</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_2">FRONTEND_RETIRED.LATENCY_GE_2_BUBBLES_GE_2</span></td>
@@ -401,11 +402,12 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_32">FRONTEND_RETIRED.LATENCY_GE_32</span></td>
-		<td>Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 32 cycles which was not interrupted by a back-end stall.</td>
+		<td>Counts retired instructions that are delivered to the back-end after a front-end stall of at least 32 cycles. During this period the front-end delivered no uops.</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_32_PS">FRONTEND_RETIRED.LATENCY_GE_32_PS</span></td>
-		<td>Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 32 cycles which was not interrupted by a back-end stall. Precise Event.</td>
+		<td>Counts retired instructions that are delivered to the back-end  after a front-end stall of at least 32 cycles. During this period the front-end delivered no uops.
+</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_4">FRONTEND_RETIRED.LATENCY_GE_4</span></td>
@@ -433,19 +435,20 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_8">FRONTEND_RETIRED.LATENCY_GE_8</span></td>
-		<td>Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 8 cycles which was not interrupted by a back-end stall.</td>
+		<td>Counts retired instructions that are delivered to the back-end after a front-end stall of at least 8 cycles. During this period the front-end delivered no uops.</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.LATENCY_GE_8_PS">FRONTEND_RETIRED.LATENCY_GE_8_PS</span></td>
-		<td>Retired instructions that are fetched after an interval where the front-end delivered no uops for a period of 8 cycles which was not interrupted by a back-end stall.</td>
+		<td>Counts retired instructions that are delivered to the back-end after a front-end stall of at least 8 cycles. During this period the front-end delivered no uops. 
+</td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.STLB_MISS">FRONTEND_RETIRED.STLB_MISS</span></td>
-		<td>Retired Instructions who experienced STLB (2nd level TLB) true miss.</td>
+		<td>Counts retired Instructions that experienced STLB (2nd level TLB) true miss. </td>
 	</tr>
 	<tr>
 		<td><span id="FRONTEND_RETIRED.STLB_MISS_PS">FRONTEND_RETIRED.STLB_MISS_PS</span></td>
-		<td>Retired Instructions who experienced STLB (2nd level TLB) true miss. Precise Event.</td>
+		<td>Counts retired Instructions that experienced STLB (2nd level TLB) true miss.</td>
 	</tr>
 	<tr>
 		<td><span id="HLE_RETIRED.ABORTED">HLE_RETIRED.ABORTED</span></td>
@@ -481,16 +484,15 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="HLE_RETIRED.START">HLE_RETIRED.START</span></td>
-		<td>Number of times we entered an HLE region
- does not count nested transactions.</td>
+		<td>Number of times we entered an HLE region. Does not count nested transactions.</td>
 	</tr>
 	<tr>
 		<td><span id="HW_INTERRUPTS.RECEIVED">HW_INTERRUPTS.RECEIVED</span></td>
-		<td>This event counts the number of hardware interruptions received by the processor.</td>
+		<td>Counts the number of hardware interruptions received by the processor.</td>
 	</tr>
 	<tr>
 		<td><span id="ICACHE_16B.IFDATA_STALL">ICACHE_16B.IFDATA_STALL</span></td>
-		<td>Cycles where a code fetch is stalled due to L1 instruction cache miss.</td>
+		<td>Cycles where a code line fetch is stalled due to an L1 instruction cache miss. The legacy decode pipeline works at a 16 Byte granularity.</td>
 	</tr>
 	<tr>
 		<td><span id="ICACHE_64B.IFTAG_HIT">ICACHE_64B.IFTAG_HIT</span></td>
@@ -506,47 +508,47 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="IDQ.ALL_DSB_CYCLES_4_UOPS">IDQ.ALL_DSB_CYCLES_4_UOPS</span></td>
-		<td>This event counts the number of cycles 4  uops were  delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
+		<td>Counts the number of cycles 4 uops were delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path. Count includes uops that may &#39;bypass&#39; the IDQ.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.ALL_DSB_CYCLES_ANY_UOPS">IDQ.ALL_DSB_CYCLES_ANY_UOPS</span></td>
-		<td>This event counts the number of cycles  uops were  delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
+		<td>Counts the number of cycles uops were delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path. Count includes uops that may &#39;bypass&#39; the IDQ.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.ALL_MITE_CYCLES_4_UOPS">IDQ.ALL_MITE_CYCLES_4_UOPS</span></td>
-		<td>This event counts the number of cycles 4  uops were  delivered to Instruction Decode Queue (IDQ) from the MITE path. Counting includes uops that may &#39;bypass&#39; the IDQ. This also means that uops are not being delivered from the Decode Stream Buffer (DSB).</td>
+		<td>Counts the number of cycles 4 uops were delivered to the Instruction Decode Queue (IDQ) from the MITE (legacy decode pipeline) path. Counting includes uops that may &#39;bypass&#39; the IDQ. During these cycles uops are not being delivered from the Decode Stream Buffer (DSB).</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.ALL_MITE_CYCLES_ANY_UOPS">IDQ.ALL_MITE_CYCLES_ANY_UOPS</span></td>
-		<td>This event counts the number of cycles  uops were delivered to Instruction Decode Queue (IDQ) from the MITE path. Counting includes uops that may &#39;bypass&#39; the IDQ. This also means that uops are not being delivered from the Decode Stream Buffer (DSB).</td>
+		<td>Counts the number of cycles uops were delivered to the Instruction Decode Queue (IDQ) from the MITE (legacy decode pipeline) path. Counting includes uops that may &#39;bypass&#39; the IDQ. During these cycles uops are not being delivered from the Decode Stream Buffer (DSB).</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.DSB_CYCLES">IDQ.DSB_CYCLES</span></td>
-		<td>This event counts cycles during which uops are being delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
+		<td>Counts cycles during which uops are being delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.DSB_UOPS">IDQ.DSB_UOPS</span></td>
-		<td>This event counts the number of uops delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
+		<td>Counts the number of uops delivered to Instruction Decode Queue (IDQ) from the Decode Stream Buffer (DSB) path. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.MITE_CYCLES">IDQ.MITE_CYCLES</span></td>
-		<td>This event counts cycles during which uops are being delivered to Instruction Decode Queue (IDQ) from the MITE path. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
+		<td>Counts cycles during which uops are being delivered to Instruction Decode Queue (IDQ) from the MITE path. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.MITE_UOPS">IDQ.MITE_UOPS</span></td>
-		<td>This event counts the number of uops delivered to Instruction Decode Queue (IDQ) from the MITE path. Counting includes uops that may &#39;bypass&#39; the IDQ. This also means that uops are not being delivered from the Decode Stream Buffer (DSB).</td>
+		<td>Counts the number of uops delivered to Instruction Decode Queue (IDQ) from the MITE path. Counting includes uops that may &#39;bypass&#39; the IDQ. This also means that uops are not being delivered from the Decode Stream Buffer (DSB).</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.MS_CYCLES">IDQ.MS_CYCLES</span></td>
-		<td>This event counts cycles during which uops are being delivered to Instruction Decode Queue (IDQ) while the Microcode Sequenser (MS) is busy. Counting includes uops that may &#39;bypass&#39; the IDQ. Uops maybe initiated by Decode Stream Buffer (DSB) or MITE.</td>
+		<td>Counts cycles during which uops are being delivered to Instruction Decode Queue (IDQ) while the Microcode Sequencer (MS) is busy. Counting includes uops that may &#39;bypass&#39; the IDQ. Uops maybe initiated by Decode Stream Buffer (DSB) or MITE.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.MS_DSB_CYCLES">IDQ.MS_DSB_CYCLES</span></td>
-		<td>This event counts cycles during which uops initiated by Decode Stream Buffer (DSB) are being delivered to Instruction Decode Queue (IDQ) while the Microcode Sequencer (MS) is busy. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
+		<td>Counts cycles during which uops initiated by Decode Stream Buffer (DSB) are being delivered to Instruction Decode Queue (IDQ) while the Microcode Sequencer (MS) is busy. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.MS_MITE_UOPS">IDQ.MS_MITE_UOPS</span></td>
-		<td>This event counts the number of uops initiated by MITE and delivered to Instruction Decode Queue (IDQ) while the Microcode Sequenser (MS) is busy. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
+		<td>Counts the number of uops initiated by MITE and delivered to Instruction Decode Queue (IDQ) while the Microcode Sequencer (MS) is busy. Counting includes uops that may &#39;bypass&#39; the IDQ.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ.MS_SWITCHES">IDQ.MS_SWITCHES</span></td>
@@ -554,20 +556,15 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="IDQ.MS_UOPS">IDQ.MS_UOPS</span></td>
-		<td>This event counts the total number of uops delivered to Instruction Decode Queue (IDQ) while the Microcode Sequenser (MS) is busy. Counting includes uops that may &#39;bypass&#39; the IDQ. Uops maybe initiated by Decode Stream Buffer (DSB) or MITE.</td>
+		<td>Counts the total number of uops delivered by the Microcode Sequencer (MS). Any instruction over 4 uops will be delivered by the MS. Some instructions such as transcendentals may additionally generate uops from the MS.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CORE">IDQ_UOPS_NOT_DELIVERED.CORE</span></td>
-		<td>This event counts the number of uops not delivered to Resource Allocation Table (RAT) per thread adding “4 – x” when Resource Allocation Table (RAT) is not stalled and Instruction Decode Queue (IDQ) delivers x uops to Resource Allocation Table (RAT) (where x belongs to {0,1,2,3}). Counting does not cover cases when:
- a. IDQ-Resource Allocation Table (RAT) pipe serves the other thread
-
- b. Resource Allocation Table (RAT) is stalled for the thread (including uop drops and clear BE conditions)
- 
- c. Instruction Decode Queue (IDQ) delivers four uops.</td>
+		<td>Counts the number of uops not delivered to Resource Allocation Table (RAT) per thread adding “4 – x” when Resource Allocation Table (RAT) is not stalled and Instruction Decode Queue (IDQ) delivers x uops to Resource Allocation Table (RAT) (where x belongs to {0,1,2,3}). Counting does not cover cases when: a. IDQ-Resource Allocation Table (RAT) pipe serves the other thread. b. Resource Allocation Table (RAT) is stalled for the thread (including uop drops and clear BE conditions).  c. Instruction Decode Queue (IDQ) delivers four uops.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE">IDQ_UOPS_NOT_DELIVERED.CYCLES_0_UOPS_DELIV.CORE</span></td>
-		<td>This event counts, on the per-thread basis, cycles when no uops are delivered to Resource Allocation Table (RAT). IDQ_Uops_Not_Delivered.core =4.</td>
+		<td>Counts, on the per-thread basis, cycles when no uops are delivered to Resource Allocation Table (RAT). IDQ_Uops_Not_Delivered.core =4.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK">IDQ_UOPS_NOT_DELIVERED.CYCLES_FE_WAS_OK</span></td>
@@ -575,33 +572,31 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_1_UOP_DELIV.CORE">IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_1_UOP_DELIV.CORE</span></td>
-		<td>This event counts, on the per-thread basis, cycles when less than 1 uop is  delivered to Resource Allocation Table (RAT). IDQ_Uops_Not_Delivered.core &gt;=3.</td>
+		<td>Counts, on the per-thread basis, cycles when less than 1 uop is delivered to Resource Allocation Table (RAT). IDQ_Uops_Not_Delivered.core &gt;= 3.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_2_UOP_DELIV.CORE">IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_2_UOP_DELIV.CORE</span></td>
-		<td>Cycles with less than 2 uops delivered by the front end.</td>
+		<td>Cycles with less than 2 uops delivered by the front-end.</td>
 	</tr>
 	<tr>
 		<td><span id="IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_3_UOP_DELIV.CORE">IDQ_UOPS_NOT_DELIVERED.CYCLES_LE_3_UOP_DELIV.CORE</span></td>
-		<td>Cycles with less than 3 uops delivered by the front end.</td>
+		<td>Cycles with less than 3 uops delivered by the front-end.</td>
 	</tr>
 	<tr>
 		<td><span id="ILD_STALL.LCP">ILD_STALL.LCP</span></td>
-		<td>This event counts stalls occured due to changing prefix length (66, 67 or REX.W when they change the length of the decoded instruction). Occurrences counting is proportional to the number of prefixes in a 16B-line. This may result in the following penalties: three-cycle penalty for each LCP in a 16-byte chunk.</td>
+		<td>Counts cycles that the Instruction Length decoder (ILD) stalls occurred due to dynamically changing prefix length of the decoded instruction (by operand size prefix instruction 0x66, address size prefix instruction 0x67 or REX.W for Intel64). Count is proportional to the number of prefixes in a 16B-line. This may result in a three-cycle penalty for each LCP (Length changing prefix) in a 16-byte chunk.</td>
 	</tr>
 	<tr>
 		<td><span id="INST_RETIRED.ANY">INST_RETIRED.ANY</span></td>
-		<td>This event counts the number of instructions retired from execution. For instructions that consist of multiple micro-ops, this event counts the retirement of the last micro-op of the instruction. Counting continues during hardware interrupts, traps, and inside interrupt handlers. 
-Notes: INST_RETIRED.ANY is counted by a designated fixed counter, leaving the four (eight when Hyperthreading is disabled) programmable counters available for other events. INST_RETIRED.ANY_P is counted by a programmable counter and it is an architectural performance event. 
-Counting: Faulting executions of GETSEC/VM entry/VM Exit/MWait will not count as retired instructions.</td>
+		<td>Counts the number of instructions retired from execution. For instructions that consist of multiple micro-ops, Counts the retirement of the last micro-op of the instruction. Counting continues during hardware interrupts, traps, and inside interrupt handlers. Notes: INST_RETIRED.ANY is counted by a designated fixed counter, leaving the four (eight when Hyperthreading is disabled) programmable counters available for other events. INST_RETIRED.ANY_P is counted by a programmable counter and it is an architectural performance event. Counting: Faulting executions of GETSEC/VM entry/VM Exit/MWait will not count as retired instructions.</td>
 	</tr>
 	<tr>
 		<td><span id="INST_RETIRED.ANY_P">INST_RETIRED.ANY_P</span></td>
-		<td>This event counts the number of instructions (EOMs) retired. Counting covers macro-fused instructions individually (that is, increments by two).</td>
+		<td>Counts the number of instructions (EOMs) retired. Counting covers macro-fused instructions individually (that is, increments by two).</td>
 	</tr>
 	<tr>
 		<td><span id="INST_RETIRED.PREC_DIST">INST_RETIRED.PREC_DIST</span></td>
-		<td>This is a precise version (that is, uses PEBS) of the event that counts instructions retired.</td>
+		<td>A version of INST_RETIRED that allows for a more unbiased distribution of samples across instructions retired. It utilizes the Precise Distribution of Instructions Retired (PDIR) feature to mitigate some bias in how retired instructions get sampled.</td>
 	</tr>
 	<tr>
 		<td><span id="INST_RETIRED.TOTAL_CYCLES_PS">INST_RETIRED.TOTAL_CYCLES_PS</span></td>
@@ -613,7 +608,7 @@ Counting: Faulting executions of GETSEC/VM entry/VM Exit/MWait will not count as
 	</tr>
 	<tr>
 		<td><span id="INT_MISC.RECOVERY_CYCLES">INT_MISC.RECOVERY_CYCLES</span></td>
-		<td>Cycles checkpoints in Resource Allocation Table (RAT) are recovering from JEClear or machine clear.</td>
+		<td>Core cycles the Resource allocator was stalled due to recovery from an earlier branch misprediction or machine clear event.</td>
 	</tr>
 	<tr>
 		<td><span id="INT_MISC.RECOVERY_CYCLES_ANY">INT_MISC.RECOVERY_CYCLES_ANY</span></td>
@@ -621,11 +616,11 @@ Counting: Faulting executions of GETSEC/VM entry/VM Exit/MWait will not count as
 	</tr>
 	<tr>
 		<td><span id="ITLB.ITLB_FLUSH">ITLB.ITLB_FLUSH</span></td>
-		<td>This event counts the number of flushes of the big or small ITLB pages. Counting include both TLB Flush (covering all sets) and TLB Set Clear (set-specific).</td>
+		<td>Counts the number of flushes of the big or small ITLB pages. Counting include both TLB Flush (covering all sets) and TLB Set Clear (set-specific).</td>
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.MISS_CAUSES_A_WALK">ITLB_MISSES.MISS_CAUSES_A_WALK</span></td>
-		<td>This event counts store misses in all DTLB levels that cause page walks of any page size (4K/2M/4M/1G).</td>
+		<td>Counts page walks of any page size (4K/2M/4M/1G) caused by a code fetch. This implies it missed in the ITLB and further levels of TLB, but the walk need not have completed.</td>
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.STLB_HIT">ITLB_MISSES.STLB_HIT</span></td>
@@ -633,45 +628,43 @@ Counting: Faulting executions of GETSEC/VM entry/VM Exit/MWait will not count as
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.WALK_ACTIVE">ITLB_MISSES.WALK_ACTIVE</span></td>
-		<td>Cycles when at least one PMH is busy with a page walk for code (instruction fetch) request. EPT page walk duration are excluded in Skylake.</td>
+		<td>Cycles when at least one PMH is busy with a page walk for code (instruction fetch) request. EPT page walk duration are excluded in Skylake microarchitecture.</td>
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.WALK_COMPLETED">ITLB_MISSES.WALK_COMPLETED</span></td>
-		<td>Code miss in all TLB levels causes a page walk that completes. (All page sizes)</td>
+		<td>Counts completed page walks (2M and 4M page sizes) caused by a code fetch. This implies it missed in the ITLB and further levels of TLB. The page walk can end with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.WALK_COMPLETED_1G">ITLB_MISSES.WALK_COMPLETED_1G</span></td>
-		<td>This event counts store misses in all DTLB levels that cause a completed page walk (1G  page size). The page walk can end with or without a fault.</td>
+		<td>Counts store misses in all DTLB levels that cause a completed page walk (1G page size). The page walk can end with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.WALK_COMPLETED_2M_4M">ITLB_MISSES.WALK_COMPLETED_2M_4M</span></td>
-		<td>This event counts store misses in all DTLB levels that cause a completed page walk (2M and 4M page sizes). The page walk can end with or without a fault.</td>
+		<td>Counts completed page walks of any page size (4K/2M/4M/1G) caused by a code fetch. This implies it missed in the ITLB and further levels of TLB. The page walk can end with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.WALK_COMPLETED_4K">ITLB_MISSES.WALK_COMPLETED_4K</span></td>
-		<td>This event counts store misses in all DTLB levels that cause a completed page walk (4K page size). The page walk can end with or without a fault.</td>
+		<td>Counts completed page walks (4K page size) caused by a code fetch. This implies it missed in the ITLB and further levels of TLB. The page walk can end with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.WALK_PENDING">ITLB_MISSES.WALK_PENDING</span></td>
-		<td>Counts 1 per cycle for each PMH that is busy with a page walk for an instruction fetch request. EPT page walk duration are excluded in Skylake. </td>
+		<td>Counts 1 per cycle for each PMH (Page Miss Handler) that is busy with a page walk for an instruction fetch request. EPT page walk duration are excluded in Skylake michroarchitecture. </td>
 	</tr>
 	<tr>
 		<td><span id="L1D.REPLACEMENT">L1D.REPLACEMENT</span></td>
-		<td>This event counts L1D data line replacements including opportunistic replacements, and replacements that require stall-for-replace or block-for-replace.</td>
+		<td>Counts L1D data line replacements including opportunistic replacements, and replacements that require stall-for-replace or block-for-replace.</td>
 	</tr>
 	<tr>
 		<td><span id="L1D_PEND_MISS.FB_FULL">L1D_PEND_MISS.FB_FULL</span></td>
-		<td>Number of times a request needed a FB entry but there was no entry available for it. That is the FB unavailability was dominant reason for blocking the request. A request includes cacheable/uncacheable demands that is load, store or SW prefetch.</td>
+		<td>Number of times a request needed a FB (Fill Buffer) entry but there was no entry available for it. A request includes cacheable/uncacheable demands that are load, store or SW prefetch instructions.</td>
 	</tr>
 	<tr>
 		<td><span id="L1D_PEND_MISS.PENDING">L1D_PEND_MISS.PENDING</span></td>
-		<td>This event counts duration of L1D miss outstanding, that is each cycle number of Fill Buffers (FB) outstanding required by Demand Reads. FB either is held by demand loads, or it is held by non-demand loads and gets hit at least once by demand. The valid outstanding interval is defined until the FB deallocation by one of the following ways: from FB allocation, if FB is allocated by demand
- from the demand Hit FB, if it is allocated by hardware or software prefetch.
-Note: In the L1D, a Demand Read contains cacheable or noncacheable demand loads, including ones causing cache-line splits and reads due to page walks resulted from any request type.</td>
+		<td>Counts duration of L1D miss outstanding, that is each cycle number of Fill Buffers (FB) outstanding required by Demand Reads. FB either is held by demand loads, or it is held by non-demand loads and gets hit at least once by demand. The valid outstanding interval is defined until the FB deallocation by one of the following ways: from FB allocation, if FB is allocated by demand from the demand Hit FB, if it is allocated by hardware or software prefetch.Note: In the L1D, a Demand Read contains cacheable or noncacheable demand loads, including ones causing cache-line splits and reads due to page walks resulted from any request type.</td>
 	</tr>
 	<tr>
 		<td><span id="L1D_PEND_MISS.PENDING_CYCLES">L1D_PEND_MISS.PENDING_CYCLES</span></td>
-		<td>This event counts duration of L1D miss outstanding in cycles.</td>
+		<td>Counts duration of L1D miss outstanding in cycles.</td>
 	</tr>
 	<tr>
 		<td><span id="L1D_PEND_MISS.PENDING_CYCLES_ANY">L1D_PEND_MISS.PENDING_CYCLES_ANY</span></td>
@@ -679,7 +672,7 @@ Note: In the L1D, a Demand Read contains cacheable or noncacheable demand loads,
 	</tr>
 	<tr>
 		<td><span id="L2_LINES_IN.ALL">L2_LINES_IN.ALL</span></td>
-		<td>This event counts the number of L2 cache lines filling the L2. Counting does not cover rejects.</td>
+		<td>Counts the number of L2 cache lines filling the L2. Counting does not cover rejects.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_LINES_OUT.NON_SILENT">L2_LINES_OUT.NON_SILENT</span></td>
@@ -699,11 +692,11 @@ Note: In the L1D, a Demand Read contains cacheable or noncacheable demand loads,
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.ALL_CODE_RD">L2_RQSTS.ALL_CODE_RD</span></td>
-		<td>This event counts the total number of L2 code requests.</td>
+		<td>Counts the total number of L2 code requests.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.ALL_DEMAND_DATA_RD">L2_RQSTS.ALL_DEMAND_DATA_RD</span></td>
-		<td>This event counts the number of demand Data Read requests (including requests from L1D hardware prefetchers). These loads may hit or miss L2 cache. Only non rejected loads are counted.</td>
+		<td>Counts the number of demand Data Read requests (including requests from L1D hardware prefetchers). These loads may hit or miss L2 cache. Only non rejected loads are counted.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.ALL_DEMAND_MISS">L2_RQSTS.ALL_DEMAND_MISS</span></td>
@@ -715,27 +708,27 @@ Note: In the L1D, a Demand Read contains cacheable or noncacheable demand loads,
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.ALL_PF">L2_RQSTS.ALL_PF</span></td>
-		<td>This event counts the total number of requests from the L2 hardware prefetchers.</td>
+		<td>Counts the total number of requests from the L2 hardware prefetchers.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.ALL_RFO">L2_RQSTS.ALL_RFO</span></td>
-		<td>This event counts the total number of RFO (read for ownership) requests to L2 cache. L2 RFO requests include both L1D demand RFO misses as well as L1D RFO prefetches.</td>
+		<td>Counts the total number of RFO (read for ownership) requests to L2 cache. L2 RFO requests include both L1D demand RFO misses as well as L1D RFO prefetches.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.CODE_RD_HIT">L2_RQSTS.CODE_RD_HIT</span></td>
-		<td>L2 cache hits when fetching instructions, code reads.</td>
+		<td>Counts L2 cache hits when fetching instructions, code reads.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.CODE_RD_MISS">L2_RQSTS.CODE_RD_MISS</span></td>
-		<td>L2 cache misses when fetching instructions.</td>
+		<td>Counts L2 cache misses when fetching instructions.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.DEMAND_DATA_RD_HIT">L2_RQSTS.DEMAND_DATA_RD_HIT</span></td>
-		<td>This event counts the number of demand Data Read requests that hit L2 cache. Only not rejected loads are counted.</td>
+		<td>Counts the number of demand Data Read requests that hit L2 cache. Only non rejected loads are counted.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.DEMAND_DATA_RD_MISS">L2_RQSTS.DEMAND_DATA_RD_MISS</span></td>
-		<td>This event counts the number of demand Data Read requests that miss L2 cache. Only not rejected loads are counted.</td>
+		<td>Counts the number of demand Data Read requests that miss L2 cache. Only not rejected loads are counted.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.MISS">L2_RQSTS.MISS</span></td>
@@ -743,11 +736,11 @@ Note: In the L1D, a Demand Read contains cacheable or noncacheable demand loads,
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.PF_HIT">L2_RQSTS.PF_HIT</span></td>
-		<td>Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that hit L2 cache.</td>
+		<td>Counts requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that hit L2 cache.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.PF_MISS">L2_RQSTS.PF_MISS</span></td>
-		<td>Requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that miss L2 cache.</td>
+		<td>Counts requests from the L1/L2/L3 hardware prefetchers or Load software prefetches that miss L2 cache.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.REFERENCES">L2_RQSTS.REFERENCES</span></td>
@@ -755,15 +748,15 @@ Note: In the L1D, a Demand Read contains cacheable or noncacheable demand loads,
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.RFO_HIT">L2_RQSTS.RFO_HIT</span></td>
-		<td>RFO requests that hit L2 cache.</td>
+		<td>Counts the RFO (Read-for-Ownership) requests that hit L2 cache.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_RQSTS.RFO_MISS">L2_RQSTS.RFO_MISS</span></td>
-		<td>RFO requests that miss L2 cache.</td>
+		<td>Counts the RFO (Read-for-Ownership) requests that miss L2 cache.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_TRANS.L2_WB">L2_TRANS.L2_WB</span></td>
-		<td>This event counts L2 writebacks that access L2 cache.</td>
+		<td>Counts L2 writebacks that access L2 cache.</td>
 	</tr>
 	<tr>
 		<td><span id="LD_BLOCKS.NO_SR">LD_BLOCKS.NO_SR</span></td>
@@ -771,48 +764,37 @@ Note: In the L1D, a Demand Read contains cacheable or noncacheable demand loads,
 	</tr>
 	<tr>
 		<td><span id="LD_BLOCKS.STORE_FORWARD">LD_BLOCKS.STORE_FORWARD</span></td>
-		<td>This event counts how many times the load operation got the true Block-on-Store blocking code preventing store forwarding. This includes cases when:
- - preceding store conflicts with the load (incomplete overlap)
-
- - store forwarding is impossible due to u-arch limitations
-
- - preceding lock RMW operations are not forwarded
-
- - store has the no-forward bit set (uncacheable/page-split/masked stores)
-
- - all-blocking stores are used (mostly, fences and port I/O)
-
-and others.
-The most common case is a load blocked due to its address range overlapping with a preceding smaller uncompleted store. Note: This event does not take into account cases of out-of-SW-control (for example, SbTailHit), unknown physical STA, and cases of blocking loads on store due to being non-WB memory type or a lock. These cases are covered by other events.
-See the table of not supported store forwards in the Optimization Guide.</td>
+		<td>Counts how many times the load operation got the true Block-on-Store blocking code preventing store forwarding. This includes cases when:a. preceding store conflicts with the load (incomplete overlap),b. store forwarding is impossible due to u-arch limitations,c. preceding lock RMW operations are not forwarded,d. store has the no-forward bit set (uncacheable/page-split/masked stores),e. all-blocking stores are used (mostly, fences and port I/O), and others.The most common case is a load blocked due to its address range overlapping with a preceding smaller uncompleted store. Note: This event does not take into account cases of out-of-SW-control (for example, SbTailHit), unknown physical STA, and cases of blocking loads on store due to being non-WB memory type or a lock. These cases are covered by other events. See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="LD_BLOCKS_PARTIAL.ADDRESS_ALIAS">LD_BLOCKS_PARTIAL.ADDRESS_ALIAS</span></td>
-		<td>This event counts false dependencies in MOB when the partial comparison upon loose net check and dependency was resolved by the Enhanced Loose net mechanism. This may not result in high performance penalties. Loose net checks can fail when loads and stores are 4k aliased.</td>
+		<td>Counts false dependencies in MOB when the partial comparison upon loose net check and dependency was resolved by the Enhanced Loose net mechanism. This may not result in high performance penalties. Loose net checks can fail when loads and stores are 4k aliased.</td>
 	</tr>
 	<tr>
 		<td><span id="LOAD_HIT_PRE.SW_PF">LOAD_HIT_PRE.SW_PF</span></td>
-		<td>This event counts all not software-prefetch load dispatches that hit the fill buffer (FB) allocated for the software prefetch. It can also be incremented by some lock instructions. So it should only be used with profiling so that the locks can be excluded by asm inspection of the nearby instructions.</td>
+		<td>Counts all not software-prefetch load dispatches that hit the fill buffer (FB) allocated for the software prefetch. It can also be incremented by some lock instructions. So it should only be used with profiling so that the locks can be excluded by ASM (Assembly File) inspection of the nearby instructions.</td>
 	</tr>
 	<tr>
 		<td><span id="LONGEST_LAT_CACHE.MISS">LONGEST_LAT_CACHE.MISS</span></td>
-		<td>This event counts core-originated cacheable demand requests that miss the last level cache (LLC). Demand requests include loads, RFOs, and hardware prefetches from L1D, and instruction fetches from IFU.</td>
+		<td>Counts core-originated cacheable requests that miss the L3 cache (Longest Latency cache). Requests include data and code reads, Reads-for-Ownership (RFOs), speculative accesses and hardware prefetches from L1 and L2. It does not include all misses to the L3.
+</td>
 	</tr>
 	<tr>
 		<td><span id="LONGEST_LAT_CACHE.REFERENCE">LONGEST_LAT_CACHE.REFERENCE</span></td>
-		<td>This event counts core-originated cacheable demand requests that refer to the last level cache (LLC). Demand requests include loads, RFOs, and hardware prefetches from L1D, and instruction fetches from IFU.</td>
+		<td>Counts core-originated cacheable requests to the  L3 cache (Longest Latency cache). Requests include data and code reads, Reads-for-Ownership (RFOs), speculative accesses and hardware prefetches from L1 and L2.  It does not include all accesses to the L3.
+</td>
 	</tr>
 	<tr>
 		<td><span id="LSD.CYCLES_4_UOPS">LSD.CYCLES_4_UOPS</span></td>
-		<td>Cycles 4 Uops delivered by the LSD, but didn&#39;t come from the decoder.</td>
+		<td>Counts the cycles when 4 uops are delivered by the LSD (Loop-stream detector).</td>
 	</tr>
 	<tr>
 		<td><span id="LSD.CYCLES_ACTIVE">LSD.CYCLES_ACTIVE</span></td>
-		<td>Cycles Uops delivered by the LSD, but didn&#39;t come from the decoder.</td>
+		<td>Counts the cycles when at least one uop is delivered by the LSD (Loop-stream detector).</td>
 	</tr>
 	<tr>
 		<td><span id="LSD.UOPS">LSD.UOPS</span></td>
-		<td>Number of Uops delivered by the LSD.</td>
+		<td>Number of uops delivered to the back-end by the LSD(Loop Stream Detector).</td>
 	</tr>
 	<tr>
 		<td><span id="MACHINE_CLEARS.COUNT">MACHINE_CLEARS.COUNT</span></td>
@@ -820,14 +802,11 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MACHINE_CLEARS.MEMORY_ORDERING">MACHINE_CLEARS.MEMORY_ORDERING</span></td>
-		<td>This event counts the number of memory ordering Machine Clears detected. Memory Ordering Machine Clears can result from one of the following:
-1. memory disambiguation,
-2. external snoop, or
-3. cross SMT-HW-thread snoop (stores) hitting load buffer.</td>
+		<td>Counts the number of memory ordering Machine Clears detected. Memory Ordering Machine Clears can result from one of the following:a. memory disambiguation,b. external snoop, orc. cross SMT-HW-thread snoop (stores) hitting load buffer.</td>
 	</tr>
 	<tr>
 		<td><span id="MACHINE_CLEARS.SMC">MACHINE_CLEARS.SMC</span></td>
-		<td>This event counts self-modifying code (SMC) detected, which causes a machine clear.</td>
+		<td>Counts self-modifying code (SMC) detected, which causes a machine clear.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.ALL_LOADS">MEM_INST_RETIRED.ALL_LOADS</span></td>
@@ -843,7 +822,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.ALL_STORES_PS">MEM_INST_RETIRED.ALL_STORES_PS</span></td>
-		<td>All retired store instructions. (Precise Event)</td>
+		<td>All retired store instructions.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.LOCK_LOADS">MEM_INST_RETIRED.LOCK_LOADS</span></td>
@@ -855,7 +834,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.SPLIT_LOADS">MEM_INST_RETIRED.SPLIT_LOADS</span></td>
-		<td>Retired load instructions that split across a cacheline boundary.</td>
+		<td>Counts retired load instructions that split across a cacheline boundary.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.SPLIT_LOADS_PS">MEM_INST_RETIRED.SPLIT_LOADS_PS</span></td>
@@ -863,7 +842,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.SPLIT_STORES">MEM_INST_RETIRED.SPLIT_STORES</span></td>
-		<td>Retired store instructions that split across a cacheline boundary.</td>
+		<td>Counts retired store instructions that split across a cacheline boundary.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.SPLIT_STORES_PS">MEM_INST_RETIRED.SPLIT_STORES_PS</span></td>
@@ -875,7 +854,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.STLB_MISS_LOADS_PS">MEM_INST_RETIRED.STLB_MISS_LOADS_PS</span></td>
-		<td>Retired load instructions that miss the STLB. (Precise Event)</td>
+		<td>Retired load instructions that miss the STLB.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.STLB_MISS_STORES">MEM_INST_RETIRED.STLB_MISS_STORES</span></td>
@@ -883,7 +862,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_INST_RETIRED.STLB_MISS_STORES_PS">MEM_INST_RETIRED.STLB_MISS_STORES_PS</span></td>
-		<td>Retired store instructions that miss the STLB. (Precise Event)</td>
+		<td>Retired store instructions that miss the STLB.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_L3_HIT_RETIRED.XSNP_HIT">MEM_LOAD_L3_HIT_RETIRED.XSNP_HIT</span></td>
@@ -927,27 +906,29 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.FB_HIT">MEM_LOAD_RETIRED.FB_HIT</span></td>
-		<td>Retired load instructions which data sources were load missed L1 but hit FB due to preceding miss to the same cache line with data not ready.</td>
+		<td>Counts retired load instructions with at least one uop was load missed in L1 but hit FB (Fill Buffers) due to preceding miss to the same cache line with data not ready. </td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.FB_HIT_PS">MEM_LOAD_RETIRED.FB_HIT_PS</span></td>
-		<td>Retired load instructions which data sources were load missed L1 but hit FB due to preceding miss to the same cache line with data not ready.</td>
+		<td>Counts retired load instructions with at least one uop was load missed in L1 but hit FB (Fill Buffers) due to preceding miss to the same cache line with data not ready. 
+</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L1_HIT">MEM_LOAD_RETIRED.L1_HIT</span></td>
-		<td>Retired load instructions with L1 cache hits as data sources.</td>
+		<td>Counts retired load instructions with at least one uop that hit in the L1 data cache. This event includes all SW prefetches and lock instructions regardless of the data source.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L1_HIT_PS">MEM_LOAD_RETIRED.L1_HIT_PS</span></td>
-		<td>Retired load instructions with L1 cache hits as data sources.</td>
+		<td>Counts retired load instructions with at least one uop that hit in the L1 data cache. This event includes all SW prefetches and lock instructions regardless of the data source.
+</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L1_MISS">MEM_LOAD_RETIRED.L1_MISS</span></td>
-		<td>Retired load instructions missed L1 cache as data sources.</td>
+		<td>Counts retired load instructions with at least one uop that missed in the L1 cache.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L1_MISS_PS">MEM_LOAD_RETIRED.L1_MISS_PS</span></td>
-		<td>Retired load instructions missed L1 cache as data sources.</td>
+		<td>Counts retired load instructions with at least one uop that missed in the L1 cache.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L2_HIT">MEM_LOAD_RETIRED.L2_HIT</span></td>
@@ -967,7 +948,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L3_HIT">MEM_LOAD_RETIRED.L3_HIT</span></td>
-		<td>Retired load instructions with L3 cache hits as data sources.</td>
+		<td>Counts retired load instructions with at least one uop that hit in the L3 cache. </td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L3_HIT_PS">MEM_LOAD_RETIRED.L3_HIT_PS</span></td>
@@ -975,7 +956,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L3_MISS">MEM_LOAD_RETIRED.L3_MISS</span></td>
-		<td>Retired load instructions missed L3 cache as data sources.</td>
+		<td>Counts retired load instructions with at least one uop that missed in the L3 cache. </td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_RETIRED.L3_MISS_PS">MEM_LOAD_RETIRED.L3_MISS_PS</span></td>
@@ -1015,23 +996,23 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS.ALL_DATA_RD">OFFCORE_REQUESTS.ALL_DATA_RD</span></td>
-		<td>This event counts the demand and prefetch data reads. All Core Data Reads include cacheable &#39;Demands&#39; and L2 prefetchers (not L3 prefetchers). Counting also covers reads due to page walks resulted from any request type.</td>
+		<td>Counts the demand and prefetch data reads. All Core Data Reads include cacheable &#39;Demands&#39; and L2 prefetchers (not L3 prefetchers). Counting also covers reads due to page walks resulted from any request type.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS.ALL_REQUESTS">OFFCORE_REQUESTS.ALL_REQUESTS</span></td>
-		<td>This event counts memory transactions reached the super queue including requests initiated by the core, all L3 prefetches, page walks, and so on.</td>
+		<td>Counts memory transactions reached the super queue including requests initiated by the core, all L3 prefetches, page walks, etc..</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS.DEMAND_CODE_RD">OFFCORE_REQUESTS.DEMAND_CODE_RD</span></td>
-		<td>This event counts both cacheable and noncachaeble code read requests.</td>
+		<td>Counts both cacheable and non-cacheable code read requests.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS.DEMAND_DATA_RD">OFFCORE_REQUESTS.DEMAND_DATA_RD</span></td>
-		<td>This event counts the Demand Data Read requests sent to uncore. Use it in conjunction with OFFCORE_REQUESTS_OUTSTANDING to determine average latency in the uncore.</td>
+		<td>Counts the Demand Data Read requests sent to uncore. Use it in conjunction with OFFCORE_REQUESTS_OUTSTANDING to determine average latency in the uncore.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS.DEMAND_RFO">OFFCORE_REQUESTS.DEMAND_RFO</span></td>
-		<td>This event counts the demand RFO (read for ownership) requests including regular RFOs, locks, ItoM.</td>
+		<td>Counts the demand RFO (read for ownership) requests including regular RFOs, locks, ItoM.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS.L3_MISS_DEMAND_DATA_RD">OFFCORE_REQUESTS.L3_MISS_DEMAND_DATA_RD</span></td>
@@ -1039,28 +1020,27 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_BUFFER.SQ_FULL">OFFCORE_REQUESTS_BUFFER.SQ_FULL</span></td>
-		<td>This event counts the number of cases when the offcore requests buffer cannot take more entries for the core. This can happen when the superqueue does not contain eligible entries, or when L1D writeback pending FIFO requests is full.
-Note: Writeback pending FIFO has six entries.</td>
+		<td>Counts the number of cases when the offcore requests buffer cannot take more entries for the core. This can happen when the superqueue does not contain eligible entries, or when L1D writeback pending FIFO requests is full.Note: Writeback pending FIFO has six entries.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.ALL_DATA_RD</span></td>
-		<td>This event counts the number of offcore outstanding cacheable Core Data Read transactions in the super queue every cycle. A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor (SQ de-allocation). See corresponding Umask under OFFCORE_REQUESTS.</td>
+		<td>Counts the number of offcore outstanding cacheable Core Data Read transactions in the super queue every cycle. A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor (SQ de-allocation). See corresponding Umask under OFFCORE_REQUESTS.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DATA_RD</span></td>
-		<td>This event counts cycles when offcore outstanding cacheable Core Data Read transactions are present in the super queue. A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor (SQ de-allocation). See corresponding Umask under OFFCORE_REQUESTS.</td>
+		<td>Counts cycles when offcore outstanding cacheable Core Data Read transactions are present in the super queue. A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor (SQ de-allocation). See corresponding Umask under OFFCORE_REQUESTS.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_CODE_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_CODE_RD</span></td>
-		<td>This event counts the number of offcore outstanding Code Reads transactions in the super queue every cycle. The &#39;Offcore outstanding&#39; state of the transaction lasts from the L2 miss until the sending transaction completion to requestor (SQ deallocation). See the corresponding Umask under OFFCORE_REQUESTS.</td>
+		<td>Counts the number of offcore outstanding Code Reads transactions in the super queue every cycle. The &#39;Offcore outstanding&#39; state of the transaction lasts from the L2 miss until the sending transaction completion to requestor (SQ deallocation). See the corresponding Umask under OFFCORE_REQUESTS.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_DATA_RD</span></td>
-		<td>This event counts cycles when offcore outstanding Demand Data Read transactions are present in the super queue (SQ). A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor (SQ de-allocation).</td>
+		<td>Counts cycles when offcore outstanding Demand Data Read transactions are present in the super queue (SQ). A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor (SQ de-allocation).</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_DEMAND_RFO</span></td>
-		<td>This event counts the number of offcore outstanding demand rfo Reads transactions in the super queue every cycle. The &#39;Offcore outstanding&#39; state of the transaction lasts from the L2 miss until the sending transaction completion to requestor (SQ deallocation). See the corresponding Umask under OFFCORE_REQUESTS.</td>
+		<td>Counts the number of offcore outstanding demand rfo Reads transactions in the super queue every cycle. The &#39;Offcore outstanding&#39; state of the transaction lasts from the L2 miss until the sending transaction completion to requestor (SQ deallocation). See the corresponding Umask under OFFCORE_REQUESTS.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_L3_MISS_DEMAND_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.CYCLES_WITH_L3_MISS_DEMAND_DATA_RD</span></td>
@@ -1068,12 +1048,11 @@ Note: Writeback pending FIFO has six entries.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_CODE_RD</span></td>
-		<td>This event counts the number of offcore outstanding Code Reads transactions in the super queue every cycle. The &#39;Offcore outstanding&#39; state of the transaction lasts from the L2 miss until the sending transaction completion to requestor (SQ deallocation). See the corresponding Umask under OFFCORE_REQUESTS.</td>
+		<td>Counts the number of offcore outstanding Code Reads transactions in the super queue every cycle. The &#39;Offcore outstanding&#39; state of the transaction lasts from the L2 miss until the sending transaction completion to requestor (SQ deallocation). See the corresponding Umask under OFFCORE_REQUESTS.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD</span></td>
-		<td>This event counts the number of offcore outstanding Demand Data Read transactions in the super queue (SQ) every cycle. A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor. See the corresponding Umask under OFFCORE_REQUESTS.
-Note: A prefetch promoted to Demand is counted from the promotion point.</td>
+		<td>Counts the number of offcore outstanding Demand Data Read transactions in the super queue (SQ) every cycle. A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor. See the corresponding Umask under OFFCORE_REQUESTS.Note: A prefetch promoted to Demand is counted from the promotion point.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_DATA_RD_GE_6</span></td>
@@ -1081,7 +1060,7 @@ Note: A prefetch promoted to Demand is counted from the promotion point.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO">OFFCORE_REQUESTS_OUTSTANDING.DEMAND_RFO</span></td>
-		<td>This event counts the number of offcore outstanding RFO (store) transactions in the super queue (SQ) every cycle. A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor (SQ de-allocation). See corresponding Umask under OFFCORE_REQUESTS.</td>
+		<td>Counts the number of offcore outstanding RFO (store) transactions in the super queue (SQ) every cycle. A transaction is considered to be in the Offcore outstanding state between L2 miss and transaction completion sent to requestor (SQ de-allocation). See corresponding Umask under OFFCORE_REQUESTS.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_REQUESTS_OUTSTANDING.L3_MISS_DEMAND_DATA_RD">OFFCORE_REQUESTS_OUTSTANDING.L3_MISS_DEMAND_DATA_RD</span></td>
@@ -1101,15 +1080,11 @@ Note: A prefetch promoted to Demand is counted from the promotion point.</td>
 	</tr>
 	<tr>
 		<td><span id="RESOURCE_STALLS.ANY">RESOURCE_STALLS.ANY</span></td>
-		<td>This event counts resource-related stall cycles. Reasons for stalls can be as follows:
- - *any* u-arch structure got full (LB, SB, RS, ROB, BOB, LM, Physical Register Reclaim Table (PRRT), or Physical History Table (PHT) slots)
- - *any* u-arch structure got empty (like INT/SIMD FreeLists)
- - FPU control word (FPCW), MXCSR
-and others. This counts cycles that the pipeline backend blocked uop delivery from the front end.</td>
+		<td>Counts resource-related stall cycles. Reasons for stalls can be as follows:a. *any* u-arch structure got full (LB, SB, RS, ROB, BOB, LM, Physical Register Reclaim Table (PRRT), or Physical History Table (PHT) slots).b. *any* u-arch structure got empty (like INT/SIMD FreeLists).c. FPU control word (FPCW), MXCSR.and others. This counts cycles that the pipeline back-end blocked uop delivery from the front-end.</td>
 	</tr>
 	<tr>
 		<td><span id="RESOURCE_STALLS.SB">RESOURCE_STALLS.SB</span></td>
-		<td>This event counts stall cycles caused by the store buffer (SB) overflow (excluding draining from synch). This counts cycles that the pipeline backend blocked uop delivery from the front end.</td>
+		<td>Counts allocation stall cycles caused by the store buffer (SB) being full. This counts cycles that the pipeline back-end blocked uop delivery from the front-end.</td>
 	</tr>
 	<tr>
 		<td><span id="ROB_MISC_EVENTS.LBR_INSERTS">ROB_MISC_EVENTS.LBR_INSERTS</span></td>
@@ -1117,12 +1092,11 @@ and others. This counts cycles that the pipeline backend blocked uop delivery fr
 	</tr>
 	<tr>
 		<td><span id="RS_EVENTS.EMPTY_CYCLES">RS_EVENTS.EMPTY_CYCLES</span></td>
-		<td>This event counts cycles during which the reservation station (RS) is empty for the thread.
-Note: In ST-mode, not active thread should drive 0. This is usually caused by severely costly branch mispredictions, or allocator/FE issues.</td>
+		<td>Counts cycles during which the reservation station (RS) is empty for the thread.; Note: In ST-mode, not active thread should drive 0. This is usually caused by severely costly branch mispredictions, or allocator/FE issues.</td>
 	</tr>
 	<tr>
 		<td><span id="RS_EVENTS.EMPTY_END">RS_EVENTS.EMPTY_END</span></td>
-		<td>Counts end of periods where the Reservation Station (RS) was empty. Could be useful to precisely locate Frontend Latency Bound issues.</td>
+		<td>Counts end of periods where the Reservation Station (RS) was empty. Could be useful to precisely locate front-end Latency Bound issues.</td>
 	</tr>
 	<tr>
 		<td><span id="RTM_RETIRED.ABORTED">RTM_RETIRED.ABORTED</span></td>
@@ -1158,28 +1132,39 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="RTM_RETIRED.START">RTM_RETIRED.START</span></td>
-		<td>Number of times we entered an RTM region
- does not count nested transactions.</td>
+		<td>Number of times we entered an RTM region. Does not count nested transactions.</td>
 	</tr>
 	<tr>
 		<td><span id="SQ_MISC.SPLIT_LOCK">SQ_MISC.SPLIT_LOCK</span></td>
-		<td>This event counts the number of cache line split locks sent to the uncore.</td>
+		<td>Counts the number of cache line split locks sent to the uncore.</td>
+	</tr>
+	<tr>
+		<td><span id="SW_PREFETCH_ACCESS.NTA">SW_PREFETCH_ACCESS.NTA</span></td>
+		<td>Number of PREFETCHNTA instructions executed.</td>
+	</tr>
+	<tr>
+		<td><span id="SW_PREFETCH_ACCESS.T0">SW_PREFETCH_ACCESS.T0</span></td>
+		<td>Number of PREFETCHT0 instructions executed.</td>
+	</tr>
+	<tr>
+		<td><span id="SW_PREFETCH_ACCESS.T1_T2">SW_PREFETCH_ACCESS.T1_T2</span></td>
+		<td>Number of PREFETCHT1 or PREFETCHT2 instructions executed.</td>
 	</tr>
 	<tr>
 		<td><span id="TLB_FLUSH.DTLB_THREAD">TLB_FLUSH.DTLB_THREAD</span></td>
-		<td>This event counts the number of DTLB flush attempts of the thread-specific entries.</td>
+		<td>Counts the number of DTLB flush attempts of the thread-specific entries.</td>
 	</tr>
 	<tr>
 		<td><span id="TLB_FLUSH.STLB_ANY">TLB_FLUSH.STLB_ANY</span></td>
-		<td>This event counts the number of any STLB flush attempts (such as entire, VPID, PCID, InvPage, CR3 write, and so on).</td>
+		<td>Counts the number of any STLB flush attempts (such as entire, VPID, PCID, InvPage, CR3 write, etc.).</td>
 	</tr>
 	<tr>
 		<td><span id="TX_EXEC.MISC1">TX_EXEC.MISC1</span></td>
-		<td>Unfriendly TSX abort triggered by  a flowmarker.</td>
+		<td>Counts the number of times a class of instructions that may cause a transactional abort was executed. Since this is the count of execution, it may not always cause a transactional abort.</td>
 	</tr>
 	<tr>
 		<td><span id="TX_EXEC.MISC2">TX_EXEC.MISC2</span></td>
-		<td>Unfriendly TSX abort triggered by  a vzeroupper instruction.</td>
+		<td>Unfriendly TSX abort triggered by a vzeroupper instruction.</td>
 	</tr>
 	<tr>
 		<td><span id="TX_EXEC.MISC3">TX_EXEC.MISC3</span></td>
@@ -1223,35 +1208,35 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="UOPS_DISPATCHED_PORT.PORT_0">UOPS_DISPATCHED_PORT.PORT_0</span></td>
-		<td>This event counts, on the per-thread basis, cycles during which uops are dispatched from the Reservation Station (RS) to port 0.</td>
+		<td>Counts, on the per-thread basis, cycles during which at least one uop is dispatched from the Reservation Station (RS) to port 0.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_DISPATCHED_PORT.PORT_1">UOPS_DISPATCHED_PORT.PORT_1</span></td>
-		<td>This event counts, on the per-thread basis, cycles during which uops are dispatched from the Reservation Station (RS) to port 1.</td>
+		<td>Counts, on the per-thread basis, cycles during which at least one uop is dispatched from the Reservation Station (RS) to port 1.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_DISPATCHED_PORT.PORT_2">UOPS_DISPATCHED_PORT.PORT_2</span></td>
-		<td>This event counts, on the per-thread basis, cycles during which uops are dispatched from the Reservation Station (RS) to port 2.</td>
+		<td>Counts, on the per-thread basis, cycles during which at least one uop is dispatched from the Reservation Station (RS) to port 2.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_DISPATCHED_PORT.PORT_3">UOPS_DISPATCHED_PORT.PORT_3</span></td>
-		<td>This event counts, on the per-thread basis, cycles during which uops are dispatched from the Reservation Station (RS) to port 3.</td>
+		<td>Counts, on the per-thread basis, cycles during which at least one uop is dispatched from the Reservation Station (RS) to port 3.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_DISPATCHED_PORT.PORT_4">UOPS_DISPATCHED_PORT.PORT_4</span></td>
-		<td>This event counts, on the per-thread basis, cycles during which uops are dispatched from the Reservation Station (RS) to port 4.</td>
+		<td>Counts, on the per-thread basis, cycles during which at least one uop is dispatched from the Reservation Station (RS) to port 4.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_DISPATCHED_PORT.PORT_5">UOPS_DISPATCHED_PORT.PORT_5</span></td>
-		<td>This event counts, on the per-thread basis, cycles during which uops are dispatched from the Reservation Station (RS) to port 5.</td>
+		<td>Counts, on the per-thread basis, cycles during which at least one uop is dispatched from the Reservation Station (RS) to port 5.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_DISPATCHED_PORT.PORT_6">UOPS_DISPATCHED_PORT.PORT_6</span></td>
-		<td>This event counts, on the per-thread basis, cycles during which uops are dispatched from the Reservation Station (RS) to port 6.</td>
+		<td>Counts, on the per-thread basis, cycles during which at least one uop is dispatched from the Reservation Station (RS) to port 6.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_DISPATCHED_PORT.PORT_7">UOPS_DISPATCHED_PORT.PORT_7</span></td>
-		<td>This event counts, on the per-thread basis, cycles during which uops are dispatched from the Reservation Station (RS) to port 7.</td>
+		<td>Counts, on the per-thread basis, cycles during which at least one uop is dispatched from the Reservation Station (RS) to port 7.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_EXECUTED.CORE">UOPS_EXECUTED.CORE</span></td>
@@ -1295,7 +1280,7 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="UOPS_EXECUTED.STALL_CYCLES">UOPS_EXECUTED.STALL_CYCLES</span></td>
-		<td>This event counts cycles during which no uops were dispatched from the Reservation Station (RS) per thread.</td>
+		<td>Counts cycles during which no uops were dispatched from the Reservation Station (RS) per thread.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_EXECUTED.THREAD">UOPS_EXECUTED.THREAD</span></td>
@@ -1303,11 +1288,11 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="UOPS_EXECUTED.X87">UOPS_EXECUTED.X87</span></td>
-		<td>Counts the number of x87 uops dispatched.</td>
+		<td>Counts the number of x87 uops executed.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_ISSUED.ANY">UOPS_ISSUED.ANY</span></td>
-		<td>This event counts the number of Uops issued by the Resource Allocation Table (RAT) to the reservation station (RS).</td>
+		<td>Counts the number of uops that the Resource Allocation Table (RAT) issues to the Reservation Station (RS).</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_ISSUED.SLOW_LEA">UOPS_ISSUED.SLOW_LEA</span></td>
@@ -1315,16 +1300,15 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="UOPS_ISSUED.STALL_CYCLES">UOPS_ISSUED.STALL_CYCLES</span></td>
-		<td>This event counts cycles during which the Resource Allocation Table (RAT) does not issue any Uops to the reservation station (RS) for the current thread.</td>
+		<td>Counts cycles during which the Resource Allocation Table (RAT) does not issue any Uops to the reservation station (RS) for the current thread.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_ISSUED.VECTOR_WIDTH_MISMATCH">UOPS_ISSUED.VECTOR_WIDTH_MISMATCH</span></td>
-		<td>This event counts the number of Blend Uops issued by the Resource Allocation Table (RAT) to the reservation station (RS) in order to preserve upper bits of vector registers. Starting the Skylake microarchitecture, these Blend uops are needed since every Intel SSE instruction executed in Dirty Upper State needs to preserve bits 128-255 of the destination register.
-For more information, refer to “Mixing Intel AVX and Intel SSE Code” section of the Optimization Guide.</td>
+		<td>Counts the number of Blend Uops issued by the Resource Allocation Table (RAT) to the reservation station (RS) in order to preserve upper bits of vector registers. Starting with the Skylake microarchitecture, these Blend uops are needed since every Intel SSE instruction executed in Dirty Upper State needs to preserve bits 128-255 of the destination register. For more information, refer to “Mixing Intel AVX and Intel SSE Code” section of the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.RETIRE_SLOTS">UOPS_RETIRED.RETIRE_SLOTS</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts the number of retirement slots used.</td>
+		<td>Counts the retirement slots used.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.STALL_CYCLES">UOPS_RETIRED.STALL_CYCLES</span></td>

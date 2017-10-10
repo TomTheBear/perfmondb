@@ -162,6 +162,10 @@
 		<td>These Events provide information regarding Hardware (Vectored, Fixed) interrupts.  HW_INTERRUPTS.RECEIVED provides a count of the total number of Hardware Interrupts received by the processor.  This event is a straightforward count of the number of interrupts the ROB recognizes.  HW_INTERRUPTS.PENDING_AND_MASKED is the core cycles from when an interrupt arrives but the processor has masked interrupts (when the register EFLAGS.IF = 0) to when the processor no longer has masked interrupts.  Using these events in combination with PEBS can help to identify issues resulting in a system becoming unresponsive.</td>
 	</tr>
 	<tr>
+		<td><span id="HW_INTERRUPTS.MASKED">HW_INTERRUPTS.MASKED</span></td>
+		<td>Counts the number of core cycles during which interrupts are masked (disabled). Increments by 1 each core cycle that EFLAGS.IF is 0, regardless of whether interrupts are pending or not.</td>
+	</tr>
+	<tr>
 		<td><span id="HW_INTERRUPTS.PENDING_AND_MASKED">HW_INTERRUPTS.PENDING_AND_MASKED</span></td>
 		<td>Counts core cycles during which there are pending interrupts, but interrupts are masked (EFLAGS.IF = 0).</td>
 	</tr>
@@ -407,6 +411,14 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="UOPS_RETIRED.ANY">UOPS_RETIRED.ANY</span></td>
 		<td>Counts uops which retired.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.FPDIV">UOPS_RETIRED.FPDIV</span></td>
+		<td>Counts the number of floating point divide uops retired.</td>
+	</tr>
+	<tr>
+		<td><span id="UOPS_RETIRED.IDIV">UOPS_RETIRED.IDIV</span></td>
+		<td>Counts the number of integer divide uops retired.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.MS">UOPS_RETIRED.MS</span></td>

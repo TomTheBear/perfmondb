@@ -1,11 +1,11 @@
 # Performance Monitoring Events for the Fourth Generation Intel Core Processors Based on the Haswell Microarchitecture - V26
-# 4/25/2017 1:00:09 PM
+# 10/4/2017 11:41:44 AM
 # Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
 EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue	MSRIndex	MSRValue	TakenAlone	CounterMask	Invert	AnyThread	EdgeDetect	PEBS	Data_LA	L1_Hit_Indication	Errata
-0x00	0x01	INST_RETIRED.ANY	Instructions retired from execution.	Fixed counter 1	Fixed counter 1	2000003	0	0	0	0	0	0	0	0	0	0	HSD140, HSD143
-0x00	0x02	CPU_CLK_UNHALTED.THREAD	Core cycles when the thread is not in halt state.	Fixed counter 2	Fixed counter 2	2000003	0	0	0	0	0	0	0	0	0	0	null
-0x00	0x02	CPU_CLK_UNHALTED.THREAD_ANY	Core cycles when at least one thread on the physical core is not in halt state.	Fixed counter 2	Fixed counter 2	2000003	0	0	0	0	0	1	0	0	0	0	null
-0x00	0x03	CPU_CLK_UNHALTED.REF_TSC	Reference cycles when the core is not in halt state.	Fixed counter 3	Fixed counter 3	2000003	0	0	0	0	0	0	0	0	0	0	null
+0x00	0x01	INST_RETIRED.ANY	Instructions retired from execution.	Fixed counter 0	Fixed counter 0	2000003	0	0	0	0	0	0	0	0	0	0	HSD140, HSD143
+0x00	0x02	CPU_CLK_UNHALTED.THREAD	Core cycles when the thread is not in halt state.	Fixed counter 1	Fixed counter 1	2000003	0	0	0	0	0	0	0	0	0	0	null
+0x00	0x02	CPU_CLK_UNHALTED.THREAD_ANY	Core cycles when at least one thread on the physical core is not in halt state.	Fixed counter 1	Fixed counter 1	2000003	0	0	0	0	0	1	0	0	0	0	null
+0x00	0x03	CPU_CLK_UNHALTED.REF_TSC	Reference cycles when the core is not in halt state.	Fixed counter 2	Fixed counter 2	2000003	0	0	0	0	0	0	0	0	0	0	null
 0x03	0x02	LD_BLOCKS.STORE_FORWARD	loads blocked by overlapping with store buffer that cannot be forwarded	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
 0x03	0x08	LD_BLOCKS.NO_SR	The number of times that split load operations are temporarily blocked because all resources for handling the split accesses are in use	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
 0x05	0x01	MISALIGN_MEM_REF.LOADS	Speculative cache line split load uops dispatched to L1 cache	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
@@ -53,10 +53,10 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0x3C	0x00	CPU_CLK_UNHALTED.THREAD_P_ANY	Core cycles when at least one thread on the physical core is not in halt state.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	1	0	0	0	0	null
 0x3C	0x01	CPU_CLK_THREAD_UNHALTED.REF_XCLK	Reference cycles when the thread is unhalted (counts at 100 MHz rate)	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
 0x3C	0x01	CPU_CLK_THREAD_UNHALTED.REF_XCLK_ANY	Reference cycles when the at least one thread on the physical core is unhalted (counts at 100 MHz rate)	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	1	0	0	0	0	null
-0x3C	0x01	CPU_CLK_UNHALTED.REF_XCLK	Reference cycles when the thread is unhalted (counts at 100 MHz rate)	"0,1,2,3"	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
-0x3C	0x01	CPU_CLK_UNHALTED.REF_XCLK_ANY	Reference cycles when the at least one thread on the physical core is unhalted (counts at 100 MHz rate)	"0,1,2,3"	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	1	0	0	0	0	null
+0x3C	0x01	CPU_CLK_UNHALTED.REF_XCLK	Reference cycles when the thread is unhalted (counts at 100 MHz rate)	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
+0x3C	0x01	CPU_CLK_UNHALTED.REF_XCLK_ANY	Reference cycles when the at least one thread on the physical core is unhalted (counts at 100 MHz rate)	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	1	0	0	0	0	null
 0x3c	0x02	CPU_CLK_THREAD_UNHALTED.ONE_THREAD_ACTIVE	Count XClk pulses when this thread is unhalted and the other thread is halted.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null
-0x3C	0x02	CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE	Count XClk pulses when this thread is unhalted and the other thread is halted.	"0,1,2,3"	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
+0x3C	0x02	CPU_CLK_UNHALTED.ONE_THREAD_ACTIVE	Count XClk pulses when this thread is unhalted and the other thread is halted.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
 0x48	0x01	L1D_PEND_MISS.PENDING	L1D miss oustandings duration in cycles	2	2	2000003	0	0	0	0	0	0	0	0	0	0	null
 0x48	0x01	L1D_PEND_MISS.PENDING_CYCLES	Cycles with L1D load Misses outstanding.	2	2	2000003	0	0	0	1	0	0	0	0	0	0	null
 0x48	0x01	L1D_PEND_MISS.PENDING_CYCLES_ANY	Cycles with L1D load Misses outstanding from any thread on physical core.	2	2	2000003	0	0	0	1	0	1	0	0	0	0	null
@@ -243,14 +243,14 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xBD	0x20	TLB_FLUSH.STLB_ANY	STLB flush attempts	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
 0xC0	0x00	INST_RETIRED.ANY_P	Number of instructions retired. General Counter   - architectural event	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	HSD11, HSD140
 0xC0	0x01	INST_RETIRED.PREC_DIST	Precise instruction retired event with HW to reduce effect of PEBS shadow in IP distribution	1	1	2000003	0	0	0	0	0	0	0	2	0	0	HSD140
-0xC0	0x02	INST_RETIRED.X87	FP operations retired. X87 FP operations that have no exceptions: Counts also flows that have several X87 or flows that use X87 uops in the exception handling.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
-0xC1	0x08	OTHER_ASSISTS.AVX_TO_SSE	Number of transitions from AVX-256 to legacy SSE when penalty applicable.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	HSD56, HSM57
-0xC1	0x10	OTHER_ASSISTS.SSE_TO_AVX	Number of transitions from SSE to AVX-256 when penalty applicable.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	HSD56, HSM57
-0xC1	0x40	OTHER_ASSISTS.ANY_WB_ASSIST	Number of times any microcode assist is invoked by HW upon uop writeback.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
+0xC0	0x02	INST_RETIRED.X87	This is a precise version (that is, uses PEBS) of the event that counts FP operations retired. For X87 FP operations that have no exceptions counting also includes flows that have several X87, or flows that use X87 uops in the exception handling.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
+0xC1	0x08	OTHER_ASSISTS.AVX_TO_SSE		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	HSD56, HSM57
+0xC1	0x10	OTHER_ASSISTS.SSE_TO_AVX		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	HSD56, HSM57
+0xC1	0x40	OTHER_ASSISTS.ANY_WB_ASSIST		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
 0xC2	0x01	UOPS_RETIRED.ALL	Actually retired uops.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	1	1	0	null
-0xC2	0x01	UOPS_RETIRED.STALL_CYCLES	Cycles without actually retired uops.	0,1,2,3	0,1,2,3	2000003	0	0	0	1	1	0	0	0	0	0	null
-0xC2	0x01	UOPS_RETIRED.TOTAL_CYCLES	Cycles with less than 10 actually retired uops.	0,1,2,3	0,1,2,3	2000003	0	0	0	10	1	0	0	0	0	0	null
-0xC2	0x01	UOPS_RETIRED.CORE_STALL_CYCLES	Cycles without actually retired uops.	0,1,2,3	0,1,2,3	2000003	0	0	0	1	1	1	0	0	0	0	null
+0xC2	0x01	UOPS_RETIRED.STALL_CYCLES		0,1,2,3	0,1,2,3	2000003	0	0	0	1	1	0	0	0	0	0	null
+0xC2	0x01	UOPS_RETIRED.TOTAL_CYCLES		0,1,2,3	0,1,2,3	2000003	0	0	0	10	1	0	0	0	0	0	null
+0xC2	0x01	UOPS_RETIRED.CORE_STALL_CYCLES		0,1,2,3	0,1,2,3	2000003	0	0	0	1	1	1	0	0	0	0	null
 0xC2	0x02	UOPS_RETIRED.RETIRE_SLOTS	Retirement slots used.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	1	0	0	null
 0xC3	0x01	MACHINE_CLEARS.CYCLES	Cycles there was a Nuke. Account for both thread-specific and All Thread Nukes.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
 0xC3	0x01	MACHINE_CLEARS.COUNT	Number of machine clears (nukes) of any type.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	1	0	0	1	0	0	0	null
@@ -263,12 +263,12 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xC4	0x02	BR_INST_RETIRED.NEAR_CALL_R3	Direct and indirect macro near call instructions retired (captured in ring 3).	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	1	0	0	null
 0xC4	0x04	BR_INST_RETIRED.ALL_BRANCHES_PEBS	All (macro) branch instructions retired.	0,1,2,3	0,1,2,3	400009	0	0	0	0	0	0	0	2	0	0	null
 0xC4	0x08	BR_INST_RETIRED.NEAR_RETURN	Return instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	1	0	0	null
-0xC4	0x10	BR_INST_RETIRED.NOT_TAKEN	Not taken branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	0	0	0	null
+0xC4	0x10	BR_INST_RETIRED.NOT_TAKEN		0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	0	0	0	null
 0xC4	0x20	BR_INST_RETIRED.NEAR_TAKEN	Taken branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null
-0xC4	0x40	BR_INST_RETIRED.FAR_BRANCH	Far branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
+0xC4	0x40	BR_INST_RETIRED.FAR_BRANCH		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
 0xC5	0x00	BR_MISP_RETIRED.ALL_BRANCHES	All mispredicted macro branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	0	0	0	null
 0xC5	0x01	BR_MISP_RETIRED.CONDITIONAL	Mispredicted conditional branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null
-0xC5	0x04	BR_MISP_RETIRED.ALL_BRANCHES_PEBS	Mispredicted macro branch instructions retired. 	0,1,2,3	0,1,2,3	400009	0	0	0	0	0	0	0	2	0	0	null
+0xC5	0x04	BR_MISP_RETIRED.ALL_BRANCHES_PEBS	Mispredicted macro branch instructions retired.	0,1,2,3	0,1,2,3	400009	0	0	0	0	0	0	0	2	0	0	null
 0xC5	0x20	BR_MISP_RETIRED.NEAR_TAKEN	number of near branch instructions retired that were mispredicted and taken.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null
 0xC6	0x07	AVX_INSTS.ALL	Approximate counts of AVX & AVX2 256-bit instructions, including non-arithmetic instructions, loads, and stores.  May count non-AVX instructions that employ 256-bit operations, including (but not necessarily limited to) rep string instructions that use 256-bit loads and stores for optimized performance, XSAVE* and XRSTOR*, and operations that transition the x87 FPU data registers between x87 and MMX.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
 0xC8	0x01	HLE_RETIRED.START	Number of times an HLE execution started.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
@@ -287,11 +287,11 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xc9	0x20	RTM_RETIRED.ABORTED_MISC3	Number of times an RTM execution aborted due to HLE-unfriendly instructions.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null
 0xc9	0x40	RTM_RETIRED.ABORTED_MISC4	Number of times an RTM execution aborted due to incompatible memory type.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	HSD65
 0xc9	0x80	RTM_RETIRED.ABORTED_MISC5	Number of times an RTM execution aborted due to none of the previous 4 categories (e.g. interrupt)	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null
-0xCA	0x02	FP_ASSIST.X87_OUTPUT	Number of X87 assists due to output value.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
-0xCA	0x04	FP_ASSIST.X87_INPUT	Number of X87 assists due to input value.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
-0xCA	0x08	FP_ASSIST.SIMD_OUTPUT	Number of SIMD FP assists due to Output values	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
-0xCA	0x10	FP_ASSIST.SIMD_INPUT	Number of SIMD FP assists due to input values	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
-0xCA	0x1E	FP_ASSIST.ANY	Cycles with any input/output SSE or FP assist	0,1,2,3	0,1,2,3	100003	0	0	0	1	0	0	0	0	0	0	null
+0xCA	0x02	FP_ASSIST.X87_OUTPUT		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
+0xCA	0x04	FP_ASSIST.X87_INPUT		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
+0xCA	0x08	FP_ASSIST.SIMD_OUTPUT		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
+0xCA	0x10	FP_ASSIST.SIMD_INPUT		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
+0xCA	0x1E	FP_ASSIST.ANY		0,1,2,3	0,1,2,3	100003	0	0	0	1	0	0	0	0	0	0	null
 0xCC	0x20	ROB_MISC_EVENTS.LBR_INSERTS	Count cases of saving new LBR	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_4	Loads with latency value being above 4.	3	3	100003	0x3F6	0x4	1	0	0	0	0	2	0	0	HSD76, HSD25, HSM26
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8	Loads with latency value being above 8.	3	3	50021	0x3F6	0x8	1	0	0	0	0	2	0	0	HSD76, HSD25, HSM26
@@ -301,25 +301,25 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128	Loads with latency value being above 128.	3	3	1009	0x3F6	0x80	1	0	0	0	0	2	0	0	HSD76, HSD25, HSM26
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_256	Loads with latency value being above 256.	3	3	503	0x3F6	0x100	1	0	0	0	0	2	0	0	HSD76, HSD25, HSM26
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_512	Loads with latency value being above 512.	3	3	101	0x3F6	0x200	1	0	0	0	0	2	0	0	HSD76, HSD25, HSM26
-0xD0	0x11	MEM_UOPS_RETIRED.STLB_MISS_LOADS	Retired load uops that miss the STLB.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
-0xD0	0x12	MEM_UOPS_RETIRED.STLB_MISS_STORES	Retired store uops that miss the STLB.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	1	HSD29, HSM30
-0xD0	0x21	MEM_UOPS_RETIRED.LOCK_LOADS	Retired load uops with locked access.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD76, HSD29, HSM30
-0xD0	0x41	MEM_UOPS_RETIRED.SPLIT_LOADS	Retired load uops that split across a cacheline boundary.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
-0xD0	0x42	MEM_UOPS_RETIRED.SPLIT_STORES	Retired store uops that split across a cacheline boundary.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	1	HSD29, HSM30
-0xD0	0x81	MEM_UOPS_RETIRED.ALL_LOADS	All retired load uops.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
-0xD0	0x82	MEM_UOPS_RETIRED.ALL_STORES	All retired store uops.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	1	HSD29, HSM30
+0xD0	0x11	MEM_UOPS_RETIRED.STLB_MISS_LOADS	Retired load uops that miss the STLB. (precise Event)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
+0xD0	0x12	MEM_UOPS_RETIRED.STLB_MISS_STORES	Retired store uops that miss the STLB. (precise Event)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	1	HSD29, HSM30
+0xD0	0x21	MEM_UOPS_RETIRED.LOCK_LOADS	Retired load uops with locked access. (precise Event)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD76, HSD29, HSM30
+0xD0	0x41	MEM_UOPS_RETIRED.SPLIT_LOADS	This event counts load uops retired which had memory addresses spilt across 2 cache lines. A line split is across 64B cache-lines which may include a page split (4K). This is a precise event.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
+0xD0	0x42	MEM_UOPS_RETIRED.SPLIT_STORES	This event counts store uops retired which had memory addresses spilt across 2 cache lines. A line split is across 64B cache-lines which may include a page split (4K). This is a precise event.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	1	HSD29, HSM30
+0xD0	0x81	MEM_UOPS_RETIRED.ALL_LOADS	All retired load uops. (precise Event)	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
+0xD0	0x82	MEM_UOPS_RETIRED.ALL_STORES	This event counts all store uops retired. This is a precise event.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	1	HSD29, HSM30
 0xD1	0x01	MEM_LOAD_UOPS_RETIRED.L1_HIT	Retired load uops with L1 cache hits as data sources.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
 0xD1	0x02	MEM_LOAD_UOPS_RETIRED.L2_HIT	Retired load uops with L2 cache hits as data sources.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD76, HSD29, HSM30
-0xD1	0x04	MEM_LOAD_UOPS_RETIRED.L3_HIT	Retired load uops which data sources were data hits in L3 without snoops required.	0,1,2,3	0,1,2,3	50021	0	0	0	0	0	0	0	1	1	0	HSD74, HSD29, HSD25, HSM26, HSM30
-0xD1	0x08	MEM_LOAD_UOPS_RETIRED.L1_MISS	Retired load uops misses in L1 cache as data sources.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSM30
-0xD1	0x10	MEM_LOAD_UOPS_RETIRED.L2_MISS	Miss in mid-level (L2) cache. Excludes Unknown data-source.	0,1,2,3	0,1,2,3	50021	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
+0xD1	0x04	MEM_LOAD_UOPS_RETIRED.L3_HIT	This event counts retired load uops in which data sources were data hits in the L3 cache without snoops required. This does not include hardware prefetches. This is a precise event.	0,1,2,3	0,1,2,3	50021	0	0	0	0	0	0	0	1	1	0	HSD74, HSD29, HSD25, HSM26, HSM30
+0xD1	0x08	MEM_LOAD_UOPS_RETIRED.L1_MISS	This event counts retired load uops in which data sources missed in the L1 cache. This does not include hardware prefetches. This is a precise event.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSM30
+0xD1	0x10	MEM_LOAD_UOPS_RETIRED.L2_MISS	Retired load uops with L2 cache misses as data sources.	0,1,2,3	0,1,2,3	50021	0	0	0	0	0	0	0	1	1	0	HSD29, HSM30
 0xD1	0x20	MEM_LOAD_UOPS_RETIRED.L3_MISS	Miss in last-level (L3) cache. Excludes Unknown data-source.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD74, HSD29, HSD25, HSM26, HSM30
 0xD1	0x40	MEM_LOAD_UOPS_RETIRED.HIT_LFB	Retired load uops which data sources were load uops missed L1 but hit FB due to preceding miss to the same cache line with data not ready.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSM30
 0xD2	0x01	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS	Retired load uops which data sources were L3 hit and cross-core snoop missed in on-pkg core cache.	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	HSD29, HSD25, HSM26, HSM30
-0xD2	0x02	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT	Retired load uops which data sources were L3 and cross-core snoop hits in on-pkg core cache.	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	HSD29, HSD25, HSM26, HSM30
-0xD2	0x04	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM	Retired load uops which data sources were HitM responses from shared L3.	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	HSD29, HSD25, HSM26, HSM30
+0xD2	0x02	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT	This event counts retired load uops that hit in the L3 cache, but required a cross-core snoop which resulted in a HIT in an on-pkg core cache. This does not include hardware prefetches. This is a precise event.	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	HSD29, HSD25, HSM26, HSM30
+0xD2	0x04	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM	This event counts retired load uops that hit in the L3 cache, but required a cross-core snoop which resulted in a HITM (hit modified) in an on-pkg core cache. This does not include hardware prefetches. This is a precise event.	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	HSD29, HSD25, HSM26, HSM30
 0xD2	0x08	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE	Retired load uops which data sources were hits in L3 without snoops required.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD74, HSD29, HSD25, HSM26, HSM30
-0xD3	0x01	MEM_LOAD_UOPS_L3_MISS_RETIRED.LOCAL_DRAM	Data from local DRAM either Snoop not needed or Snoop Miss (RspI)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD74, HSD29, HSD25, HSM30
+0xD3	0x01	MEM_LOAD_UOPS_L3_MISS_RETIRED.LOCAL_DRAM	This event counts retired load uops where the data came from local DRAM. This does not include hardware prefetches. This is a precise event.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	HSD74, HSD29, HSD25, HSM30
 0xe6	0x1f	BACLEARS.ANY	Counts the total number when the front end is resteered, mainly when the BPU cannot provide a correct prediction and this is corrected by other branch handling mechanisms at the front end.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null
 0xf0	0x01	L2_TRANS.DEMAND_DATA_RD	Demand Data Read requests that access L2 cache	0,1,2,3	0,1,2,3,4,5,6,7	200003	0	0	0	0	0	0	0	0	0	0	null
 0xf0	0x02	L2_TRANS.RFO	RFO requests that access L2 cache	0,1,2,3	0,1,2,3,4,5,6,7	200003	0	0	0	0	0	0	0	0	0	0	null

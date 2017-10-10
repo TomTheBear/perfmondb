@@ -1304,7 +1304,7 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="TX_EXEC.MISC1">TX_EXEC.MISC1</span></td>
-		<td>Unfriendly TSX abort triggered by  a flowmarker.</td>
+		<td>Counts the number of times a class of instructions that may cause a transactional abort was executed. Since this is the count of execution, it may not always cause a transactional abort.</td>
 	</tr>
 	<tr>
 		<td><span id="TX_EXEC.MISC2">TX_EXEC.MISC2</span></td>
@@ -3381,11 +3381,15 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="UNC_M_CLOCKTICKS">UNC_M_CLOCKTICKS</span></td>
-		<td>DRAM Clockticks. This is an alias of the UNC_M_DCLOCKTICKS event.</td>
+		<td>Clockticks in the Memory Controller using a dedicated 48-bit Fixed Counter</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_M_CLOCKTICKS_P">UNC_M_CLOCKTICKS_P</span></td>
+		<td>Clockticks in the Memory Controller using one of the programmable counters</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_M_DCLOCKTICKS">UNC_M_DCLOCKTICKS</span></td>
-		<td>DRAM Clockticks</td>
+		<td>Use UNC_M_CLOCKTICKS or UNC_M_CLOCKTICKS_P. DRAM Clockticks</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_M_DRAM_PRE_ALL">UNC_M_DRAM_PRE_ALL</span></td>
@@ -6610,6 +6614,10 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	<tr>
 		<td><span id="UNC_S_TxR_STARVED.IV">UNC_S_TxR_STARVED.IV</span></td>
 		<td>Counts injection starvation.  This starvation is triggered when the Egress cannot send a transaction onto the ring for a long period of time.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_U_CLOCKTICKS">UNC_U_CLOCKTICKS</span></td>
+		<td>Clockticks in the UBOX using a dedicated 48-bit Fixed Counter</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_U_EVENT_MSG.DOORBELL_RCVD">UNC_U_EVENT_MSG.DOORBELL_RCVD</span></td>
