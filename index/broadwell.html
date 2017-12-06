@@ -79,7 +79,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.CONDITIONAL">BR_INST_RETIRED.CONDITIONAL</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts conditional branch instructions retired.</td>
+		<td>This event counts conditional branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.CONDITIONAL_PS">BR_INST_RETIRED.CONDITIONAL_PS</span></td>
@@ -87,11 +87,11 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.FAR_BRANCH">BR_INST_RETIRED.FAR_BRANCH</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts far branch instructions retired.</td>
+		<td>This event counts far branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_CALL">BR_INST_RETIRED.NEAR_CALL</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts both direct and indirect near call instructions retired.</td>
+		<td>This event counts both direct and indirect near call instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_CALL_PS">BR_INST_RETIRED.NEAR_CALL_PS</span></td>
@@ -99,7 +99,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3">BR_INST_RETIRED.NEAR_CALL_R3</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts both direct and indirect macro near call instructions retired (captured in ring 3).</td>
+		<td>This event counts both direct and indirect macro near call instructions retired (captured in ring 3).</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_CALL_R3_PS">BR_INST_RETIRED.NEAR_CALL_R3_PS</span></td>
@@ -107,7 +107,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_RETURN">BR_INST_RETIRED.NEAR_RETURN</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts return instructions retired.</td>
+		<td>This event counts return instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_RETURN_PS">BR_INST_RETIRED.NEAR_RETURN_PS</span></td>
@@ -115,7 +115,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_TAKEN">BR_INST_RETIRED.NEAR_TAKEN</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts taken branch instructions retired.</td>
+		<td>This event counts taken branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_TAKEN_PS">BR_INST_RETIRED.NEAR_TAKEN_PS</span></td>
@@ -123,7 +123,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NOT_TAKEN">BR_INST_RETIRED.NOT_TAKEN</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts not taken branch instructions retired.</td>
+		<td>This event counts not taken branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_EXEC.ALL_BRANCHES">BR_MISP_EXEC.ALL_BRANCHES</span></td>
@@ -167,7 +167,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.CONDITIONAL">BR_MISP_RETIRED.CONDITIONAL</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts mispredicted conditional branch instructions retired.</td>
+		<td>This event counts mispredicted conditional branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.CONDITIONAL_PS">BR_MISP_RETIRED.CONDITIONAL_PS</span></td>
@@ -183,7 +183,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.RET">BR_MISP_RETIRED.RET</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts mispredicted return instructions retired.</td>
+		<td>This event counts mispredicted return instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.RET_PS">BR_MISP_RETIRED.RET_PS</span></td>
@@ -430,19 +430,19 @@ Penalty: A Decode Stream Buffer (DSB) hit followed by a Decode Stream Buffer (DS
 	</tr>
 	<tr>
 		<td><span id="FP_ASSIST.SIMD_INPUT">FP_ASSIST.SIMD_INPUT</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts any input SSE* FP assist - invalid operation, denormal operand, dividing by zero, SNaN operand. Counting includes only cases involving penalties that required micro-code assist intervention.</td>
+		<td>This event counts any input SSE* FP assist - invalid operation, denormal operand, dividing by zero, SNaN operand. Counting includes only cases involving penalties that required micro-code assist intervention.</td>
 	</tr>
 	<tr>
 		<td><span id="FP_ASSIST.SIMD_OUTPUT">FP_ASSIST.SIMD_OUTPUT</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts the number of SSE* floating point (FP) micro-code assist (numeric overflow/underflow) when the output value (destination register) is invalid. Counting covers only cases involving penalties that require micro-code assist intervention.</td>
+		<td>This event counts the number of SSE* floating point (FP) micro-code assist (numeric overflow/underflow) when the output value (destination register) is invalid. Counting covers only cases involving penalties that require micro-code assist intervention.</td>
 	</tr>
 	<tr>
 		<td><span id="FP_ASSIST.X87_INPUT">FP_ASSIST.X87_INPUT</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts x87 floating point (FP) micro-code assist (invalid operation, denormal operand, SNaN operand) when the input value (one of the source operands to an FP instruction) is invalid.</td>
+		<td>This event counts x87 floating point (FP) micro-code assist (invalid operation, denormal operand, SNaN operand) when the input value (one of the source operands to an FP instruction) is invalid.</td>
 	</tr>
 	<tr>
 		<td><span id="FP_ASSIST.X87_OUTPUT">FP_ASSIST.X87_OUTPUT</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts the number of x87 floating point (FP) micro-code assist (numeric overflow/underflow, inexact result) when the output value (destination register) is invalid.</td>
+		<td>This event counts the number of x87 floating point (FP) micro-code assist (numeric overflow/underflow, inexact result) when the output value (destination register) is invalid.</td>
 	</tr>
 	<tr>
 		<td><span id="HLE_RETIRED.ABORTED">HLE_RETIRED.ABORTED</span></td>
@@ -608,7 +608,7 @@ Counting: Faulting executions of GETSEC/VM entry/VM Exit/MWait will not count as
 	</tr>
 	<tr>
 		<td><span id="INST_RETIRED.X87">INST_RETIRED.X87</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts FP operations retired. For X87 FP operations that have no exceptions counting also includes flows that have several X87, or flows that use X87 uops in the exception handling.</td>
+		<td>This event counts FP operations retired. For X87 FP operations that have no exceptions counting also includes flows that have several X87, or flows that use X87 uops in the exception handling.</td>
 	</tr>
 	<tr>
 		<td><span id="INT_MISC.RAT_STALL_CYCLES">INT_MISC.RAT_STALL_CYCLES</span></td>
@@ -884,7 +884,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT">MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were L3 hit and a cross-core snoop hit in the on-pkg core cache.</td>
+		<td>This event counts retired load uops which data sources were L3 hit and a cross-core snoop hit in the on-pkg core cache.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT_PS">MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT_PS</span></td>
@@ -892,7 +892,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM">MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were HitM responses from a core on same socket (shared L3).</td>
+		<td>This event counts retired load uops which data sources were HitM responses from a core on same socket (shared L3).</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM_PS">MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM_PS</span></td>
@@ -900,7 +900,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS">MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were L3 Hit and a cross-core snoop missed in the on-pkg core cache.</td>
+		<td>This event counts retired load uops which data sources were L3 Hit and a cross-core snoop missed in the on-pkg core cache.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS_PS">MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS_PS</span></td>
@@ -908,7 +908,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE">MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were hits in the last-level (L3) cache without snoops required.</td>
+		<td>This event counts retired load uops which data sources were hits in the last-level (L3) cache without snoops required.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE_PS">MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE_PS</span></td>
@@ -924,7 +924,7 @@ See the table of not supported store forwards in the Optimization Guide.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.HIT_LFB">MEM_LOAD_UOPS_RETIRED.HIT_LFB</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were load uops missed L1 but hit a fill buffer due to a preceding miss to the same cache line with the data not ready.
+		<td>This event counts retired load uops which data sources were load uops missed L1 but hit a fill buffer due to a preceding miss to the same cache line with the data not ready.
 Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though the corresponding AVX load could be serviced by a deeper level in the memory hierarchy. Data source is reported for the Low-half load.</td>
 	</tr>
 	<tr>
@@ -934,7 +934,7 @@ Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though 
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_HIT">MEM_LOAD_UOPS_RETIRED.L1_HIT</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were hits in the nearest-level (L1) cache.
+		<td>This event counts retired load uops which data sources were hits in the nearest-level (L1) cache.
 Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though the corresponding AVX load could be serviced by a deeper level in the memory hierarchy. Data source is reported for the Low-half load. This event also counts SW prefetches independent of the actual data source.</td>
 	</tr>
 	<tr>
@@ -944,7 +944,7 @@ Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though 
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_MISS">MEM_LOAD_UOPS_RETIRED.L1_MISS</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were misses in the nearest-level (L1) cache. Counting excludes unknown and UC data source.</td>
+		<td>This event counts retired load uops which data sources were misses in the nearest-level (L1) cache. Counting excludes unknown and UC data source.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L1_MISS_PS">MEM_LOAD_UOPS_RETIRED.L1_MISS_PS</span></td>
@@ -952,7 +952,7 @@ Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though 
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_HIT">MEM_LOAD_UOPS_RETIRED.L2_HIT</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were hits in the mid-level (L2) cache.</td>
+		<td>This event counts retired load uops which data sources were hits in the mid-level (L2) cache.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_HIT_PS">MEM_LOAD_UOPS_RETIRED.L2_HIT_PS</span></td>
@@ -960,7 +960,7 @@ Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though 
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_MISS">MEM_LOAD_UOPS_RETIRED.L2_MISS</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were misses in the mid-level (L2) cache. Counting excludes unknown and UC data source.</td>
+		<td>This event counts retired load uops which data sources were misses in the mid-level (L2) cache. Counting excludes unknown and UC data source.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L2_MISS_PS">MEM_LOAD_UOPS_RETIRED.L2_MISS_PS</span></td>
@@ -968,7 +968,7 @@ Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though 
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L3_HIT">MEM_LOAD_UOPS_RETIRED.L3_HIT</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts retired load uops which data sources were data hits in the last-level (L3) cache without snoops required.</td>
+		<td>This event counts retired load uops which data sources were data hits in the last-level (L3) cache without snoops required.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_LOAD_UOPS_RETIRED.L3_HIT_PS">MEM_LOAD_UOPS_RETIRED.L3_HIT_PS</span></td>
@@ -1036,7 +1036,7 @@ Note: This event ?ounts AVX-256bit load/store double-pump memory uops as a singl
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.LOCK_LOADS">MEM_UOPS_RETIRED.LOCK_LOADS</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts load uops with locked access retired to the architected path.</td>
+		<td>This event counts load uops with locked access retired to the architected path.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.LOCK_LOADS_PS">MEM_UOPS_RETIRED.LOCK_LOADS_PS</span></td>
@@ -1044,7 +1044,7 @@ Note: This event ?ounts AVX-256bit load/store double-pump memory uops as a singl
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.SPLIT_LOADS">MEM_UOPS_RETIRED.SPLIT_LOADS</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts line-splitted load uops retired to the architected path. A line split is across 64B cache-line which includes a page split (4K).</td>
+		<td>This event counts line-splitted load uops retired to the architected path. A line split is across 64B cache-line which includes a page split (4K).</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.SPLIT_LOADS_PS">MEM_UOPS_RETIRED.SPLIT_LOADS_PS</span></td>
@@ -1052,7 +1052,7 @@ Note: This event ?ounts AVX-256bit load/store double-pump memory uops as a singl
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.SPLIT_STORES">MEM_UOPS_RETIRED.SPLIT_STORES</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts line-splitted store uops retired to the architected path. A line split is across 64B cache-line which includes a page split (4K).</td>
+		<td>This event counts line-splitted store uops retired to the architected path. A line split is across 64B cache-line which includes a page split (4K).</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.SPLIT_STORES_PS">MEM_UOPS_RETIRED.SPLIT_STORES_PS</span></td>
@@ -1060,7 +1060,7 @@ Note: This event ?ounts AVX-256bit load/store double-pump memory uops as a singl
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_LOADS">MEM_UOPS_RETIRED.STLB_MISS_LOADS</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts load uops with true STLB miss retired to the architected path. True STLB miss is an uop triggering page walk that gets completed without blocks, and later gets retired. This page walk can end up with or without a fault.</td>
+		<td>This event counts load uops with true STLB miss retired to the architected path. True STLB miss is an uop triggering page walk that gets completed without blocks, and later gets retired. This page walk can end up with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_LOADS_PS">MEM_UOPS_RETIRED.STLB_MISS_LOADS_PS</span></td>
@@ -1068,7 +1068,7 @@ Note: This event ?ounts AVX-256bit load/store double-pump memory uops as a singl
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_STORES">MEM_UOPS_RETIRED.STLB_MISS_STORES</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts store uops with true STLB miss retired to the architected path. True STLB miss is an uop triggering page walk that gets completed without blocks, and later gets retired. This page walk can end up with or without a fault.</td>
+		<td>This event counts store uops with true STLB miss retired to the architected path. True STLB miss is an uop triggering page walk that gets completed without blocks, and later gets retired. This page walk can end up with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="MEM_UOPS_RETIRED.STLB_MISS_STORES_PS">MEM_UOPS_RETIRED.STLB_MISS_STORES_PS</span></td>
@@ -1162,11 +1162,11 @@ Note: A prefetch promoted to Demand is counted from the promotion point.</td>
 	</tr>
 	<tr>
 		<td><span id="OTHER_ASSISTS.AVX_TO_SSE">OTHER_ASSISTS.AVX_TO_SSE</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts the number of transitions from AVX-256 to legacy SSE when penalty is applicable.</td>
+		<td>This event counts the number of transitions from AVX-256 to legacy SSE when penalty is applicable.</td>
 	</tr>
 	<tr>
 		<td><span id="OTHER_ASSISTS.SSE_TO_AVX">OTHER_ASSISTS.SSE_TO_AVX</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts the number of transitions from legacy SSE to AVX-256 when penalty is applicable.</td>
+		<td>This event counts the number of transitions from legacy SSE to AVX-256 when penalty is applicable.</td>
 	</tr>
 	<tr>
 		<td><span id="PAGE_WALKER_LOADS.DTLB_L1">PAGE_WALKER_LOADS.DTLB_L1</span></td>
@@ -1505,7 +1505,7 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.RETIRE_SLOTS">UOPS_RETIRED.RETIRE_SLOTS</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts the number of retirement slots used.</td>
+		<td>This event counts the number of retirement slots used.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.RETIRE_SLOTS_PS">UOPS_RETIRED.RETIRE_SLOTS_PS</span></td>
@@ -1513,7 +1513,7 @@ Note: In ST-mode, not active thread should drive 0. This is usually caused by se
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.STALL_CYCLES">UOPS_RETIRED.STALL_CYCLES</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts cycles without actually retired uops.</td>
+		<td>This event counts cycles without actually retired uops.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.TOTAL_CYCLES">UOPS_RETIRED.TOTAL_CYCLES</span></td>

@@ -27,7 +27,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.CONDITIONAL">BR_INST_RETIRED.CONDITIONAL</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts conditional branch instructions retired.</td>
+		<td>This event counts conditional branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.CONDITIONAL_PS">BR_INST_RETIRED.CONDITIONAL_PS</span></td>
@@ -35,7 +35,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.FAR_BRANCH">BR_INST_RETIRED.FAR_BRANCH</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts far branch instructions retired.</td>
+		<td>This event counts far branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.FAR_BRANCH_PS">BR_INST_RETIRED.FAR_BRANCH_PS</span></td>
@@ -43,7 +43,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_CALL">BR_INST_RETIRED.NEAR_CALL</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts both direct and indirect near call instructions retired.</td>
+		<td>This event counts both direct and indirect near call instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_CALL_PS">BR_INST_RETIRED.NEAR_CALL_PS</span></td>
@@ -51,7 +51,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_RETURN">BR_INST_RETIRED.NEAR_RETURN</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts return instructions retired.</td>
+		<td>This event counts return instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_RETURN_PS">BR_INST_RETIRED.NEAR_RETURN_PS</span></td>
@@ -59,7 +59,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_TAKEN">BR_INST_RETIRED.NEAR_TAKEN</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts taken branch instructions retired.</td>
+		<td>This event counts taken branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NEAR_TAKEN_PS">BR_INST_RETIRED.NEAR_TAKEN_PS</span></td>
@@ -67,7 +67,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_INST_RETIRED.NOT_TAKEN">BR_INST_RETIRED.NOT_TAKEN</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts not taken branch instructions retired.</td>
+		<td>This event counts not taken branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.ALL_BRANCHES">BR_MISP_RETIRED.ALL_BRANCHES</span></td>
@@ -79,7 +79,7 @@
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.CONDITIONAL">BR_MISP_RETIRED.CONDITIONAL</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts mispredicted conditional branch instructions retired.</td>
+		<td>This event counts mispredicted conditional branch instructions retired.</td>
 	</tr>
 	<tr>
 		<td><span id="BR_MISP_RETIRED.CONDITIONAL_PS">BR_MISP_RETIRED.CONDITIONAL_PS</span></td>
@@ -116,6 +116,34 @@
 	<tr>
 		<td><span id="CORE_POWER.THROTTLE">CORE_POWER.THROTTLE</span></td>
 		<td>Core cycles the out-of-order engine was throttled due to a pending power level request.</td>
+	</tr>
+	<tr>
+		<td><span id="CORE_SNOOP_RESPONSE.RSP_IFWDFE">CORE_SNOOP_RESPONSE.RSP_IFWDFE</span></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><span id="CORE_SNOOP_RESPONSE.RSP_IFWDM">CORE_SNOOP_RESPONSE.RSP_IFWDM</span></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><span id="CORE_SNOOP_RESPONSE.RSP_IHITFSE">CORE_SNOOP_RESPONSE.RSP_IHITFSE</span></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><span id="CORE_SNOOP_RESPONSE.RSP_IHITI">CORE_SNOOP_RESPONSE.RSP_IHITI</span></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><span id="CORE_SNOOP_RESPONSE.RSP_SFWDFE">CORE_SNOOP_RESPONSE.RSP_SFWDFE</span></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><span id="CORE_SNOOP_RESPONSE.RSP_SFWDM">CORE_SNOOP_RESPONSE.RSP_SFWDM</span></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><span id="CORE_SNOOP_RESPONSE.RSP_SHITFSE">CORE_SNOOP_RESPONSE.RSP_SHITFSE</span></td>
+		<td></td>
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_THREAD_UNHALTED.ONE_THREAD_ACTIVE">CPU_CLK_THREAD_UNHALTED.ONE_THREAD_ACTIVE</span></td>
@@ -227,7 +255,7 @@
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M">DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M</span></td>
-		<td>Counts page walks completed due to demand data loads whose address translations missed in the TLB and were mapped to 4K pages.  The page walks can end with or without a page fault.</td>
+		<td>Counts page walks completed due to demand data loads whose address translations missed in the TLB and were mapped to 2M/4M pages.  The page walks can end with or without a page fault.</td>
 	</tr>
 	<tr>
 		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED_4K">DTLB_LOAD_MISSES.WALK_COMPLETED_4K</span></td>
@@ -672,7 +700,7 @@
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.WALK_COMPLETED_2M_4M">ITLB_MISSES.WALK_COMPLETED_2M_4M</span></td>
-		<td>Counts completed page walks of any page size (4K/2M/4M/1G) caused by a code fetch. This implies it missed in the ITLB and further levels of TLB. The page walk can end with or without a fault.</td>
+		<td>Counts code misses in all ITLB levels that caused a completed page walk (2M and 4M page sizes). The page walk can end with or without a fault.</td>
 	</tr>
 	<tr>
 		<td><span id="ITLB_MISSES.WALK_COMPLETED_4K">ITLB_MISSES.WALK_COMPLETED_4K</span></td>
@@ -947,6 +975,10 @@
 		<td>Retired load instructions whose data sources was forwarded from a remote cache.</td>
 	</tr>
 	<tr>
+		<td><span id="MEM_LOAD_L3_MISS_RETIRED.REMOTE_FWD_PS">MEM_LOAD_L3_MISS_RETIRED.REMOTE_FWD_PS</span></td>
+		<td>Retired load instructions whose data sources was forwarded from a remote cache</td>
+	</tr>
+	<tr>
 		<td><span id="MEM_LOAD_L3_MISS_RETIRED.REMOTE_HITM">MEM_LOAD_L3_MISS_RETIRED.REMOTE_HITM</span></td>
 		<td>Retired load instructions whose data sources was remote HITM.</td>
 	</tr>
@@ -1201,6 +1233,18 @@
 		<td>Number of PREFETCHNTA instructions executed.</td>
 	</tr>
 	<tr>
+		<td><span id="SW_PREFETCH_ACCESS.PREFETCHW">SW_PREFETCH_ACCESS.PREFETCHW</span></td>
+		<td>Number of PREFETCHW instructions executed.</td>
+	</tr>
+	<tr>
+		<td><span id="SW_PREFETCH_ACCESS.T0">SW_PREFETCH_ACCESS.T0</span></td>
+		<td>Number of PREFETCHT0 instructions executed.</td>
+	</tr>
+	<tr>
+		<td><span id="SW_PREFETCH_ACCESS.T1_T2">SW_PREFETCH_ACCESS.T1_T2</span></td>
+		<td>Number of PREFETCHT1 or PREFETCHT2 instructions executed.</td>
+	</tr>
+	<tr>
 		<td><span id="TLB_FLUSH.DTLB_THREAD">TLB_FLUSH.DTLB_THREAD</span></td>
 		<td>Counts the number of DTLB flush attempts of the thread-specific entries.</td>
 	</tr>
@@ -1362,7 +1406,7 @@
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.STALL_CYCLES">UOPS_RETIRED.STALL_CYCLES</span></td>
-		<td>This is a non-precise version (that is, does not use PEBS) of the event that counts cycles without actually retired uops.</td>
+		<td>This event counts cycles without actually retired uops.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS_RETIRED.TOTAL_CYCLES">UOPS_RETIRED.TOTAL_CYCLES</span></td>
@@ -14314,10 +14358,6 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_UPI_TxL_FLITS.NULL">UNC_UPI_TxL_FLITS.NULL</span></td>
-		<td>Shows legal flit time (hides impact of L0p and L0c).; LLCRD with all zeros is treated as NULL. Slot 1 is not treated as NULL if slot 0 is a dual slot. This can apply to slot 0,1, or 2. (Experimental) </td>
-	</tr>
-	<tr>
-		<td><span id="UNC_UPI_TxL_FLITS.NULL">UNC_UPI_TxL_FLITS.NULL</span></td>
 		<td>This event is deprecated. </td>
 	</tr>
 	<tr>
@@ -14839,6 +14879,54 @@
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L1D_AND_SW:response:L3_MISS_LOCAL_DRAM.SNOOP_MISS_OR_NO_FWD">OFFCORE_RESPONSE:request=PF_L1D_AND_SW: response=L3_MISS_LOCAL_DRAM.SNOOP_MISS_OR_NO_FWD</span></td>
 		<td>Counts L1 data cache hardware prefetch requests and software prefetch requests  that miss the L3 and the data is returned from local dram.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=OTHER: response=ANY_RESPONSE</span></td>
+		<td>Counts any other requests  that have any response type.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_HIT.NO_SNOOP_NEEDED">OFFCORE_RESPONSE:request=OTHER: response=L3_HIT.NO_SNOOP_NEEDED</span></td>
+		<td>Counts any other requests  that hit in the L3 and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_HIT.HIT_OTHER_CORE_NO_FWD">OFFCORE_RESPONSE:request=OTHER: response=L3_HIT.HIT_OTHER_CORE_NO_FWD</span></td>
+		<td>Counts any other requests  that hit in the L3 and the snoops to sibling cores hit in either E/S state and the line is not forwarded.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_HIT.HIT_OTHER_CORE_FWD">OFFCORE_RESPONSE:request=OTHER: response=L3_HIT.HIT_OTHER_CORE_FWD</span></td>
+		<td>Counts any other requests  that hit in the L3 and the snoop to one of the sibling cores hits the line in E/S/F state and the line is forwarded.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_HIT.HITM_OTHER_CORE">OFFCORE_RESPONSE:request=OTHER: response=L3_HIT.HITM_OTHER_CORE</span></td>
+		<td>Counts any other requests  that hit in the L3 and the snoop to one of the sibling cores hits the line in M state and the line is forwarded.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_HIT.ANY_SNOOP">OFFCORE_RESPONSE:request=OTHER: response=L3_HIT.ANY_SNOOP</span></td>
+		<td>Counts any other requests  that hit in the L3.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_MISS.ANY_SNOOP">OFFCORE_RESPONSE:request=OTHER: response=L3_MISS.ANY_SNOOP</span></td>
+		<td>Counts any other requests  that miss in the L3.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_MISS.REMOTE_HIT_FORWARD">OFFCORE_RESPONSE:request=OTHER: response=L3_MISS.REMOTE_HIT_FORWARD</span></td>
+		<td>Counts any other requests  that miss the L3 and clean or shared data is transferred from remote cache.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_MISS.REMOTE_HITM">OFFCORE_RESPONSE:request=OTHER: response=L3_MISS.REMOTE_HITM</span></td>
+		<td>Counts any other requests  that miss the L3 and the modified data is transferred from remote cache.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_MISS.SNOOP_MISS_OR_NO_FWD">OFFCORE_RESPONSE:request=OTHER: response=L3_MISS.SNOOP_MISS_OR_NO_FWD</span></td>
+		<td>Counts any other requests  that miss the L3 and the data is returned from local or remote dram.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_MISS_REMOTE_DRAM.SNOOP_MISS_OR_NO_FWD">OFFCORE_RESPONSE:request=OTHER: response=L3_MISS_REMOTE_DRAM.SNOOP_MISS_OR_NO_FWD</span></td>
+		<td>Counts any other requests  that miss the L3 and the data is returned from remote dram.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:OTHER:response:L3_MISS_LOCAL_DRAM.SNOOP_MISS_OR_NO_FWD">OFFCORE_RESPONSE:request=OTHER: response=L3_MISS_LOCAL_DRAM.SNOOP_MISS_OR_NO_FWD</span></td>
+		<td>Counts any other requests  that miss the L3 and the data is returned from local dram.</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ALL_PF_DATA_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ALL_PF_DATA_RD: response=ANY_RESPONSE</span></td>
