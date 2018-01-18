@@ -2,8 +2,8 @@
 <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="styles/intel_table_styles.css"></head>
 <body>
-<h3>Intel&reg; Microarchitecture Code Named Goldmont Events</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
-<li>Intel&reg; Microarchitecture Code Named Goldmont</li><p>
+<h3>Intel&reg; Microarchitecture Code Named Goldmont Plus Events</h3> This section provides reference for hardware events that can be monitored for the CPU(s):<p>
+<li>Intel&reg; Microarchitecture Code Named Goldmont Plus</li><p>
 <table class="table table-responsive" style="table-layout:fixed;width:100%">
 	<tr>
 		<th>EventName</th>
@@ -99,7 +99,7 @@
 	</tr>
 	<tr>
 		<td><span id="CORE_REJECT_L2Q.ALL">CORE_REJECT_L2Q.ALL</span></td>
-		<td>Counts the number of demand and L1 prefetcher requests rejected by the L2Q due to a full or nearly full condition which likely indicates back pressure from L2Q. It also counts requests that would have gone directly to the XQ, but are rejected due to a full or nearly full condition, indicating back pressure from the IDI link. The L2Q may also reject transactions from a core to ensure fairness between cores, or to delay a core&#39;s dirty eviction when the address conflicts with incoming external snoops.</td>
+		<td>Counts the number of demand and L1 prefetcher requests rejected by the L2Q due to a full or nearly full condition which likely indicates back pressure from L2Q. It also counts requests that would have gone directly to the XQ, but are rejected due to a full or nearly full condition, indicating back pressure from the IDI link. The L2Q may also reject transactions from a core to insure fairness between cores, or to delay a core&#39;s dirty eviction when the address conflicts with incoming external snoops.</td>
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_UNHALTED">CPU_CLK_UNHALTED</span></td>
@@ -115,7 +115,7 @@
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_UNHALTED.REF">CPU_CLK_UNHALTED.REF</span></td>
-		<td>Reference cycles when core is not halted.  This event uses a programmable general purpose performance counter.</td>
+		<td>Reference cycles when core is not halted.  This event uses a (_P)rogrammable general purpose performance counter.</td>
 	</tr>
 	<tr>
 		<td><span id="CPU_CLK_UNHALTED.REF_TSC">CPU_CLK_UNHALTED.REF_TSC</span></td>
@@ -142,12 +142,48 @@
 		<td>Counts the number of times the prediction (from the predecode cache) for instruction length is incorrect.</td>
 	</tr>
 	<tr>
-		<td><span id="DL1.DIRTY_EVICTION">DL1.DIRTY_EVICTION</span></td>
+		<td><span id="DL1.REPLACEMENT">DL1.REPLACEMENT</span></td>
 		<td>Counts when a modified (dirty) cache line is evicted from the data L1 cache and needs to be written back to memory.  No count will occur if the evicted line is clean, and hence does not require a writeback.</td>
 	</tr>
 	<tr>
+		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED_1GB">DTLB_LOAD_MISSES.WALK_COMPLETED_1GB</span></td>
+		<td>Counts page walks completed due to demand data loads (including SW prefetches) whose address translations missed in all TLB levels and were mapped to 1GB pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M">DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M</span></td>
+		<td>Counts page walks completed due to demand data loads (including SW prefetches) whose address translations missed in all TLB levels and were mapped to 2M or 4M pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.WALK_COMPLETED_4K">DTLB_LOAD_MISSES.WALK_COMPLETED_4K</span></td>
+		<td>Counts page walks completed due to demand data loads (including SW prefetches) whose address translations missed in all TLB levels and were mapped to 4K pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_LOAD_MISSES.WALK_PENDING">DTLB_LOAD_MISSES.WALK_PENDING</span></td>
+		<td>Counts once per cycle for each page walk occurring due to a load (demand data loads or SW prefetches). Includes cycles spent traversing the Extended Page Table (EPT). Average cycles per walk can be calculated by dividing by the number of walks.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_STORE_MISSES.WALK_COMPLETED_1GB">DTLB_STORE_MISSES.WALK_COMPLETED_1GB</span></td>
+		<td>Counts page walks completed due to demand data stores whose address translations missed in the TLB and were mapped to 1GB pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_STORE_MISSES.WALK_COMPLETED_2M_4M">DTLB_STORE_MISSES.WALK_COMPLETED_2M_4M</span></td>
+		<td>Counts page walks completed due to demand data stores whose address translations missed in the TLB and were mapped to 2M or 4M pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_STORE_MISSES.WALK_COMPLETED_4K">DTLB_STORE_MISSES.WALK_COMPLETED_4K</span></td>
+		<td>Counts page walks completed due to demand data stores whose address translations missed in the TLB and were mapped to 4K pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="DTLB_STORE_MISSES.WALK_PENDING">DTLB_STORE_MISSES.WALK_PENDING</span></td>
+		<td>Counts once per cycle for each page walk occurring due to a demand data store. Includes cycles spent traversing the Extended Page Table (EPT). Average cycles per walk can be calculated by dividing by the number of walks.</td>
+	</tr>
+	<tr>
+		<td><span id="EPT.WALK_PENDING">EPT.WALK_PENDING</span></td>
+		<td>Counts once per cycle for each page walk only while traversing the Extended Page Table (EPT), and does not count during the rest of the translation.  The EPT is used for translating Guest-Physical Addresses to Physical Addresses for Virtual Machine Monitors (VMMs).  Average cycles per walk can be calculated by dividing the count by number of walks. </td>
+	</tr>
+	<tr>
 		<td><span id="FETCH_STALL.ALL">FETCH_STALL.ALL</span></td>
-		<td>Counts cycles that fetch is stalled due to any reason. That is, the decoder queue is able to accept bytes, but the fetch unit is unable to provide bytes.  This will include cycles due to an ITLB miss, ICache miss and other events. </td>
+		<td>Counts cycles that fetch is stalled due to any reason. That is, the decoder queue is able to accept bytes, but the fetch unit is unable to provide bytes.  This will include cycles due to an ITLB miss, ICache miss and other events.</td>
 	</tr>
 	<tr>
 		<td><span id="FETCH_STALL.ICACHE_FILL_PENDING_CYCLES">FETCH_STALL.ICACHE_FILL_PENDING_CYCLES</span></td>
@@ -203,6 +239,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts the number of instructions that retire execution. For instructions that consist of multiple uops, this event counts the retirement of the last uop of the instruction. The event continues counting during hardware interrupts, traps, and inside interrupt handlers.  This is an architectural performance event.  This event uses a (_P)rogrammable general purpose performance counter. *This event is Precise Event capable:  The EventingRIP field in the PEBS record is precise to the address of the instruction which caused the event.  Note: Because PEBS records can be collected only on IA32_PMC0, only one event can use the PEBS facility at a time.</td>
 	</tr>
 	<tr>
+		<td><span id="INST_RETIRED.PREC_DIST">INST_RETIRED.PREC_DIST</span></td>
+		<td>Counts INST_RETIRED.ANY using the Reduced Skid PEBS feature that reduces the shadow in which events aren&#39;t counted allowing for a more unbiased distribution of samples across instructions retired.</td>
+	</tr>
+	<tr>
 		<td><span id="ISSUE_SLOTS_NOT_CONSUMED.ANY">ISSUE_SLOTS_NOT_CONSUMED.ANY</span></td>
 		<td>Counts the number of issue slots per core cycle that were not consumed by the backend due to either a full resource  in the backend (RESOURCE_FULL) or due to the processor recovering from some event (RECOVERY).</td>
 	</tr>
@@ -217,6 +257,22 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="ITLB.MISS">ITLB.MISS</span></td>
 		<td>Counts the number of times the machine was unable to find a translation in the Instruction Translation Lookaside Buffer (ITLB) for a linear address of an instruction fetch.  It counts when new translation are filled into the ITLB.  The event is speculative in nature, but will not count translations (page walks) that are begun and not finished, or translations that are finished but not filled into the ITLB.</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISSES.WALK_COMPLETED_1GB">ITLB_MISSES.WALK_COMPLETED_1GB</span></td>
+		<td>Counts page walks completed due to instruction fetches whose address translations missed in the TLB and were mapped to 1GB pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISSES.WALK_COMPLETED_2M_4M">ITLB_MISSES.WALK_COMPLETED_2M_4M</span></td>
+		<td>Counts page walks completed due to instruction fetches whose address translations missed in the TLB and were mapped to 2M or 4M pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISSES.WALK_COMPLETED_4K">ITLB_MISSES.WALK_COMPLETED_4K</span></td>
+		<td>Counts page walks completed due to instruction fetches whose address translations missed in the TLB and were mapped to 4K pages.  The page walks can end with or without a page fault.</td>
+	</tr>
+	<tr>
+		<td><span id="ITLB_MISSES.WALK_PENDING">ITLB_MISSES.WALK_PENDING</span></td>
+		<td>Counts once per cycle for each page walk occurring due to an instruction fetch. Includes cycles spent traversing the Extended Page Table (EPT). Average cycles per walk can be calculated by dividing by the number of walks.</td>
 	</tr>
 	<tr>
 		<td><span id="L2_REJECT_XQ.ALL">L2_REJECT_XQ.ALL</span></td>
@@ -278,7 +334,11 @@ This event counts differently than Intel processors based on Silvermont microarc
 	</tr>
 	<tr>
 		<td><span id="MACHINE_CLEARS.MEMORY_ORDERING">MACHINE_CLEARS.MEMORY_ORDERING</span></td>
-		<td>Counts machine clears due to memory ordering issues.  This occurs when a snoop request happens and the machine is uncertain if memory ordering will be preserved as another core is in the process of modifying the data.</td>
+		<td>Counts machine clears due to memory ordering issues.  This occurs when a snoop request happens and the machine is uncertain if memory ordering will be preserved - as another core is in the process of modifying the data.</td>
+	</tr>
+	<tr>
+		<td><span id="MACHINE_CLEARS.PAGE_FAULT">MACHINE_CLEARS.PAGE_FAULT</span></td>
+		<td>Counts the number of times that the machines clears due to a page fault. Covers both I-side and D-side(Loads/Stores) page faults. A page fault occurs when either page is not present, or an access violation</td>
 	</tr>
 	<tr>
 		<td><span id="MACHINE_CLEARS.SMC">MACHINE_CLEARS.SMC</span></td>
@@ -385,16 +445,8 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>These events count core cycles when a page walk is in progress.  The paging mode in use typically affects the duration of page walks.  Page walk duration divided by number of page walks is the average duration of page-walks.  The number of page walks on this processor can be determined by using the events MEM_UOPS_RETIRED.DTLB_MISS and ITLB.MISS.  The duration can hint at whether most of the page-walks are satisfied by the caches or cause an L2 cache miss.  On these events the edge trigger bit must be cleared.</td>
 	</tr>
 	<tr>
-		<td><span id="PAGE_WALKS.CYCLES">PAGE_WALKS.CYCLES</span></td>
-		<td>Counts every core cycle a page-walk is in progress due to either a data memory operation or an instruction fetch.</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.D_SIDE_CYCLES">PAGE_WALKS.D_SIDE_CYCLES</span></td>
-		<td>Counts every core cycle when a Data-side (walks due to a data operation) page walk is in progress.</td>
-	</tr>
-	<tr>
-		<td><span id="PAGE_WALKS.I_SIDE_CYCLES">PAGE_WALKS.I_SIDE_CYCLES</span></td>
-		<td>Counts every core cycle when a Instruction-side (walks due to an instruction fetch) page walk is in progress.</td>
+		<td><span id="TLB_FLUSHES.STLB_ANY">TLB_FLUSHES.STLB_ANY</span></td>
+		<td>Counts STLB flushes.  The TLBs are flushed on instructions like INVLPG and MOV to CR3.</td>
 	</tr>
 	<tr>
 		<td><span id="UOPS.RETIRED">UOPS.RETIRED</span></td>
@@ -457,6 +509,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts demand cacheable data reads of full cache lines  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_DATA_RD:response:PF_L2_CODE">OFFCORE_RESPONSE:request=DEMAND_DATA_RD: response=PF_L2_CODE</span></td>
+		<td>Counts demand cacheable data reads of full cache lines  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=ANY_RESPONSE</span></td>
 		<td>Counts demand reads for ownership (RFO) requests generated by a write to full data cache line  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -487,6 +543,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:OUTSTANDING">OFFCORE_RESPONSE:request=DEMAND_RFO: response=OUTSTANDING</span></td>
 		<td>Counts demand reads for ownership (RFO) requests generated by a write to full data cache line  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_RFO:response:PF_L2_CODE">OFFCORE_RESPONSE:request=DEMAND_RFO: response=PF_L2_CODE</span></td>
+		<td>Counts demand reads for ownership (RFO) requests generated by a write to full data cache line  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=ANY_RESPONSE</span></td>
@@ -521,6 +581,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts demand instruction cacheline and I-side prefetch requests that miss the instruction cache  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:DEMAND_CODE_RD:response:PF_L2_CODE">OFFCORE_RESPONSE:request=DEMAND_CODE_RD: response=PF_L2_CODE</span></td>
+		<td>Counts demand instruction cacheline and I-side prefetch requests that miss the instruction cache  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=COREWB: response=ANY_RESPONSE</span></td>
 		<td>Counts the number of writeback transactions caused by L1 or L2 cache evictions  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -551,6 +615,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:OUTSTANDING">OFFCORE_RESPONSE:request=COREWB: response=OUTSTANDING</span></td>
 		<td>Counts the number of writeback transactions caused by L1 or L2 cache evictions  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:COREWB:response:PF_L2_CODE">OFFCORE_RESPONSE:request=COREWB: response=PF_L2_CODE</span></td>
+		<td>Counts the number of writeback transactions caused by L1 or L2 cache evictions  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=ANY_RESPONSE</span></td>
@@ -585,6 +653,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts data cacheline reads generated by hardware L2 cache prefetcher  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_DATA_RD:response:PF_L2_CODE">OFFCORE_RESPONSE:request=PF_L2_DATA_RD: response=PF_L2_CODE</span></td>
+		<td>Counts data cacheline reads generated by hardware L2 cache prefetcher  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=ANY_RESPONSE</span></td>
 		<td>Counts reads for ownership (RFO) requests generated by L2 prefetcher  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -615,6 +687,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:OUTSTANDING">OFFCORE_RESPONSE:request=PF_L2_RFO: response=OUTSTANDING</span></td>
 		<td>Counts reads for ownership (RFO) requests generated by L2 prefetcher  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L2_RFO:response:PF_L2_CODE">OFFCORE_RESPONSE:request=PF_L2_RFO: response=PF_L2_CODE</span></td>
+		<td>Counts reads for ownership (RFO) requests generated by L2 prefetcher  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_READS:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PARTIAL_READS: response=ANY_RESPONSE</span></td>
@@ -649,6 +725,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts demand data partial reads, including data in uncacheable (UC) or uncacheable write combining (USWC) memory types  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_READS:response:PF_L2_CODE">OFFCORE_RESPONSE:request=PARTIAL_READS: response=PF_L2_CODE</span></td>
+		<td>Counts demand data partial reads, including data in uncacheable (UC) or uncacheable write combining (USWC) memory types  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_WRITES:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PARTIAL_WRITES: response=ANY_RESPONSE</span></td>
 		<td>Counts the number of demand write requests (RFO) generated by a write to partial data cache line, including the writes to uncacheable (UC) and write through (WT), and write protected (WP) types of memory  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -679,6 +759,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_WRITES:response:OUTSTANDING">OFFCORE_RESPONSE:request=PARTIAL_WRITES: response=OUTSTANDING</span></td>
 		<td>Counts the number of demand write requests (RFO) generated by a write to partial data cache line, including the writes to uncacheable (UC) and write through (WT), and write protected (WP) types of memory  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_WRITES:response:PF_L2_CODE">OFFCORE_RESPONSE:request=PARTIAL_WRITES: response=PF_L2_CODE</span></td>
+		<td>Counts the number of demand write requests (RFO) generated by a write to partial data cache line, including the writes to uncacheable (UC) and write through (WT), and write protected (WP) types of memory  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:UC_CODE_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=UC_CODE_RD: response=ANY_RESPONSE</span></td>
@@ -713,6 +797,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts code reads in uncacheable (UC) memory region  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:UC_CODE_RD:response:PF_L2_CODE">OFFCORE_RESPONSE:request=UC_CODE_RD: response=PF_L2_CODE</span></td>
+		<td>Counts code reads in uncacheable (UC) memory region  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:BUS_LOCKS:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=BUS_LOCKS: response=ANY_RESPONSE</span></td>
 		<td>Counts bus lock and split lock requests  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -743,6 +831,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:BUS_LOCKS:response:OUTSTANDING">OFFCORE_RESPONSE:request=BUS_LOCKS: response=OUTSTANDING</span></td>
 		<td>Counts bus lock and split lock requests  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:BUS_LOCKS:response:PF_L2_CODE">OFFCORE_RESPONSE:request=BUS_LOCKS: response=PF_L2_CODE</span></td>
+		<td>Counts bus lock and split lock requests  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:FULL_STREAMING_STORES:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=FULL_STREAMING_STORES: response=ANY_RESPONSE</span></td>
@@ -777,6 +869,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts full cache line data writes to uncacheable write combining (USWC) memory region and full cache-line non-temporal writes  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:FULL_STREAMING_STORES:response:PF_L2_CODE">OFFCORE_RESPONSE:request=FULL_STREAMING_STORES: response=PF_L2_CODE</span></td>
+		<td>Counts full cache line data writes to uncacheable write combining (USWC) memory region and full cache-line non-temporal writes  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:SW_PREFETCH:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=SW_PREFETCH: response=ANY_RESPONSE</span></td>
 		<td>Counts data cache lines requests by software prefetch instructions  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -807,6 +903,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:SW_PREFETCH:response:OUTSTANDING">OFFCORE_RESPONSE:request=SW_PREFETCH: response=OUTSTANDING</span></td>
 		<td>Counts data cache lines requests by software prefetch instructions  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:SW_PREFETCH:response:PF_L2_CODE">OFFCORE_RESPONSE:request=SW_PREFETCH: response=PF_L2_CODE</span></td>
+		<td>Counts data cache lines requests by software prefetch instructions  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PF_L1_DATA_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PF_L1_DATA_RD: response=ANY_RESPONSE</span></td>
@@ -841,6 +941,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts data cache line reads generated by hardware L1 data cache prefetcher  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PF_L1_DATA_RD:response:PF_L2_CODE">OFFCORE_RESPONSE:request=PF_L1_DATA_RD: response=PF_L2_CODE</span></td>
+		<td>Counts data cache line reads generated by hardware L1 data cache prefetcher  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_STREAMING_STORES:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=PARTIAL_STREAMING_STORES: response=ANY_RESPONSE</span></td>
 		<td>Counts partial cache line data writes to uncacheable write combining (USWC) memory region   that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -871,6 +975,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_STREAMING_STORES:response:OUTSTANDING">OFFCORE_RESPONSE:request=PARTIAL_STREAMING_STORES: response=OUTSTANDING</span></td>
 		<td>Counts partial cache line data writes to uncacheable write combining (USWC) memory region   that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:PARTIAL_STREAMING_STORES:response:PF_L2_CODE">OFFCORE_RESPONSE:request=PARTIAL_STREAMING_STORES: response=PF_L2_CODE</span></td>
+		<td>Counts partial cache line data writes to uncacheable write combining (USWC) memory region   that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:STREAMING_STORES:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=STREAMING_STORES: response=ANY_RESPONSE</span></td>
@@ -905,6 +1013,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts any data writes to uncacheable write combining (USWC) memory region   that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:STREAMING_STORES:response:PF_L2_CODE">OFFCORE_RESPONSE:request=STREAMING_STORES: response=PF_L2_CODE</span></td>
+		<td>Counts any data writes to uncacheable write combining (USWC) memory region   that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_REQUEST:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_REQUEST: response=ANY_RESPONSE</span></td>
 		<td>Counts requests to the uncore subsystem  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -935,6 +1047,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_REQUEST:response:OUTSTANDING">OFFCORE_RESPONSE:request=ANY_REQUEST: response=OUTSTANDING</span></td>
 		<td>Counts requests to the uncore subsystem  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_REQUEST:response:PF_L2_CODE">OFFCORE_RESPONSE:request=ANY_REQUEST: response=PF_L2_CODE</span></td>
+		<td>Counts requests to the uncore subsystem  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_PF_DATA_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_PF_DATA_RD: response=ANY_RESPONSE</span></td>
@@ -969,6 +1085,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts data reads generated by L1 or L2 prefetchers  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_PF_DATA_RD:response:PF_L2_CODE">OFFCORE_RESPONSE:request=ANY_PF_DATA_RD: response=PF_L2_CODE</span></td>
+		<td>Counts data reads generated by L1 or L2 prefetchers  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_DATA_RD:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_DATA_RD: response=ANY_RESPONSE</span></td>
 		<td>Counts data reads (demand &amp; prefetch)  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -999,6 +1119,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_DATA_RD:response:OUTSTANDING">OFFCORE_RESPONSE:request=ANY_DATA_RD: response=OUTSTANDING</span></td>
 		<td>Counts data reads (demand &amp; prefetch)  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_DATA_RD:response:PF_L2_CODE">OFFCORE_RESPONSE:request=ANY_DATA_RD: response=PF_L2_CODE</span></td>
+		<td>Counts data reads (demand &amp; prefetch)  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_RFO:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_RFO: response=ANY_RESPONSE</span></td>
@@ -1033,6 +1157,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 		<td>Counts reads for ownership (RFO) requests (demand &amp; prefetch)  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
 	</tr>
 	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_RFO:response:PF_L2_CODE">OFFCORE_RESPONSE:request=ANY_RFO: response=PF_L2_CODE</span></td>
+		<td>Counts reads for ownership (RFO) requests (demand &amp; prefetch)  that Counts code(instruction) requests generated by L2 prefetcher</td>
+	</tr>
+	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_READ:response:ANY_RESPONSE">OFFCORE_RESPONSE:request=ANY_READ: response=ANY_RESPONSE</span></td>
 		<td>Counts data read, code read, and read for ownership (RFO) requests (demand &amp; prefetch)  that have any transaction responses from the uncore subsystem.</td>
 	</tr>
@@ -1063,6 +1191,10 @@ This event counts differently than Intel processors based on Silvermont microarc
 	<tr>
 		<td><span id="OFFCORE_RESPONSE:request:ANY_READ:response:OUTSTANDING">OFFCORE_RESPONSE:request=ANY_READ: response=OUTSTANDING</span></td>
 		<td>Counts data read, code read, and read for ownership (RFO) requests (demand &amp; prefetch)  that outstanding, per cycle, from the time of the L2 miss to when any response is received.</td>
+	</tr>
+	<tr>
+		<td><span id="OFFCORE_RESPONSE:request:ANY_READ:response:PF_L2_CODE">OFFCORE_RESPONSE:request=ANY_READ: response=PF_L2_CODE</span></td>
+		<td>Counts data read, code read, and read for ownership (RFO) requests (demand &amp; prefetch)  that Counts code(instruction) requests generated by L2 prefetcher</td>
 	</tr>
 </table>
 
