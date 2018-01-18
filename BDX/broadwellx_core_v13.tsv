@@ -1,5 +1,5 @@
 # Performance Monitoring Events for Intel(R) Xeon(R) Processor E5 v4 Family Based on the the Broadwell Microarchitecture - V13
-# 10/4/2017 12:33:40 PM
+# 1/17/2018 5:47:29 PM
 # Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
 EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue	MSRIndex	MSRValue	TakenAlone	CounterMask	Invert	AnyThread	EdgeDetect	PEBS	Data_LA	L1_Hit_Indication	Errata	ELLC
 0x00	0x01	INST_RETIRED.ANY	Instructions retired from execution.	Fixed counter 0	Fixed counter 0	2000003	0	0	0	0	0	0	0	0	0	0	null	0
@@ -194,7 +194,7 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xA3	0x01	CYCLE_ACTIVITY.CYCLES_L2_MISS	Cycles while L2 cache miss demand load is outstanding.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	1	0	0	0	0	0	0	null	0
 0xA3	0x02	CYCLE_ACTIVITY.CYCLES_LDM_PENDING	Cycles while memory subsystem has an outstanding load.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	2	0	0	0	0	0	0	null	0
 0xA3	0x02	CYCLE_ACTIVITY.CYCLES_MEM_ANY	Cycles while memory subsystem has an outstanding load.	0,1,2,3	0,1,2,3	2000003	0	0	0	2	0	0	0	0	0	0	null	0
-0xA3	0x04	CYCLE_ACTIVITY.CYCLES_NO_EXECUTE	Total execution stalls	0,1,2,3	0,1,2,3	2000003	0	0	0	4	0	0	0	0	0	0	null	0
+0xA3	0x04	CYCLE_ACTIVITY.CYCLES_NO_EXECUTE	This event increments by 1 for every cycle where there was no execute for this thread.	0,1,2,3	0,1,2,3	2000003	0	0	0	4	0	0	0	0	0	0	null	0
 0xA3	0x04	CYCLE_ACTIVITY.STALLS_TOTAL	Total execution stalls.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	4	0	0	0	0	0	0	null	0
 0xA3	0x05	CYCLE_ACTIVITY.STALLS_L2_PENDING	Execution stalls while L2 cache miss demand load is outstanding.	0,1,2,3	0,1,2,3	2000003	0	0	0	5	0	0	0	0	0	0	null	0
 0xA3	0x05	CYCLE_ACTIVITY.STALLS_L2_MISS	Execution stalls while L2 cache miss demand load is outstanding.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	5	0	0	0	0	0	0	null	0
@@ -238,33 +238,33 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xBD	0x20	TLB_FLUSH.STLB_ANY	STLB flush attempts	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	0	0	0	null	0
 0xC0	0x00	INST_RETIRED.ANY_P	Number of instructions retired. General Counter   - architectural event	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	BDM61	0
 0xC0	0x01	INST_RETIRED.PREC_DIST	Precise instruction retired event with HW to reduce effect of PEBS shadow in IP distribution	1	1	2000003	0	0	0	0	0	0	0	2	0	0	BDM11, BDM55	0
-0xC0	0x02	INST_RETIRED.X87	This is a precise version (that is, uses PEBS) of the event that counts FP operations retired. For X87 FP operations that have no exceptions counting also includes flows that have several X87, or flows that use X87 uops in the exception handling.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
-0xC1	0x08	OTHER_ASSISTS.AVX_TO_SSE	This is a precise version (that is, uses PEBS) of the event that counts the number of transitions from AVX-256 to legacy SSE when penalty is applicable.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	BDM30	0
-0xC1	0x10	OTHER_ASSISTS.SSE_TO_AVX	This is a precise version (that is, uses PEBS) of the event that counts the number of transitions from legacy SSE to AVX-256 when penalty is applicable.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	BDM30	0
-0xC1	0x40	OTHER_ASSISTS.ANY_WB_ASSIST		0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
-0xC2	0x01	UOPS_RETIRED.ALL	This is a precise version (that is, uses PEBS) of the event that counts all actually retired uops. Counting increments by two for micro-fused uops, and by one for macro-fused and other uops. Maximal increment value for one cycle is eight.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	1	1	0	null	0
-0xC2	0x01	UOPS_RETIRED.STALL_CYCLES	This is a precise version (that is, uses PEBS) of the event that counts cycles without actually retired uops.	0,1,2,3	0,1,2,3	2000003	0	0	0	1	1	0	0	0	0	0	null	0
-0xC2	0x01	UOPS_RETIRED.TOTAL_CYCLES	Number of cycles using always true condition (uops_ret < 16) applied to  PEBS uops retired event.  	0,1,2,3	0,1,2,3	2000003	0	0	0	10	1	0	0	0	0	0	null	0
-0xC2	0x02	UOPS_RETIRED.RETIRE_SLOTS	This is a precise version (that is, uses PEBS) of the event that counts the number of retirement slots used.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	1	0	0	null	0
+0xC0	0x02	INST_RETIRED.X87	FP operations  retired. X87 FP operations that have no exceptions:	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
+0xC1	0x08	OTHER_ASSISTS.AVX_TO_SSE	Number of transitions from AVX-256 to legacy SSE when penalty applicable.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	BDM30	0
+0xC1	0x10	OTHER_ASSISTS.SSE_TO_AVX	Number of transitions from SSE to AVX-256 when penalty applicable.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	BDM30	0
+0xC1	0x40	OTHER_ASSISTS.ANY_WB_ASSIST	Number of times any microcode assist is invoked by HW upon uop writeback.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
+0xC2	0x01	UOPS_RETIRED.ALL	Actually retired uops. (Precise Event - PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	1	1	0	null	0
+0xC2	0x01	UOPS_RETIRED.STALL_CYCLES	Cycles without actually retired uops.	0,1,2,3	0,1,2,3	2000003	0	0	0	1	1	0	0	0	0	0	null	0
+0xC2	0x01	UOPS_RETIRED.TOTAL_CYCLES	Cycles with less than 10 actually retired uops.	0,1,2,3	0,1,2,3	2000003	0	0	0	10	1	0	0	0	0	0	null	0
+0xC2	0x02	UOPS_RETIRED.RETIRE_SLOTS	Retirement slots used. (Precise Event - PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	1	0	0	null	0
 0xC3	0x01	MACHINE_CLEARS.CYCLES	Cycles there was a Nuke. Account for both thread-specific and All Thread Nukes.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xC3	0x01	MACHINE_CLEARS.COUNT	Number of machine clears (nukes) of any type.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	1	0	0	1	0	0	0	null	0
 0xC3	0x02	MACHINE_CLEARS.MEMORY_ORDERING	Counts the number of machine clears due to memory order conflicts.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
 0xC3	0x04	MACHINE_CLEARS.SMC	Self-modifying code (SMC) detected.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
 0xC3	0x20	MACHINE_CLEARS.MASKMOV	This event counts the number of executed Intel AVX masked load operations that refer to an illegal address range with the mask bits set to 0.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
 0xC4	0x00	BR_INST_RETIRED.ALL_BRANCHES	All (macro) branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	0	0	0	null	0
-0xC4	0x01	BR_INST_RETIRED.CONDITIONAL	This is a precise version (that is, uses PEBS) of the event that counts conditional branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null	0
-0xC4	0x02	BR_INST_RETIRED.NEAR_CALL	This is a precise version (that is, uses PEBS) of the event that counts both direct and indirect near call instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	1	0	0	null	0
-0xC4	0x02	BR_INST_RETIRED.NEAR_CALL_R3	This is a precise version (that is, uses PEBS) of the event that counts both direct and indirect macro near call instructions retired (captured in ring 3).	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	1	0	0	null	0
+0xC4	0x01	BR_INST_RETIRED.CONDITIONAL	Conditional branch instructions retired. (Precise Event - PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null	0
+0xC4	0x02	BR_INST_RETIRED.NEAR_CALL	Direct and indirect near call instructions retired. (Precise Event - PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	1	0	0	null	0
+0xC4	0x02	BR_INST_RETIRED.NEAR_CALL_R3	Direct and indirect macro near call instructions retired (captured in ring 3). (Precise Event - PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	1	0	0	null	0
 0xC4	0x04	BR_INST_RETIRED.ALL_BRANCHES_PEBS	All (macro) branch instructions retired. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	400009	0	0	0	0	0	0	0	2	0	0	BDW98	0
-0xC4	0x08	BR_INST_RETIRED.NEAR_RETURN	This is a precise version (that is, uses PEBS) of the event that counts return instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	1	0	0	null	0
-0xC4	0x10	BR_INST_RETIRED.NOT_TAKEN	This is a precise version (that is, uses PEBS) of the event that counts not taken branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	0	0	0	null	0
-0xC4	0x20	BR_INST_RETIRED.NEAR_TAKEN	This is a precise version (that is, uses PEBS) of the event that counts taken branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null	0
-0xC4	0x40	BR_INST_RETIRED.FAR_BRANCH	This is a precise version (that is, uses PEBS) of the event that counts far branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	0	0	0	BDW98	0
+0xC4	0x08	BR_INST_RETIRED.NEAR_RETURN	Return instructions retired. (Precise Event - PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	1	0	0	null	0
+0xC4	0x10	BR_INST_RETIRED.NOT_TAKEN	Not taken branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	0	0	0	null	0
+0xC4	0x20	BR_INST_RETIRED.NEAR_TAKEN	Taken branch instructions retired. (Precise Event - PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null	0
+0xC4	0x40	BR_INST_RETIRED.FAR_BRANCH	Far branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	0	0	0	BDW98	0
 0xC5	0x00	BR_MISP_RETIRED.ALL_BRANCHES	All mispredicted macro branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	0	0	0	null	0
-0xC5	0x01	BR_MISP_RETIRED.CONDITIONAL	This is a precise version (that is, uses PEBS) of the event that counts mispredicted conditional branch instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null	0
+0xC5	0x01	BR_MISP_RETIRED.CONDITIONAL	Mispredicted conditional branch instructions retired. (Precise Event - PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null	0
 0xC5	0x04	BR_MISP_RETIRED.ALL_BRANCHES_PEBS	Mispredicted macro branch instructions retired. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	400009	0	0	0	0	0	0	0	2	0	0	null	0
-0xC5	0x08	BR_MISP_RETIRED.RET	This is a precise version (that is, uses PEBS) of the event that counts mispredicted return instructions retired.	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	1	0	0	null	0
-0xC5	0x20	BR_MISP_RETIRED.NEAR_TAKEN	Number of near branch instructions retired that were mispredicted and taken. (Precise Event - PEBS).	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null	0
+0xC5	0x08	BR_MISP_RETIRED.RET	This event counts the number of mispredicted ret instructions retired.(Precise Event)	0,1,2,3	0,1,2,3,4,5,6,7	100007	0	0	0	0	0	0	0	1	0	0	null	0
+0xC5	0x20	BR_MISP_RETIRED.NEAR_TAKEN	number of near branch instructions retired that were mispredicted and taken. (Precise Event - PEBS).	0,1,2,3	0,1,2,3,4,5,6,7	400009	0	0	0	0	0	0	0	1	0	0	null	0
 0xC7	0x01	FP_ARITH_INST_RETIRED.SCALAR_DOUBLE	Number of SSE/AVX computational scalar double precision floating-point instructions retired.  Each count represents 1 computation. Applies to SSE* and AVX* scalar double precision floating-point instructions: ADD SUB MUL DIV MIN MAX SQRT FM(N)ADD/SUB.  FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xC7	0x02	FP_ARITH_INST_RETIRED.SCALAR_SINGLE	Number of SSE/AVX computational scalar single precision floating-point instructions retired.  Each count represents 1 computation. Applies to SSE* and AVX* scalar single precision floating-point instructions: ADD SUB MUL DIV MIN MAX RCP RSQRT SQRT FM(N)ADD/SUB.  FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xC7	0x03	FP_ARITH_INST_RETIRED.SCALAR	Number of SSE/AVX computational scalar floating-point instructions retired. Applies to SSE* and AVX* scalar, double and single precision floating-point: ADD SUB MUL DIV MIN MAX RSQRT RCP SQRT FM(N)ADD/SUB. FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
@@ -277,7 +277,7 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xC7	0x3C	FP_ARITH_INST_RETIRED.PACKED	Number of SSE/AVX computational packed floating-point instructions retired. Applies to SSE* and AVX*, packed, double and single precision floating-point: ADD SUB MUL DIV MIN MAX RSQRT RCP SQRT DPP FM(N)ADD/SUB.  DPP and FM(N)ADD/SUB instructions count twice as they perform multiple calculations per element.	0,1,2,3	0,1,2,3	2000004	0	0	0	0	0	0	0	0	0	0	null	0
 0xc8	0x01	HLE_RETIRED.START	Number of times we entered an HLE region; does not count nested transactions	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc8	0x02	HLE_RETIRED.COMMIT	Number of times HLE commit succeeded	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
-0xc8	0x04	HLE_RETIRED.ABORTED	Number of times HLE abort was triggered (PEBS).	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	1	0	0	null	0
+0xc8	0x04	HLE_RETIRED.ABORTED	Number of times HLE abort was triggered (PEBS)	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	1	0	0	null	0
 0xc8	0x08	HLE_RETIRED.ABORTED_MISC1	Number of times an HLE execution aborted due to various memory events (e.g., read/write capacity and conflicts).	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc8	0x10	HLE_RETIRED.ABORTED_MISC2	Number of times an HLE execution aborted due to uncommon conditions	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc8	0x20	HLE_RETIRED.ABORTED_MISC3	Number of times an HLE execution aborted due to HLE-unfriendly instructions	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
@@ -285,17 +285,17 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xc8	0x80	HLE_RETIRED.ABORTED_MISC5	Number of times an HLE execution aborted due to none of the previous 4 categories (e.g. interrupts)	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc9	0x01	RTM_RETIRED.START	Number of times we entered an RTM region; does not count nested transactions	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc9	0x02	RTM_RETIRED.COMMIT	Number of times RTM commit succeeded	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
-0xc9	0x04	RTM_RETIRED.ABORTED	Number of times RTM abort was triggered (PEBS).	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	0	0	null	0
+0xc9	0x04	RTM_RETIRED.ABORTED	Number of times RTM abort was triggered (PEBS)	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	0	0	null	0
 0xc9	0x08	RTM_RETIRED.ABORTED_MISC1	Number of times an RTM execution aborted due to various memory events (e.g. read/write capacity and conflicts)	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc9	0x10	RTM_RETIRED.ABORTED_MISC2	Number of times an RTM execution aborted due to various memory events (e.g., read/write capacity and conflicts).	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc9	0x20	RTM_RETIRED.ABORTED_MISC3	Number of times an RTM execution aborted due to HLE-unfriendly instructions	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc9	0x40	RTM_RETIRED.ABORTED_MISC4	Number of times an RTM execution aborted due to incompatible memory type	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xc9	0x80	RTM_RETIRED.ABORTED_MISC5	Number of times an RTM execution aborted due to none of the previous 4 categories (e.g. interrupt)	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	0	0	0	null	0
-0xCA	0x02	FP_ASSIST.X87_OUTPUT	This is a precise version (that is, uses PEBS) of the event that counts the number of x87 floating point (FP) micro-code assist (numeric overflow/underflow, inexact result) when the output value (destination register) is invalid.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
-0xCA	0x04	FP_ASSIST.X87_INPUT	This is a precise version (that is, uses PEBS) of the event that counts x87 floating point (FP) micro-code assist (invalid operation, denormal operand, SNaN operand) when the input value (one of the source operands to an FP instruction) is invalid.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
-0xCA	0x08	FP_ASSIST.SIMD_OUTPUT	This is a precise version (that is, uses PEBS) of the event that counts the number of SSE* floating point (FP) micro-code assist (numeric overflow/underflow) when the output value (destination register) is invalid. Counting covers only cases involving penalties that require micro-code assist intervention.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
-0xCA	0x10	FP_ASSIST.SIMD_INPUT	This is a precise version (that is, uses PEBS) of the event that counts any input SSE* floating-point (FP) assist - invalid operation, denormal operand, dividing by zero, SNaN operand. Counting includes only cases involving penalties that required micro-code assist intervention.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
-0xCA	0x1E	FP_ASSIST.ANY	This event counts cycles with any input and output SSE or x87 FP assist. If an input and output assist are detected on the same cycle the event increments by 1. Uses PEBS.	0,1,2,3	0,1,2,3	100003	0	0	0	1	0	0	0	0	0	0	null	0
+0xCA	0x02	FP_ASSIST.X87_OUTPUT	Number of X87 assists due to output value.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
+0xCA	0x04	FP_ASSIST.X87_INPUT	Number of X87 assists due to input value.	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
+0xCA	0x08	FP_ASSIST.SIMD_OUTPUT	Number of SIMD FP assists due to Output values	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
+0xCA	0x10	FP_ASSIST.SIMD_INPUT	Number of SIMD FP assists due to input values	0,1,2,3	0,1,2,3,4,5,6,7	100003	0	0	0	0	0	0	0	0	0	0	null	0
+0xCA	0x1E	FP_ASSIST.ANY	Cycles with any input/output SSE or FP assist	0,1,2,3	0,1,2,3	100003	0	0	0	1	0	0	0	0	0	0	null	0
 0xCC	0x20	ROB_MISC_EVENTS.LBR_INSERTS	Count cases of saving new LBR	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	null	0
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_4	Loads with latency value being above 4	3	3	100003	0x3F6	0x4	1	0	0	0	0	2	0	0	BDM100, BDM35	0
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_8	Loads with latency value being above 8	3	3	50021	0x3F6	0x8	1	0	0	0	0	2	0	0	BDM100, BDM35	0
@@ -305,25 +305,25 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_128	Loads with latency value being above 128	3	3	1009	0x3F6	0x80	1	0	0	0	0	2	0	0	BDM100, BDM35	0
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_256	Loads with latency value being above 256	3	3	503	0x3F6	0x100	1	0	0	0	0	2	0	0	BDM100, BDM35	0
 0xCD	0x01	MEM_TRANS_RETIRED.LOAD_LATENCY_GT_512	Loads with latency value being above 512	3	3	101	0x3F6	0x200	1	0	0	0	0	2	0	0	BDM100, BDM35	0
-0xD0	0x11	MEM_UOPS_RETIRED.STLB_MISS_LOADS	This is a precise version (that is, uses PEBS) of the event that counts load uops with true STLB miss retired to the architected path. True STLB miss is an uop triggering page walk that gets completed without blocks, and later gets retired. This page walk can end up with or without a fault.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	null	0
-0xD0	0x12	MEM_UOPS_RETIRED.STLB_MISS_STORES	This is a precise version (that is, uses PEBS) of the event that counts store uops true STLB miss retired to the architected path. True STLB miss is an uop triggering page walk that gets completed without blocks, and later gets retired. This page walk can end up with or without a fault.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	1	null	0
-0xD0	0x21	MEM_UOPS_RETIRED.LOCK_LOADS	This is a precise version (that is, uses PEBS) of the event that counts load uops with locked access retired to the architected path.	0,1,2,3	0,1,2,3	100007	0	0	0	0	0	0	0	1	1	0	BDM35	0
-0xD0	0x41	MEM_UOPS_RETIRED.SPLIT_LOADS	This is a precise version (that is, uses PEBS) of the event that counts line-splitted load uops retired to the architected path. A line split is across 64B cache-line which includes a page split (4K).	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	null	0
-0xD0	0x42	MEM_UOPS_RETIRED.SPLIT_STORES	This is a precise version (that is, uses PEBS) of the event that counts line-splitted store uops retired to the architected path. A line split is across 64B cache-line which includes a page split (4K).	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	1	null	0
-0xD0	0x81	MEM_UOPS_RETIRED.ALL_LOADS	This is a precise version (that is, uses PEBS) of the event that counts load uops retired to the architected path with a filter on bits 0 and 1 applied.Note: This event ?ounts AVX-256bit load/store double-pump memory uops as a single uop at retirement. This event also counts SW prefetches.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	0	null	0
-0xD0	0x82	MEM_UOPS_RETIRED.ALL_STORES	This is a precise version (that is, uses PEBS) of the event that counts store uops retired to the architected path with a filter on bits 0 and 1 applied.Note: This event ?ounts AVX-256bit load/store double-pump memory uops as a single uop at retirement.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	1	null	0
-0xD1	0x01	MEM_LOAD_UOPS_RETIRED.L1_HIT	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data source were hits in the nearest-level (L1) cache.Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though the corresponding AVX load could be serviced by a deeper level in the memory hierarchy. Data source is reported for the Low-half load. This event also counts SW prefetches independent of the actual data source.	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	0	null	0
-0xD1	0x02	MEM_LOAD_UOPS_RETIRED.L2_HIT	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were hits in the mid-level (L2) cache.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	BDM35	0
-0xD1	0x04	MEM_LOAD_UOPS_RETIRED.L3_HIT	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were data hits in the last-level (L3) cache without snoops required.	0,1,2,3	0,1,2,3	50021	0	0	0	0	0	0	0	1	1	0	BDM100	0
-0xD1	0x08	MEM_LOAD_UOPS_RETIRED.L1_MISS	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were misses in the nearest-level (L1) cache. Counting excludes unknown and UC data source.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	null	0
-0xD1	0x10	MEM_LOAD_UOPS_RETIRED.L2_MISS	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were misses in the mid-level (L2) cache. Counting excludes unknown and UC data source.	0,1,2,3	0,1,2,3	50021	0	0	0	0	0	0	0	1	1	0	null	0
+0xD0	0x11	MEM_UOPS_RETIRED.STLB_MISS_LOADS	Retired load uops that miss the STLB. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	null	0
+0xD0	0x12	MEM_UOPS_RETIRED.STLB_MISS_STORES	Retired store uops that miss the STLB. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	1	null	0
+0xD0	0x21	MEM_UOPS_RETIRED.LOCK_LOADS	Retired load uops with locked access. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	100007	0	0	0	0	0	0	0	1	1	0	BDM35	0
+0xD0	0x41	MEM_UOPS_RETIRED.SPLIT_LOADS	Retired load uops that split across a cacheline boundary.(Precise Event - PEBS)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	null	0
+0xD0	0x42	MEM_UOPS_RETIRED.SPLIT_STORES	Retired store uops that split across a cacheline boundary. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	1	null	0
+0xD0	0x81	MEM_UOPS_RETIRED.ALL_LOADS	All retired load uops. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	0	null	0
+0xD0	0x82	MEM_UOPS_RETIRED.ALL_STORES	Retired store uops that split across a cacheline boundary. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	1	null	0
+0xD1	0x01	MEM_LOAD_UOPS_RETIRED.L1_HIT	Retired load uops with L1 cache hits as data sources. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	2000003	0	0	0	0	0	0	0	1	1	0	null	0
+0xD1	0x02	MEM_LOAD_UOPS_RETIRED.L2_HIT	Retired load uops with L2 cache hits as data sources. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	BDM35	0
+0xD1	0x04	MEM_LOAD_UOPS_RETIRED.L3_HIT	Hit in last-level (L3) cache. Excludes Unknown data-source. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	50021	0	0	0	0	0	0	0	1	1	0	BDM100	0
+0xD1	0x08	MEM_LOAD_UOPS_RETIRED.L1_MISS	Retired load uops misses in L1 cache as data sources. Uses PEBS.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	null	0
+0xD1	0x10	MEM_LOAD_UOPS_RETIRED.L2_MISS	Retired load uops with L2 cache misses as data sources. Uses PEBS.	0,1,2,3	0,1,2,3	50021	0	0	0	0	0	0	0	1	1	0	null	0
 0xD1	0x20	MEM_LOAD_UOPS_RETIRED.L3_MISS	Miss in last-level (L3) cache. Excludes Unknown data-source. (Precise Event - PEBS).	0,1,2,3	0,1,2,3	100007	0	0	0	0	0	0	0	1	1	0	BDM100, BDE70	0
-0xD1	0x40	MEM_LOAD_UOPS_RETIRED.HIT_LFB	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were load uops missed L1 but hit a fill buffer due to a preceding miss to the same cache line with the data not ready.Note: Only two data-sources of L1/FB are applicable for AVX-256bit  even though the corresponding AVX load could be serviced by a deeper level in the memory hierarchy. Data source is reported for the Low-half load.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	null	0
-0xD2	0x01	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were L3 Hit and a cross-core snoop missed in the on-pkg core cache.	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	BDM100	0
-0xD2	0x02	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were L3 hit and a cross-core snoop hit in the on-pkg core cache.	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	BDM100	0
-0xD2	0x04	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were HitM responses from a core on same socket (shared L3).	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	BDM100	0
-0xD2	0x08	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE	This is a precise version (that is, uses PEBS) of the event that counts retired load uops which data sources were hits in the last-level (L3) cache without snoops required.	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	BDM100	0
-0xD3	0x01	MEM_LOAD_UOPS_L3_MISS_RETIRED.LOCAL_DRAM	This event counts retired load uops where the data came from local DRAM. This does not include hardware prefetches. This is a precise event.	0,1,2,3	0,1,2,3	100007	0	0	0	0	0	0	0	1	1	0	BDE70, BDM100	0
+0xD1	0x40	MEM_LOAD_UOPS_RETIRED.HIT_LFB	Retired load uops which data sources were load uops missed L1 but hit FB due to preceding miss to the same cache line with data not ready. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	null	0
+0xD2	0x01	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_MISS	Retired load uops which data sources were L3 hit and cross-core snoop missed in on-pkg core cache. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	BDM100	0
+0xD2	0x02	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HIT	Retired load uops which data sources were L3 and cross-core snoop hits in on-pkg core cache. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	BDM100	0
+0xD2	0x04	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_HITM	Retired load uops which data sources were HitM responses from shared L3. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	20011	0	0	0	0	0	0	0	1	1	0	BDM100	0
+0xD2	0x08	MEM_LOAD_UOPS_L3_HIT_RETIRED.XSNP_NONE	Retired load uops which data sources were hits in L3 without snoops required. (Precise Event - PEBS)	0,1,2,3	0,1,2,3	100003	0	0	0	0	0	0	0	1	1	0	BDM100	0
+0xD3	0x01	MEM_LOAD_UOPS_L3_MISS_RETIRED.LOCAL_DRAM	tbd	0,1,2,3	0,1,2,3	100007	0	0	0	0	0	0	0	1	1	0	BDE70, BDM100	0
 0xD3	0x04	MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_DRAM	Retired load uop whose Data Source was: remote DRAM either Snoop not needed or Snoop Miss (RspI) (Precise Event)	0,1,2,3	0,1,2,3	100007	0	0	0	0	0	0	0	1	1	0	BDE70	0
 0xD3	0x10	MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_HITM	Retired load uop whose Data Source was: Remote cache HITM (Precise Event)	0,1,2,3	0,1,2,3	100007	0	0	0	0	0	0	0	1	1	0	BDE70	0
 0xD3	0x20	MEM_LOAD_UOPS_L3_MISS_RETIRED.REMOTE_FWD	Retired load uop whose Data Source was: forwarded from remote cache (Precise Event)	0,1,2,3	0,1,2,3	100007	0	0	0	0	0	0	0	1	1	0	BDE70	0
