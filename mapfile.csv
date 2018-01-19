@@ -54,8 +54,8 @@ GenuineIntel-6-47,V22,/BDW/broadwell_fp_arith_inst_v22.json,fp_arith_inst
 GenuineIntel-6-4F,V13,/BDX/broadwellx_core_v13.json,core
 GenuineIntel-6-4F,V13,/BDX/broadwellx_matrix_v13.json,offcore
 GenuineIntel-6-4F,V13,/BDX/broadwellx_uncore_v13.json,uncore
-GenuineIntel-6-56,V6,/BDW-DE/broadwellde_core_v6.json,core
-GenuineIntel-6-56,V6,/BDW-DE/broadwellde_uncore_v6.json,uncore
+GenuineIntel-6-56,V7,/BDW-DE/broadwellde_core_v7.json,core
+GenuineIntel-6-56,V7,/BDW-DE/broadwellde_uncore_v7.json,uncore
 GenuineIntel-6-4E,V36,/SKL/skylake_core_v36.json,core
 GenuineIntel-6-5E,V36,/SKL/skylake_core_v36.json,core
 GenuineIntel-6-4E,V36,/SKL/skylake_matrix_v36.json,offcore
