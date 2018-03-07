@@ -3817,6 +3817,70 @@
 		<td>Counts injection starvation.  This starvation is triggered when the CMS Egress cannot send a transaction onto the Vertical ring for a long period of time. (Experimental) </td>
 	</tr>
 	<tr>
+		<td><span id="UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_AD_REQ">UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_AD_REQ</span></td>
+		<td>Accumulates the number of UPI credits available in each cycle for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This stat increments by the number of credits that are available each cycle.  This can be used in conjunction with the Credit Acquired event in order to calculate average credit lifetime.  This event supports filtering for the different types of credits that are available.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_AD_RSP">UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_AD_RSP</span></td>
+		<td>Accumulates the number of UPI credits available in each cycle for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This stat increments by the number of credits that are available each cycle.  This can be used in conjunction with the Credit Acquired event in order to calculate average credit lifetime.  This event supports filtering for the different types of credits that are available.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_BL_NCB">UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_BL_NCB</span></td>
+		<td>Accumulates the number of UPI credits available in each cycle for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This stat increments by the number of credits that are available each cycle.  This can be used in conjunction with the Credit Acquired event in order to calculate average credit lifetime.  This event supports filtering for the different types of credits that are available.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_BL_NCS">UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_BL_NCS</span></td>
+		<td>Accumulates the number of UPI credits available in each cycle for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This stat increments by the number of credits that are available each cycle.  This can be used in conjunction with the Credit Acquired event in order to calculate average credit lifetime.  This event supports filtering for the different types of credits that are available.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_BL_RSP">UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_BL_RSP</span></td>
+		<td>Accumulates the number of UPI credits available in each cycle for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This stat increments by the number of credits that are available each cycle.  This can be used in conjunction with the Credit Acquired event in order to calculate average credit lifetime.  This event supports filtering for the different types of credits that are available.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_BL_WB">UNC_CHA_UPI_CREDIT_OCCUPANCY.VN0_BL_WB</span></td>
+		<td>Accumulates the number of UPI credits available in each cycle for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This stat increments by the number of credits that are available each cycle.  This can be used in conjunction with the Credit Acquired event in order to calculate average credit lifetime.  This event supports filtering for the different types of credits that are available.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDIT_OCCUPANCY.VNA_AD">UNC_CHA_UPI_CREDIT_OCCUPANCY.VNA_AD</span></td>
+		<td>Accumulates the number of UPI credits available in each cycle for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This stat increments by the number of credits that are available each cycle.  This can be used in conjunction with the Credit Acquired event in order to calculate average credit lifetime.  This event supports filtering for the different types of credits that are available.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDIT_OCCUPANCY.VNA_BL">UNC_CHA_UPI_CREDIT_OCCUPANCY.VNA_BL</span></td>
+		<td>Accumulates the number of UPI credits available in each cycle for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This stat increments by the number of credits that are available each cycle.  This can be used in conjunction with the Credit Acquired event in order to calculate average credit lifetime.  This event supports filtering for the different types of credits that are available.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDITS_ACQUIRED.AD_REQ">UNC_CHA_UPI_CREDITS_ACQUIRED.AD_REQ</span></td>
+		<td>Counts the number of UPI credits acquired for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This can be used with the Credit Occupancy event in order to calculate average credit lifetime.  This event supports filtering to cover the VNA/VN0 credits and the different message classes.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDITS_ACQUIRED.AD_RSP">UNC_CHA_UPI_CREDITS_ACQUIRED.AD_RSP</span></td>
+		<td>Counts the number of UPI credits acquired for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This can be used with the Credit Occupancy event in order to calculate average credit lifetime.  This event supports filtering to cover the VNA/VN0 credits and the different message classes.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDITS_ACQUIRED.BL_NCB">UNC_CHA_UPI_CREDITS_ACQUIRED.BL_NCB</span></td>
+		<td>Counts the number of UPI credits acquired for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This can be used with the Credit Occupancy event in order to calculate average credit lifetime.  This event supports filtering to cover the VNA/VN0 credits and the different message classes.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDITS_ACQUIRED.BL_NCS">UNC_CHA_UPI_CREDITS_ACQUIRED.BL_NCS</span></td>
+		<td>Counts the number of UPI credits acquired for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This can be used with the Credit Occupancy event in order to calculate average credit lifetime.  This event supports filtering to cover the VNA/VN0 credits and the different message classes.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDITS_ACQUIRED.BL_RSP">UNC_CHA_UPI_CREDITS_ACQUIRED.BL_RSP</span></td>
+		<td>Counts the number of UPI credits acquired for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This can be used with the Credit Occupancy event in order to calculate average credit lifetime.  This event supports filtering to cover the VNA/VN0 credits and the different message classes.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDITS_ACQUIRED.BL_WB">UNC_CHA_UPI_CREDITS_ACQUIRED.BL_WB</span></td>
+		<td>Counts the number of UPI credits acquired for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This can be used with the Credit Occupancy event in order to calculate average credit lifetime.  This event supports filtering to cover the VNA/VN0 credits and the different message classes.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDITS_ACQUIRED.VN0">UNC_CHA_UPI_CREDITS_ACQUIRED.VN0</span></td>
+		<td>Counts the number of UPI credits acquired for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This can be used with the Credit Occupancy event in order to calculate average credit lifetime.  This event supports filtering to cover the VNA/VN0 credits and the different message classes.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CHA_UPI_CREDITS_ACQUIRED.VNA">UNC_CHA_UPI_CREDITS_ACQUIRED.VNA</span></td>
+		<td>Counts the number of UPI credits acquired for either the AD or BL ring.  In order to send snoops, snoop responses, requests, data, etc to the UPI agent on the ring, it is necessary to first acquire a credit for the UPI ingress buffer.  This can be used with the Credit Occupancy event in order to calculate average credit lifetime.  This event supports filtering to cover the VNA/VN0 credits and the different message classes.  Note that you must select the link that you would like to monitor using the link select register, and you can only monitor 1 link at a time. (Experimental) </td>
+	</tr>
+	<tr>
 		<td><span id="UNC_CHA_VERT_RING_AD_IN_USE.DN_EVEN">UNC_CHA_VERT_RING_AD_IN_USE.DN_EVEN</span></td>
 		<td>Counts the number of cycles that the Vertical AD ring is being used at this ring stop.  This includes when packets are passing by and when packets are being sunk, but does not include when packets are being sent from the ring stop.  We really have two rings  -- a clockwise ring and a counter-clockwise ring.  On the left side of the ring, the &quot;UP&quot; direction is on the clockwise ring and &quot;DN&quot; is on the counter-clockwise ring.  On the right side of the ring, this is reversed.  The first half of the CBos are on the left side of the ring, and the 2nd half are on the right side of the ring.  In other words (for example), in a 4c part, Cbo 0 UP AD is NOT the same ring as CBo 2 UP AD because they are on opposite sides of the ring. (Experimental) </td>
 	</tr>
@@ -6398,19 +6462,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.PART0">UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.PART0</span></td>
-		<td>Counts every read request for 4 bytes of data made by a unit on the main die (generally a core) to the MMIO space of a card on IIO Part0. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus.</td>
+		<td>Counts every read request for 4 bytes of data made by a unit on the main die (generally a core) or by another IIO unit to the MMIO space of a card on IIO Part0. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.PART1">UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.PART1</span></td>
-		<td>Counts every read request for 4 bytes of data made by a unit on the main die (generally a core) to the MMIO space of a card on IIO Part1. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus.</td>
+		<td>Counts every read request for 4 bytes of data made by a unit on the main die (generally a core) or by another IIO unit to the MMIO space of a card on IIO Part1. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.PART2">UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.PART2</span></td>
-		<td>Counts every read request for 4 bytes of data made by a unit on the main die (generally a core) to the MMIO space of a card on IIO Part2. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus.</td>
+		<td>Counts every read request for 4 bytes of data made by a unit on the main die (generally a core) or by another IIO unit to the MMIO space of a card on IIO Part2. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.PART3">UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.PART3</span></td>
-		<td>Counts every read request for 4 bytes of data made by a unit on the main die (generally a core) to the MMIO space of a card on IIO Part3. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus.</td>
+		<td>Counts every read request for 4 bytes of data made by a unit on the main die (generally a core) or by another IIO unit to the MMIO space of a card on IIO Part3. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.VTD0">UNC_IIO_DATA_REQ_BY_CPU.MEM_READ.VTD0</span></td>
@@ -6422,19 +6486,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.PART0">UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.PART0</span></td>
-		<td>Counts every write request of 4 bytes of data made to the MMIO space of a card on IIO Part0 by a unit on the main die (generally a core). In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus.</td>
+		<td>Counts every write request of 4 bytes of data made to the MMIO space of a card on IIO Part0 by a unit on the main die (generally a core) or by another IIO unit. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.PART1">UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.PART1</span></td>
-		<td>Counts every write request of 4 bytes of data made to the MMIO space of a card on IIO Part1 by a unit on the main die (generally a core). In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus.</td>
+		<td>Counts every write request of 4 bytes of data made to the MMIO space of a card on IIO Part1 by a unit on the main die (generally a core) or by another IIO unit. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.PART2">UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.PART2</span></td>
-		<td>Counts every write request of 4 bytes of data made to the MMIO space of a card on IIO Part2 by  a unit on the main die (generally a core). In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus.</td>
+		<td>Counts every write request of 4 bytes of data made to the MMIO space of a card on IIO Part2 by  a unit on the main die (generally a core) or by another IIO unit. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.PART3">UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.PART3</span></td>
-		<td>Counts every write request of 4 bytes of data made to the MMIO space of a card on IIO Part3 by  a unit on the main die (generally a core). In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus.</td>
+		<td>Counts every write request of 4 bytes of data made to the MMIO space of a card on IIO Part3 by  a unit on the main die (generally a core) or by another IIO unit. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.VTD0">UNC_IIO_DATA_REQ_BY_CPU.MEM_WRITE.VTD0</span></td>
@@ -6446,19 +6510,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.PART0">UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.PART0</span></td>
-		<td>Number of double word (4 bytes) requests initiated by the main die to the attached device.; x16 card plugged in to stack, Or x8 card plugged in to Lane 0/1, Or x4 card is plugged in to slot 0 (Experimental) </td>
+		<td>Counts ever peer to peer read request for 4 bytes of data made by a different IIO unit to the MMIO space of a card on IIO Part0. Does not include requests made by the same IIO unit. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.PART1">UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.PART1</span></td>
-		<td>Number of double word (4 bytes) requests initiated by the main die to the attached device.; x4 card is plugged in to slot 1 (Experimental) </td>
+		<td>Counts ever peer to peer read request for 4 bytes of data made by a different IIO unit to the MMIO space of a card on IIO Part1. Does not include requests made by the same IIO unit. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.PART2">UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.PART2</span></td>
-		<td>Number of double word (4 bytes) requests initiated by the main die to the attached device.; x8 card plugged in to Lane 2/3, Or x4 card is plugged in to slot 2 (Experimental) </td>
+		<td>Counts ever peer to peer read request for 4 bytes of data made by a different IIO unit to the MMIO space of a card on IIO Part2. Does not include requests made by the same IIO unit. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.PART3">UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.PART3</span></td>
-		<td>Number of double word (4 bytes) requests initiated by the main die to the attached device.; x4 card is plugged in to slot 3 (Experimental) </td>
+		<td>Counts ever peer to peer read request for 4 bytes of data made by a different IIO unit to the MMIO space of a card on IIO Part3. Does not include requests made by the same IIO unit. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.VTD0">UNC_IIO_DATA_REQ_BY_CPU.PEER_READ.VTD0</span></td>
@@ -6470,19 +6534,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.PART0">UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.PART0</span></td>
-		<td>Number of double word (4 bytes) requests initiated by the main die to the attached device.; x16 card plugged in to stack, Or x8 card plugged in to Lane 0/1, Or x4 card is plugged in to slot 0 (Experimental) </td>
+		<td>Counts every peer to peer write request of 4 bytes of data made to the MMIO space of a card on IIO Part0 by a different IIO unit. Does not include requests made by the same IIO unit.  In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.PART1">UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.PART1</span></td>
-		<td>Number of double word (4 bytes) requests initiated by the main die to the attached device.; x4 card is plugged in to slot 1 (Experimental) </td>
+		<td>Counts every peer to peer write request of 4 bytes of data made to the MMIO space of a card on IIO Part1 by a different IIO unit. Does not include requests made by the same IIO unit. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.PART2">UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.PART2</span></td>
-		<td>Number of double word (4 bytes) requests initiated by the main die to the attached device.; x8 card plugged in to Lane 2/3, Or x4 card is plugged in to slot 2 (Experimental) </td>
+		<td>Counts every peer to peer write request of 4 bytes of data made to the MMIO space of a card on IIO Part2 by a different IIO unit. Does not include requests made by the same IIO unit. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.PART3">UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.PART3</span></td>
-		<td>Number of double word (4 bytes) requests initiated by the main die to the attached device.; x4 card is plugged in to slot 3 (Experimental) </td>
+		<td>Counts every peer to peer write request of 4 bytes of data made to the MMIO space of a card on IIO Part3 by a different IIO unit. Does not include requests made by the same IIO unit. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.VTD0">UNC_IIO_DATA_REQ_BY_CPU.PEER_WRITE.VTD0</span></td>
@@ -6606,19 +6670,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.PART0">UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.PART0</span></td>
-		<td>Number of double word (4 bytes) requests the attached device made of the main die.; x16 card plugged in to stack, Or x8 card plugged in to Lane 0/1, Or x4 card is plugged in to slot 0 (Experimental) </td>
+		<td>Counts every peer to peer read request for 4 bytes of data made by IIO Part0 to the MMIO space of an IIO target. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.PART1">UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.PART1</span></td>
-		<td>Number of double word (4 bytes) requests the attached device made of the main die.; x4 card is plugged in to slot 1 (Experimental) </td>
+		<td>Counts every peer to peer read request for 4 bytes of data made by IIO Part1 to the MMIO space of an IIO target. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.PART2">UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.PART2</span></td>
-		<td>Number of double word (4 bytes) requests the attached device made of the main die.; x8 card plugged in to Lane 2/3, Or x4 card is plugged in to slot 2 (Experimental) </td>
+		<td>Counts every peer to peer read request for 4 bytes of data made by IIO Part2 to the MMIO space of an IIO target. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.PART3">UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.PART3</span></td>
-		<td>Number of double word (4 bytes) requests the attached device made of the main die.; x4 card is plugged in to slot 3 (Experimental) </td>
+		<td>Counts every peer to peer read request for 4 bytes of data made by IIO Part3 to the MMIO space of an IIO target. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.VTD0">UNC_IIO_DATA_REQ_OF_CPU.PEER_READ.VTD0</span></td>
@@ -6630,19 +6694,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.PART0">UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.PART0</span></td>
-		<td>Number of double word (4 bytes) requests the attached device made of the main die.; x16 card plugged in to stack, Or x8 card plugged in to Lane 0/1, Or x4 card is plugged in to slot 0 (Experimental) </td>
+		<td>Counts every peer to peer write request of 4 bytes of data made by IIO Part0 to the MMIO space of an IIO target. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.PART1">UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.PART1</span></td>
-		<td>Number of double word (4 bytes) requests the attached device made of the main die.; x4 card is plugged in to slot 1 (Experimental) </td>
+		<td>Counts every peer to peer write request of 4 bytes of data made by IIO Part1 to the MMIO space of an IIO target. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.PART2">UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.PART2</span></td>
-		<td>Number of double word (4 bytes) requests the attached device made of the main die.; x8 card plugged in to Lane 2/3, Or x4 card is plugged in to slot 2 (Experimental) </td>
+		<td>Counts every peer to peer write request of 4 bytes of data made by IIO Part2 to the MMIO space of an IIO target. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.PART3">UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.PART3</span></td>
-		<td>Number of double word (4 bytes) requests the attached device made of the main die.; x4 card is plugged in to slot 3 (Experimental) </td>
+		<td>Counts every peer to peer write request of 4 bytes of data made by IIO Part3 to the MMIO space of an IIO target. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.VTD0">UNC_IIO_DATA_REQ_OF_CPU.PEER_WRITE.VTD0</span></td>
@@ -7518,19 +7582,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.PART0">UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.PART0</span></td>
-		<td>Counts every read request for up to a 64 byte transaction of data made by a unit on the main die (generally a core) to the MMIO space of a card on IIO Part0. In the general case, part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus.</td>
+		<td>Counts every read request for up to a 64 byte transaction of data made by a unit on the main die (generally a core) or by another IIO unit to the MMIO space of a card on IIO Part0. In the general case, part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.PART1">UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.PART1</span></td>
-		<td>Counts every read request for up to a 64 byte transaction of data made by a unit on the main die (generally a core) to the MMIO space of a card on IIO Part1. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus.</td>
+		<td>Counts every read request for up to a 64 byte transaction of data made by a unit on the main die (generally a core) or by another IIO unit to the MMIO space of a card on IIO Part1. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.PART2">UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.PART2</span></td>
-		<td>Counts every read request for up to a 64 byte transaction of data made by a unit on the main die (generally a core) to the MMIO space of a card on IIO Part2. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus.</td>
+		<td>Counts every read request for up to a 64 byte transaction of data made by a unit on the main die (generally a core) or by another IIO unit to the MMIO space of a card on IIO Part2. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.PART3">UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.PART3</span></td>
-		<td>Counts every read request for up to a 64 byte transaction of data made by a unit on the main die (generally a core) to the MMIO space of a card on IIO Part3. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus.</td>
+		<td>Counts every read request for up to a 64 byte transaction of data made by a unit on the main die (generally a core) or by another IIO unit to the MMIO space of a card on IIO Part3. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.VTD0">UNC_IIO_TXN_REQ_BY_CPU.MEM_READ.VTD0</span></td>
@@ -7542,19 +7606,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.PART0">UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.PART0</span></td>
-		<td>Counts every write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part0 by a unit on the main die (generally a core). In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus.</td>
+		<td>Counts every write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part0 by a unit on the main die (generally a core) or by another IIO unit. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.PART1">UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.PART1</span></td>
-		<td>Counts every write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part1 by a unit on the main die (generally a core). In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus.</td>
+		<td>Counts every write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part1 by a unit on the main die (generally a core) or by another IIO unit. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.PART2">UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.PART2</span></td>
-		<td>Counts every write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part2 by a unit on the main die (generally a core). In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus.</td>
+		<td>Counts every write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part2 by a unit on the main die (generally a core) or by another IIO unit. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.PART3">UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.PART3</span></td>
-		<td>Counts every write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part3 by a unit on the main die (generally a core). In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus.</td>
+		<td>Counts every write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part3 by a unit on the main die (generally a core) or by another IIO unit. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.VTD0">UNC_IIO_TXN_REQ_BY_CPU.MEM_WRITE.VTD0</span></td>
@@ -7566,19 +7630,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.PART0">UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.PART0</span></td>
-		<td>Also known as Outbound.  Number of requests, to the attached device, initiated by the main die.; x16 card plugged in to stack, Or x8 card plugged in to Lane 0/1, Or x4 card is plugged in to slot 0 (Experimental) </td>
+		<td>Counts every peer to peer read request for up to a 64 byte transaction of data made by a different IIO unit to the MMIO space of a card on IIO Part0. Does not include requests made by the same IIO unit. In the general case, part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.PART1">UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.PART1</span></td>
-		<td>Also known as Outbound.  Number of requests, to the attached device, initiated by the main die.; x4 card is plugged in to slot 1 (Experimental) </td>
+		<td>Counts every peer to peer read request for up to a 64 byte transaction of data made by a different IIO unit to the MMIO space of a card on IIO Part1. Does not include requests made by the same IIO unit. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.PART2">UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.PART2</span></td>
-		<td>Also known as Outbound.  Number of requests, to the attached device, initiated by the main die.; x8 card plugged in to Lane 2/3, Or x4 card is plugged in to slot 2 (Experimental) </td>
+		<td>Counts every peer to peer read request for up to a 64 byte transaction of data made by a different IIO unit to the MMIO space of a card on IIO Part2. Does not include requests made by the same IIO unit. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.PART3">UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.PART3</span></td>
-		<td>Also known as Outbound.  Number of requests, to the attached device, initiated by the main die.; x4 card is plugged in to slot 3 (Experimental) </td>
+		<td>Counts every peer to peer read request for up to a 64 byte transaction of data made by a different IIO unit to the MMIO space of a card on IIO Part3. Does not include requests made by the same IIO unit. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.VTD0">UNC_IIO_TXN_REQ_BY_CPU.PEER_READ.VTD0</span></td>
@@ -7590,19 +7654,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.PART0">UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.PART0</span></td>
-		<td>Also known as Outbound.  Number of requests, to the attached device, initiated by the main die.; x16 card plugged in to stack, Or x8 card plugged in to Lane 0/1, Or x4 card is plugged in to slot 0 (Experimental) </td>
+		<td>Counts every peer to peer write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part0 by a different IIO unit. Does not include requests made by the same IIO unit. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.PART1">UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.PART1</span></td>
-		<td>Also known as Outbound.  Number of requests, to the attached device, initiated by the main die.; x4 card is plugged in to slot 1 (Experimental) </td>
+		<td>Counts every peer to peer write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part1 by a different IIO unit. Does not include requests made by the same IIO unit. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.PART2">UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.PART2</span></td>
-		<td>Also known as Outbound.  Number of requests, to the attached device, initiated by the main die.; x8 card plugged in to Lane 2/3, Or x4 card is plugged in to slot 2 (Experimental) </td>
+		<td>Counts every peer to peer write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part2 by a different IIO unit. Does not include requests made by the same IIO unit. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.PART3">UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.PART3</span></td>
-		<td>Also known as Outbound.  Number of requests, to the attached device, initiated by the main die.; x4 card is plugged in to slot 3 (Experimental) </td>
+		<td>Counts every peer to peer write request of up to a 64 byte transaction of data made to the MMIO space of a card on IIO Part3 by a different IIO unit. Does not include requests made by the same IIO unit. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.VTD0">UNC_IIO_TXN_REQ_BY_CPU.PEER_WRITE.VTD0</span></td>
@@ -7726,19 +7790,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.PART0">UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.PART0</span></td>
-		<td>Also known as Inbound.  Number of 64 byte cache line requests initiated by the attached device.; x16 card plugged in to stack, Or x8 card plugged in to Lane 0/1, Or x4 card is plugged in to slot 0 (Experimental) </td>
+		<td>Counts every peer to peer read request of up to a 64 byte transaction made by IIO Part0 to the MMIO space of an IIO target. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.PART1">UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.PART1</span></td>
-		<td>Also known as Inbound.  Number of 64 byte cache line requests initiated by the attached device.; x4 card is plugged in to slot 1 (Experimental) </td>
+		<td>Counts every peer to peer read request of up to a 64 byte transaction made by IIO Part1 to the MMIO space of an IIO target. In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.PART2">UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.PART2</span></td>
-		<td>Also known as Inbound.  Number of 64 byte cache line requests initiated by the attached device.; x8 card plugged in to Lane 2/3, Or x4 card is plugged in to slot 2 (Experimental) </td>
+		<td>Counts every peer to peer read request of up to a 64 byte transaction made by IIO Part2 to the MMIO space of an IIO target. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.PART3">UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.PART3</span></td>
-		<td>Also known as Inbound.  Number of 64 byte cache line requests initiated by the attached device.; x4 card is plugged in to slot 3 (Experimental) </td>
+		<td>Counts every peer to peer read request of up to a 64 byte transaction made by IIO Part3 to the MMIO space of an IIO target. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.VTD0">UNC_IIO_TXN_REQ_OF_CPU.PEER_READ.VTD0</span></td>
@@ -7750,19 +7814,19 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.PART0">UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.PART0</span></td>
-		<td>Also known as Inbound.  Number of 64 byte cache line requests initiated by the attached device.; x16 card plugged in to stack, Or x8 card plugged in to Lane 0/1, Or x4 card is plugged in to slot 0 (Experimental) </td>
+		<td>Counts every peer to peer write request of up to a 64 byte transaction of data made by IIO Part0 to the MMIO space of an IIO target. In the general case, Part0 refers to a standard PCIe card of any size (x16,x8,x4) that is plugged directly into one of the PCIe slots. Part0 could also refer to any device plugged into the first slot of a PCIe riser card or to a device attached to the IIO unit which starts its use of the bus using lane 0 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.PART1">UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.PART1</span></td>
-		<td>Also known as Inbound.  Number of 64 byte cache line requests initiated by the attached device.; x4 card is plugged in to slot 1 (Experimental) </td>
+		<td>Counts every peer to peer write request of up to a 64 byte transaction of data made by IIO Part1 to the MMIO space of an IIO target.In the general case, Part1 refers to a x4 PCIe card plugged into the second slot of a PCIe riser card, but it could refer to any x4 device attached to the IIO unit using lanes starting at lane 4 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.PART2">UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.PART2</span></td>
-		<td>Also known as Inbound.  Number of 64 byte cache line requests initiated by the attached device.; x8 card plugged in to Lane 2/3, Or x4 card is plugged in to slot 2 (Experimental) </td>
+		<td>Counts every peer to peer write request of up to a 64 byte transaction of data made by IIO Part2 to the MMIO space of an IIO target. In the general case, Part2 refers to a x4 or x8 PCIe card plugged into the third slot of a PCIe riser card, but it could refer to any x4 or x8 device attached to the IIO unit and using lanes starting at lane 8 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.PART3">UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.PART3</span></td>
-		<td>Also known as Inbound.  Number of 64 byte cache line requests initiated by the attached device.; x4 card is plugged in to slot 3 (Experimental) </td>
+		<td>Counts every peer to peer write request of up to a 64 byte transaction of data made by IIO Part3 to the MMIO space of an IIO target. In the general case, Part3 refers to a x4 PCIe card plugged into the fourth slot of a PCIe riser card, but it could brefer to  any device attached to the IIO unit using the lanes starting at lane 12 of the 16 lanes supported by the bus. (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.VTD0">UNC_IIO_TXN_REQ_OF_CPU.PEER_WRITE.VTD0</span></td>
@@ -10025,20 +10089,8 @@
 		<td>M2M to iMC RPQ Cycles w/Credits - Regular; Channel 0 (Experimental) </td>
 	</tr>
 	<tr>
-		<td><span id="UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN0">UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN0</span></td>
-		<td>M2M to iMC RPQ Cycles w/Credits - Regular; Channel 0 (Experimental) </td>
-	</tr>
-	<tr>
 		<td><span id="UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN1">UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN1</span></td>
 		<td>M2M to iMC RPQ Cycles w/Credits - Regular; Channel 1 (Experimental) </td>
-	</tr>
-	<tr>
-		<td><span id="UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN1">UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN1</span></td>
-		<td>M2M to iMC RPQ Cycles w/Credits - Regular; Channel 1 (Experimental) </td>
-	</tr>
-	<tr>
-		<td><span id="UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN2">UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN2</span></td>
-		<td>M2M to iMC RPQ Cycles w/Credits - Regular; Channel 2 (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN2">UNC_M2M_RPQ_CYCLES_REG_CREDITS.CHN2</span></td>
@@ -10427,10 +10479,6 @@
 	<tr>
 		<td><span id="UNC_M2M_TxC_AK_CYCLES_FULL.CMS0">UNC_M2M_TxC_AK_CYCLES_FULL.CMS0</span></td>
 		<td>AK Egress (to CMS) Full; Common Mesh Stop - Near Side (Experimental) </td>
-	</tr>
-	<tr>
-		<td><span id="UNC_M2M_TxC_AK_CYCLES_FULL.CMS1">UNC_M2M_TxC_AK_CYCLES_FULL.CMS1</span></td>
-		<td>AK Egress (to CMS) Full; Common Mesh Stop - Far Side (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_M2M_TxC_AK_CYCLES_FULL.CMS1">UNC_M2M_TxC_AK_CYCLES_FULL.CMS1</span></td>
@@ -14414,7 +14462,7 @@
 	</tr>
 	<tr>
 		<td><span id="UNC_UPI_TxL_HDR_MATCH.RSP_DATA">UNC_UPI_TxL_HDR_MATCH.RSP_DATA</span></td>
-		<td>This event is deprecated. Refer to new event UNC_UPI_TxL_BASIC_HDR_MATCH.RSP_DATA (Experimental) </td>
+		<td>This event is deprecated.  (Experimental) </td>
 	</tr>
 	<tr>
 		<td><span id="UNC_UPI_TxL_HDR_MATCH.RSP_NODATA">UNC_UPI_TxL_HDR_MATCH.RSP_NODATA</span></td>

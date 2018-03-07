@@ -242,6 +242,10 @@
 		<td>Count XClk pulses when this thread is unhalted and the other thread is halted.</td>
 	</tr>
 	<tr>
+		<td><span id="CPU_CLK_UNHALTED.REF_TSC">CPU_CLK_UNHALTED.REF_TSC</span></td>
+		<td>This event counts the number of reference cycles when the core is not in a halt state. The core enters the halt state when it is running the HLT instruction or the MWAIT instruction. This event is not affected by core frequency changes (for example, P states, TM2 transitions) but has the same incrementing frequency as the time stamp counter. This event can approximate elapsed time while the core was not in a halt state. This event has a constant ratio with the CPU_CLK_UNHALTED.REF_XCLK event. It is counted on a dedicated fixed counter, leaving the four (eight when Hyperthreading is disabled) programmable counters available for other events. </td>
+	</tr>
+	<tr>
 		<td><span id="CPU_CLK_UNHALTED.REF_XCLK">CPU_CLK_UNHALTED.REF_XCLK</span></td>
 		<td>Reference cycles when the thread is unhalted (counts at 100 MHz rate)</td>
 	</tr>

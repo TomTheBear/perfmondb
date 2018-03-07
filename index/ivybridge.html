@@ -1286,72 +1286,104 @@
 		<td>Counts the number of allocated write entries, include full, partial, and LLC evictions.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.ANY_REQUEST_FILTER">UNC_CBO_CACHE_LOOKUP.ANY_REQUEST_FILTER</span></td>
-		<td>Filter on any IRQ or IPQ initiated requests including uncacheable, non-coherent requests.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.ANY_ES">UNC_CBO_CACHE_LOOKUP.ANY_ES</span></td>
+		<td>L3 Lookup any request that access cache and found line in E or S-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.E">UNC_CBO_CACHE_LOOKUP.E</span></td>
-		<td>LLC lookup request that access cache and found line in E-state.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.ANY_I">UNC_CBO_CACHE_LOOKUP.ANY_I</span></td>
+		<td>L3 Lookup any request that access cache and found line in I-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.ES">UNC_CBO_CACHE_LOOKUP.ES</span></td>
-		<td>LLC lookup request that access cache and found line in E-state or S-state.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.ANY_M">UNC_CBO_CACHE_LOOKUP.ANY_M</span></td>
+		<td>L3 Lookup any request that access cache and found line in M-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.EXTSNP_FILTER">UNC_CBO_CACHE_LOOKUP.EXTSNP_FILTER</span></td>
-		<td>Filter on external snoop requests.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.ANY_MESI">UNC_CBO_CACHE_LOOKUP.ANY_MESI</span></td>
+		<td>L3 Lookup any request that access cache and found line in MESI-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.I">UNC_CBO_CACHE_LOOKUP.I</span></td>
-		<td>LLC lookup request that access cache and found line in I-state.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.EXTSNP_ES">UNC_CBO_CACHE_LOOKUP.EXTSNP_ES</span></td>
+		<td>L3 Lookup external snoop request that access cache and found line in E or S-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.M">UNC_CBO_CACHE_LOOKUP.M</span></td>
-		<td>LLC lookup request that access cache and found line in M-state.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.EXTSNP_I">UNC_CBO_CACHE_LOOKUP.EXTSNP_I</span></td>
+		<td>L3 Lookup external snoop request that access cache and found line in I-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.READ_FILTER">UNC_CBO_CACHE_LOOKUP.READ_FILTER</span></td>
-		<td>Filter on processor core initiated cacheable read requests.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.EXTSNP_M">UNC_CBO_CACHE_LOOKUP.EXTSNP_M</span></td>
+		<td>L3 Lookup external snoop request that access cache and found line in M-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.S">UNC_CBO_CACHE_LOOKUP.S</span></td>
-		<td>LLC lookup request that access cache and found line in S-state.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.EXTSNP_MESI">UNC_CBO_CACHE_LOOKUP.EXTSNP_MESI</span></td>
+		<td>L3 Lookup external snoop request that access cache and found line in MESI-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_CACHE_LOOKUP.WRITE_FILTER">UNC_CBO_CACHE_LOOKUP.WRITE_FILTER</span></td>
-		<td>Filter on processor core initiated cacheable write requests.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.READ_ES">UNC_CBO_CACHE_LOOKUP.READ_ES</span></td>
+		<td>L3 Lookup read request that access cache and found line in E or S-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.EVICTION_FILTER">UNC_CBO_XSNP_RESPONSE.EVICTION_FILTER</span></td>
-		<td>Filter on cross-core snoops initiated by this Cbox due to LLC eviction.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.READ_I">UNC_CBO_CACHE_LOOKUP.READ_I</span></td>
+		<td>L3 Lookup read request that access cache and found line in I-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.EXTERNAL_FILTER">UNC_CBO_XSNP_RESPONSE.EXTERNAL_FILTER</span></td>
-		<td>Filter on cross-core snoops initiated by this Cbox due to external snoop request.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.READ_M">UNC_CBO_CACHE_LOOKUP.READ_M</span></td>
+		<td>L3 Lookup read request that access cache and found line in M-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.HIT">UNC_CBO_XSNP_RESPONSE.HIT</span></td>
-		<td>A snoop hits a non-modified line in some processor core.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.READ_MESI">UNC_CBO_CACHE_LOOKUP.READ_MESI</span></td>
+		<td>L3 Lookup read request that access cache and found line in any MESI-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.HITM">UNC_CBO_XSNP_RESPONSE.HITM</span></td>
-		<td>A snoop hits a modified line in some processor core.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.WRITE_ES">UNC_CBO_CACHE_LOOKUP.WRITE_ES</span></td>
+		<td>L3 Lookup write request that access cache and found line in E or S-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.INVAL">UNC_CBO_XSNP_RESPONSE.INVAL</span></td>
-		<td>A snoop invalidates a non-modified line in some processor core.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.WRITE_I">UNC_CBO_CACHE_LOOKUP.WRITE_I</span></td>
+		<td>L3 Lookup write request that access cache and found line in I-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.INVAL_M">UNC_CBO_XSNP_RESPONSE.INVAL_M</span></td>
-		<td>A snoop invalidates a modified line in some processor core.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.WRITE_M">UNC_CBO_CACHE_LOOKUP.WRITE_M</span></td>
+		<td>L3 Lookup write request that access cache and found line in M-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.MISS">UNC_CBO_XSNP_RESPONSE.MISS</span></td>
-		<td>A snoop misses in some processor core.</td>
+		<td><span id="UNC_CBO_CACHE_LOOKUP.WRITE_MESI">UNC_CBO_CACHE_LOOKUP.WRITE_MESI</span></td>
+		<td>L3 Lookup write request that access cache and found line in MESI-state.</td>
 	</tr>
 	<tr>
-		<td><span id="UNC_CBO_XSNP_RESPONSE.XCORE_FILTER">UNC_CBO_XSNP_RESPONSE.XCORE_FILTER</span></td>
-		<td>Filter on cross-core snoops initiated by this Cbox due to processor core memory request.</td>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.HIT_EVICTION">UNC_CBO_XSNP_RESPONSE.HIT_EVICTION</span></td>
+		<td>A cross-core snoop resulted from L3 Eviction which hits a non-modified line in some processor core.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.HIT_EXTERNAL">UNC_CBO_XSNP_RESPONSE.HIT_EXTERNAL</span></td>
+		<td>An external snoop hits a non-modified line in some processor core.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.HIT_XCORE">UNC_CBO_XSNP_RESPONSE.HIT_XCORE</span></td>
+		<td>A cross-core snoop initiated by this Cbox due to processor core memory request which hits a non-modified line in some processor core.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.HITM_EVICTION">UNC_CBO_XSNP_RESPONSE.HITM_EVICTION</span></td>
+		<td>A cross-core snoop resulted from L3 Eviction which hits a modified line in some processor core.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.HITM_EXTERNAL">UNC_CBO_XSNP_RESPONSE.HITM_EXTERNAL</span></td>
+		<td>An external snoop hits a modified line in some processor core.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.HITM_XCORE">UNC_CBO_XSNP_RESPONSE.HITM_XCORE</span></td>
+		<td>A cross-core snoop initiated by this Cbox due to processor core memory request which hits a modified line in some processor core.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.MISS_EVICTION">UNC_CBO_XSNP_RESPONSE.MISS_EVICTION</span></td>
+		<td>A cross-core snoop resulted from L3 Eviction which misses in some processor core.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.MISS_EXTERNAL">UNC_CBO_XSNP_RESPONSE.MISS_EXTERNAL</span></td>
+		<td>An external snoop misses in some processor core.</td>
+	</tr>
+	<tr>
+		<td><span id="UNC_CBO_XSNP_RESPONSE.MISS_XCORE">UNC_CBO_XSNP_RESPONSE.MISS_XCORE</span></td>
+		<td>A cross-core snoop initiated by this Cbox due to processor core memory request which misses in some processor core.</td>
 	</tr>
 	<tr>
 		<td><span id="UNC_CLOCK.SOCKET">UNC_CLOCK.SOCKET</span></td>
