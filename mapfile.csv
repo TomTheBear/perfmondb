@@ -21,9 +21,9 @@ GenuineIntel-6-26,V4,/BNL/Bonnell_core_V4.json,core
 GenuineIntel-6-27,V4,/BNL/Bonnell_core_V4.json,core
 GenuineIntel-6-36,V4,/BNL/Bonnell_core_V4.json,core
 GenuineIntel-6-35,V4,/BNL/Bonnell_core_V4.json,core
-GenuineIntel-6-2A,V16,/SNB/sandybridge_core_V16.json,core
-GenuineIntel-6-2A,V16,/SNB/sandybridge_matrix_V16.json,offcore
-GenuineIntel-6-2A,V16,/SNB/sandybridge_uncore_V16.json,uncore
+GenuineIntel-6-2A,V16,/SNB/sandybridge_core_v16.json,core
+GenuineIntel-6-2A,V16,/SNB/sandybridge_matrix_v16.json,offcore
+GenuineIntel-6-2A,V16,/SNB/sandybridge_uncore_v16.json,uncore
 GenuineIntel-6-2D,V20,/JKT/Jaketown_core_V20.json,core
 GenuineIntel-6-2D,V20,/JKT/Jaketown_matrix_V20.json,offcore
 GenuineIntel-6-2D,V20,/JKT/Jaketown_uncore_V20.json,uncore
