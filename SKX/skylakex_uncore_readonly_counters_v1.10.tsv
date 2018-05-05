@@ -1,0 +1,21 @@
+# Performance Monitoring Events for Intel Xeon Processors Based on the Skylake Microarchitecture - V1.10
+# 5/3/2018 8:49:22 AM
+# Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
+UNIT	PROG_TYPE	MSR_INDEX	NAME	DESCRIPTION	COUNTER_TYPE	EVENT_SCOPE	MAX_COUNTER
+IIO	MSR	00x0A45,0x0A65,0x0A85,0x0AA5,0x0C55,0x0AE5	UNC_IIO_MSR_PMON_FRCTR_IOCLK	36-bit running count of IO clocks	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B04,0x0B14,0x0B24,0xB34,0xB44,0xB54	UNC_IIO_MSR_PMON_FRCTR_BW_OUT_P0	36-bit running count of data bytes transmitted link for this port.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B05,0x0B15,0x0B25,0x0B35,0x0B45,0x0B55	UNC_IIO_MSR_PMON_FRCTR_BW_OUT_P1	36-bit running count of data bytes transmitted link for this port.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B06,0x0B16,0x0B26,0x0B36,0x0B46,0x0B56	UNC_IIO_MSR_PMON_FRCTR_BW_OUT_P2	36-bit running count of data bytes transmitted link for this port.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B07,0x0B17,0x0B27,0x0B37,0x0B47,0x0B57	UNC_IIO_MSR_PMON_FRCTR_BW_OUT_P3	36-bit running count of data bytes transmitted link for this port.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B00,0x0B10,0x0B20,0xB30,0xB40,0xB50	UNC_IIO_MSR_PMON_FRCTR_BW_IN_P0	36-bit running count of data bytes transmitted from link for this port.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B01,0x0B11,0x0B21,0x0B31,0x0B41,0x0B51	UNC_IIO_MSR_PMON_FRCTR_BW_IN_P1	36-bit running count of data bytes transmitted from link for this port.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B02,0x0B12,0x0B22,0x0B32,0x0B42,0x0B52	UNC_IIO_MSR_PMON_FRCTR_BW_IN_P2	36-bit running count of data bytes transmitted from link for this port.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B03,0x0B13,0x0B23,0x0B33,0x0B43,0x0B53	UNC_IIO_MSR_PMON_FRCTR_BW_IN_P3	36-bit running count of data bytes transmitted from link for this port.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B08,0x0B18,0x0B28,0xB38,0xB48,0xB58	UNC_IIO_MSR_PMON_FRCTR_UTIL_IN_P0	36-bit running count of cycles the input link to this port was utilized.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B0A,0x0B1A,0x0B2A,0x0B3A,0x0B4A,0x0B5A	UNC_IIO_MSR_PMON_FRCTR_UTIL_IN_P1	36-bit running count of cycles the input link to this port was utilized.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B0C,0x0B1C,0x0B2C,0x0B3C,0x0B4C,0x0B5C	UNC_IIO_MSR_PMON_FRCTR_UTIL_IN_P2	36-bit running count of cycles the input link to this port was utilized.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B0E,0x0B1E,0x0B2E,0x0B3E,0x0B4E,0x0B5E	UNC_IIO_MSR_PMON_FRCTR_UTIL_IN_P3	36-bit running count of cycles the input link to this port was utilized.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B09,0x0B19,0x0B29,0xB39,0xB49,0xB59	UNC_IIO_MSR_PMON_FRCTR_UTIL_OUT_P0	36-bit running count of cycles the output link to this port was utilized.	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B0B,0x0B1B,0x0B2B,0x0B3B,0x0B4B,0x0B5B	UNC_IIO_MSR_PMON_FRCTR_UTIL_OUT_P1	Running count of cycles the output link on port1 was utilized reported on a 36bit free running counter	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B0D,0x0B1D,0x0B2D,0x0B3D,0x0B4D,0x0B5D	UNC_IIO_MSR_PMON_FRCTR_UTIL_OUT_P2	Running count of cycles the output link on port2 was utilized reported on a 36bit free running counter	FREERUN	UNIT	0xFFFFFFFFFF
+IIO	MSR	0x0B0F,0x0B1F,0x0B2F,0x0B3F,0x0B4F,0x0B5F	UNC_IIO_MSR_PMON_FRCTR_UTIL_OUT_P3	Running count of cycles the output link on port3 was utilized reported on a 36bit free running counter	FREERUN	UNIT	0xFFFFFFFFFF
