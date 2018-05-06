@@ -6024,7 +6024,7 @@
     "PEBS": "0",
     "PRECISE_STORE": "0",
     "Errata": "0",
-    "Offcore": "0",	
+    "Offcore": "0"
   },
    {
     "EventCode": "0xB7, 0xBB",
