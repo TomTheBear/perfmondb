@@ -1,5 +1,5 @@
 # Performance Monitoring Events for Intel Xeon Processors Based on the Skylake Microarchitecture - V1.10
-# 5/3/2018 8:49:25 AM
+# 5/6/2018 12:57:03 AM
 # Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
 EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue	MSRIndex	MSRValue	TakenAlone	CounterMask	Invert	AnyThread	EdgeDetect	PEBS	Data_LA	L1_Hit_Indication	Errata	ELLC	Deprecated
 0x00	0x01	INST_RETIRED.ANY	Instructions retired from execution.	Fixed counter 0	Fixed counter 0	2000003	0	0	0	0	0	0	0	0	0	0	0	0	0
@@ -82,6 +82,7 @@ EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue
 0x54	0x10	TX_MEM.ABORT_HLE_ELISION_BUFFER_MISMATCH	Number of times an HLE transactional execution aborted due to XRELEASE lock not satisfying the address and value requirements in the elision buffer	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	0	0	0
 0x54	0x20	TX_MEM.ABORT_HLE_ELISION_BUFFER_UNSUPPORTED_ALIGNMENT	Number of times an HLE transactional execution aborted due to an unsupported read alignment from the elision buffer.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	0	0	0
 0x54	0x40	TX_MEM.HLE_ELISION_BUFFER_FULL	Number of times HLE lock could not be elided due to ElisionBufferAvailable being zero.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	0	0	0
+0x59	0x01	PARTIAL_RAT_STALLS.SCOREBOARD	Cycles where the pipeline is stalled due to serializing operations.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	0	0	0
 0x5d	0x01	TX_EXEC.MISC1	Counts the number of times a class of instructions that may cause a transactional abort was executed. Since this is the count of execution, it may not always cause a transactional abort.	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	0	0	0
 0x5d	0x02	TX_EXEC.MISC2	Counts the number of times a class of instructions (e.g., vzeroupper) that may cause a transactional abort was executed inside a transactional region	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	0	0	0
 0x5d	0x04	TX_EXEC.MISC3	Counts the number of times an instruction execution caused the transactional nest count supported to be exceeded	0,1,2,3	0,1,2,3,4,5,6,7	2000003	0	0	0	0	0	0	0	0	0	0	0	0	0

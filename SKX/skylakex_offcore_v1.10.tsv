@@ -1,5 +1,5 @@
 # Performance Monitoring Events for Intel Xeon Processors Based on the Skylake Microarchitecture - V1.10
-# 5/3/2018 8:49:25 AM
+# 5/6/2018 12:57:03 AM
 # Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
 EventCode	UMask	EventName	BriefDescription	Counter	CounterHTOff	SampleAfterValue	MSRIndex	MSRValue	TakenAlone	CounterMask	Invert	AnyThread	EdgeDetect	PEBS	Data_LA	L1_Hit_Indication	Errata	ELLC	Deprecated
 0xB7, 0xBB	0x01	OFFCORE_RESPONSE.DEMAND_DATA_RD.ANY_RESPONSE	Counts demand data reads that have any response type.	0,1,2,3	0,1,2,3	100003	0x1a6,0x1a7	0x0000010001 	0	0	0	0	0	0	0	0	null	0	0
