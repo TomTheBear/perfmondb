@@ -93,5 +93,5 @@ GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_core_v1.01.json,core
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_fp_arith_inst_v1.01.json,fp_arith_inst
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_matrix_v1.01.json,offcore
 GenuineIntel-6-7E,V1.00,/ICL/icelake_core_v1.00.json,core
-GenuineIntel-6-86,V1.00,/SNR/snowridgex_core_v1.00.json,core
-GenuineIntel-6-86,V1.00,/SNR/snowridgex_uncore_v1.00.json,uncore
+GenuineIntel-6-86,V1.02,/SNR/snowridgex_core_v1.02.json,core
+GenuineIntel-6-86,V1.02,/SNR/snowridgex_uncore_v1.02.json,uncore
