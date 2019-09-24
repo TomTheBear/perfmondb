@@ -1,0 +1,91 @@
+# Performance Monitoring Events for the Sixth Generation Intel Core Processors Based on the Skylake Microarchitecture - V45
+# 8/28/2019 3:31:55 PM
+# Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
+BitName	BitIndex	Type	Description	MATRIX_REG	BitsNotCombinedWith	Errata
+DEMAND_DATA_RD	0	1	Counts demand data reads	0,1		na
+DEMAND_RFO	1	1	Counts all demand data writes (RFOs)	0,1		na
+DEMAND_CODE_RD	2	1	Counts demand instruction fetches and L1 instruction cache prefetches that	0,1		na
+OTHER	15	1	Counts any other requests	0,1		na
+ANY_RESPONSE	16	2	have any response type.	0,1		na
+SUPPLIER_NONE	17	3		0,1		na
+L3_HIT_M	18	3		0,1		na
+L3_HIT_E	19	3		0,1		na
+L3_HIT_S	20	3		0,1		na
+L3_HIT	18,19,20	3		0,1		na
+L4_HIT_LOCAL_L4	22	3		0,1		na
+L3_MISS_LOCAL_DRAM	26	3		0,1		na
+L3_MISS	26,27,28,29,22	3		0,1		na
+SPL_HIT	30	4		0,1		na
+SNOOP_NONE	31	4		0,1		na
+SNOOP_NOT_NEEDED	32	4		0,1		na
+SNOOP_MISS	33	4		0,1		na
+SNOOP_HIT_NO_FWD	34	4		0,1		na
+SNOOP_HIT_WITH_FWD	35	4		0,1	18,19,20,21	na
+SNOOP_HITM	36	4		0,1		na
+SNOOP_NON_DRAM	37	4		0,1		na
+ANY_SNOOP	30,31,32,33,34,35,36,37	4		0,1		na
+SUPPLIER_NONE.SPL_HIT	17,30	2		tbd	na	na
+SUPPLIER_NONE.SNOOP_NONE	17,31	2		tbd	na	na
+SUPPLIER_NONE.SNOOP_NOT_NEEDED	17,32	2		tbd	na	na
+SUPPLIER_NONE.SNOOP_MISS	17,33	2		tbd	na	na
+SUPPLIER_NONE.SNOOP_HIT_NO_FWD	17,34	2		tbd	na	na
+SUPPLIER_NONE.SNOOP_HITM	17,36	2		tbd	na	na
+SUPPLIER_NONE.SNOOP_NON_DRAM	17,37	2		tbd	na	na
+SUPPLIER_NONE.ANY_SNOOP	17,30,31,32,33,34,35,36,37	2		tbd	na	na
+L3_HIT_M.SPL_HIT	18,30	2		tbd	na	na
+L3_HIT_M.SNOOP_NONE	18,31	2		tbd	na	na
+L3_HIT_M.SNOOP_NOT_NEEDED	18,32	2		tbd	na	na
+L3_HIT_M.SNOOP_MISS	18,33	2		tbd	na	na
+L3_HIT_M.SNOOP_HIT_NO_FWD	18,34	2		tbd	na	na
+L3_HIT_M.SNOOP_HITM	18,36	2		tbd	na	na
+L3_HIT_M.SNOOP_NON_DRAM	18,37	2		tbd	na	na
+L3_HIT_M.ANY_SNOOP	18,30,31,32,33,34,35,36,37	2		tbd	na	na
+L3_HIT_E.SPL_HIT	19,30	2		tbd	na	na
+L3_HIT_E.SNOOP_NONE	19,31	2		tbd	na	na
+L3_HIT_E.SNOOP_NOT_NEEDED	19,32	2		tbd	na	na
+L3_HIT_E.SNOOP_MISS	19,33	2		tbd	na	na
+L3_HIT_E.SNOOP_HIT_NO_FWD	19,34	2		tbd	na	na
+L3_HIT_E.SNOOP_HITM	19,36	2		tbd	na	na
+L3_HIT_E.SNOOP_NON_DRAM	19,37	2		tbd	na	na
+L3_HIT_E.ANY_SNOOP	19,30,31,32,33,34,35,36,37	2		tbd	na	na
+L3_HIT_S.SPL_HIT	20,30	2		tbd	na	na
+L3_HIT_S.SNOOP_NONE	20,31	2		tbd	na	na
+L3_HIT_S.SNOOP_NOT_NEEDED	20,32	2		tbd	na	na
+L3_HIT_S.SNOOP_MISS	20,33	2		tbd	na	na
+L3_HIT_S.SNOOP_HIT_NO_FWD	20,34	2		tbd	na	na
+L3_HIT_S.SNOOP_HITM	20,36	2		tbd	na	na
+L3_HIT_S.SNOOP_NON_DRAM	20,37	2		tbd	na	na
+L3_HIT_S.ANY_SNOOP	20,30,31,32,33,34,35,36,37	2		tbd	na	na
+L3_HIT.SPL_HIT	18,19,20,30	2		tbd	na	na
+L3_HIT.SNOOP_NONE	18,19,20,31	2		tbd	na	na
+L3_HIT.SNOOP_NOT_NEEDED	18,19,20,32	2	hit in the L3 and sibling core snoops are not needed as either the core-valid bit is not set or the shared line is present in multiple cores.	tbd	na	na
+L3_HIT.SNOOP_MISS	18,19,20,33	2	hit in the L3 and the snoops sent to sibling cores return clean response.	tbd	na	na
+L3_HIT.SNOOP_HIT_NO_FWD	18,19,20,34	2	hit in the L3 and the snoops to sibling cores hit in either E/S state and the line is not forwarded.	tbd	na	na
+L3_HIT.SNOOP_HITM	18,19,20,36	2		tbd	na	na
+L3_HIT.SNOOP_NON_DRAM	18,19,20,37	2		tbd	na	na
+L3_HIT.ANY_SNOOP	18,19,20,30,31,32,33,34,35,36,37	2		tbd	na	na
+L4_HIT_LOCAL_L4.SPL_HIT	22,30	2		tbd	na	na
+L4_HIT_LOCAL_L4.SNOOP_NONE	22,31	2		tbd	na	na
+L4_HIT_LOCAL_L4.SNOOP_NOT_NEEDED	22,32	2		tbd	na	na
+L4_HIT_LOCAL_L4.SNOOP_MISS	22,33	2		tbd	na	na
+L4_HIT_LOCAL_L4.SNOOP_HIT_NO_FWD	22,34	2		tbd	na	na
+L4_HIT_LOCAL_L4.SNOOP_HIT_WITH_FWD	22,35	2		tbd	na	na
+L4_HIT_LOCAL_L4.SNOOP_HITM	22,36	2		tbd	na	na
+L4_HIT_LOCAL_L4.SNOOP_NON_DRAM	22,37	2		tbd	na	na
+L4_HIT_LOCAL_L4.ANY_SNOOP	22,30,31,32,33,34,35,36,37	2		tbd	na	na
+L3_MISS_LOCAL_DRAM.SPL_HIT	26,30	2		tbd	na	na
+L3_MISS_LOCAL_DRAM.SNOOP_NONE	26,31	2		tbd	na	na
+L3_MISS_LOCAL_DRAM.SNOOP_NOT_NEEDED	26,32	2		tbd	na	na
+L3_MISS_LOCAL_DRAM.SNOOP_MISS	26,33	2		tbd	na	na
+L3_MISS_LOCAL_DRAM.SNOOP_HIT_NO_FWD	26,34	2		tbd	na	na
+L3_MISS_LOCAL_DRAM.SNOOP_HITM	26,36	2		tbd	na	na
+L3_MISS_LOCAL_DRAM.SNOOP_NON_DRAM	26,37	2		tbd	na	na
+L3_MISS_LOCAL_DRAM.ANY_SNOOP	26,30,31,32,33,34,35,36,37	2		tbd	na	na
+L3_MISS.SPL_HIT	22,26,27,28,29,30	2		tbd	na	na
+L3_MISS.SNOOP_NONE	22,26,27,28,29,31	2		tbd	na	na
+L3_MISS.SNOOP_NOT_NEEDED	22,26,27,28,29,32	2		tbd	na	na
+L3_MISS.SNOOP_MISS	22,26,27,28,29,33	2		tbd	na	na
+L3_MISS.SNOOP_HIT_NO_FWD	22,26,27,28,29,34	2		tbd	na	na
+L3_MISS.SNOOP_HITM	22,26,27,28,29,36	2		tbd	na	na
+L3_MISS.SNOOP_NON_DRAM	22,26,27,28,29,37	2		tbd	na	na
+L3_MISS.ANY_SNOOP	22,26,27,28,29,30,31,32,33,34,35,36,37	2		tbd	na	na
