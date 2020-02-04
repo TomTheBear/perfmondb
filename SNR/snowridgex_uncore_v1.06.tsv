@@ -1,0 +1,43 @@
+# Performance Monitoring Events for Intel Next Generation Atom-based Processors - V1.06
+# 1/29/2020 8:22:03 PM
+# Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
+Unit	EventCode	UMask	PortMask	FCMask	UMaskExt	EventName	Description	Counter	MSRValue	ELLC	Filter	Internal	Deprecated	FILTER_VALUE	CounterType
+CHA	0x00	0x00	0x00	0x00	0x00	UNC_CHA_CLOCKTICKS	Clockticks of the uncore caching and home agent (CHA)	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC001FE	UNC_CHA_TOR_INSERTS.IA_MISS	TOR Inserts : All requests from iA Cores that Missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC80FFE	UNC_CHA_TOR_INSERTS.IA_MISS_CRD	TOR Inserts : CRds issued by iA Cores that Missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC807FE	UNC_CHA_TOR_INSERTS.IA_MISS_RFO	TOR Inserts : RFOs issued by iA Cores that Missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC88FFE	UNC_CHA_TOR_INSERTS.IA_MISS_CRD_PREF	TOR Inserts : CRd_Prefs issued by iA Cores that Missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC827FE	UNC_CHA_TOR_INSERTS.IA_MISS_DRD_OPT	TOR Inserts : DRd_Opt issued by iA Cores that missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC8A7FE	UNC_CHA_TOR_INSERTS.IA_MISS_DRD_OPT_PREF	TOR Inserts : DRd_Opt_Prefs issued by iA Cores that missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC887FE	UNC_CHA_TOR_INSERTS.IA_MISS_RFO_PREF	TOR Inserts : RFO_Prefs issued by iA Cores that Missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC86FFE	UNC_CHA_TOR_INSERTS.IA_MISS_WCIL	TOR Inserts : WCiLs issued by iA Cores that Missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+CHA	0x35	0x01	0x00	0x00	0xC867FE	UNC_CHA_TOR_INSERTS.IA_MISS_WCILF	TOR Inserts : WCiLF issued by iA Cores that Missed the LLC	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+IIO	0x01	0x00	0x00	0x00	0x00	UNC_IIO_CLOCKTICKS	Clockticks of the integrated IO (IIO) traffic controller	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x01	0x01	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART0	Four byte data request of the CPU : Card writing to DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x01	0x02	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART1	Four byte data request of the CPU : Card writing to DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x01	0x04	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART2	Four byte data request of the CPU : Card writing to DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x01	0x08	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART3	Four byte data request of the CPU : Card writing to DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x04	0x01	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART0	Four byte data request of the CPU : Card reading from DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x04	0x02	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART1	Four byte data request of the CPU : Card reading from DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x04	0x04	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART2	Four byte data request of the CPU : Card reading from DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x04	0x08	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART3	Four byte data request of the CPU : Card reading from DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x01	0x10	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART4	Four byte data request of the CPU : Card writing to DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x01	0x20	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART5	Four byte data request of the CPU : Card writing to DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x01	0x40	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART6	Four byte data request of the CPU : Card writing to DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x01	0x80	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_WRITE.PART7	Four byte data request of the CPU : Card writing to DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x04	0x10	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART4	Four byte data request of the CPU : Card reading from DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x04	0x20	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART5	Four byte data request of the CPU : Card reading from DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x04	0x40	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART6	Four byte data request of the CPU : Card reading from DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IIO	0x83	0x04	0x80	0x07	0x00	UNC_IIO_DATA_REQ_OF_CPU.MEM_READ.PART7	Four byte data request of the CPU : Card reading from DRAM	0,1	0x00	0	na	0	0	0	PGMABLE
+IRP	0x01	0x00	0x00	0x00	0x00	UNC_I_CLOCKTICKS	Clockticks of the IO coherency tracker (IRP)	0,1	0x00	0	na	0	0	0	PGMABLE
+iMC	0x02	0x04	0x00	0x00	0x00	UNC_M_PRE_COUNT.RD	DRAM Precharge commands. : Precharge due to read	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+iMC	0x02	0x08	0x00	0x00	0x00	UNC_M_PRE_COUNT.WR	DRAM Precharge commands. : Precharge due to write	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+iMC	0x04	0x0f	0x00	0x00	0x00	UNC_M_CAS_COUNT.RD	All DRAM read CAS commands issued (including underfills)	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+iMC	0x04	0x30	0x00	0x00	0x00	UNC_M_CAS_COUNT.WR	All DRAM write CAS commands issued	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+iMC	0x02	0x10	0x00	0x00	0x00	UNC_M_PRE_COUNT.PGT	DRAM Precharge commands. : Precharge due to page table	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+iMC	0x00	0x00	0x00	0x00	0x00	UNC_M_CLOCKTICKS	DRAM Clockticks	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+iMC	0x02	0x1C	0x00	0x00	0x00	UNC_M_PRE_COUNT.ALL	DRAM Precharge commands.	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+M2M	0x00	0x00	0x00	0x00	0x00	UNC_M2M_CLOCKTICKS	Clockticks of the mesh to memory (M2M)	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+M2PCIe	0x01	0x00	0x00	0x00	0x00	UNC_M2P_CLOCKTICKS	Clockticks of the mesh to PCI (M2P)	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
+UBOX	0x00	0x01	0x00	0x00	0x00	UNC_U_CLOCKTICKS	Clockticks in the UBOX using a dedicated 48-bit Fixed Counter	FIXED	0x00	0	na	0	0	0	FIXED
+PCU	0x00	0x00	0x00	0x00	0x00	UNC_P_CLOCKTICKS	Clockticks of the power control unit (PCU)	0,1,2,3	0x00	0	na	0	0	0	PGMABLE
