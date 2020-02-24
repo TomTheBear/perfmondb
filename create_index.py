@@ -51,10 +51,12 @@ for s in files:
             if m:
                 head = m.group(1)
     if p and head and s:
-        out.write("<h1>{}</h1>\n".format(head))
-        out.write("<p><a href={}>{}</a><br><a href={}>{}</a></p>\n\n".format(p, os.path.basename(p), s, s))
-
-#
-#<p>This is a paragraph.</p>
+        out.write("<h1><a href={}>{}</a></h1>\n".format(p, head))
+        folderfiles = sorted(glob.glob(os.path.join(s, "*.json")))
+        m = re.search(".*_([vV][\d\.]+).*\.json", folderfiles[-1])
+        if m:
+            folderfiles = sorted(glob.glob(os.path.join(s, "*{}*.json".format(m.group(1)))))
+            for f in folderfiles:
+                out.write("<p><a href={}>{}</a></p>\n\n".format(f, os.path.basename(f)))
 
 out.write("""</body>\n</html>\n""")
