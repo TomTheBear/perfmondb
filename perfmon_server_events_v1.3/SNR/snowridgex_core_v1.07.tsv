@@ -1,0 +1,32 @@
+# Performance Monitoring Events for Intel Next Generation Atom-based Processors - V1.07
+# 3/10/2020 11:58:34 AM
+# Copyright (c) 2007 - 2017 Intel Corporation. All rights reserved.
+EventCode	UMask	EventName	BriefDescription	Counter	PEBScounters	SampleAfterValue	MSRIndex	MSRValue	CollectPEBSRecord	CounterMask	Invert	AnyThread	EdgeDetect	PEBS	Data_LA	Errata	PDIR_COUNTER
+0x00	0x01	INST_RETIRED.ANY	Counts the number of instructions retired. (Fixed event)	32	32	2000003	0x00	0x00	2	0	0	0	0	1	0	0	0
+0x00	0x02	CPU_CLK_UNHALTED.CORE	Counts the number of unhalted core clock cycles. (Fixed event)	33	33	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x00	0x03	CPU_CLK_UNHALTED.REF_TSC	Counts the number of unhalted reference clock cycles at TSC frequency. (Fixed event)	34	34	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x08	0x02	DTLB_LOAD_MISSES.WALK_COMPLETED_4K	Page walk completed due to a demand load to a 4K page.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x08	0x04	DTLB_LOAD_MISSES.WALK_COMPLETED_2M_4M	Page walk completed due to a demand load to a 2M or 4M page.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x2e	0x41	LONGEST_LAT_CACHE.MISS	Counts memory requests originating from the core that miss in the last level cache. If the platform has an L3 cache, last level cache is the L3, otherwise it is the L2.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x2e	0x4f	LONGEST_LAT_CACHE.REFERENCE	Counts memory requests originating from the core that reference a cache line in the last level cache. If the platform has an L3 cache, last level cache is the L3, otherwise it is the L2.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x3c	0x00	CPU_CLK_UNHALTED.CORE_P	Counts the number of unhalted core clock cycles.	0,1,2,3	0,1,2,3	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x3c	0x01	CPU_CLK_UNHALTED.REF	Counts the number of unhalted reference clock cycles at TSC frequency.	0,1,2,3	0,1,2,3	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x49	0x02	DTLB_STORE_MISSES.WALK_COMPLETED_4K	Page walk completed due to a demand data store to a 4K page.	0,1,2,3	0,1,2,3	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x49	0x04	DTLB_STORE_MISSES.WALK_COMPLETED_2M_4M	Page walk completed due to a demand data store to a 2M or 4M page.	0,1,2,3	0,1,2,3	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x80	0x02	ICACHE.MISSES	Counts requests to the Instruction Cache (ICache) for one or more bytes in a cache line and they do not hit in the ICache (miss).	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x80	0x03	ICACHE.ACCESSES	Counts requests to the Instruction Cache (ICache) for one or more bytes cache Line.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x81	0x04	ITLB.FILLS	Counts the number of times there was an ITLB miss and a new translation was filled into the ITLB.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x85	0x02	ITLB_MISSES.WALK_COMPLETED_4K	Page walk completed due to an instruction fetch in a 4K page.	0,1,2,3	0,1,2,3	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0x85	0x04	ITLB_MISSES.WALK_COMPLETED_2M_4M	Page walk completed due to an instruction fetch in a 2M or 4M page.	0,1,2,3	0,1,2,3	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0xc0	0x00	INST_RETIRED.ANY_P	Counts the number of instructions retired.	0,1,2,3	0,1,2,3	2000003	0x00	0x00	2	0	0	0	0	1	0	0	0
+0xc3	0x00	MACHINE_CLEARS.ANY	Counts all machine clears due to, but not limited to memory ordering, memory disambiguation, SMC, page faults and FP assist.	0,1,2,3	0,1,2,3	20003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0xc4	0x00	BR_INST_RETIRED.ALL_BRANCHES	Counts the number of branch instructions retired for all branch types.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	0	0	0
+0xc5	0x00	BR_MISP_RETIRED.ALL_BRANCHES	Counts the number of mispredicted branch instructions retired.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	0	0	0
+0xcd	0x00	CYCLES_DIV_BUSY.ANY	Counts cycles the floating point divider or integer divider or both are busy.  Does not imply a stall waiting for either divider.	0,1,2,3	0,1,2,3	2000003	0x00	0x00	2	0	0	0	0	0	0	0	na
+0xd0	0x81	MEM_UOPS_RETIRED.ALL_LOADS	Counts the number of load uops retired.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	1	0	0
+0xd0	0x82	MEM_UOPS_RETIRED.ALL_STORES	Counts the number of store uops retired.	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	1	0	0
+0xd1	0x01	MEM_LOAD_UOPS_RETIRED.L1_HIT	Counts the number of load uops retired that hit the level 1 data cache	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	1	0	0
+0xd1	0x02	MEM_LOAD_UOPS_RETIRED.L2_HIT	Counts the number of load uops retired that hit in the level 2 cache	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	1	0	0
+0xd1	0x04	MEM_LOAD_UOPS_RETIRED.L3_HIT	Counts the number of load uops retired that miss in the level 3 cache	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	0	0	0
+0xd1	0x08	MEM_LOAD_UOPS_RETIRED.L1_MISS	Counts the number of load uops retired that miss in the level 1 data cache	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	1	0	0
+0xd1	0x10	MEM_LOAD_UOPS_RETIRED.L2_MISS	Counts the number of load uops retired that miss in the level 2 cache	0,1,2,3	0,1,2,3	200003	0x00	0x00	2	0	0	0	0	1	1	0	0
