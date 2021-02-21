@@ -100,8 +100,8 @@ GenuineIntel-6-55-[56789ABCDEF],V1.11,/CLX/cascadelakex_uncore_v1.11_experimenta
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_core_v1.01.json,core
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_fp_arith_inst_v1.01.json,fp_arith_inst
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_matrix_v1.01.json,offcore
-GenuineIntel-6-7E,V1.09,/ICL/icelake_core_v1.09.json,core
-GenuineIntel-6-7E,V1.09,/ICL/icelake_uncore_v1.09.json,uncore
+GenuineIntel-6-7E,V1.10,/ICL/icelake_core_v1.10.json,core
+GenuineIntel-6-7E,V1.10,/ICL/icelake_uncore_v1.10.json,uncore
 GenuineIntel-6-86,V1.10,/SNR/snowridgex_core_v1.10.json,core
 GenuineIntel-6-86,V1.10,/SNR/snowridgex_uncore_v1.10.json,uncore
 GenuineIntel-6-8C,V1.00,/TGL/tigerlake_core_v1.00.json,core
