@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import os, glob, os.path, re
+from locale import getpreferredencoding
+
+ENCODING = getpreferredencoding()
 
 files = {"IVB" : "index/ivybridge.html",
          "CLX" : "index/cascadelake_server.html",
@@ -45,8 +48,10 @@ for s in files:
     p = files[s]
     head = None
     if p:
-        with open(p, "r") as fp:
-            data = fp.read()
+        with open(p, "rb") as fp:
+            data = ""
+            while len(data) < 5 or data[-5:] != "</h3>":
+                data += fp.read(1).decode(ENCODING)
             m = re.search("<h3>(.*)</h3>", data)
             if m:
                 head = m.group(1)
