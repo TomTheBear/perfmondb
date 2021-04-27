@@ -3,7 +3,7 @@
 
 import os, json, sys, glob, os.path
 
-folder = "BDX"
+folder = "CLX"
 
 def get_files(folder):
     out = []
@@ -23,8 +23,9 @@ opt_dict = { "Invert"       : "EVENT_OPTION_INVERT",
 
 def analyse_file(f):
     o = []
-    fp = open(f, "r")
-    j = json.load(fp)
+    fp = open(f, "rb")
+    s = fp.read().decode("UTF-8")
+    j = json.loads(s)
     for e in j:
         c = "NONE"
         if e["Counter"].startswith("Fixed"):
@@ -58,11 +59,11 @@ def printout(l):
                 tname = tname.replace(ename, ename + "_" + str(i))
                 ename = ename + "_" + str(i)
 
-            print "EVENT_%s\t\t%s\t%s" % (ename, c.strip(), e["Limit"])
+            print("EVENT_%s\t\t%s\t%s" % (ename, c.strip(), e["Limit"]))
             if "DefaultOpts" in e:
-                print "DEFAULT_OPTIONS_%s\t%s" % (tname, e["DefaultOpts"],)
-            print "UMASK_%s\t%s" % (tname, e["Umask"],)
-            print
+                print("DEFAULT_OPTIONS_%s\t%s" % (tname, e["DefaultOpts"],))
+            print("UMASK_%s\t%s" % (tname, e["Umask"],))
+            print("")
 
 flist = get_files(folder)
 out = []
