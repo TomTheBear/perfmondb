@@ -106,3 +106,9 @@ GenuineIntel-6-86,V1.13,/SNR/snowridgex_core_v1.13.json,core
 GenuineIntel-6-86,V1.13,/SNR/snowridgex_uncore_v1.13.json,uncore
 GenuineIntel-6-8C,V1.00,/TGL/tigerlake_core_v1.00.json,core
 GenuineIntel-6-8D,V1.00,/TGL/tigerlake_core_v1.00.json,core
+GenuineIntel-6-6A,V1.04,/ICX/icelakex_core_v1.04.json,core
+GenuineIntel-6-6A,V1.04,/ICX/icelakex_uncore_v1.04.json,uncore
+GenuineIntel-6-6A,V1.04,/ICX/icelakex_uncore_v1.04_experimental.json,uncore experimental
+GenuineIntel-6-6C,V1.04,/ICX/icelakex_core_v1.04.json,core
+GenuineIntel-6-6C,V1.04,/ICX/icelakex_uncore_v1.04.json,uncore
+GenuineIntel-6-6C,V1.04,/ICX/icelakex_uncore_v1.04_experimental.json,uncore experimental
