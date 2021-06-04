@@ -111,4 +111,4 @@ GenuineIntel-6-6A,V1.04,/ICX/icelakex_uncore_v1.04.json,uncore
 GenuineIntel-6-6A,V1.04,/ICX/icelakex_uncore_v1.04_experimental.json,uncore experimental
 GenuineIntel-6-6C,V1.04,/ICX/icelakex_core_v1.04.json,core
 GenuineIntel-6-6C,V1.04,/ICX/icelakex_uncore_v1.04.json,uncore
-GenuineIntel-6-96,V1.01,/EHL/,elkhartlake_core_v1.01.json,core
+GenuineIntel-6-96,V1.01,/EHL/elkhartlake_core_v1.01.json,core
