@@ -102,15 +102,15 @@ GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_fp_arith_inst_v1.01.json,fp_arith_inst
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_matrix_v1.01.json,offcore
 GenuineIntel-6-7E,V1.10,/ICL/icelake_core_v1.10.json,core
 GenuineIntel-6-7E,V1.10,/ICL/icelake_uncore_v1.10.json,uncore
-GenuineIntel-6-86,V1.15,/SNR/snowridgex_core_v1.15.json,core
-GenuineIntel-6-86,V1.15,/SNR/snowridgex_uncore_v1.15.json,uncore
+GenuineIntel-6-86,V1.16,/SNR/snowridgex_core_v1.16.json,core
+GenuineIntel-6-86,V1.16,/SNR/snowridgex_uncore_v1.16.json,uncore
 GenuineIntel-6-8C,V1.03,/TGL/tigerlake_core_v1.03.json,core
 GenuineIntel-6-8D,V1.03,/TGL/tigerlake_core_v1.03.json,core
 GenuineIntel-6-8C,V1.03,/TGL/tigerlake_uncore_v1.03.json,uncore
 GenuineIntel-6-8D,V1.03,/TGL/tigerlake_uncore_v1.03.json,uncore
-GenuineIntel-6-6A,V1.06,/ICX/icelakex_core_v1.06.json,core
-GenuineIntel-6-6A,V1.06,/ICX/icelakex_uncore_v1.06.json,uncore
-GenuineIntel-6-6A,V1.06,/ICX/icelakex_uncore_v1.06_experimental.json,uncore experimental
-GenuineIntel-6-6C,V1.06,/ICX/icelakex_core_v1.06.json,core
+GenuineIntel-6-6A,V1.07,/ICX/icelakex_core_v1.07.json,core
+GenuineIntel-6-6A,V1.07,/ICX/icelakex_uncore_v1.07.json,uncore
+GenuineIntel-6-6A,V1.07,/ICX/icelakex_uncore_v1.07_experimental.json,uncore experimental
+GenuineIntel-6-6C,V1.07,/ICX/icelakex_core_v1.07.json,core
 GenuineIntel-6-6C,V1.06,/ICX/icelakex_uncore_v1.06.json,uncore
-GenuineIntel-6-96,V1.01,/EHL/elkhartlake_core_v1.01.json,core
+GenuineIntel-6-96,V1.02,/EHL/elkhartlake_core_v1.02.json,core
