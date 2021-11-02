@@ -93,10 +93,10 @@ GenuineIntel-6-55-[01234],V1.26,/SKX/skylakex_matrix_v1.26.json,offcore
 GenuineIntel-6-55-[01234],V1.26,/SKX/skylakex_fp_arith_inst_v1.26.json,fp_arith_inst
 GenuineIntel-6-55-[01234],V1.26,/SKX/skylakex_uncore_v1.26.json,uncore
 GenuineIntel-6-55-[01234],V1.26,/SKX/skylakex_uncore_v1.26_experimental.json,uncore experimental
-GenuineIntel-6-55-[56789ABCDEF],V1.13,/CLX/cascadelakex_core_v1.13.json,core
-GenuineIntel-6-55-[56789ABCDEF],V1.13,/CLX/cascadelakex_fp_arith_inst_v1.13.json,fp_arith_inst
-GenuineIntel-6-55-[56789ABCDEF],V1.13,/CLX/cascadelakex_uncore_v1.13.json,uncore
-GenuineIntel-6-55-[56789ABCDEF],V1.13,/CLX/cascadelakex_uncore_v1.13_experimental.json,uncore experimental
+GenuineIntel-6-55-[56789ABCDEF],V1.14,/CLX/cascadelakex_core_v1.14.json,core
+GenuineIntel-6-55-[56789ABCDEF],V1.14,/CLX/cascadelakex_fp_arith_inst_v1.14.json,fp_arith_inst
+GenuineIntel-6-55-[56789ABCDEF],V1.14,/CLX/cascadelakex_uncore_v1.14.json,uncore
+GenuineIntel-6-55-[56789ABCDEF],V1.14,/CLX/cascadelakex_uncore_v1.14_experimental.json,uncore experimental
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_core_v1.01.json,core
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_fp_arith_inst_v1.01.json,fp_arith_inst
 GenuineIntel-6-7A,V1.01,/GLP/goldmontplus_matrix_v1.01.json,offcore
