@@ -5535,7 +5535,7 @@
     "Invert": "0",
     "AnyThread": "0",
     "EdgeDetect": "0",
-    "PEBS": "0",
+    "PEBS": "1",
     "Data_LA": "0",
     "L1_Hit_Indication": "0",
     "Errata": "null",
