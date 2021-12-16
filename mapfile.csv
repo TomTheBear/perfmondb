@@ -114,9 +114,9 @@ GenuineIntel-6-6A,V1.09,/ICX/icelakex_uncore_v1.09_experimental.json,uncore expe
 GenuineIntel-6-6C,V1.09,/ICX/icelakex_core_v1.09.json,core,,,
 GenuineIntel-6-6C,V1.09,/ICX/icelakex_uncore_v1.09.json,uncore,,,
 GenuineIntel-6-96,V1.02,/EHL/elkhartlake_core_v1.02.json,core,,,
-GenuineIntel-6-97,v1.03,/ADL/alderlake_gracemont_core_v1.03.json,hybridcore,0x20,0x000001,Atom
-GenuineIntel-6-97,v1.03,/ADL/alderlake_goldencove_core_v1.03.json,hybridcore,0x40,0x000001,Core
-GenuineIntel-6-97,v1.03,/ADL/alderlake_alderlake_uncore_v1.03.json,uncore,,,
-GenuineIntel-6-9A,v1.03,/ADL/alderlake_gracemont_core_v1.03.json,hybridcore,0x20,0x000001,Atom
-GenuineIntel-6-9A,v1.03,/ADL/alderlake_goldencove_core_v1.03.json,hybridcore,0x40,0x000001,Core
-GenuineIntel-6-9A,v1.03,/ADL/alderlake_alderlake_uncore_v1.03.json,uncore,,,
+GenuineIntel-6-97,v1.04,/ADL/alderlake_gracemont_core_v1.04.json,hybridcore,0x20,0x000001,Atom
+GenuineIntel-6-97,v1.04,/ADL/alderlake_goldencove_core_v1.04.json,hybridcore,0x40,0x000001,Core
+GenuineIntel-6-97,v1.04,/ADL/alderlake_alderlake_uncore_v1.04.json,uncore,,,
+GenuineIntel-6-9A,v1.04,/ADL/alderlake_gracemont_core_v1.04.json,hybridcore,0x20,0x000001,Atom
+GenuineIntel-6-9A,v1.04,/ADL/alderlake_goldencove_core_v1.04.json,hybridcore,0x40,0x000001,Core
+GenuineIntel-6-9A,v1.04,/ADL/alderlake_alderlake_uncore_v1.04.json,uncore,,,
