@@ -28,8 +28,10 @@ files = {"IVB" : "index/ivybridge.html",
          "WSM-EX" : "index/wsmex.html",
          "SKL" : "index/skylake.html",
          "SKX" : "index/skylake_server.html",
-         "SNB" : "index/snb.html", 
-         "SNR" : None}
+         "SNB" : "index/snb.html",
+         "SNR" : "index/snr.html",
+         "ADL" : "index/adl.html"
+         }
 
 
 outfile = "index.html"
