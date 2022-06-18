@@ -49,7 +49,7 @@ out.write(""" <!DOCTYPE html>
 for s in files:
     p = files[s]
     head = None
-    if p:
+    if p and os.access(p, os.R_OK):
         with open(p, "rb") as fp:
             data = ""
             while len(data) < 5 or data[-5:] != "</h3>":
