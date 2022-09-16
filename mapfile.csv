@@ -8,6 +8,8 @@ GenuineIntel-6-25,V3,/WSM-EP-SP/WestmereEP-SP_core_V3.json,core,,,
 GenuineIntel-6-2C,V2,/WSM-EP-DP/WestmereEP-DP_core_V2.json,core,,,
 GenuineIntel-6-37,V14,/SLM/Silvermont_core_V14.json,core,,,
 GenuineIntel-6-37,V14,/SLM/Silvermont_matrix_V14.json,offcore,,,
+GenuineIntel-6-4A,V14,/SLM/Silvermont_core_V14.json,core,,,
+GenuineIntel-6-4A,V14,/SLM/Silvermont_matrix_V14.json,offcore,,,
 GenuineIntel-6-4D,V14,/SLM/Silvermont_core_V14.json,core,,,
 GenuineIntel-6-4D,V14,/SLM/Silvermont_matrix_V14.json,offcore,,,
 GenuineIntel-6-4C,V14,/SLM/Silvermont_core_V14.json,core,,,
@@ -122,6 +124,7 @@ GenuineIntel-6-6A,V1.16,/ICX/icelakex_uncore_v1.16_experimental.json,uncore expe
 GenuineIntel-6-6C,V1.16,/ICX/icelakex_core_v1.16.json,core,,,
 GenuineIntel-6-6C,V1.16,/ICX/icelakex_uncore_v1.16.json,uncore,,,
 GenuineIntel-6-96,V1.03,/EHL/elkhartlake_core_v1.03.json,core,,,
+GenuineIntel-6-9C,V1.03,/EHL/elkhartlake_core_v1.03.json,core,,,
 GenuineIntel-6-97,v1.15,/ADL/alderlake_gracemont_core_v1.15.json,hybridcore,0x20,0x000001,Atom
 GenuineIntel-6-97,v1.15,/ADL/alderlake_goldencove_core_v1.15.json,hybridcore,0x40,0x000001,Core
 GenuineIntel-6-97,v1.15,/ADL/alderlake_uncore_v1.15.json,uncore,,,
